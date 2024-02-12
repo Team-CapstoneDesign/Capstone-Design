@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>capstone main page</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+<body>
+  <div id="wrap">
+    <div class="headerTitle">
+      <img class="logo" src="../images/logo.png" alt="">  
+    </div>
+    <div id="header">
+			<div class="formbox">
+        <div class="search">
+          <input type="text">
+        </div>
+					<div class="topmenuWrap">
+						<ul class="topmenu">
+							<li>
+								<a>나만의 캡슐</a>
+							</li>
+							<li>
+								<a>두잔 캡슐</a>
+								<div class="submenu">
+									<ul id="productMenu">
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a>커피이야기</a>
+								<div class="submenu">
+									<ul id="productMenu">
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a>두잔이야기</a>
+								<div class="submenu">
+									<ul id="productMenu">
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+									</ul>
+								</div>
+							</li>
+            </ul>
+					</div>
+					<div class="nav_top">
+            <span class="quick_menu"><a href="#">로그인</a></span>
+            <span class="quick_menu"><a href="#">회원가입</a></span>
+            <span class="quick_menu"><a href="#">고객센터</a></span>
+					</div>
+			</div>
+		</div>
+    <div class="container" class="main">
+      <div id="section1" class="kvWrap">
+        <div class="kvList">
+          <div class="slide" style="background-color: rgb(190, 246, 246);"></div>
+          <div class="slide" style="background-color: #0092BF;;"></div>
+          <div class="slide" style="background-color: rgb(2, 110, 110);"></div>
+        </div>
+      </div>
+      <div id="section2">
+        <div class="cont">
+          <div class="section-title">
+            <img src="../images/binder.png" alt="">
+            <span class="title">BEST10</span>
+            <img src="../images/binder.png" alt="">
+          </div>
+          <div class="goods-list">
+            <ul>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+              <li>
+                <img class="goods best" src="../images/goods.png" alt="">
+                <div>name</div>
+                <div>price</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $('.kvList').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      pauseOnHover: false,
+      dots:true,
+      appendDots: $('#section1 .dot'),
+      prevArrow: $('#section1 .prev'),
+      nextArrow: $('#section1 .next')
+    });
+
+    AOS.init({
+		duration: 1000,
+      });
+
+  </script>
+</body>
+</html>

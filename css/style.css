@@ -1,0 +1,208 @@
+/*전체영역*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  padding: 0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+text-decoration: #333;
+  text-decoration: none;
+}
+
+li {
+list-style-type: none;
+}
+body{
+    background-color: #f9f9f9;
+}
+#wrap {
+    width: 100%;  /* 1920px * 1080px */
+    min-width: 1200px;
+    color: #333333;
+}
+/*nav*/
+
+.headerTitle{
+  display: block;
+  position: relative;
+  width: 1920px;
+  min-width: 1200px;
+  height: 74px;
+  background-image: url(../images/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 5px solid #E8BB00;
+}
+.headerTitle .logo{
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  line-height: 74px;
+  padding-top: 15px;
+}
+#header{
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#header .formbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+}
+s
+#header.open .formbox h1 a{
+	background: url(../images/logo_black.png)no-repeat center / contain;
+}
+#header.scroll .formbox h1 a{
+	background: url(../images/logo_black.png)no-repeat center / contain;
+}
+#header .nav_top{
+    position: relative;
+    display: block;
+    right: 40px;
+    top: 0;
+}
+
+#header .topmenu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+}
+
+#header .topmenu > li{
+    width: 160px;
+    left: 40%;
+}
+#header .topmenu > li > a{
+    position: relative;
+    display: block;
+    font-size: 1.125em;
+    line-height: 80px;
+    color: #333;
+}
+
+#header .topmenu > li > a ::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: block;
+    width: 0;
+    
+}
+#header .topmenuWrap .submenu{
+    display: none;
+}
+#header .topmenuWrap .submenu #productMenu > li > a:hover {
+    color: #1C9FB3;
+    transition: 0.2s;
+}
+#header.open .formbox{
+    background: #fff;
+    padding-bottom: 50px;
+}
+#header.open .topmenu > li > a{
+    color: #333;
+}
+
+#header.open .topmenuWrap .submenu{
+    display: block;
+}
+#header.open .nav_top{
+  color: #fff;
+}
+#header.open .nav_top .quick_menu{
+  background-color: #333;
+  border: none;
+}
+#header.open .nav_top .quick_menu a{
+  color: #fff;
+}
+#header.scroll .formbox{
+    background-color: #fff;
+}
+#header.scroll .topmenu > li > a{
+    color: #333;
+}
+#header.scroll .nav_top .quick_menu{
+  background-color: #333;
+  border: none;
+}
+#header.scroll .nav_top .quick_menu a{
+  color: #fff;
+}
+
+#container{
+    overflow: hidden;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, #0092BF 0%, #33A9AB 100%);
+  color:white;
+}
+.inner-header {
+  height: 210px;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*container*/
+.container{
+  width: 1920px;
+  height: 900px;
+}
+
+.kvWrap .kvList .slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+  height: 400px;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+  word-break: keep-all;
+
+}
+
+.kvWrap .kvList .subTitle{
+  font-size: 1.875em;
+}
+.kvWrap .kvList .title{
+  margin: 30px 0;
+  font-size: 2.5em;
+}
+.kvWrap .kvList .des{
+  font-size: 1.25em;
+}
+
+
+.cont{
+  width: 1200px;
+  margin: 0 auto;
+}
+.goods-list ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods-list .goods{
+  border-radius: 200px 200px 0 0;
+}

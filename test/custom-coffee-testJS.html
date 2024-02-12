@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <form id="start-screen">
+      시작하기
+      <button>시작</button>
+    </form>
+    <div id="select-coffee" style="display: none;">
+      커피선택
+      <div id="coffee-checkbox">
+        <!--js로 커피 체크박스 추가-->
+      </div>
+      <button id="coffee-next">다음</button>
+    </div>
+    <div id="select-roasting" style="display: none;">
+      로스팅
+      <div id="roasting-radio">
+        <input type="radio" id="1step" name="roasting-step"><label for="1step">1단계</label>
+        <input type="radio" id="2step" name="roasting-step"><label for="2step">2단계</label>
+        <input type="radio" id="3step" name="roasting-step"><label for="3step">3단계</label>
+        <input type="radio" id="4step" name="roasting-step"><label for="4step">4단계</label>
+        <input type="radio" id="5step" name="roasting-step"><label for="5step">5단계</label>
+        <input type="radio" id="6step" name="roasting-step"><label for="6step">6단계</label>
+        <input type="radio" id="7step" name="roasting-step"><label for="7step">7단계</label>
+        <input type="radio" id="8step" name="roasting-step"><label for="8step">8단계</label>
+        <br>
+        <button id="roasting-prev">이전</button>
+        <button id="roasting-next">다음</button>
+      </div>
+    </div>
+    <div id="select-machine" style="display: none;">
+      커피머신
+      <div id="machine-radio">
+        <input type="radio" id="nespresso-original" name="machine"><label for="nespresso-original">네스프레소 오리지널</label>
+        <input type="radio" id="nespresso-vertuo" name="machine"><label for="nespresso-vertuo">네스프레소 버츄오</label>
+        <input type="radio" id="dolceGusto" name="machine"><label for="dolceGusto">돌체구스토</label>
+        <input type="radio" id="illy" name="machine"><label for="illy">일리</label>
+        <input type="radio" id="kanu" name="machine"><label for="kanu">카누</label>
+        <input type="radio" id="keurig" name="machine"><label for="keurig">큐리그</label>
+      </div>
+      <button id="machine-prev">이전</button>
+    </div>
+
+    <script>
+      const $startScreen = document.querySelector('#start-screen');
+      const $selectCoffee = document.querySelector('#select-coffee');
+      const $selectRoasting = document.querySelector('#select-roasting');
+      const $selectMachine = document.querySelector('#select-machine');
+      const $coffeeCheckbox = document.querySelector('#coffee-checkbox');
+      const $coffeeNext = document.querySelector('#coffee-next');
+      const $roastingPrev = document.querySelector('#roasting-prev');
+      const $roastingRadioArea = document.querySelector('#roasting-radio');
+      const $roastingNext = document.querySelector('#roasting-next');
+      const $machinePrev = document.querySelector('#machine-prev');
+
+      class Game {
+        constructor() {
+          //name:원두이름, feature:특징, compatible:어울리는 원두 종류, price:가격(추가예정)
+          this.coffeeList = [
+            { name: '브라질 산토스', feature: '단단하고 밀도가 높다', compatible: '원두1 원두2 원두3' },
+            { name: '콜롬비아 수프리모', feature: '단단하고 밀도가 높다', compatible: '원두1 원두2 원두3' },
+            { name: '자메이카 블루마운틴', feature: '단단하고 밀도가 높다', compatible: '원두1 원두2 원두3' },
+            { name: '에티오피아 예가체프', feature: '단단하고 밀도가 높다', compatible: '원두1 원두2 원두3' },
+            { name: '케냐AA', feature: '단단하고 밀도가 높다', compatible: '원두1 원두2 원두3' },
+          ]
+          this.start();
+        }
+
+        start() {
+          this.changeScreen('select-coffee');
+          this.selectCoffee();
+          $coffeeNext.addEventListener('click', this.selectRoastingPage);
+          $roastingPrev.addEventListener('click', () => this.goBackToScreen('select-coffee'));
+        }
+
+        changeScreen(screen) {
+          const screens = ['start-screen', 'select-coffee', 'select-roasting', 'select-machine'];
+          screens.forEach(s => {
+            const $screen = document.querySelector(`#${s}`);
+            $screen.style.display = (s === screen) ? 'block' : 'none';
+          });
+          /*
+          풀어서 쓴 예시
+          if (screen === 'start-screen') {
+            $startScreen.style.display = 'block';
+            $selectCoffee.style.display = 'none';
+            $selectRoasting.style.display = 'none';
+            $selectMachine.style.display = 'none';
+          }
+          else if (screen === 'select-coffee') {
+            $startScreen.style.display = 'none';
+            $selectCoffee.style.display = 'block';
+            $selectRoasting.style.display = 'none';
+            $selectMachine.style.display = 'none';
+          } else if (screen === 'select-roasting') {
+            $startScreen.style.display = 'none';
+            $selectCoffee.style.display = 'none';
+            $selectRoasting.style.display = 'block';
+            $selectMachine.style.display = 'none';
+          } else if (screen === 'select-machine') {
+            $startScreen.style.display = 'none';
+            $selectCoffee.style.display = 'none';
+            $selectRoasting.style.display = 'none';
+            $selectMachine.style.display = 'block';
+          }
+          */
+        }
+        goBackToScreen(screen) {
+          this.changeScreen(screen);
+        }
+        selectCoffee() {
+          this.coffeeList.forEach(coffee => {
+            const { name } = coffee;
+            const checkboxList = document.createElement("input");
+            checkboxList.type = "checkbox";
+            checkboxList.id = name;
+
+            const checkboxLabel = document.createElement("label");
+            checkboxLabel.htmlFor = name;
+            checkboxLabel.appendChild(document.createTextNode(name));
+
+            const newLine = document.createElement("span");
+            newLine.innerHTML = "<br>";
+
+            $coffeeCheckbox.appendChild(checkboxList);
+            $coffeeCheckbox.appendChild(checkboxLabel);
+            $coffeeCheckbox.appendChild(newLine);
+          });
+        }
+
+        selectRoastingPage = (event) => {
+          event.preventDefault();
+          this.changeScreen('select-roasting');
+          $roastingNext.addEventListener('click', this.selectMachinePage);
+          $machinePrev.addEventListener('click', () => this.goBackToScreen('select-roasting'));
+        }
+
+        selectMachinePage = (event) => {
+          event.preventDefault();
+          this.changeScreen('select-machine');
+        }
+
+
+
+      }
+
+      $startScreen.addEventListener('click', (event) => {
+        event.preventDefault();
+        game = new Game();
+      });
+
+
+    </script>
+</body>
+
+</html>
