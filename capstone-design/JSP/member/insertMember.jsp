@@ -6,7 +6,7 @@
 
 <title>회원가입</title>
 
-<script language="javascript" src="dojan_js_package.js">
+<script language="javascript" src="../dojan_js_package.js">
 </script>
 
 </head>
