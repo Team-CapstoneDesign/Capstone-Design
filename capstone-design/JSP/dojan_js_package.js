@@ -55,3 +55,132 @@ function checkID() {
 
     window.open("checkID.jsp?id=" + id, "win", "width=250, height=145, scrollbars=no, resizable=no");
 }
+
+
+
+///////////  dojan_login.jsp ////////////////
+
+
+function login_check()      
+{
+if(document.login.id.value=="")
+{
+    alert("아이디를 입력해 주세요");
+    document.login.id.focus();
+    return;	
+  }
+
+  if(document.login.pwd.value=="")
+{
+    alert("비밀번호를 입력해 주세요");
+    document.login.pwd.focus();			
+    return;
+  }
+  
+  document.login.submit();
+}
+
+///////// loginOK.jsp //////////
+
+function noPwd() {
+    alert("비밀번호를 잘못 입력하셨습니다");
+    window.location.href = 'dojan_login.jsp';
+    return;
+}
+
+function noID() {
+    alert("존재하지 않는 ID입니다");
+    window.location.href = 'dojan_login.jsp';
+    return;
+}
+
+
+/////////////// searchID.jsp ////////////
+
+function search_id()   // 아이디 찾기 미입력시 찾아감
+{
+	if(document.searchid.name.value=="")
+	{
+    	alert("이름을 입력해 주세요.");
+    	document.searchid.name.focus();
+    	return;	
+    }
+
+    if(document.searchid.tel1.value=="")
+	{
+    	alert("전화번호 앞자리 주세요.");
+    	document.searchid.tel1.focus();			
+    	return;
+    }
+
+	  if(document.searchid.tel2.value=="")
+	{
+    	alert("전화번호 중간자리 주세요.");
+    	document.searchid.tel2.focus();			
+    	return;
+    }
+
+	  if(document.searchid.tel3.value=="")
+	{
+    	alert("전화번호 뒷자리 주세요.");
+    	document.searchid.tel3.focus();			
+    	return;
+    }
+		
+    document.searchid.submit();
+}
+
+function searchid_focus()    // 이름 입력창에 찾아감
+{
+   	document.searchid.name.focus();
+   	return;
+}
+
+
+//////  searchPWD.jsp ////////
+
+function search_pwd()   // 비밀번호 찾기 미입력시 찾아감
+{
+	if(document.searchpwd.id.value=="")
+	{
+    	alert("아이디를 입력해 주세요.");
+    	document.searchpwd.id.focus();
+    	return;	
+    }
+
+	if(document.searchpwd.name.value=="")
+	{
+    	alert("이름을 입력해 주세요.");
+    	document.searchpwd.name.focus();
+    	return;	
+    }
+
+    if(document.searchpwd.tel1.value=="")
+	{
+    	alert("전화번호 앞자리 주세요.");
+    	document.searchpwd.tel1.focus();			
+    	return;
+    }
+
+	  if(document.searchpwd.tel2.value=="")
+	{
+    	alert("전화번호 중간자리 주세요.");
+    	document.searchpwd.tel2.focus();			
+    	return;
+    }
+
+	  if(document.searchpwd.tel3.value=="")
+	{
+    	alert("전화번호 뒷자리 주세요.");
+    	document.searchpwd.tel3.focus();			
+    	return;
+    }
+		
+    document.searchpwd.submit();
+}
+
+function searchpwd_focus()   
+{
+   	document.searchpwd.id.focus();
+   	return;
+}
