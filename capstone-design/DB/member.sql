@@ -31,6 +31,7 @@ CREATE TABLE `member` (
   `memEmail` char(20) NOT NULL,
   `memZipno` char(10) NOT NULL,
   `memAddress` char(50) NOT NULL,
+  `memAddrplus` char(30) DEFAULT NULL,
   PRIMARY KEY (`memId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -41,6 +42,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
+INSERT INTO `member` VALUES ('이준영','19910101','010-1234-1234','a123','a12345','a123@gmail.com','31020','충남 천안시 서북구 성환읍 대학로 91  남서울','대학교');
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-15 18:04:39
+-- Dump completed on 2024-02-21  1:38:18
