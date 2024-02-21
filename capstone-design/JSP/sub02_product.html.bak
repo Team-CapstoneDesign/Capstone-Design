@@ -1,0 +1,1583 @@
+<<<<<<< Updated upstream
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>capstone main page</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/sub02.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+<body>
+  <div id="wrap">
+    <div class="headerTitle">
+      <img class="logo" src="../images/logo.png" alt="">  
+    </div>
+	
+	
+	<!-- 이 아래부터 sub02.css 적용 -->
+	  
+    <div class="sub02_container" name="sub02_product">
+		
+      <div class="sub02_section1" name="sub02_header">
+        <div class="sub02_headerTitle">
+          <div class="sub02_subTilte">두잔만의 캡슐</div>
+			<ul class="smap"> <!-- 미니 네비게이션 -->
+				<li><a href="index.html"><img src="../images/smap/icon_home_w.png" alt="홈으로"></a></li>
+				<li><img class="arrow" src="../images/smap/icon_arrow_w.png" alt="하위메뉴"></li>
+				<li class="en"><a href="index.html">두잔 캡슐</a></li>
+				<li><img class="arrow" src="../images/smap/icon_arrow_w.png" alt="하위메뉴"></li>
+				<li><a href="index.html" class="this">시그니쳐</a></li>
+			</ul>
+        </div>
+      </div>
+		
+	<div class="product_kind_wrap">
+		<p class="tit">분류 보기</p>
+					
+			<div class="product_select_wrap">
+				<form method="post">
+					<fieldset>
+						<legend class="hid">캡슐 카테고리 별 분류 보기</legend>
+						<ul class="cate_list">
+							<div id="" class="" tabindex="0">
+								<div id="" class="" style="position:relative; top:0; left:0;" dir="ltr">
+									<li><input type="checkbox" name="product_all" id="product_all"> <label for="product_all">전체 캡슐 보기</label></li>
+									<li><input type="checkbox" name="product_signature" id="product_signature"> <label for="product_signature">시그니쳐 캡슐</label></li>
+									<li><input type="checkbox" name="product_original" id="product_original"> <label for="product_original">오리지널 캡슐</label></li>
+									<li><input type="checkbox" name="product_blending" id="product_blending"> <label for="product_blending">블렌딩 캡슐</label></li>
+									<li><input type="checkbox" name="product_decaf" id="product_decaf"> <label for="product_decaf">디카페인 캡슐</label></li>
+									<li><input type="checkbox" name="product_beverage" id="product_beverage"> <label for="product_beverage">베버리지 캡슐</label></li>
+									
+									<li><input type="checkbox" name="product_Tsour" id="product_Tsour"> <label for="product_Tsour">신 맛</label></li>
+									<li><input type="checkbox" name="product_Tsweet" id="product_Tsweet"> <label for="product_Tsweet">단 맛</label></li>
+									<li><input type="checkbox" name="product_Tbitter" id="product_Tbitter"> <label for="product_Tbitter">쓴 맛</label></li>
+									
+									<li><input type="checkbox" name="product_beanBS" id="product_beanBS"> <label for="product_beanBS">브라질 산토스</label></li>
+									<li><input type="checkbox" name="product_beanCS" id="product_beanCS"> <label for="product_beanCS">콜롬비아 수프리모</label></li>
+									<li><input type="checkbox" name="product_beanJB" id="product_beanJB"> <label for="product_beanJB">자메이카 블루마운틴</label></li>
+									<li><input type="checkbox" name="product_beanEY" id="product_beanEY"> <label for="product_beanEY">에티오피아 예가체프</label></li>
+									<li><input type="checkbox" name="product_beanKA" id="product_beanKA"> <label for="product_beanKA">케냐 AA</label></li>
+									<li><input type="checkbox" name="product_beanCT" id="product_beanCT"> <label for="product_beanCT">코스타리카 따라</label></li>
+									<li><input type="checkbox" name="product_beanTA" id="product_beanTA"> <label for="product_beanTA">탄자니아 AA</label></li>
+									<li><input type="checkbox" name="product_beanYM" id="product_beanYM"> <label for="product_beanYM">예멘 모카 마타리</label></li>
+									<li><input type="checkbox" name="product_beanHK" id="product_beanHK"> <label for="product_beanHK">하와이 코나</label></li>
+									<li><input type="checkbox" name="product_beanGA" id="product_beanGA"> <label for="product_beanGA">과테말라 안티구아</label></li>
+									<li><input type="checkbox" name="product_beanPG" id="product_beanPG"> <label for="product_beanPG">파나마 게이샤</label></li>
+									<li><input type="checkbox" name="product_beanES" id="product_beanES"> <label for="product_beanES">엘살바도르 SHG</label></li>
+									<li><input type="checkbox" name="product_beanIM" id="product_beanIM"> <label for="product_beanIM">인도네시아 만델링</label></li>
+									<li><input type="checkbox" name="product_beanBR" id="product_beanBR"> <label for="product_beanBR">베트남 로부스타</label></li>
+								</div>
+							</div>
+						</ul>		
+					</fieldset>
+				</form>
+			</div>
+		
+	</div>
+		
+	<div class="product_result_wrap product_result_wrap01" style="display: block;">
+		<div class="product_view_tab_wrap">
+							
+			<dl class="product_view_tab product_view_tab01">
+				<dd>
+					<div class="product_list">
+						<dl>
+						<!-- 시그니쳐 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">시그니쳐 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_signature">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS001.png" alt="시그니쳐01"></a></dt>
+										<dd>두잔 시그니쳐 오리진</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS002.png" alt="시그니쳐02"></a></dt>
+										<dd>두잔 시그니쳐 블렌드</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS003.png" alt="시그니쳐03"></a></dt>
+										<dd>두잔 모닝 오리진</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS004.png" alt="시그니쳐04"></a></dt>
+										<dd>두잔 런치 오리진</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS005.png" alt="시그니쳐05"></a></dt>
+										<dd>두잔 디너 오리진</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+													
+							</ul>
+						</dd>
+						</dl>
+						<dl>
+						<!-- 오리지널 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">오리지널 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_original">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DO001.png" alt="오리지널01"></a></dt>
+										<dd>두잔 게이샤</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DO002.png" alt="오리지널02"></a></dt>
+										<dd>두잔 코나</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DO003.png" alt="오리지널03"></a></dt>
+										<dd>두잔 수프리모</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DO004.png" alt="오리지널04"></a></dt>
+										<dd>두잔 모카 마타리</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO005.png" alt="오리지널05"></a></dt>
+										<dd>두잔 따라주</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO006.png" alt="오리지널06"></a></dt>
+										<dd>두잔 안티구아</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO007.png" alt="오리지널07"></a></dt>
+										<dd>두잔 SHG</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO008.png" alt="오리지널08"></a></dt>
+										<dd>두잔 AA</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO009.png" alt="오리지널09"></a></dt>
+										<dd>두잔 블루마운틴</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+													
+						  </ul>
+						</dd>
+					  	</dl>
+						<dl>
+						<!-- 블렌딩 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">블렌딩 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_blending">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DB001.png" alt="블렌딩01"></a></dt>
+										<dd>두잔 소프트 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DB002.png" alt="블렌딩02"></a></dt>
+										<dd>두잔 예가체프 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DB003.png" alt="블렌딩03"></a></dt>
+										<dd>두잔 초코 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DB004.png" alt="블렌딩04"></a></dt>
+										<dd>두잔 프리미엄 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DB005.png" alt="블렌딩05"></a></dt>
+										<dd>두잔 더치 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DB006.png" alt="블렌딩06"></a></dt>
+										<dd>두잔 다크 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DB007.png" alt="블렌딩07"></a></dt>
+										<dd>두잔 가을 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>					
+						  </ul>
+						</dd>
+					  	</dl>
+						<dl>
+						<!-- 디카페인 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">디카페인 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_decaf">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DD001.png" alt="디카페인01"></a></dt>
+										<dd>두잔 디카페인 콜롬비아</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DD002.png" alt="디카페인02"></a></dt>
+										<dd>두잔 디카페인 과테말라</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DD003.png" alt="디카페인03"></a></dt>
+										<dd>두잔 디카페인 에티오피아</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>				
+						  </ul>
+						</dd>
+					  	</dl>
+						<dl>
+						<!-- 베버리지 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">베버리지 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_beverage">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DT001.png" alt="베버리지01"></a></dt>
+										<dd>두잔 히비스커스 티</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DT002.png" alt="베버리지02"></a></dt>
+										<dd>두잔 피치 블로섬 티</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DT003.png" alt="베버리지03"></a></dt>
+										<dd>두잔 코코아</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DT004.png" alt="베버리지04"></a></dt>
+										<dd>두잔 자몽허니 블랙 티</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+						  </ul>
+						</dd>
+					  	</dl>
+						
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+		
+    </div>
+  </div>
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>capstone main page</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/sub02.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+<body>
+  <div id="wrap">
+    <div class="headerTitle">
+      <img class="logo" src="../images/logo.png" alt="">  
+    </div>
+    <div id="header">
+			<div class="formbox">
+        <div class="search">
+          <input type="text">
+        </div>
+					<div class="topmenuWrap">
+					  <ul class="topmenu">
+							<li>
+								<a>나만의 캡슐</a>
+							</li>
+							<li>
+								<a>두잔 캡슐</a>
+								<div class="submenu">
+									<ul id="productMenu">
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a>커피이야기</a>
+								<div class="submenu">
+									<ul id="productMenu">
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a>두잔이야기</a>
+								<div class="submenu">
+									<ul id="productMenu">
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+										<li><a href="sub1.html">sub</a></li>
+									</ul>
+								</div>
+							</li>
+            </ul>
+					</div>
+			  <div class="nav_top">
+				<span class="quick_menu"><a href="#">로그인</a></span>
+				<span class="quick_menu"><a href="#">회원가입</a></span>
+				<span class="quick_menu"><a href="#">고객센터</a></span>
+					</div>
+			</div>
+	</div>
+	
+	<!-- 이 아래부터 sub02.css 적용 -->
+	  
+    <div class="sub02_container" name="sub02_product">
+		
+      <div class="sub02_section1" name="sub02_header">
+        <div class="sub02_headerTitle">
+          <div class="sub02_subTilte">두잔만의 캡슐</div>
+			<ul class="smap"> <!-- 미니 네비게이션 -->
+				<li><a href="index.html"><img src="../images/smap/icon_home_w.png" alt="홈으로"></a></li>
+				<li><img class="arrow" src="../images/smap/icon_arrow_w.png" alt="하위메뉴"></li>
+				<li class="en"><a href="index.html">두잔 캡슐</a></li>
+				<li><img class="arrow" src="../images/smap/icon_arrow_w.png" alt="하위메뉴"></li>
+				<li><a href="index.html" class="this">시그니쳐</a></li>
+			</ul>
+        </div>
+      </div>
+		
+	<div class="product_kind_wrap">
+		<p class="tit">분류 보기</p>
+					
+			<div class="product_select_wrap">
+				<form method="post">
+					<fieldset>
+						<legend class="hid">캡슐 카테고리 별 분류 보기</legend>
+						<ul class="cate_list">
+							<div id="" class="" tabindex="0">
+								<div id="" class="" style="position:relative; top:0; left:0;" dir="ltr">
+									<li><input type="checkbox" name="product_all" id="product_all"> <label for="product_all">전체 캡슐 보기</label></li>
+									<li><input type="checkbox" name="product_signature" id="product_signature"> <label for="product_signature">시그니쳐 캡슐</label></li>
+									<li><input type="checkbox" name="product_original" id="product_original"> <label for="product_original">오리지널 캡슐</label></li>
+									<li><input type="checkbox" name="product_blending" id="product_blending"> <label for="product_blending">블렌딩 캡슐</label></li>
+									<li><input type="checkbox" name="product_decaf" id="product_decaf"> <label for="product_decaf">디카페인 캡슐</label></li>
+									<li><input type="checkbox" name="product_beverage" id="product_beverage"> <label for="product_beverage">베버리지 캡슐</label></li>
+									
+									<li><input type="checkbox" name="product_Tsour" id="product_Tsour"> <label for="product_Tsour">신 맛</label></li>
+									<li><input type="checkbox" name="product_Tsweet" id="product_Tsweet"> <label for="product_Tsweet">단 맛</label></li>
+									<li><input type="checkbox" name="product_Tbitter" id="product_Tbitter"> <label for="product_Tbitter">쓴 맛</label></li>
+									
+									<li><input type="checkbox" name="product_beanBS" id="product_beanBS"> <label for="product_beanBS">브라질 산토스</label></li>
+									<li><input type="checkbox" name="product_beanCS" id="product_beanCS"> <label for="product_beanCS">콜롬비아 수프리모</label></li>
+									<li><input type="checkbox" name="product_beanJB" id="product_beanJB"> <label for="product_beanJB">자메이카 블루마운틴</label></li>
+									<li><input type="checkbox" name="product_beanEY" id="product_beanEY"> <label for="product_beanEY">에티오피아 예가체프</label></li>
+									<li><input type="checkbox" name="product_beanKA" id="product_beanKA"> <label for="product_beanKA">케냐 AA</label></li>
+									<li><input type="checkbox" name="product_beanCT" id="product_beanCT"> <label for="product_beanCT">코스타리카 따라</label></li>
+									<li><input type="checkbox" name="product_beanTA" id="product_beanTA"> <label for="product_beanTA">탄자니아 AA</label></li>
+									<li><input type="checkbox" name="product_beanYM" id="product_beanYM"> <label for="product_beanYM">예멘 모카 마타리</label></li>
+									<li><input type="checkbox" name="product_beanHK" id="product_beanHK"> <label for="product_beanHK">하와이 코나</label></li>
+									<li><input type="checkbox" name="product_beanGA" id="product_beanGA"> <label for="product_beanGA">과테말라 안티구아</label></li>
+									<li><input type="checkbox" name="product_beanPG" id="product_beanPG"> <label for="product_beanPG">파나마 게이샤</label></li>
+									<li><input type="checkbox" name="product_beanES" id="product_beanES"> <label for="product_beanES">엘살바도르 SHG</label></li>
+									<li><input type="checkbox" name="product_beanIM" id="product_beanIM"> <label for="product_beanIM">인도네시아 만델링</label></li>
+									<li><input type="checkbox" name="product_beanBR" id="product_beanBR"> <label for="product_beanBR">베트남 로부스타</label></li>
+								</div>
+							</div>
+						</ul>		
+					</fieldset>
+				</form>
+			</div>
+		
+	</div>
+		
+	<div class="product_result_wrap product_result_wrap01" style="display: block;">
+		<div class="product_view_tab_wrap">
+							
+			<dl class="product_view_tab product_view_tab01">
+				<dd>
+					<div class="product_list">
+						<dl>
+						<!-- 시그니쳐 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">시그니쳐 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_signature">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS001.png" alt="시그니쳐01"></a></dt>
+										<dd>두잔 시그니쳐 오리진</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS002.png" alt="시그니쳐02"></a></dt>
+										<dd>두잔 시그니쳐 블렌드</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS003.png" alt="시그니쳐03"></a></dt>
+										<dd>두잔 모닝 오리진</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS004.png" alt="시그니쳐04"></a></dt>
+										<dd>두잔 런치 오리진</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DS005.png" alt="시그니쳐05"></a></dt>
+										<dd>두잔 디너 오리진</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+													
+							</ul>
+						</dd>
+						</dl>
+						<dl>
+						<!-- 오리지널 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">오리지널 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_original">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DO001.png" alt="오리지널01"></a></dt>
+										<dd>두잔 게이샤</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DO002.png" alt="오리지널02"></a></dt>
+										<dd>두잔 코나</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DO003.png" alt="오리지널03"></a></dt>
+										<dd>두잔 수프리모</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DO004.png" alt="오리지널04"></a></dt>
+										<dd>두잔 모카 마타리</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO005.png" alt="오리지널05"></a></dt>
+										<dd>두잔 따라주</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO006.png" alt="오리지널06"></a></dt>
+										<dd>두잔 안티구아</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO007.png" alt="오리지널07"></a></dt>
+										<dd>두잔 SHG</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO008.png" alt="오리지널08"></a></dt>
+										<dd>두잔 AA</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DO009.png" alt="오리지널09"></a></dt>
+										<dd>두잔 블루마운틴</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+													
+						  </ul>
+						</dd>
+					  	</dl>
+						<dl>
+						<!-- 블렌딩 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">블렌딩 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_blending">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DB001.png" alt="블렌딩01"></a></dt>
+										<dd>두잔 소프트 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DB002.png" alt="블렌딩02"></a></dt>
+										<dd>두잔 예가체프 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DB003.png" alt="블렌딩03"></a></dt>
+										<dd>두잔 초코 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DB004.png" alt="블렌딩04"></a></dt>
+										<dd>두잔 프리미엄 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DB005.png" alt="블렌딩05"></a></dt>
+										<dd>두잔 더치 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DB006.png" alt="블렌딩06"></a></dt>
+										<dd>두잔 다크 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+									  <img src="../images/sample/sample_DB007.png" alt="블렌딩07"></a></dt>
+										<dd>두잔 가을 블렌딩</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+								  </dl>
+							  </li>					
+						  </ul>
+						</dd>
+					  	</dl>
+						<dl>
+						<!-- 디카페인 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">디카페인 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_decaf">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DD001.png" alt="디카페인01"></a></dt>
+										<dd>두잔 디카페인 콜롬비아</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DD002.png" alt="디카페인02"></a></dt>
+										<dd>두잔 디카페인 과테말라</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DD003.png" alt="디카페인03"></a></dt>
+										<dd>두잔 디카페인 에티오피아</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>				
+						  </ul>
+						</dd>
+					  	</dl>
+						<dl>
+						<!-- 베버리지 캡슐 -->
+						<dt style="display: block;"><a href="javascript:void(0);">베버리지 캡슐</a>
+							<span class="summary"></span>
+						</dt>
+						<dd style="display: block;">
+							<ul class="product_beverage">
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DT001.png" alt="베버리지01"></a></dt>
+										<dd>두잔 히비스커스 티</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DT002.png" alt="베버리지02"></a></dt>
+										<dd>두잔 피치 블로섬 티</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DT003.png" alt="베버리지03"></a></dt>
+										<dd>두잔 코코아</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+								<li class="menuDataSet" new="N" sell="" recomm="0" sold="N">
+									<dl>
+										<dt><a href="javascript:void(0)" class="">
+										<img src="../images/sample/sample_DT004.png" alt="베버리지04"></a></dt>
+										<dd>두잔 자몽허니 블랙 티</dd>
+										<dd>커피 향 또는 맛 입력란</dd>
+										<dd>캡슐 구성 10+10 개</dd>
+										<dd>10,900 원</dd>
+										<dd>수량 
+											<select>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</dd>
+										<dd>
+											<div class="put_cart">장바구니에 넣기</div>
+										</dd>
+									</dl>
+								</li>
+						  </ul>
+						</dd>
+					  	</dl>
+						
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+		
+    </div>
+  </div>
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+>>>>>>> Stashed changes
+</html>

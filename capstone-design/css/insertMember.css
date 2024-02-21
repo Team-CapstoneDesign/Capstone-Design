@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+.insertNewMem {
+  position: absolute;
+  width: 410px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.insertMemLogo img{
+  margin-top: -50px;
+  margin-bottom: 20px;
+  width: 150px;
+}
+.insertNewMem h2 {
+  padding: 0 0 20px 0;
+  font-size: 25px;
+  color: #111;
+  text-align: center;
+  border-bottom: 2px solid #111;
+  line-height: 1;
+}
+
+.insertNewMem>ul {
+  padding: 20px 0 20px
+}
+
+.insertNewMem>ul li {
+  padding: 0 0 12px;
+  /*위-아래-가로사이즈*/
+  text-align: left;
+}
+
+.insertNewMem>ul li input {
+  width: 100%;
+  height: 46px;
+  box-sizing: border-box;
+  text-indent: 16px;
+  /*들여쓰기*/
+}
+
+.insertNewMem>ul li input[id=tel1] {
+  /*전화번호 앞자리 입력칸*/
+  width: 20%;
+}
+
+.insertNewMem>ul li input[id=tel2] {
+  /*전화번호 중간자리 입력칸*/
+  width: 39%;
+  float: center;
+}
+
+.insertNewMem>ul li input[id=tel3] {
+  /*전화번호 뒷자리 입력칸*/
+  width: 39%;
+  float: right;
+}
+
+.insertNewMem>ul li input[id=id] {
+  /*아이디 입력칸*/
+  width: 70%;
+}
+
+.insertNewMem>ul li input[id=idCheckBtn] {
+  /*아이디 중복 확인 버튼*/
+  width: 28%;
+  float: right;
+  font-size: 14px;
+  text-align: center;
+  text-indent: inherit;
+  background: #0e5a6d;
+  color: #fff;
+  border-radius: 5px;
+  border: none;	
+}
+.insertNewMem>ul li input[id=idCheckBtn]:hover {
+  /*아이디 중복 확인 버튼 마우스오버*/
+  background: #b83333;
+}
+
+.insertNewMem>ul li input[id=zipNo] {
+  /*우편번호 입력칸*/
+  width: 60%;
+}
+
+.insertNewMem button {
+  /*우편번호 찾기 버튼*/
+  width: 38%;
+  height: 46px;
+  background: #0e5a6d;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+}
+.insertNewMem button:hover {
+  /*우편번호 찾기 버튼 마우스오버*/
+  background: #b83333;
+}
+
+.insertNewMem>ul li input[id=makeMemID] {
+  /*회원가입 하기 버튼*/
+  width: 100%;
+  background: #0e5a6d;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+}
+.insertNewMem>ul li input[id=makeMemID]:hover {
+  /*회원가입하기 버튼 마우스오버*/
+  background: #b83333;
+}
+
+.insertNewMem>ul li input::-webkit-input-placeholder {
+  font-size: 16px;
+  color: #9fa19f;
+}
+
+.insertNewMem div {
+  padding: 0 0 10px;
+}
+
+.insertNewMem div ul {
+  display: flex;
+  justify-content: center;
+  /*flex 요소의 수평 방향 정렬 방식 설정, text-align이랑 쓰임이 다르다*/
+}
+
+.insertNewMem div ul li {
+  position: relative;
+  padding: 0 18px;
+}
+
+.insertNewMem div ul li~li:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 4;
+  height: 14px;
+  width: 1px;
+  background: #111;
+  transform: rotate(25deg);
+}
+
+
+input[type=text], input[type=password]{
+	font-size: 13px;
+    color: #373737;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    transition: all 0.5s;
+    vertical-align: middle;
+}
+:root {
+  --bg: #171717;
+  --accent: rgb(8, 66, 50);
+}
+
+

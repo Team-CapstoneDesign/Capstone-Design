@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>두잔 로그인</title>
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/login.css">
 </head>
