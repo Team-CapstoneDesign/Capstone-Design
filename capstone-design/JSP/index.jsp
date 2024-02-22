@@ -7,6 +7,7 @@
 <meta charset="EUC-KR">
   <title>capstone - dojan main page</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 <body>
