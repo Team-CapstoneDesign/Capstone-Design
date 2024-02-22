@@ -6,7 +6,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>서브페이지 표준</title>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/sub02.css">
 </head>
