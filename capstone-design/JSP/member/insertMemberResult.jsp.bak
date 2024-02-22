@@ -26,9 +26,9 @@
 	String email = request.getParameter("email");
 	String zipno = request.getParameter("zipNo");
 	String address1 = request.getParameter("address");
+	String addrplus = request.getParameter("addrplus");
 	String address2 = request.getParameter("addressdetail");
 	String addr = address1 + "  " + address2 ;
-	String addrplus = request.getParameter("addrplus");
 
 
 
@@ -39,7 +39,7 @@
 	 Class.forName("org.gjt.mm.mysql.Driver"); 
  	 Connection con = DriverManager.getConnection(DB_URL, DB_ID, DB_PASSWORD);
 
-	 String jsql = "INSERT INTO member (memName, memBirth, memTel, memId, memPwd, memEmail, memZipno, memAddress, memAddrplus) VALUES (?,?,?,?,?,?,?,?,?)";	
+	 String jsql = "INSERT INTO member (memName, memBirth, memTel, memId, memPwd, memEmail, memZipno, memAddrplus, memAddress) VALUES (?,?,?,?,?,?,?,?,?)";	
 
 	 
 
@@ -52,8 +52,8 @@
 	 pstmt.setString(5,pwd);
 	 pstmt.setString(6,email);
      pstmt.setString(7,zipno);
-     pstmt.setString(8,addr);
-	 pstmt.setString(9,addrplus);
+     pstmt.setString(8,addrplus);
+	 pstmt.setString(9,addr);
 
 
 

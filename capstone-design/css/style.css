@@ -26,7 +26,7 @@ list-style-type: none;
 body{
     background-color: #f9f9f9;
     overflow-x: hidden;
-    font-family: Chosunilbo_myungjo;
+    font-family: 'Chosunilbo_myungjo';
 }
 #wrap {
     width: 100%;  /* 1920px * 1080px */
@@ -754,4 +754,3 @@ footer{
   font-size: 16px;
   color: #fff;
 }
-

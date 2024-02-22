@@ -50,7 +50,7 @@ try {
 		   if(isExist)  
                  out.println("사용 불가능한 ID입니다.");
 	       else 
-                 out.println("이미 사용중인 ID입니다.");
+                 out.println("사용 가능한 ID입니다.");
   %>
         </td>
     </tr>
