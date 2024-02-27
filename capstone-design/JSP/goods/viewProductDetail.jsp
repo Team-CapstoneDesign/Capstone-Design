@@ -14,8 +14,26 @@
 </head>
 <body>
 	<%
-		String id = (String) session.getAttribute("sid");
-		
+    String id = (String) session.getAttribute("sid");
+
+try{
+	String DB_URL="jdbc:mysql://localhost:3306/dojan";
+	String DB_ID="multi";
+	String DB_PASSWORD="abcd";
+
+    Class.forName("org.gjt.mm.mysql.Driver");
+	Connection con = DriverManager.getConnection(DB_URL, DB_ID, DB_PASSWORD);
+
+	request.setCharacterEncoding("euc-kr");
+        
+	String prdNo = request.getParameter("prdNo");
+	String jsql = "select * from goods where prdNo = ?";
+	PreparedStatement pstmt = con.prepareStatement(jsql);
+	pstmt.setString(1, prdNo);
+	ResultSet rs = pstmt.executeQuery();
+    
+	
+					
 	%>
 	<div class="wrap">
 		<div class="headerTitle">
@@ -76,7 +94,15 @@
 				</div>
 			</div>
 		</div>
-		
+		<% 
+		while(rs.next()){
+			String name = rs.getString("prdName");
+			String roast = rs.getString("prdRoasting");
+			String price = rs.getString("prdPrice");
+			String smell = rs.getString("prdSmell");
+			String taste = rs.getString("prdTaste");
+			String detail = rs.getString("prdDetail"); 
+		%>
 		<!-- 컨텐츠 -->
 		<div class="sub_container" name="sub_product">
 			<!-- 네비게이션 헤더 -->
@@ -101,7 +127,9 @@
 		</div>
 
 		<!-- 상품 소개 -->
+
 		<div class="productDetail_view">
+		
         <h2>두잔 시그니쳐 오리진</h2>
         <table>
             <caption>
@@ -115,25 +143,27 @@
             <col>
             </colgroup>
             <tbody>
+	
                 <tr>
                     <th>로스팅 단계</th>
-                    <td>하이</td>
+                    <td><%= roast%></td>
                 </tr>
                 <tr>
                     <th>향미</th>
-                    <td>smell + taste</td>
+                    <td><%= smell %> + <%= taste %></td>
                 </tr>
+				
 				<tr>
                     <th>상세 설명</th>
-                    <td>마일드하고 부드러운맛이 특징인 브라질 원두인 ‘산토스’를 사용</td>
+                    <td><%= detail%></td>
                 </tr>
 				<tr>
                     <th>기본 구성</th>
-                    <td>1세트(10개)</td>
+                    <td>1세트(10개) + 10캡슐</td>
                 </tr>
 				<tr>
                     <th>판매가</th>
-                    <td class="price">10,900 원</td>
+                    <td class="price"><%= price%></td>
                 </tr>
                 <tr>
                     <th>구매수량</th>
@@ -150,18 +180,22 @@
                     <td>3,000원 (3만원 이상 배송비 무료)</td>
                 </tr>
                 <tr>
-                    <th>총 결제금액</th>
-                    <td class="total"><b>10,900 원</b></td>
+                    <th>총 주문 금액</th>
+                    <td class="total"><b>원</b></td>
                 </tr>
+				
             </tbody>
         </table>
+		
+	
         <div class="img">
             <img src="../../images/sample/sample_DS001.png" alt="thumb" id="big">
             <ul class="thumb_image">
-                <li><img src="../../images/sample/sample_small_DS001.png" onMouseOver="showBig('sample_DS001.png');"></li>
-                <li><img src="../../images/sample/sample_small_DS002.png" onMouseOver="showBig('sample_DS002.png');"></li>
+                <li><img src="../../images/sample/sample_small_<%=prdNo%>.png" onMouseOver="showBig('sample_<%=prdNo%>.png');"></li>
+                <li><img src="../../images/sample/sample_small_<%=prdNo%>.png" onMouseOver="showBig('sample_<%=prdNo%>.png');"></li>
             </ul>
         </div>
+			
         <div class="btns">
             <a href="#a" class="btn1">위시리스트에 담기</a>
             <a href="#a" class="btn2">장바구니에 담기</a>
@@ -169,8 +203,9 @@
     	</div>
 
 		</div>
-					
+		<% } %>
 		<!-- 상품 상세 소개 영역 -->
+		
 		<div>
 			<img src="../../images/sample/sample_detail.png">
 		</div>
@@ -248,7 +283,11 @@
 	</footer>
 
 	</div>
-
+      <%
+			}catch(Exception e){
+			out.println(e);
+		}
+		%>
 	<!-- 스크립트 -->	
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="../../JS/navEvent.js"></script>
