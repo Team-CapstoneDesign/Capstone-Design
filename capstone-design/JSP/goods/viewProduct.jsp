@@ -247,7 +247,7 @@
 											<li class="">
 												<dl>
 													<dt>
-														<a href="javascript:void(0)" class="">
+														<a href="viewProductDetail.jsp?prdNo=<%= prdNo%>" class="">
 														<img src="../../images/sample/sample_<%=prdNo%>.png" alt="<%=prdNo%>"></a>
 													</dt>
 													<dd><%=prdName%></dd>
