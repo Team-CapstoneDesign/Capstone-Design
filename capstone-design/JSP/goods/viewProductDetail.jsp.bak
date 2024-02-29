@@ -189,7 +189,7 @@ try{
 		
 	
         <div class="img">
-            <img src="../../images/sample/sample_<%=prdNo%>.png" alt="thumb" id="big">
+            <img src="../../images/sample/sample_DS001.png" alt="thumb" id="big">
             <ul class="thumb_image">
                 <li><img src="../../images/sample/sample_small_<%=prdNo%>.png" onMouseOver="showBig('sample_<%=prdNo%>.png');"></li>
                 <li><img src="../../images/sample/sample_small_<%=prdNo%>.png" onMouseOver="showBig('sample_<%=prdNo%>.png');"></li>

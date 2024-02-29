@@ -42,7 +42,7 @@
 			<br>
 			<li><input type="text" name="email" id="email" placeholder="이메일을 입력해주세요"></li>
 			<br>
-			<li><input type="text" name="zipNo" id="zipNo" placeholder="우편번호를 입력해주세요" readonly>
+			<li><input type="text" name="zipNo" id="zipNo" placeholder="우편번호를 입력해주세요" readonly="">
 				<button type="button" onclick="DaumPostcode();">우편번호 찾기</button></li>
 			<li><input type="text" name="address" id="address" placeholder="기본주소를 입력해주세요"></li>
 			<li><input type="text" name="addrplus" id="addrplus" placeholder="주소 참고항목을 입력해주세요"></li>
