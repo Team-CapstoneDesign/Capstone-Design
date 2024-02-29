@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+/* cart.html page */
+
+.cart_container{
+  width: 1920px;
+  /* height: 900px; */
+}
+
+/* cart Page header */
+.cart_section1{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    word-break: keep-all;
+    background-color: #083844;
+}
+.cart_headerTitle{
+    display: flex;
+    position: relative;
+    height: 200px;
+    width: 1920px;
+    min-width: 1200px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.cart_subTilte{
+	display: block;
+    position: relative;
+	color: #fff;
+    width: 100%;
+    height: 50px;
+	font-size: 50px;
+	text-align: center;
+	word-break: keep-all;
+	padding-bottom: 30px;
+}
+
+/* cart progress content */
+.cart_content{
+    margin: 0 auto;
+    height: auto;
+    word-break: keep-all;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.cart_content span{
+	color: #fff;
+}
+.cartProgress_nav{
+    width: 1300px;
+    margin: 0 auto;
+	background-color: #083844;
+	margin-top: 20px;
+}
+.cartProgress{
+    display: flex;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.cartProgress_detail{
+	width: 25%;
+    float: left;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+.cartProgress_detail_step{
+	display: block;
+    margin-bottom: 5px;
+}
+
+/* cart item content */
+.cartItem_content{
+	margin: 0 auto;
+	width: 1300px;
+}
+.cartItem_content .cartItem_list{
+	box-shadow: 0px 3px 9px rgba(0,0,0,.1);
+	margin-bottom: 30px;
+	font-size: 20px;
+	background-color: #fff;
+	border-radius: 20px;
+}
+.cartItem_content .cartItem_list img{
+	width: 120px;
+	padding-right: 20px;
+}
+.cartItem_header th{
+	width: 1300px;
+	padding: 20px;
+	background-color: #ccc;
+	color: black;
+	text-align: center;
+}
+.cartItem_header th:nth-child(1){
+	width: 40%;
+	text-align: left;
+}
+.cartItem_header th span{
+	font-size: 15px;
+}
+.cartItem_product th{
+	padding: 20px;
+	color: #000;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.cartItem_product th:nth-child(1){
+	text-align: left;
+}
+
+/* 수량 선택 버튼 */
+.cartItem_content .cartItem_list input[type="number"]{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 25px;
+	margin-right: 10px;
+}
+
+/*주문 총합*/
+.cartTotal{
+	background-color: #fff;
+	width: 1300px;
+	height: auto;
+	box-shadow: 0px 3px 9px rgba(0,0,0,.1);
+	display: flex;
+	margin-bottom: 30px;
+	border-radius: 20px;
+}
+.cartTotal_box{
+	width: 800px;
+	margin-top: 30px;
+	margin-left: 60px;
+}
+.cartTotal_box th{
+    padding: 10px 0px 10px 80px;
+    text-align: left;
+    border-right: 1px solid #ccc;
+}
+.cartTotal_box th:nth-child(3){
+    border-right: none;
+}
+.cartTotal_box .cartTotal_box_header{
+	font-size: 20px;
+}
+.cartTotal_box .cartTotal_box_number{
+	font-size: 25px;
+}
+.cartTotal_box .cartTotal_box_number span{
+	padding-right: 10px;
+}
+.cartTotal_box .cartTotal_box_number .realTotal{
+	font-size: 30px;
+	color: #e8bb00;
+}
+.orderButton1{
+    width: 300px;
+    height: 70px;
+	margin: 50px 70px 50px 0px;
+    float: right;
+	font-size: 25px;
+	background-color: #fff;
+	border-radius: 35px;
+	border: 2px solid #e8bb00;
+	color: #e8bb00;
+	font-weight: bold;
+}
+.orderButton1:hover{
+	background-color: #e8bb00;
+	border: 1px solid #e8bb00;
+	color: #fff;
+}
+
+
+/* 배송 및 결제 */
+.cart_Info{
+	margin: 0 auto;
+	width: 1300px;
+}
+.cart_Info table{
+	box-shadow: 0px 3px 9px rgba(0,0,0,.1);
+	margin-bottom: 30px;
+	font-size: 20px;
+	background-color: #fff;
+	border-radius: 20px;
+}
+.cart_orderInfo, .cart_addrInfo, .cart_payInfo{
+	width: 1300px;
+	padding: 10px;
+	background-color: #ccc;
+	color: black;
+	text-align: center;
+	display: flex;
+}
+.cart_Info th span{
+	font-size: 30px;
+}
+.cart_Info th span .myinfo{
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.cart_Info th{
+	display: block;
+	padding: 30px;
+	font-size: 20px;
+}
+.cart_Info input[type="text"]{
+	margin-top: 20px;
+	padding: 10px;
+	width: 300px;
+}
+#tel1{
+	width: 100px;
+}
+.cart_Info .findZipNo{
+	width: 150px;
+	height: 50px;
+}
+#address{
+	width: 600px;
+}
+#addressdetail{
+	width: 600px;
+}
+.cart_Info input[type="radio"]{
+	margin-top: 20px;
+}
+.cart_Info_button{
+	width: 1300px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.btn_backPage{
+	width: 400px;
+	height: 70px;
+	font-size: 25px;
+	border-radius: 35px;
+	color: #0E0E0E;
+	border: 1px solid #ccc;
+}
+.btn_backPage:hover{
+	background-color: #ccc;
+}
+.btn_nextPage{
+	width: 400px;
+	height: 70px;
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 35px;
+	float: right;
+	color: #e8bb00;
+	background-color: #fff;
+	border: 2px solid #e8bb00;
+}
+.btn_nextPage:hover{
+	color: #fff;
+	background-color: #e8bb00;
+	border: 2px solid #e8bb00;
+}
+
+/* 주문 상세 확인 */
+.cartTotal_final{
+	margin: 0 auto;
+	background-color: #fff;
+	width: 1300px;
+	height: auto;
+	box-shadow: 0px 3px 9px rgba(0,0,0,.1);
+	display: flex;
+	margin-bottom: 30px;
+	border-radius: 20px;
+}
+.cartTotal_box_final{
+	width: 800px;
+	margin: 30px 0px 30px 250px;
+}
+.cartTotal_box_final th{
+    padding: 10px 0px 10px 80px;
+    text-align: left;
+    border-right: 1px solid #ccc;
+}
+.cartTotal_box_final th:nth-child(3){
+    border-right: none;
+}
+.cartTotal_box_final .cartTotal_box_header_final{
+	font-size: 20px;
+}
+.cartTotal_box_final .cartTotal_box_number_final{
+	font-size: 25px;
+}
+.cartTotal_box_final .cartTotal_box_number_final span{
+	padding-right: 10px;
+}
+.cartTotal_box_final .cartTotal_box_number_final .realTotal{
+	font-size: 40px;
+	color: #e8bb00;
+}
+
+/*주문완료 페이지*/
+.orderClear{
+	margin: 0 auto;
+	width: 1300px;
+	height: 500px;
+	text-align: center;
+	box-shadow: 0px 3px 9px rgba(0,0,0,.1);
+	margin-bottom: 30px;
+	background-color: #fff;
+	border-radius: 20px;
+}
+.orderClear h2{
+	font-size: 50px;
+	padding-top: 120px;
+}
+.orderClear h3{
+	font-size: 25px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+.orderClear_button{
+	width: 1000px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+.btn_goMain{
+	width: 400px;
+	height: 70px;
+	font-size: 25px;
+	border-radius: 35px;
+	color: #0E0E0E;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+}
+.btn_goMain:hover{
+	background-color: #ccc;
+}
+.btn_goMypage{
+	width: 400px;
+	height: 70px;
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 35px;
+	color: #e8bb00;
+	background-color: #fff;
+	border: 2px solid #e8bb00;
+}
+.btn_goMypage:hover{
+	color: #fff;
+	background-color: #e8bb00;
+	border: 2px solid #e8bb00;
+}
