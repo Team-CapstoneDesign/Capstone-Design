@@ -100,7 +100,7 @@
 					<%
 						} else {
 					%>
-						<span class="quick_menu"><a href="">로그아웃</a></span>
+						<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
 						<span class="quick_menu"><a href="">마이페이지</a></span>
 						<span class="quick_menu"><a href="">고객센터</a></span>
 					<%

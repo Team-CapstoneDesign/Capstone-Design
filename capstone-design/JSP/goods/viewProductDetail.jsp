@@ -96,6 +96,7 @@ try{
 		</div>
 		<% 
 		while(rs.next()){
+			String num = rs.getString("prdNo");
 			String name = rs.getString("prdName");
 			String roast = rs.getString("prdRoasting");
 			String price = rs.getString("prdPrice");
@@ -131,6 +132,8 @@ try{
 		<div class="productDetail_view">
 		
         <h2>두잔 시그니쳐 오리진</h2>
+        <form action="../incart.jsp" name="selectCapsule">
+        <!-- numEvent.js에 event.preventDefault(); 넣었는지 꼭 확인할것!! -->
         <table>
             <caption>
                 <details class="hide">
@@ -143,7 +146,7 @@ try{
             <col>
             </colgroup>
             <tbody>
-	
+	        <input type=hidden name=prdNo  value="<%=num%>">
                 <tr>
                     <th>로스팅 단계</th>
                     <td><%= roast%></td>
@@ -170,7 +173,7 @@ try{
                     <td>
 						<div class="length">
                             <button id="decrement" onclick="stepper(this)"> - </button>
-        					<input type="number" min="1" max="20" step="1" value="1" id="my-input" readonly>
+        					<input name="qty" type="number" min="1" max="20" step="1" value="1" id="my-input" readonly>
         					<button id="increment" onclick="stepper(this)"> + </button>
                         </div>
                     </td>
@@ -186,6 +189,7 @@ try{
 				
             </tbody>
         </table>
+        </form>
 		
 	
         <div class="img">
@@ -198,7 +202,7 @@ try{
 			
         <div class="btns">
             <a href="#a" class="btn1">위시리스트에 담기</a>
-            <a href="#a" class="btn2">장바구니에 담기</a>
+            <a href="#a" class="btn2" onclick="checkSelectCoffeeValue()">장바구니에 담기</a>
         </div>
     	</div>
 
@@ -293,6 +297,11 @@ try{
 	<script src="../../JS/navEvent.js"></script>
 	<script src="../../JS/thumbEvent.js"></script>
 	<script src="../../JS/numEvent.js"></script>
+	<script>
+	function checkSelectCoffeeValue(){
+		selectCapsule.submit();
+	}
 	
+	</script>
 </body>
 </html>

@@ -14,4 +14,6 @@ function stepper(btn) {
     if (newValue >= min && newValue <= max) {
         myInput.setAttribute("value", newValue);
     }
+
+	 event.preventDefault();
 }
