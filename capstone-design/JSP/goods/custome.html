@@ -169,6 +169,10 @@
 						<p>
 							커피 머신:<span id="custome_machin"></span>
 						</p>
+						<p>
+							가격:<span id="custome_price"></span>
+						</p>
+            <input type="text" name="customeName" placeholder="커피의 이름을 지어주세요">
 					</div>
 					<div id="hiddenInputRadio"></div>
 					<div class="buttonWrap">
@@ -283,6 +287,8 @@
     const $custome_blend = document.getElementById('custome_blend');
     const $custome_roasting = document.getElementById('custome_roasting');
     const $custome_machin = document.getElementById('custome_machin');
+    const $custome_price = document.getElementById('custome_price');
+
     class Game {
       constructor() {
         //name:원두이름, feature:특징, compatible:어울리는 원두 종류, price:가격(추가예정)
@@ -564,7 +570,7 @@
     });
 
     /*결과표시*/
-        function customeResult() {
+    function customeResult() {
       const baseCoffeeChecked = document.querySelector('input[name="baseCoffee"]:checked');
       const blendCoffeeChecked = document.querySelectorAll('input[name="blendCoffee"]:checked');
       const roastingValue = document.getElementById('roasting-range').value;
@@ -576,7 +582,7 @@
       let blendResult = "";
       if (blendCoffeeChecked.length > 0) {
         blendCoffeeChecked.forEach(checkbox => {
-          blendResult += checkbox.value + ' ';
+          blendResult += checkbox.value + '  ';
         });
       } else {
         blendResult += '선택 없음';
@@ -587,6 +593,20 @@
       let machineResult = "";
       machineResult += machineChecked ? machineChecked.value : '선택없음';
 
+      let price = 0;
+      let price_comma = "";
+      if(baseResult === "자메이카 블루마운틴" || baseResult === "하와이안 코나" || baseResult === "예멘 모카 마타리"){
+        price = 15900;
+        price_comma = "15,900";
+        $custome_price.innerHTML = price_comma;
+        
+      } else{
+        price = 13900;
+        price_comma = "13,900";
+        $custome_price.innerHTML = price_comma;  
+      }
+      
+
       $custome_base.innerHTML = `${baseResult}`;
       $custome_blend.innerHTML = `${blendResult}`;
       $custome_roasting.innerHTML = `${roastingResult}`;
@@ -596,6 +616,8 @@
       hiddenInput('blendName', blendResult);
       hiddenInput('roastingName', roastingResult);
       hiddenInput('machineName', machineResult);
+      hiddenInput('price', price);
+      hiddenInput('price_comma', price_comma);
       // 생성한 input을 div에 추가
     }
 
