@@ -212,7 +212,7 @@ try {
 							<th><img src="../images/sample/sample_<%=prdNo%>.png"><%=prdName%></th>
 							<th><%=prdPrice%> ¿ø</th>
 							<th><input type="hidden" value="<%=ctQty%>"><%=ctQty%>¼¼Æ®</th>
-							<th><%=comNomaltotal%> ¿ø</th>
+							<th><%=Nomaltotal%> ¿ø</th>
 						</tr>
 						<tr class="cartItem_header" alt="Ä¸½¶ Á¾·ù ±¸ºÐ¿ë">
 							<th>Ä¿½ºÅÒ Ä¸½¶</th>
