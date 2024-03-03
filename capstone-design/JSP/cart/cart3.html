@@ -9,8 +9,8 @@
 <meta charset="EUC-KR">
 <title>주문 상세 확인</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/cart.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/cart.css">
 </head>
 <body>
 	<!-- //.jsp로 변환 시 해당 줄 삭제
@@ -20,7 +20,7 @@
 	//.jsp로 변환 시 해당 줄 삭제 --> 
 	<div class="wrap">
 		<div class="headerTitle">
-			<a href="../index.jsp"><img class="logo" src="../images/logo.png"
+			<a href="../../index.jsp"><img class="logo" src="../../images/logo.png"
 				alt=""> </a>
 		</div>
 		<div id="header">
@@ -149,36 +149,42 @@
 						<tr class="cartItem_header" alt="캡슐 종류 구분용">
 							<th>두잔 캡슐</th>
 							<th>판매가</th>
+							<th>캡슐종류</th>
 							<th>구매수량<span>(10개 1세트)</span></th>
 							<th>합계</th>
 						</tr>
 						<tr class="cartItem_product" alt="상세 상품">
-							<th><img src="../images/sample/sample_DS001.png">두잔 시그니쳐 오리진</th>
+							<th><img src="../../images/sample/sample_DS001.png">두잔 시그니쳐 오리진</th>
 							<th>10,000 원</th>
+							<th>네스프레소 오리지널</th>
 							<th><input type="number" min="1" max="20" step="1" value="1" readonly>세트</th>
 							<th>10,000 원</th>
 						</tr>
 						<tr class="cartItem_product" alt="상세 상품">
-							<th><img src="../images/sample/sample_DO001.png">두잔 게이샤</th>
+							<th><img src="../../images/sample/sample_DO001.png">두잔 게이샤</th>
 							<th>10,000 원</th>
+							<th>네스프레소 오리지널</th>
 							<th><input type="number" min="1" max="20" step="1" value="1" readonly>세트</th>
 							<th>10,000 원</th>
 						</tr>
 						<tr class="cartItem_header" alt="캡슐 종류 구분용">
 							<th>커스텀 캡슐</th>
 							<th>판매가</th>
+							<th>캡슐종류</th>
 							<th>구매수량<span>(10개 1세트)</span></th>
 							<th>합계</th>
 						</tr>
 						<tr class="cartItem_product" alt="상세 상품">
-							<th><img src="../images/sample/sample_custom01.png">커스텀 제작명1</th>
+							<th><img src="../../images/sample/sample_custom01.png">커스텀 제작명1</th>
 							<th>10,000 원</th>
+							<th>네스프레소 오리지널</th>
 							<th><input type="number" min="1" max="20" step="1" value="1" readonly>세트</th>
 							<th>10,000 원</th>
 						</tr>
 						<tr class="cartItem_product" alt="상세 상품">
-							<th><img src="../images/sample/sample_custom02.png">커스텀 제작명2</th>
+							<th><img src="../../images/sample/sample_custom02.png">커스텀 제작명2</th>
 							<th>10,000 원</th>
+							<th>네스프레소 오리지널</th>
 							<th><input type="number" min="1" max="20" step="1" value="1" readonly>세트</th>
 							<th>10,000 원</th>
 						</tr>
@@ -186,6 +192,14 @@
 					</table>
 			</div>
 			
+			<!-- 캡슐 재활용 회수 신청 여부 -->
+			<div class="recycleCap">
+				<label for="recycle_rq">
+					<img src="../../images/recycle/recycle_rq.png">
+					캡슐 재활용 백 수거 신청 완료. <!-- 체크박스 미체크 시 "캡슐 재활용 백 수거 미신청." 또는 해당칸 삭제. -->
+				</label>
+			</div>
+				
 			<!-- 주문 / 결제 정보 입력 -->
 			<div class="cart_Info">
 				<table>
@@ -267,7 +281,7 @@
 				<div class="call_center">
 					<p class="footer_title">고객만족센터</p>
 					<p class="footer_text">
-						<span class="tell"><img src="../images/tell.png" alt=""></span><span
+						<span class="tell"><img src="../../images/tell.png" alt=""></span><span
 							id="tell_number">02-456-789</span><br> <span
 							class="footer_bold">상담시간 </span>10:00 ~ 18:00<br> <span
 							class="footer_bold">문자상담 </span>카카오톡 플러스 친구 등록<br> 반품 안내는 해당
@@ -307,16 +321,16 @@
 					<br>
 					<div class="SNSicon">
 						<div>
-							<a href="#"><img src="../images/insta.png" alt=""></a>
+							<a href="#"><img src="../../images/insta.png" alt=""></a>
 						</div>
 						<div>
-							<a href="#"><img src="../images/twitter.png" alt=""></a>
+							<a href="#"><img src="../../images/twitter.png" alt=""></a>
 						</div>
 						<div>
-							<a href="#"><img src="../images/youtube.png" alt=""></a>
+							<a href="#"><img src="../../images/youtube.png" alt=""></a>
 						</div>
 						<div>
-							<a href="#"><img src="../images/naver.png" alt=""></a>
+							<a href="#"><img src="../../images/naver.png" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -325,9 +339,7 @@
 	</div>
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="../JS/dojan_js_package.js"></script>
-	<script src="../JS/navEvent.js"></script>
-	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script src="../../JS/dojan_js_package.js"></script>
 	
 </body>
 </html>

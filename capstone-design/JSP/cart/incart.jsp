@@ -16,7 +16,7 @@ if (sid == null)
 %>
 <script type="text/javascript">
     alert("장바구니에 담으려면 로그인이 필요합니다!");
-    window.location.href = "member/login.jsp";
+    window.location.href = "../member/login.jsp";
 </script>
 <%
 }

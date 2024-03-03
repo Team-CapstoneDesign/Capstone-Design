@@ -131,8 +131,8 @@ try{
 
 		<div class="productDetail_view">
 		
-        <h2>두잔 시그니쳐 오리진</h2>
-        <form action="../incart.jsp" name="selectCapsule">
+        <h2><%=name%></h2>
+        <form action="../cart/incart.jsp" name="selectCapsule">
         <!-- numEvent.js에 event.preventDefault(); 넣었는지 꼭 확인할것!! -->
         <table>
             <caption>
@@ -168,7 +168,20 @@ try{
                     <th>판매가</th>
                     <td class="price"><%= price%></td>
                 </tr>
-                <tr>
+				<tr>
+					<th>캡슐종류</th>
+					<td>
+						<select name="capType" class="captype">
+							<option value="NessOri">네스프레소 오리지널</option>
+							<option value="NessVert">네스프레소 버츄오</option>
+							<option value="Dolce">돌체구스토</option>
+							<option value="Illy">일리</option>
+							<option value="Kanu">카누</option>
+							<option value="Keur">큐리그</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
                     <th>구매수량</th>
                     <td>
 						<div class="length">
@@ -181,10 +194,6 @@ try{
 				<tr>
                     <th>배송비</th>
                     <td>3,000원 (3만원 이상 배송비 무료)</td>
-                </tr>
-                <tr>
-                    <th>총 주문 금액</th>
-                    <td class="total"><b>원</b></td>
                 </tr>
 				
             </tbody>

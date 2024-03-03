@@ -73,12 +73,22 @@
     margin-bottom: 5px;
 }
 
+/* cart emty item */
+.cartItem_content .noItemCart{
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 200px;
+	margin: 30px;
+}
+
 /* cart item content */
 .cartItem_content{
 	margin: 0 auto;
 	width: 1300px;
 }
 .cartItem_content .cartItem_list{
+	display: inline-block;
 	box-shadow: 0px 3px 9px rgba(0,0,0,.1);
 	margin-bottom: 30px;
 	font-size: 20px;
@@ -97,20 +107,44 @@
 	text-align: center;
 }
 .cartItem_header th:nth-child(1){
-	width: 40%;
+	width: 30%;
 	text-align: left;
 }
 .cartItem_header th span{
-	font-size: 15px;
+	font-size: 12px;
 }
 .cartItem_product th{
 	padding: 20px;
+	font-size: 18px;
 	color: #000;
 	text-align: center;
 	border-bottom: 1px solid #ccc;
 }
 .cartItem_product th:nth-child(1){
 	text-align: left;
+}
+.cartItem_content .deleteAllBtn{
+	float: right;
+	margin-bottom: 30px;
+	width: 160px;
+	height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	border: 2px solid #000;
+	border-radius: 5px;
+	background-color: #fff;
+}
+.cartItem_content .deleteBtn{
+	width: 50px;
+	height: 50px;
+	border: 2px solid #000;
+	border-radius: 5px;
+	background-color: #fff;
+}
+.cartItem_content .deleteAllBtn:hover, 
+.cartItem_content .deleteBtn:hover{
+	color: #fff;
+	background-color: #000;
 }
 
 /* 수량 선택 버튼 */
@@ -176,6 +210,32 @@
 	color: #fff;
 }
 
+/* 재활용 */
+.recycleCap{
+	margin: 0 auto;
+	width: 1300px;
+	height: 200px;
+	margin-bottom: 30px;
+	background-color: #fff;
+	box-shadow: 0px 3px 9px rgba(0,0,0,.1);
+	border-radius: 20px;
+	font-size: 30px;
+	line-height: 200px;
+	text-align: center;
+}
+.recycleCap input{
+	accent-color: red;
+	width: 50px;
+	height: 30px;
+}
+.recycleCap label{
+	cursor: pointer;
+	text-align: center;	
+}
+.recycleCap img{
+	width: 150px;
+}
+
 
 /* 배송 및 결제 */
 .cart_Info{
@@ -193,7 +253,7 @@
 	width: 1300px;
 	padding: 10px;
 	background-color: #ccc;
-	color: black;
+	color: #000;
 	text-align: center;
 	display: flex;
 }
