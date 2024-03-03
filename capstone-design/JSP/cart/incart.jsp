@@ -36,6 +36,7 @@ else
 		
 		String prdNo = request.getParameter("prdNo"); 
 		int ctQty = Integer.parseInt(request.getParameter("qty")); //  주문수량(장바구니에 담을 상품수량)
+		String capType = request.getParameter("capType"); 
 
 
 		String jsql = "select * from cart where ctNo = ? and prdNo = ?";
@@ -48,21 +49,23 @@ else
 		{		               
 			int sum = rs.getInt("ctQty") + ctQty;  
 
-			String jsql2 = "update cart set ctQty=? where ctNo=? and prdNo=?";
+			String jsql2 = "update cart set ctQty=? where ctNo=? and prdNo=? and capType=? ";
 			PreparedStatement pstmt2 = con.prepareStatement(jsql2);
 			pstmt2.setInt(1, sum);
 			pstmt2.setString(2, ctNo);
 			pstmt2.setString(3, prdNo);
+			pstmt2.setString(4, capType);
 
 			pstmt2.executeUpdate();
 		}
 		else  // 없으니까 새로 추가
 		{
-			String jsql3 = "insert into cart (ctNo, prdNo, ctQty) values (?,?,?)";
+			String jsql3 = "insert into cart (ctNo, prdNo, ctQty, capType) values (?,?,?,?)";
 			PreparedStatement pstmt3 = con.prepareStatement(jsql3);
 			pstmt3.setString(1,ctNo);
 			pstmt3.setString(2,prdNo);
 			pstmt3.setInt(3,ctQty);	
+			pstmt3.setString(4,capType);
 
 			pstmt3.executeUpdate();
 		}  

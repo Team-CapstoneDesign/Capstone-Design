@@ -152,56 +152,11 @@ try {
 
 	ResultSet rs = pstmt.executeQuery();
 
-    if(!rs.next())     // 장바구니 내용없으면 비었다고 출력하기 위해 
+    if(!rs.next())     // 장바구니 내용없으면 굳이 비었다고 출력하는거보다 그냥 아무것도 없게 보이는것도 괜찮을거같음
 	{  
 		 
 %>
-	<div class="noItemCart">장바구니가 비었습니다.</div>
-<%
-	}
-	else
-	{
-
-        %>
-
-	<%
-		String jsql2 = "select prdNo, ctQty from cart where ctNo = ?";
-		PreparedStatement pstmt2 = con.prepareStatement(jsql2);
-		pstmt2.setString(1, ctNo);		
-
-		ResultSet rs2 = pstmt2.executeQuery(); 
-
-		int Nomaltotal=0;                                  //  완제품 총가격
-		int Customtotal=0;                                 //  커스텀 총가격
-		int total=0;                                       //  완제품 + 커스텀 총가격
-
-
-
-
-		while(rs2.next()) 
-  		{			                   
-			String prdNo = rs2.getString("prdNo");	            //  cart에서 상품번호 추출
-    		int ctQty = rs2.getInt("ctQty");	                //  cart에서 주문수량 추출 
-
-    		String jsql3 = "select prdName, prdPrice, prdPrice2 from goods where prdNo = ?";
-	    	PreparedStatement pstmt3 = con.prepareStatement(jsql3);
-		    pstmt3.setString(1, prdNo);
-		    
-			ResultSet rs3 = pstmt3.executeQuery(); 
-			rs3.next();
-
-			String	prdName =  rs3.getString("prdName");       	    //   상품명 추출
-			String  prdPrice =  rs3.getString("prdPrice");          //  완제품 단가 추출
-			int prdPrice2= rs3.getInt("prdPrice2");                 //
-				 
-    		int NomalAmount = prdPrice2 * ctQty;
-			Nomaltotal = Nomaltotal + NomalAmount;
-
-			String comNomaltotal = String.format("%,d", Nomaltotal);
-
-		%>
-					
-			<div><input type="button" class="deleteAllBtn" value="전체 상품 삭제"></div>
+	<div><a href="deleteAllcart.jsp" ><input type="button" class="deleteAllBtn" value="전체 상품 삭제"></a></div>
 				
 					<table class="cartItem_list">
 						<tr class="cartItem_header" alt="캡슐 종류 구분용">
@@ -212,14 +167,77 @@ try {
 							<th>합계</th>
 							<th></th>
 						</tr>
+<%
+	}
+	else
+	{
+
+        %>
+
+	<%
+		String jsql2 = "select prdNo, ctQty, capType from cart where ctNo = ?";
+		PreparedStatement pstmt2 = con.prepareStatement(jsql2);
+		pstmt2.setString(1, ctNo);		
+
+		ResultSet rs2 = pstmt2.executeQuery(); 
+
+		int Nomaltotal=0;                                  //  완제품 총가격
+		int Customtotal=0;                                 //  커스텀 총가격
+		int total=0;                                       //  완제품 + 커스텀 총가격
+
+
+%>
+					
+			<div><a href="deleteAllcart.jsp" ><input type="button" class="deleteAllBtn" value="전체 상품 삭제"></a></div>
+				
+					<table class="cartItem_list">
+						<tr class="cartItem_header" alt="캡슐 종류 구분용">
+							<th>두잔 캡슐</th>
+							<th>판매가</th>
+							<th>캡슐종류</th>
+							<th>구매수량<br><span>(10개 1세트 + 10캡슐)</span></th>
+							<th>합계</th>
+							<th></th>
+						</tr>
+
+<% while(rs2.next()) 
+  		{			                   
+			String prdNo = rs2.getString("prdNo");	            //  cart에서 상품번호 추출
+    		int ctQty = rs2.getInt("ctQty");                    //  cart에서 주문수량 추출 
+			String capType = rs2.getString("capType");          //  cart에서 캡슐타입 추출
+
+    		String jsql3 = "select prdName, prdPrice, prdPrice2 from goods where prdNo = ?";
+	    	PreparedStatement pstmt3 = con.prepareStatement(jsql3);
+		    pstmt3.setString(1, prdNo);
+		    
+			ResultSet rs3 = pstmt3.executeQuery(); 
+			rs3.next();
+
+			String	prdName =  rs3.getString("prdName");       	    //   상품명 추출
+			String  prdPrice =  rs3.getString("prdPrice");          //  완제품 단가 문자형 추출
+			int prdPrice2= rs3.getInt("prdPrice2");                 //  완제품 단가 숫자형 추출  합계산을 위해
+				 
+    		int NomalAmount = prdPrice2 * ctQty;
+			Nomaltotal = Nomaltotal + NomalAmount;
+
+			String comNomaltotal = String.format("%,d", Nomaltotal);
+
+		%> 
 						<tr class="cartItem_product" alt="상세 상품">
 							<th><img src="../../images/sample/sample_<%=prdNo%>.png"><%=prdName%></th>
 							<th><%=prdPrice%> 원</th>
 							<th><%=capType%></th>
 							<th><input type="hidden" value="<%=ctQty%>"><%=ctQty%>세트</th>
 							<th><%=comNomaltotal%> 원</th>
-							<th><input type="button" class="deleteBtn" value="삭제"></th>
+							<th><a href="deletecart.jsp?prdNo=<%=prdNo%>"><input type="button" class="deleteBtn" value="삭제"></a></th>
 						</tr>
+
+						<% } // while의 끝
+					}	// 완제품 전용 if-else문의 끝    다음줄부터 커스텀 카트 전용 if-else문 jsql4 시작
+						
+						%>
+          
+
 						<tr class="cartItem_header" alt="캡슐 종류 구분용">
 							<th>커스텀 캡슐</th>
 							<th>판매가</th>
@@ -255,9 +273,7 @@ try {
 							</table>
 						</div>
 
-				<%
-	     }  
- %>
+				
 	
 						<div><input type="button" class="orderButton1" value="주문하기"></div>
 					</div>
@@ -265,8 +281,8 @@ try {
 			</div>	
 
 <%
-		}	
-   }  catch(Exception e)  {
+			
+			} catch(Exception e)  {
         out.println(e);
 } 
 %>
