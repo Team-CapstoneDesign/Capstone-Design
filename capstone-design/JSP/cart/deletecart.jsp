@@ -22,7 +22,7 @@ try {
 	pstmt.setString(2, prdNo);
 	
 	pstmt.executeUpdate();
-	response.sendRedirect("showCart.jsp");    
+	response.sendRedirect("showcart.jsp");    
     } 
 
 	catch (Exception e) {

@@ -6,7 +6,7 @@
 
 <%
 try {
- 	 String DB_URL="jdbc:mysql://localhost:3306/dojan";    //// 아직 미완
+ 	 String DB_URL="jdbc:mysql://localhost:3306/dojan";    //// 아직 커스텀 미완
      String DB_ID="multi"; 
      String DB_PASSWORD="abcd";
  	 
@@ -25,19 +25,17 @@ try {
 	if(caseNo!= null)  //  주문완료로 인한 지우기
 	{                             
 %>
-<br><br>
-<font size=6 color=blue><b>[상품 주문 완료]</b></font><p>
-	상품 주문이 완료되었습니다.<br><br>
-	주문하신 상품은 주문 완료 후 2일 이내에 배송될 예정입니다.<br><br>
-	남서울 멀티쇼핑몰(주)을 이용해 주셔서 감사합니다!
+<!-- 주문완료시 나오는 페이지 -->
 <%
 	}
 	  else   //  그냥 장바구니 전체삭제시
-	 {
-%>
-<br><br>
-<font color="blue" size='6'><b>[장바구니 내용 삭제]</b></font><p>
-	장바구니의 모든 내용을 삭제하였습니다.
+	 {  %>
+
+		 <script type="text/javascript">
+         alert("장바구니의 담은 모든 상품을 삭제했습니다.");
+         window.location.href = "showcart.jsp";
+         </script>
+
 <%
 	  }
    } catch (Exception e) {

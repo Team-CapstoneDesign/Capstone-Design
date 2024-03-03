@@ -171,13 +171,13 @@ try{
 				<tr>
 					<th>캡슐종류</th>
 					<td>
-						<select name="capType" class="captype">
-							<option value="NessOri">네스프레소 오리지널</option>
-							<option value="NessVert">네스프레소 버츄오</option>
-							<option value="Dolce">돌체구스토</option>
-							<option value="Illy">일리</option>
-							<option value="Kanu">카누</option>
-							<option value="Keur">큐리그</option>
+						<select name=capType class="captype">
+							<option value="네스프레소 오리지널">네스프레소 오리지널</option>
+							<option value="네스프레소 버츄오">네스프레소 버츄오</option>
+							<option value="돌체구스토">돌체구스토</option>
+							<option value="일리">일리</option>
+							<option value="카누">카누</option>
+							<option value="큐리그">큐리그</option>
 						</select>
 					</td>
 				</tr>
