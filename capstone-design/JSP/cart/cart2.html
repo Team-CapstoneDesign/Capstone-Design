@@ -9,8 +9,8 @@
 <meta charset="EUC-KR">
 <title>배송/결제</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/cart.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/cart.css">
 </head>
 <body>
 	<!-- //.jsp로 변환 시 해당 줄 삭제
@@ -20,7 +20,7 @@
 	//.jsp로 변환 시 해당 줄 삭제 --> 
 	<div class="wrap">
 		<div class="headerTitle">
-			<a href="../index.jsp"><img class="logo" src="../images/logo.png"
+			<a href="../../index.jsp"><img class="logo" src="../../images/logo.png"
 				alt=""> </a>
 		</div>
 		<div id="header">
@@ -142,6 +142,15 @@
 			<!-- 주문 / 결제 정보 입력 -->
 			<div class="cart_Info">
 				<form name="orderInfo" method="post" action="">
+				
+				<div class="recycleCap">
+					<label for="recycle_rq">
+						<img src="../../images/recycle/recycle_rq.png">
+						캡슐 재활용 백 수거를 원할 시 체크해주세요.
+						<input type="checkbox" name="recycle" value="checkbox" id="recycle_rq">
+					</label>
+                </div>
+					
 				<table>
 					<tr class="cart_orderInfo">
 						<th><span>주문자 정보(내 정보 그대로 불러오기. 수정 불가.)</span></th>
@@ -254,16 +263,16 @@
 					<br>
 					<div class="SNSicon">
 						<div>
-							<a href="#"><img src="../images/insta.png" alt=""></a>
+							<a href="#"><img src="../../images/insta.png" alt=""></a>
 						</div>
 						<div>
-							<a href="#"><img src="../images/twitter.png" alt=""></a>
+							<a href="#"><img src="../../images/twitter.png" alt=""></a>
 						</div>
 						<div>
-							<a href="#"><img src="../images/youtube.png" alt=""></a>
+							<a href="#"><img src="../../images/youtube.png" alt=""></a>
 						</div>
 						<div>
-							<a href="#"><img src="../images/naver.png" alt=""></a>
+							<a href="#"><img src="../../images/naver.png" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -272,8 +281,8 @@
 	</div>
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="../JS/dojan_js_package.js"></script>
-	<script src="../JS/navEvent.js"></script>
+	<script src="../../JS/dojan_js_package.js"></script>
+	<script src="../../JS/navEvent.js"></script>
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	
 </body>

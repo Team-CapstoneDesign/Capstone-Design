@@ -4,8 +4,8 @@
 <head>
 <title>장바구니</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/cart.css">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/cart.css">
 </head>
 <body>
 	
@@ -14,7 +14,7 @@
 	%> 
 	<div class="wrap">
 		<div class="headerTitle">
-			<a href="index.jsp"><img class="logo" src="../images/logo.png"
+			<a href="../index.jsp"><img class="logo" src="../../images/logo.png"
 				alt=""> </a>
 		</div>
 		<div id="header">
@@ -156,7 +156,7 @@ try {
 	{  
 		 
 %>
-	<p>장바구니가 비었습니다.</p>
+	<div class="noItemCart">장바구니가 비었습니다.</div>
 <%
 	}
 	else
@@ -201,35 +201,44 @@ try {
 
 		%>
 					
+			<div><input type="button" class="deleteAllBtn" value="전체 상품 삭제"></div>
+				
 					<table class="cartItem_list">
 						<tr class="cartItem_header" alt="캡슐 종류 구분용">
 							<th>두잔 캡슐</th>
 							<th>판매가</th>
-							<th>구매수량<span>(10개 1세트 + 10캡슐)</span></th>
+							<th>캡슐종류</th>
+							<th>구매수량<br><span>(10개 1세트 + 10캡슐)</span></th>
 							<th>합계</th>
+							<th></th>
 						</tr>
 						<tr class="cartItem_product" alt="상세 상품">
-							<th><img src="../images/sample/sample_<%=prdNo%>.png"><%=prdName%></th>
+							<th><img src="../../images/sample/sample_<%=prdNo%>.png"><%=prdName%></th>
 							<th><%=prdPrice%> 원</th>
+							<th><%=capType%></th>
 							<th><input type="hidden" value="<%=ctQty%>"><%=ctQty%>세트</th>
 							<th><%=comNomaltotal%> 원</th>
+							<th><input type="button" class="deleteBtn" value="삭제"></th>
 						</tr>
 						<tr class="cartItem_header" alt="캡슐 종류 구분용">
 							<th>커스텀 캡슐</th>
 							<th>판매가</th>
-							<th>구매수량<span>(10개 1세트)</span></th>
+							<th>캡슐종류</th>
+							<th>구매수량<br><span>(10개 1세트)</span></th>
 							<th>합계</th>
+							<th></th>
 						</tr>
 						<tr class="cartItem_product" alt="상세 상품">
-							<th><img src="../images/sample/sample_custom01.png">커스텀 제작명1</th>
+							<th><img src="../../images/sample/sample_custom01.png">커스텀 제작명1</th>
 							<th>10,000 원</th>
+							<th>돌체구스토</th>
 							<th><input type="number" min="1" max="20" step="1" value="1">세트</th>
 							<th>10,000 원</th>
+							<th><input type="button" class="deleteBtn" value="삭제"></th>
 						</tr>
 					
-						
 					</table>
-					
+		
 					<div class="cartTotal">
 						<div>
 							<table class="cartTotal_box">
@@ -275,7 +284,7 @@ try {
 				<div class="call_center">
 					<p class="footer_title">고객만족센터</p>
 					<p class="footer_text">
-						<span class="tell"><img src="../images/tell.png" alt=""></span><span
+						<span class="tell"><img src="../../images/tell.png" alt=""></span><span
 							id="tell_number">02-456-789</span><br> <span
 							class="footer_bold">상담시간 </span>10:00 ~ 18:00<br> <span
 							class="footer_bold">문자상담 </span>카카오톡 플러스 친구 등록<br> 반품 안내는 해당
@@ -315,16 +324,16 @@ try {
 					<br>
 					<div class="SNSicon">
 						<div>
-							<a href="#"><img src="../images/insta.png" alt=""></a>
+							<a href="#"><img src="../../images/insta.png" alt=""></a>
 						</div>
 						<div>
-							<a href="#"><img src="../images/twitter.png" alt=""></a>
+							<a href="#"><img src="../../images/twitter.png" alt=""></a>
 						</div>
 						<div>
-							<a href="#"><img src="../images/youtube.png" alt=""></a>
+							<a href="#"><img src="../../images/youtube.png" alt=""></a>
 						</div>
 						<div>
-							<a href="#"><img src="../images/naver.png" alt=""></a>
+							<a href="#"><img src="../../images/naver.png" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -333,7 +342,7 @@ try {
 	</div>
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="../JS/navEvent.js"></script>
-	<script src="../JS/numEvent.js"></script>
+	<script src="../../JS/navEvent.js"></script>
+	<script src="../../JS/numEvent.js"></script>
 </body>
 </html>

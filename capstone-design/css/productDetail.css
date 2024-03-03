@@ -114,7 +114,15 @@ body{padding: 50px;}
     border-radius: 0 5px 5px 0;
 	font-weight: bold;
 }
-
+.productDetail_view table .captype{
+	width: 250px;
+	height: 50px;
+	text-indent : 15px;
+	background-color: #ffffff;
+    border-radius: 5px;
+	border: none;
+    box-shadow: 0 5px 7px rgba(0,0,0,0.05);
+}
 
 /* 버튼 부분 */
 .productDetail_view .btns{
