@@ -24,7 +24,7 @@
         <div class="topmenuWrap">
           <ul class="topmenu">
             <li>
-              <a>д╦╫╤ д©╫╨ер</a>
+              <a href="./goods/custome.html">д╦╫╤ д©╫╨ер</a>
             </li>
             <li>
               <a>╣нюэ д╦╫╤</a>
