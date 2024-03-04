@@ -66,7 +66,7 @@ else
     }  		
 
     
-	 response.sendRedirect("../goods/test1.jsp");          // Å×½ºÆ®
+	 response.sendRedirect("showcart.jsp");          
 }  	                                     
 %>
 </body>
