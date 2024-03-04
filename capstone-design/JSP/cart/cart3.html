@@ -1,345 +1,316 @@
-<!-- //.jsp·Î º¯È¯ ½Ã ÇØ´ç ÁÙ »èÁ¦
+<!-- //.jspë¡œ ë³€í™˜ ì‹œ í•´ë‹¹ ì¤„ ì‚­ì œ
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*"%>
-//.jsp·Î º¯È¯ ½Ã ÇØ´ç ÁÙ »èÁ¦ -->
+//.jspë¡œ ë³€í™˜ ì‹œ í•´ë‹¹ ì¤„ ì‚­ì œ -->
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="EUC-KR">
-<title>ÁÖ¹® »ó¼¼ È®ÀÎ</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../css/style.css">
-<link rel="stylesheet" href="../../css/cart.css">
+  <!-- <meta charset="EUC-KR"> -->
+  <title>ì£¼ë¬¸ ìƒì„¸ í™•ì¸</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/cart.css">
 </head>
+
 <body>
-	<!-- //.jsp·Î º¯È¯ ½Ã ÇØ´ç ÁÙ »èÁ¦
+  <!-- //.jspë¡œ ë³€í™˜ ì‹œ í•´ë‹¹ ì¤„ ì‚­ì œ
 	<%
 		String id = (String) session.getAttribute("sid");
 	%> 
-	//.jsp·Î º¯È¯ ½Ã ÇØ´ç ÁÙ »èÁ¦ --> 
-	<div class="wrap">
-		<div class="headerTitle">
-			<a href="../../index.jsp"><img class="logo" src="../../images/logo.png"
-				alt=""> </a>
-		</div>
-		<div id="header">
-			<div class="formbox">
-				<input type="text" placeholder="°Ë»ö">
-				<div class="topmenuWrap">
-					<ul class="topmenu">
-						<li><a>Ä¸½¶ Ä¿½ºÅÒ</a></li>
-						<li><a>µÎÀÜ Ä¸½¶</a>
-							<div class="submenu">
-								<ul id="productMenu">
-									<li><a href="./goods/viewProduct.jsp?ctgType=season">½ÃÁðÇÑÁ¤</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=signature">½Ã±×´ÏÃ³</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=blending">ºí·»µù</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=original">¿À¸®Áö³Î</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=decaf">µðÄ«ÆäÀÎ</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=beveridge">º£¹ö¸®Áö
-											/ ³íÄ¿ÇÇ</a></li>
-									<li><a href="">¼±¹° ÆÐÅ°Áö</a></li>
-								</ul>
-							</div></li>
-						<li><a>Ä¿ÇÇ ÀÌ¾ß±â</a>
-							<div class="submenu">
-								<ul id="productMenu">
-									<li><a href="#">Ä¸½¶ Á¶ÇÕ ¸®ºä</a></li>
-									<li><a href="#">¿øµÎ¼Ò°³</a></li>
-									<li><a href="#">Ä¿ÇÇ ÀÀ¿ë ·¹½ÃÇÇ</a></li>
-									<li><a href="#">³ª¿Í ¾î¿ï¸®´Â Ä¿ÇÇ</a></li>
-								</ul>
-							</div></li>
-						<li><a>µÎÀÜ ÀÌ¾ß±â</a>
-							<div class="submenu">
-								<ul id="productMenu">
-									<li><a href="#">µÎ ÀÜÀÇ ¿©À¯</a></li>
-									<li><a href="#">µÎ ÀÜÀÇ È¯°æ°¡Ä¡</a></li>
-								</ul>
-							</div></li>
-					</ul>
-				</div>
-				<div class="nav_top">
-					<%
-						if (id == null) {
-					%>
-					<span class="quick_menu"><a href="">·Î±×ÀÎ</a></span> <span
-						class="quick_menu"><a href="">È¸¿ø°¡ÀÔ</a></span> <span
-						class="quick_menu"><a href="">°í°´¼¾ÅÍ</a></span>
-					<%
-						} else {
-					%>
-					<span class="quick_menu"><a href="">·Î±×ÀÎ</a></span> <span
-						class="quick_menu"><a href="">È¸¿ø°¡ÀÔ</a></span> <span
-						class="quick_menu"><a href="">°í°´¼¾ÅÍ</a></span>
-					<%
-						}
-					%>
-				</div>
-			</div>
-		</div>
-		
-		<!-- ÄÁÅÙÃ÷ -->
-		<div class="cart_container" name="cart_product">
-			<!-- ³×ºñ°ÔÀÌ¼Ç Çì´õ -->
-			<div class="cart_section1" name="cart_header">
-				<div class="cart_headerTitle">
-				<div class="cart_subTilte">ÁÖ¹®/°áÁ¦</div><br><br>
-			</div>
-		</div>
-		
-		<div class="cart_content">
-			<!-- ´Ü°è ÁøÇàµµ -->
-        	<nav class="cartProgress_nav">
-			<ul class="cartProgress">
+	//.jspë¡œ ë³€í™˜ ì‹œ í•´ë‹¹ ì¤„ ì‚­ì œ -->
+  <div class="wrap">
+    <div class="headerTitle">
+      <a href="../../index.jsp"><img class="logo" src="../../images/logo.png" alt=""> </a>
+    </div>
+    <div id="header">
+      <div class="formbox">
+        <input type="text" placeholder="ê²€ìƒ‰">
+        <div class="topmenuWrap">
+          <ul class="topmenu">
+            <li><a>ìº¡ìŠ ì»¤ìŠ¤í…€</a></li>
+            <li><a>ë‘ìž” ìº¡ìŠ</a>
+              <div class="submenu">
+                <ul id="productMenu">
+                  <li><a href="./goods/viewProduct.jsp?ctgType=season">ì‹œì¦Œí•œì •</a></li>
+                  <li><a href="./goods/viewProduct.jsp?ctgType=signature">ì‹œê·¸ë‹ˆì²˜</a></li>
+                  <li><a href="./goods/viewProduct.jsp?ctgType=blending">ë¸”ë Œë”©</a></li>
+                  <li><a href="./goods/viewProduct.jsp?ctgType=original">ì˜¤ë¦¬ì§€ë„</a></li>
+                  <li><a href="./goods/viewProduct.jsp?ctgType=decaf">ë””ì¹´íŽ˜ì¸</a></li>
+                  <li><a href="./goods/viewProduct.jsp?ctgType=beveridge">ë² ë²„ë¦¬ì§€
+                      / ë…¼ì»¤í”¼</a></li>
+                  <li><a href="">ì„ ë¬¼ íŒ¨í‚¤ì§€</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a>ì»¤í”¼ ì´ì•¼ê¸°</a>
+              <div class="submenu">
+                <ul id="productMenu">
+                  <li><a href="#">ìº¡ìŠ ì¡°í•© ë¦¬ë·°</a></li>
+                  <li><a href="#">ì›ë‘ì†Œê°œ</a></li>
+                  <li><a href="#">ì»¤í”¼ ì‘ìš© ë ˆì‹œí”¼</a></li>
+                  <li><a href="#">ë‚˜ì™€ ì–´ìš¸ë¦¬ëŠ” ì»¤í”¼</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a>ë‘ìž” ì´ì•¼ê¸°</a>
+              <div class="submenu">
+                <ul id="productMenu">
+                  <li><a href="#">ë‘ ìž”ì˜ ì—¬ìœ </a></li>
+                  <li><a href="#">ë‘ ìž”ì˜ í™˜ê²½ê°€ì¹˜</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="nav_top">
+          <% if (id==null) { %>
+            <span class="quick_menu"><a href="">ë¡œê·¸ì¸</a></span> <span class="quick_menu"><a href="">íšŒì›ê°€ìž…</a></span> <span
+              class="quick_menu"><a href="">ê³ ê°ì„¼í„°</a></span>
+            <% } else { %>
+              <span class="quick_menu"><a href="">ë¡œê·¸ì¸</a></span> <span class="quick_menu"><a href="">íšŒì›ê°€ìž…</a></span>
+              <span class="quick_menu"><a href="">ê³ ê°ì„¼í„°</a></span>
+              <% } %>
+        </div>
+      </div>
+    </div>
 
-        		<li class="cartProgress_detail" style="border-bottom: 10px solid #e8bb00; font-weight: bold;">
-                	<span class="cartProgress_detail_step">
-						<span>1´Ü°è</span>
-					</span>
-                        <span class="cartProgress_detail_title">
-                            Àå¹Ù±¸´Ï »ó¼¼
-						</span>
-                    <span hidden>ÀÌÀü ´Ü°è</span>
-					<span class="border"></span>
-                </li>
-				<li class="cartProgress_detail" style="border-bottom: 10px solid #e8bb00; font-weight: bold;">
-                	<span class="cartProgress_detail_step">
-						<span>2´Ü°è</span>
-					</span>
-                        <span class="cartProgress_detail_title">
-                            ¹è¼ÛÁö ¹× °áÁ¦ Á¤º¸ ÀÔ·Â
-						</span>
-                    <span hidden>ÀÌÀü ´Ü°è</span>
-					<span class="border"></span>
-                </li>
-				<li class="cartProgress_detail" style="border-bottom: 10px solid #e8bb00; font-weight: bold;">
-                	<span class="cartProgress_detail_step">
-						<span>3´Ü°è</span>
-					</span>
-                        <span class="cartProgress_detail_title">
-                            ÁÖ¹® »ó¼¼ ³»¿ª È®ÀÎ
-						</span>
-                    <span hidden>ÇöÀç ´Ü°è</span>
-					<span class="border"></span>
-                </li>
-				<li class="cartProgress_detail">
-                	<span class="cartProgress_detail_step">
-						<span>4´Ü°è</span>
-					</span>
-                        <span class="cartProgress_detail_title">
-                            ÁÖ¹® ¿Ï·á ¹× È®ÀÎ
-						</span>
-                    <span hidden>ÀÌÈÄ ´Ü°è</span>
-					<span class="border"></span>
-                </li>
-   	
-			</ul>
-			</nav>
-			</div>
-			
-			<!-- ¸ðµç Á¤º¸ È®ÀÎ. ÀÌÀü´Ü°èµé¿¡¼­ ÀÔ·ÂÇÑ Á¤º¸ ±×´ë·Î ºÒ·¯¿À±â. ÇöÀç ÆäÀÌÁö¿¡¼­ ¼öÁ¤ ºÒ°¡. -->
-			<form name="everyCartInfo" method="post" action="">
-				
-			<!-- Àå¹Ù±¸´Ï »óÇ°¸ñ·Ï -->
-			<div class="cartItem_content">
-					
-					<table class="cartItem_list">
-						<tr class="cartItem_header" alt="Ä¸½¶ Á¾·ù ±¸ºÐ¿ë">
-							<th>µÎÀÜ Ä¸½¶</th>
-							<th>ÆÇ¸Å°¡</th>
-							<th>Ä¸½¶Á¾·ù</th>
-							<th>±¸¸Å¼ö·®<span>(10°³ 1¼¼Æ®)</span></th>
-							<th>ÇÕ°è</th>
-						</tr>
-						<tr class="cartItem_product" alt="»ó¼¼ »óÇ°">
-							<th><img src="../../images/sample/sample_DS001.png">µÎÀÜ ½Ã±×´ÏÃÄ ¿À¸®Áø</th>
-							<th>10,000 ¿ø</th>
-							<th>³×½ºÇÁ·¹¼Ò ¿À¸®Áö³Î</th>
-							<th><input type="number" min="1" max="20" step="1" value="1" readonly>¼¼Æ®</th>
-							<th>10,000 ¿ø</th>
-						</tr>
-						<tr class="cartItem_product" alt="»ó¼¼ »óÇ°">
-							<th><img src="../../images/sample/sample_DO001.png">µÎÀÜ °ÔÀÌ»þ</th>
-							<th>10,000 ¿ø</th>
-							<th>³×½ºÇÁ·¹¼Ò ¿À¸®Áö³Î</th>
-							<th><input type="number" min="1" max="20" step="1" value="1" readonly>¼¼Æ®</th>
-							<th>10,000 ¿ø</th>
-						</tr>
-						<tr class="cartItem_header" alt="Ä¸½¶ Á¾·ù ±¸ºÐ¿ë">
-							<th>Ä¿½ºÅÒ Ä¸½¶</th>
-							<th>ÆÇ¸Å°¡</th>
-							<th>Ä¸½¶Á¾·ù</th>
-							<th>±¸¸Å¼ö·®<span>(10°³ 1¼¼Æ®)</span></th>
-							<th>ÇÕ°è</th>
-						</tr>
-						<tr class="cartItem_product" alt="»ó¼¼ »óÇ°">
-							<th><img src="../../images/sample/sample_custom01.png">Ä¿½ºÅÒ Á¦ÀÛ¸í1</th>
-							<th>10,000 ¿ø</th>
-							<th>³×½ºÇÁ·¹¼Ò ¿À¸®Áö³Î</th>
-							<th><input type="number" min="1" max="20" step="1" value="1" readonly>¼¼Æ®</th>
-							<th>10,000 ¿ø</th>
-						</tr>
-						<tr class="cartItem_product" alt="»ó¼¼ »óÇ°">
-							<th><img src="../../images/sample/sample_custom02.png">Ä¿½ºÅÒ Á¦ÀÛ¸í2</th>
-							<th>10,000 ¿ø</th>
-							<th>³×½ºÇÁ·¹¼Ò ¿À¸®Áö³Î</th>
-							<th><input type="number" min="1" max="20" step="1" value="1" readonly>¼¼Æ®</th>
-							<th>10,000 ¿ø</th>
-						</tr>
-						
-					</table>
-			</div>
-			
-			<!-- Ä¸½¶ ÀçÈ°¿ë È¸¼ö ½ÅÃ» ¿©ºÎ -->
-			<div class="recycleCap">
-				<label for="recycle_rq">
-					<img src="../../images/recycle/recycle_rq.png">
-					Ä¸½¶ ÀçÈ°¿ë ¹é ¼ö°Å ½ÅÃ» ¿Ï·á. <!-- Ã¼Å©¹Ú½º ¹ÌÃ¼Å© ½Ã "Ä¸½¶ ÀçÈ°¿ë ¹é ¼ö°Å ¹Ì½ÅÃ»." ¶Ç´Â ÇØ´çÄ­ »èÁ¦. -->
-				</label>
-			</div>
-				
-			<!-- ÁÖ¹® / °áÁ¦ Á¤º¸ ÀÔ·Â -->
-			<div class="cart_Info">
-				<table>
-					<tr class="cart_orderInfo">
-						<th><span>ÁÖ¹®ÀÚ Á¤º¸(³» Á¤º¸ ±×´ë·Î ºÒ·¯¿À±â. ¼öÁ¤ ºÒ°¡.)</span></th>
-					</tr>
-					<tr>
-						<th>ÁÖ¹®ÀÚ<br>¸¶¿¹½½</th>
-						<th>¹øÈ£<br>010-1111-2222</th>
-						<th>ÀÌ¸ÞÀÏ<br>abc123@naver.com</th>
-					</tr>
-					<tr class="cart_addrInfo">
-						<th><span>¹è¼ÛÁö Á¤º¸(ÀÌÀü ´Ü°è Á¤º¸ ±×´ë·Î ºÒ·¯¿À±â. ¼öÁ¤ ºÒ°¡.)</span></th>
-					</tr>
-					<tr>
-						<th>¹Þ´Â »ç¶÷<br>
-							¸¶¿¹½½
-						</th>
-						<th>¹øÈ£<br>
-							010-1111-2222
-						</th>
-						<th>ÁÖ¼Ò<br>
-							12345 (¿ìÆí¹øÈ£)
-							<br>
-							°æ±â ¼º³²½Ã ºÐ´ç±¸ ÆÇ±³¿ª·Î 6-4 (±âº»ÁÖ¼Ò)
-							(¹éÇöµ¿) (Âü°íÁÖ¼Ò)<br>
-							101µ¿ 101È£ (»ó¼¼ ÁÖ¼Ò)
-						</th>
-					</tr>
-					<tr class="cart_payInfo">
-						<th><span>°áÁ¦ ¼ö´Ü</span></th>
-					</tr>
-					<tr>
-						<th>
-						<p>
-						  Ä«Ä«¿ÀÆäÀÌ
-					    </p>
-						</th>
-					</tr>
-				</table>
-				
-			</div>
-			
-			<div class="cartTotal_final">
-				<div>
-					<table class="cartTotal_box_final">
-						<tr class="cartTotal_box_header_final">
-							<th><span class="cartTotal_itemtotal">»óÇ° ±Ý¾×</span></th>
-							<th><span class="cartTotal_delivery">¹è¼Ûºñ</span></th>
-							<th><span class="cartTotal_total">ÃÑ ÁÖ¹® ±Ý¾×</span></th>
-						</tr>
-						<tr class="cartTotal_box_number_final">
-							<th><span>40,000</span>¿ø</th>
-							<th><span>3,000</span>¿ø</th>
-							<th><span class="realTotal">43,000</span>¿ø</th>
-						</tr>
-					</table>
-				</div>
-			</div>
-			
-				<div class="cart_Info_button">
-					<input type="button" class="btn_backPage" value="<  Á¤º¸ ÀÔ·ÂÀ¸·Î µ¹¾Æ°¡±â">
-					<input type="button" class="btn_nextPage" value="ÁÖ¹®ÇÏ±â  >">
-				</div>
-				
-			</form>
-		
-		<!-- ÇªÅÍ -->
-		<footer>
-			<div class="footer1">
-				<ul>
-					<li><a href="">È¸»ç¼Ò°³</a></li>
-					<li><a href="">ÀÌ¿ë¾à°ü</a></li>
-					<li><a href="">°³ÀÎÁ¤º¸Ãë±Þ¹æÄ§ </a></li>
-					<li><a href="">°í°´¼¾ÅÍ</a></li>
-				</ul>
-			</div>
-			<div class="footer2">
-				<div class="call_center">
-					<p class="footer_title">°í°´¸¸Á·¼¾ÅÍ</p>
-					<p class="footer_text">
-						<span class="tell"><img src="../../images/tell.png" alt=""></span><span
-							id="tell_number">02-456-789</span><br> <span
-							class="footer_bold">»ó´ã½Ã°£ </span>10:00 ~ 18:00<br> <span
-							class="footer_bold">¹®ÀÚ»ó´ã </span>Ä«Ä«¿ÀÅå ÇÃ·¯½º Ä£±¸ µî·Ï<br> ¹ÝÇ° ¾È³»´Â ÇØ´ç
-						»óÇ° ÆäÀÌÁö¸¦ Âü°íÇØÁÖ¼¼¿ä
-					</p>
-				</div>
+    <!-- ì»¨í…ì¸  -->
+    <div class="cart_container" name="cart_product">
+      <!-- ë„¤ë¹„ê²Œì´ì…˜ í—¤ë” -->
+      <div class="cart_section1" name="cart_header">
+        <div class="cart_headerTitle">
+          <div class="cart_subTilte">ì£¼ë¬¸/ê²°ì œ</div><br><br>
+        </div>
+      </div>
 
-				<div class="company">
-					<p class="footer_title">È¸»ç Á¤º¸</p>
-					<p class="footer_text">
-						<span class="footer_bold">È¸»ç¸í</span>(ÁÖ)µÎÀÜ / µÎ ÀÜÀÇ ¿©À¯<br> <span
-							class="footer_bold">´ëÇ¥</span>¼­¹ÎÈñ<br> <span
-							class="footer_bold">´ëÇ¥ÀüÈ­</span>02-456-789<br> <span
-							class="footer_bold">ÁÖ¼Ò</span>¼­¿ïÆ¯º°½Ã ¸¶Æ÷±¸<br> <span
-							class="footer_bold">ÀÌ¸ÞÀÏ</span>alslalsl_06@naver.com<br>
-					</p>
-				</div>
+      <div class="cart_content">
+        <!-- ë‹¨ê³„ ì§„í–‰ë„ -->
+        <div class="stepper-wrapper">
+          <div class="stepper-item completed">
+            <div class="step-counter">1</div>
+            <div class="step-name">ìž¥ë°”êµ¬ë‹ˆ</div>
+          </div>
+          <div class="stepper-item completed">
+            <div class="step-counter">2</div>
+            <div class="step-name">ë°°ì†¡ì§€ ë° ê²°ì œ ì •ë³´ ìž…ë ¥</div>
+          </div>
+          <div class="stepper-item completed">
+            <div class="step-counter">3</div>
+            <div class="step-name">ì£¼ë¬¸ ìƒì„¸ ë‚´ì—­ í™•ì¸</div>
+          </div>
+          <div class="stepper-item">
+            <div class="step-counter">4</div>
+            <div class="step-name">ì£¼ë¬¸ ì™„ë£Œ ë° í™•ì¸</div>
+          </div>
+        </div>
+      </div>
 
-				<div class="delivery">
-					<p class="footer_title">¹è¼Û¾È³»</p>
-					<p class="footer_text">
-						CJ ´ëÇÑÅë¿î(TEL 1588-4321)<br> ¹è¼Û »óÈ²Àº ÅÃ¹è»ç È¨ÆäÀÌÁö¸¦ ÂüÁ¶ÇØÁÖ¼¼¿ä<br> <a
-							href="#">¹è¼Û »óÈ² È®ÀÎÇÏ±â></a>
-					</p>
-				</div>
-			</div>
-			<div class="footer3">
-				<div class="shopping_menu">
-					<p class="footer_title">¼îÇÎ ¸Þ´º</p>
-					<p class="footer_text">
-						<a href="#" id="shopping_text">ÀÚÁÖ ¹¯´Â Áú¹®</a><br> <a href="#"
-							id="shopping_text">¹®ÀÇ °Ô½ÃÆÇ</a>
-					</p>
-				</div>
-				<div class="SNS">
-					<p class="footer_title">SNS</p>
-					<br>
-					<div class="SNSicon">
-						<div>
-							<a href="#"><img src="../../images/insta.png" alt=""></a>
-						</div>
-						<div>
-							<a href="#"><img src="../../images/twitter.png" alt=""></a>
-						</div>
-						<div>
-							<a href="#"><img src="../../images/youtube.png" alt=""></a>
-						</div>
-						<div>
-							<a href="#"><img src="../../images/naver.png" alt=""></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
+      <!-- ëª¨ë“  ì •ë³´ í™•ì¸. ì´ì „ë‹¨ê³„ë“¤ì—ì„œ ìž…ë ¥í•œ ì •ë³´ ê·¸ëŒ€ë¡œ ë¶ˆëŸ¬ì˜¤ê¸°. í˜„ìž¬ íŽ˜ì´ì§€ì—ì„œ ìˆ˜ì • ë¶ˆê°€. -->
+      <form name="everyCartInfo" method="post" action="">
 
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="../../JS/dojan_js_package.js"></script>
-	
+        <!-- ìž¥ë°”êµ¬ë‹ˆ ìƒí’ˆëª©ë¡ -->
+        <div class="cartItem_content">
+
+          <table class="cartItem_list">
+            <tr class="cartItem_header" alt="ìº¡ìŠ ì¢…ë¥˜ êµ¬ë¶„ìš©">
+              <th>ë‘ìž” ìº¡ìŠ</th>
+              <th></th>
+              <th>íŒë§¤ê°€</th>
+              <th>ìº¡ìŠì¢…ë¥˜</th>
+              <th>êµ¬ë§¤ìˆ˜ëŸ‰<span>(10ê°œ 1ì„¸íŠ¸)</span></th>
+              <th>í•©ê³„</th>
+            </tr>
+            <tr class="cartItem_product" alt="ìƒì„¸ ìƒí’ˆ">
+              <td><img src="../../images/sample/sample_DS001.png"></td>
+              <td>ë‘ìž” ì‹œê·¸ë‹ˆì³ ì˜¤ë¦¬ì§„</td>
+              <td>10,000 ì›</td>
+              <td>ë„¤ìŠ¤í”„ë ˆì†Œ ì˜¤ë¦¬ì§€ë„</td>
+              <td><input type="number" min="1" max="20" step="1" value="1" readonly>ì„¸íŠ¸</td>
+              <td>10,000 ì›</td>
+            </tr>
+            <tr class="cartItem_product" alt="ìƒì„¸ ìƒí’ˆ">
+              <td><img src="../../images/sample/sample_DS001.png"></td>
+              <td>ë‘ìž” ì‹œê·¸ë‹ˆì³ ì˜¤ë¦¬ì§„</td>
+              <td>10,000 ì›</td>
+              <td>ë„¤ìŠ¤í”„ë ˆì†Œ ì˜¤ë¦¬ì§€ë„</td>
+              <td><input type="number" min="1" max="20" step="1" value="1" readonly>ì„¸íŠ¸</td>
+              <td>10,000 ì›</td>
+            </tr>
+
+          </table>
+          <table class="cartItem_list">
+            <tr class="cartItem_header" alt="ìº¡ìŠ ì¢…ë¥˜ êµ¬ë¶„ìš©">
+              <th>ì»¤ìŠ¤í…€ ìº¡ìŠ</th>
+              <th></th>
+              <th>íŒë§¤ê°€</th>
+              <th>ìº¡ìŠì¢…ë¥˜</th>
+              <th>êµ¬ë§¤ìˆ˜ëŸ‰<span>(10ê°œ 1ì„¸íŠ¸)</span></th>
+              <th>í•©ê³„</th>
+            </tr>
+            <tr class="cartItem_product" alt="ìƒì„¸ ìƒí’ˆ">
+              <td>ì»¤ìŠ¤í…€ ì œìž‘ëª…1</td>
+              <td></td>
+              <td>10,000 ì›</td>
+              <td>ë„¤ìŠ¤í”„ë ˆì†Œ ì˜¤ë¦¬ì§€ë„</td>
+              <td><input type="number" min="1" max="20" step="1" value="1" readonly>ì„¸íŠ¸</td>
+              <td>10,000 ì›</td>
+            </tr>
+            <tr class="cartItem_product" alt="ìƒì„¸ ìƒí’ˆ">
+              <td>ì»¤ìŠ¤í…€ ì œìž‘ëª…1</td>
+              <td></td>
+              <td>10,000 ì›</td>
+              <td>ë„¤ìŠ¤í”„ë ˆì†Œ ì˜¤ë¦¬ì§€ë„</td>
+              <td><input type="number" min="1" max="20" step="1" value="1" readonly>ì„¸íŠ¸</td>
+              <td>10,000 ì›</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- ìº¡ìŠ ìž¬í™œìš© íšŒìˆ˜ ì‹ ì²­ ì—¬ë¶€ -->
+        <div class="recycleCap">
+          <label for="recycle_rq">
+            <img src="../../images/recycle/recycle_rq.png">
+            ìº¡ìŠ ìž¬í™œìš© ë°± ìˆ˜ê±° ì‹ ì²­ ì™„ë£Œ. <!-- ì²´í¬ë°•ìŠ¤ ë¯¸ì²´í¬ ì‹œ "ìº¡ìŠ ìž¬í™œìš© ë°± ìˆ˜ê±° ë¯¸ì‹ ì²­." ë˜ëŠ” í•´ë‹¹ì¹¸ ì‚­ì œ. -->
+          </label>
+        </div>
+
+        <!-- ì£¼ë¬¸ / ê²°ì œ ì •ë³´ ìž…ë ¥ -->
+        <div class="cart_Info">
+          <table>
+            <tr class="cart_orderInfo">
+              <th><span>ì£¼ë¬¸ìž ì •ë³´(ë‚´ ì •ë³´ ê·¸ëŒ€ë¡œ ë¶ˆëŸ¬ì˜¤ê¸°. ìˆ˜ì • ë¶ˆê°€.)</span></th>
+            </tr>
+            <tr>
+              <th>ì£¼ë¬¸ìž<br>ë§ˆì˜ˆìŠ¬</th>
+              <th>ë²ˆí˜¸<br>010-1111-2222</th>
+              <th>ì´ë©”ì¼<br>abc123@naver.com</th>
+            </tr>
+            <tr class="cart_addrInfo">
+              <th><span>ë°°ì†¡ì§€ ì •ë³´(ì´ì „ ë‹¨ê³„ ì •ë³´ ê·¸ëŒ€ë¡œ ë¶ˆëŸ¬ì˜¤ê¸°. ìˆ˜ì • ë¶ˆê°€.)</span></th>
+            </tr>
+            <tr>
+              <th>ë°›ëŠ” ì‚¬ëžŒ<br>
+                ë§ˆì˜ˆìŠ¬
+              </th>
+              <th>ë²ˆí˜¸<br>
+                010-1111-2222
+              </th>
+              <th>ì£¼ì†Œ<br>
+                12345 (ìš°íŽ¸ë²ˆí˜¸)
+                <br>
+                ê²½ê¸° ì„±ë‚¨ì‹œ ë¶„ë‹¹êµ¬ íŒêµì—­ë¡œ 6-4 (ê¸°ë³¸ì£¼ì†Œ)
+                (ë°±í˜„ë™) (ì°¸ê³ ì£¼ì†Œ)<br>
+                101ë™ 101í˜¸ (ìƒì„¸ ì£¼ì†Œ)
+              </th>
+            </tr>
+            <tr class="cart_payInfo">
+              <th><span>ê²°ì œ ìˆ˜ë‹¨</span></th>
+            </tr>
+            <tr>
+              <th>
+                <p>
+                  ì¹´ì¹´ì˜¤íŽ˜ì´
+                </p>
+              </th>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="cartTotal_final">
+          <div>
+            <table class="cartTotal_box_final">
+              <tr class="cartTotal_box_header_final">
+                <th><span class="cartTotal_itemtotal">ìƒí’ˆ ê¸ˆì•¡</span></th>
+                <th><span class="cartTotal_delivery">ë°°ì†¡ë¹„</span></th>
+                <th><span class="cartTotal_total">ì´ ì£¼ë¬¸ ê¸ˆì•¡</span></th>
+              </tr>
+              <tr class="cartTotal_box_number_final">
+                <th><span>40,000</span>ì›</th>
+                <th><span>3,000</span>ì›</th>
+                <th><span class="realTotal">43,000</span>ì›</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="cart_Info_button">
+          <input type="button" class="btn_backPage" value="<  ì •ë³´ ìž…ë ¥ìœ¼ë¡œ ëŒì•„ê°€ê¸°">
+          <input type="button" class="btn_nextPage" value="ì£¼ë¬¸í•˜ê¸°  >">
+        </div>
+
+      </form>
+
+      <!-- í‘¸í„° -->
+      <footer>
+        <div class="footer1">
+          <ul>
+            <li><a href="">íšŒì‚¬ì†Œê°œ</a></li>
+            <li><a href="">ì´ìš©ì•½ê´€</a></li>
+            <li><a href="">ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨ </a></li>
+            <li><a href="">ê³ ê°ì„¼í„°</a></li>
+          </ul>
+        </div>
+        <div class="footer2">
+          <div class="call_center">
+            <p class="footer_title">ê³ ê°ë§Œì¡±ì„¼í„°</p>
+            <p class="footer_text">
+              <span class="tell"><img src="../../images/tell.png" alt=""></span><span
+                id="tell_number">02-456-789</span><br> <span class="footer_bold">ìƒë‹´ì‹œê°„ </span>10:00 ~ 18:00<br> <span
+                class="footer_bold">ë¬¸ìžìƒë‹´ </span>ì¹´ì¹´ì˜¤í†¡ í”ŒëŸ¬ìŠ¤ ì¹œêµ¬ ë“±ë¡<br> ë°˜í’ˆ ì•ˆë‚´ëŠ” í•´ë‹¹
+              ìƒí’ˆ íŽ˜ì´ì§€ë¥¼ ì°¸ê³ í•´ì£¼ì„¸ìš”
+            </p>
+          </div>
+
+          <div class="company">
+            <p class="footer_title">íšŒì‚¬ ì •ë³´</p>
+            <p class="footer_text">
+              <span class="footer_bold">íšŒì‚¬ëª…</span>(ì£¼)ë‘ìž” / ë‘ ìž”ì˜ ì—¬ìœ <br> <span class="footer_bold">ëŒ€í‘œ</span>ì„œë¯¼í¬<br> <span
+                class="footer_bold">ëŒ€í‘œì „í™”</span>02-456-789<br> <span class="footer_bold">ì£¼ì†Œ</span>ì„œìš¸íŠ¹ë³„ì‹œ ë§ˆí¬êµ¬<br> <span
+                class="footer_bold">ì´ë©”ì¼</span>alslalsl_06@naver.com<br>
+            </p>
+          </div>
+
+          <div class="delivery">
+            <p class="footer_title">ë°°ì†¡ì•ˆë‚´</p>
+            <p class="footer_text">
+              CJ ëŒ€í•œí†µìš´(TEL 1588-4321)<br> ë°°ì†¡ ìƒí™©ì€ íƒë°°ì‚¬ í™ˆíŽ˜ì´ì§€ë¥¼ ì°¸ì¡°í•´ì£¼ì„¸ìš”<br> <a href="#">ë°°ì†¡ ìƒí™© í™•ì¸í•˜ê¸°></a>
+            </p>
+          </div>
+        </div>
+        <div class="footer3">
+          <div class="shopping_menu">
+            <p class="footer_title">ì‡¼í•‘ ë©”ë‰´</p>
+            <p class="footer_text">
+              <a href="#" id="shopping_text">ìžì£¼ ë¬»ëŠ” ì§ˆë¬¸</a><br> <a href="#" id="shopping_text">ë¬¸ì˜ ê²Œì‹œíŒ</a>
+            </p>
+          </div>
+          <div class="SNS">
+            <p class="footer_title">SNS</p>
+            <br>
+            <div class="SNSicon">
+              <div>
+                <a href="#"><img src="../../images/insta.png" alt=""></a>
+              </div>
+              <div>
+                <a href="#"><img src="../../images/twitter.png" alt=""></a>
+              </div>
+              <div>
+                <a href="#"><img src="../../images/youtube.png" alt=""></a>
+              </div>
+              <div>
+                <a href="#"><img src="../../images/naver.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../../JS/dojan_js_package.js"></script>
+
 </body>
+
 </html>
