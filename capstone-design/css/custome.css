@@ -1,13 +1,12 @@
 .customeWrap{
+  margin-top: 100px;
   display: block;
   position: relative;
-  margin: 0 auto;
   width: 1920px;
 }
 .custome_main{
   background-image: url("../images/custome_1.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
 }
 .custome_page{
   background-image: url("../images/custom_2.jpg");

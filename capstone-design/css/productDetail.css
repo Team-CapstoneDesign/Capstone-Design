@@ -10,9 +10,6 @@ body{padding: 50px;}
 #header .nav_top .quick_menu a{
 	color: #fff;
 }
-#header .formbox{
-	position: absolute;
-}
 .containerWrap{
 	display: block;
 	width: 1920px;
@@ -170,7 +167,7 @@ body{padding: 50px;}
 .btns{
 	display: block;
 	position: relative;
-	top: 45px;
+	top: 65px;
 	text-align: center;
 }
 .btns > a{
