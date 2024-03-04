@@ -4,26 +4,55 @@
 *{list-style: none; padding: 0; margin: 0;}
 body{padding: 50px;}
 */
+#header .topmenu > li > a{
+	color: #fff;
+}
+#header .nav_top .quick_menu a{
+	color: #fff;
+}
+#header .formbox{
+	position: absolute;
+}
+.containerWrap{
+	display: block;
+	width: 1920px;
+	height: 844px;
+	padding-top: 100px;
+	background-image: url(../images/detail_background2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.productDetail_view{
+	margin: 0 auto;
+	min-width: 1200px;
+	width: 1200px; 
+	height: 300px;
+	position: relative; 
+	padding: 30px 0 50px 450px; 
+	box-sizing: border-box;
 
+}
 .productDetail_view{
 	margin: 0 auto;
 	position: relative; 
 	padding: 30px 0 50px 450px; 
 	width: 1200px; 
+	height: 680px;
 	box-sizing: border-box;
 }
 
+
 /* 이미지 부분 */
 .productDetail_view .img{
+	display: flex;
 	position: absolute; 
 	left: 0; 
-	top: 0;
 	padding-top: 30px;
+	bottom: 0;
 } 
 .productDetail_view .img > img {
-	width: 400px; 
-	height: 400px; 
-	border: 1px solid #e8e8e8;
+	position: relative;
+	width: 450px; 
 }
 .productDetail_view .img li:after{
 	content: ""; 
@@ -45,78 +74,91 @@ body{padding: 50px;}
 	height: 80px;  
 	border: 1px solid #e8e8e8;
 }
+.thumb_image{
+	display: flex;
+	flex-direction: column;
+}
 
 /* 우측 상품 설명 부분 */
+
 .productDetail_view h2{
-	margin: 0 0 15px; 
-	padding: 0 0 20px; 
-	border-bottom: 2px solid #333; 
-	font-size: 35px; 
-	color: #232323; 
-	line-height: 35px;
+	font-size: 40px;
+	line-height: 40px;
+	margin-bottom: 50px;
+	color: #fff;
 }
-.productDetail_view table td, .productDetail_view table th{
-	padding: 20px 0 20px 10px;
-}
-.productDetail_view table th{
-	font-size: 20px; 
-	color: #444; 
-	text-align: left;
-}
-.productDetail_view table td{
-	font-size: 20px; 
-	color: #444; 
-}
-.productDetail_view table td.price, .productDetail_view table td.total b{
-	font-size: 25px;
+.productDetail_detail{
+	display: flex;
 }
 
+.productDetail_list{
+	position: relative;
+	width: 480px;
+	height: 580px;
+	float: right;
+	background-color: #e0b782d3;
+	backdrop-filter: blur(5px);
+	padding: 50px 40px;
+	border-radius: 20px;
+	box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+}
+
+.productDetail_detail1, .productDetail_detail2{
+	font-size: 18px;
+	width: 150px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+.productDetail_detail1_explain{
+	margin-top: 20px;
+	font-size: 18px;
+	line-height: 23px;
+}
 /* 수량 선택 버튼 */
-.productDetail_view table .length{
+.length{
 	width: 150px; 
-	height: 45px;
+	height: 30px;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 5px 7px rgba(0,0,0,0.05);
 }
-.productDetail_view table .length input[type="number"]{
+.length input[type="number"]{
 	margin-left: 25px;
     -moz-appearance: textfield;
     text-align: center;
     font-size: 25px;
-	line-height: 45px;
+	line-height: 30px;
     border: none;
     background-color: #ffffff;
     color: #202030;
+		font-size: 18px;
 }
-.productDetail_view table .length input::-webkit-outer-spin-button,
-.productDetail_view table .length input::-webkit-inner-spin-button{
+ .length input::-webkit-outer-spin-button,
+ .length input::-webkit-inner-spin-button{
     -webkit-appearance: none;
     margin: 0 auto;
 }
-.productDetail_view table .length button{
+.length button{
     background-color: #fff;
     border: none;
     font-size: 25px;
     cursor: pointer;
 }
-.productDetail_view table .length #decrement{
+.length #decrement{
 	float: left;
-	height: 45px;
-    padding: 5px 0px 5px 15px;
+    height: 30px;
+    padding: 0px 0px 5px 15px;
     border-radius: 5px 0 0 5px;
-	font-weight: bold;
 }
-.productDetail_view table .length #increment{
+.length #increment{
 	float: right;
-	height: 45px;
-    padding: 5px 15px 5px 0px;
+	height: 30px;
+    padding: 0px 15px 5px 0px;
     border-radius: 0 5px 5px 0;
-	font-weight: bold;
 }
-.productDetail_view table .captype{
+.captype{
 	width: 250px;
-	height: 50px;
+	height: 30px;
 	text-indent : 15px;
 	background-color: #ffffff;
     border-radius: 5px;
@@ -125,33 +167,35 @@ body{padding: 50px;}
 }
 
 /* 버튼 부분 */
-.productDetail_view .btns{
-	padding: 30px 0 0; 
+.btns{
+	display: block;
+	position: relative;
+	top: 45px;
 	text-align: center;
 }
-.productDetail_view .btns > a{
+.btns > a{
 	display: inline-block; 
-	width: 370px; 
-	height: 70px; 
+	padding: 10px 30px;
 	border-radius: 35px; 
-	font-size: 25px; 
+	font-size: 18px; 
 	font-weight: bold;
 	color: #fff;
-	line-height: 70px;
 	text-decoration-line: none;
+	transition: 0.3s;
 }
-.productDetail_view .btns > a.btn1{
+.btns > a.btn1{
 	color: #ff555d;
 	background: #fff;
-	border: 2px solid #ff555d;
+	border: 1px solid #ff555d;
 }
-.productDetail_view .btns > a.btn1:hover{
+.btns > a.btn1:hover{
 	color: #fff;
 	background: #ff555d;
 }
-.productDetail_view .btns > a.btn2{
-	background: #083844;
+.btns > a.btn2{
+	background: #ff555d;
 }
-.productDetail_view .btns > a.btn2:hover{
+.btns > a.btn2:hover{
 	background: #b83333;
 }
+

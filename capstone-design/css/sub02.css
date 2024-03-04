@@ -2,6 +2,10 @@
 
 /* sub02_completeCapsule page */
 
+body{
+-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
 .sub_container{
   width: 1920px;
   /* height: 900px; */
@@ -11,9 +15,24 @@
 .sub_section1{
     width: 100%;
     height: 400px;
-    text-align: center;
     word-break: keep-all;
-    background-color: #083844;
+    background-image: url(../images/sub02_title3.png);
+}
+.ctgTitle{
+    position: relative;
+    display: block;
+    padding-top: 50px;
+    width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    text-align: right;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #b9971d;
+}
+.ctgTitle > span{
+    font-weight: normal;
+    font-size: 40px;
 }
 .sub_headerTitle{
     display: flex;
@@ -22,13 +41,11 @@
     width: 1920px;
     min-width: 1200px;
     text-align: center;
-    flex-direction: column;
-    justify-content: center;
 }
 .sub_subTilte{
 	display: block;
     position: relative;
-	color: #fff;
+	color: #333;
     width: 100%;
     height: 50px;
 	font-size: 50px;
@@ -42,14 +59,13 @@
 	display: block;
     position: relative;
 	color: #fff;
-    width: 100%;
+    width: 1200px;
 	font-size: 15px;
-	text-align: center;
-	word-break: keep-all;
-    bottom: 0;
+	text-align: right;
+    margin: 0 auto;
 }
 .smap a{
-	color: #fff;
+	color: #333;
 	text-decoration-color: none;
 	text-decoration-line: none;
 }
@@ -136,56 +152,96 @@ div.product_view_tab_wrap {
     position: relative;
 	margin: 0 auto;
 }
-dl.product_view_tab {
+
+.product_list > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.product_list li{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 282px;
+}
+.product_list .product_info{
     position: relative;
+    margin-top: -180px;
+    padding: 200px 30px 30px 30px;
+    width: 290px;
+    height: 420px;
+    background-color: #efefef;
+    border-radius: 10px;
+    bottom: 0;
+    z-index: 1;
+    transition: 0.2s ease-in-out;
 }
-div.product_list > dl{
-    clear: left;
+.product_info:hover{
+    color:#fff;
+    background:linear-gradient(135deg, #184e68 0%,#57ca85 100%);
+    background-size: 400% 400%;
+    animation: colorChange 3s ease infinite;
+    background-size: 400% 400%;
+    margin-top: -190px;
 }
-div.product_list > dl > dt {
-    padding: 20px;
-    background: #b7b7b7;
-    margin-bottom: 20px;
-    border-radius: 3px;
-    overflow: hidden;
+@keyframes colorChange{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
-div.product_list > dl > dt > a {
+.product_info:hover > p{
+    color: #fff;
+}
+.product_info:hover > div > div > span{
+    color: #fff;
+}
+.product_list img {
+    position: relative;
     display: block;
-    float: left;
-    line-height: 25px;
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 3;
+}
+.product_list .product_name{
     font-size: 25px;
     font-weight: bold;
-    color: #0D0D0D;
+    text-align: left;
 }
-div.product_list > dl > dd {
-    margin-bottom: 40px;
-	text-align: center;
-}
-div.product_list > dl > dd > ul {
-    width: 1280px;
-    position: relative;
-	left: -10px;
-}
-div.product_list > dl > dd > ul > li {
-    width: 293px;
-    float: left;
-    margin: 10px;
+.product_info_detail{
     margin-bottom: 10px;
+}
+.detail{
+    display: flex;
+    line-height: 20px;
+}
+.detail1{
+    width: 50px;
+    font-size: 15px;
+    color: #898989;
+}
+.detail2{
+    text-align: right;
+    width: 190px;
+    right: 30px;
+}
+.blending{
+    margin: 8px 0;
+    color: #898989;
+    font-size: 14px;
+}
+.move_detail{
+    display: block;
     position: relative;
-    border: 1px solid #0D0D0D;
-}
-div.product_list > dl > dd > ul li dl {
-    width: 293px;
-}
-div.product_list > dl > dd > ul li dt {
-    width: 293px;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-}
-div.product_list > dl > dd > ul li dt img{
-    width: 293px;
-}
-div.product_list > dl > dd > ul li dl dd{
-    padding: 10px 0;
+    padding: 10px 15px;
+    border-radius: 20px ;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    margin: 0 auto;
 }
