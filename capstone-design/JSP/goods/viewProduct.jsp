@@ -237,21 +237,9 @@
 								String prdSmell = rs.getString("prdSmell");
 								String prdTaste = rs.getString("prdTaste");
 							%>
-							<%-- 											<li class="">
-												<dl>
-													<dt>
-														<a href="viewProductDetail.jsp?prdNo=<%= prdNo%>" class="">
-														<img src="../../images/sample/sample_<%=prdNo%>.png" alt="<%=prdNo%>"></a>
-													</dt>
-													<dd><%=prdName%></dd>
-													<dd>커피 향 또는 맛 입력란</dd>
-													<dd>1세트 (10개)</dd>
-													<dd><%=prdPrice%>원</dd>
-												</dl>
-											</li>	 --%>
-							<li class=""><a
-								href="viewProductDetail.jsp?prdNo=<%=prdNo%>" class=""> <img
-									src="../../images/productImg/productImg1.png" alt="<%=prdNo%>"></a>
+						
+							<li class=""> <a href="viewProductDetail.jsp?prdNo=<%=prdNo%>"> 
+                                  <img src="../../images/productImg/productImg1.png" alt="<%=prdNo%>"></a>
 								<div class="product_info">
 									<p class="product_name"><%=prdName %></p>
 									<p class="blending"><%=prdType %></p>
@@ -261,6 +249,7 @@
 										</div>
 
 										<div class="detail">
+							
 											<span class="detail1">향</span> <span class="detail2"><%=prdSmell %></span>
 										</div>
 										<div class="detail">
@@ -271,7 +260,7 @@
 										</div>
 									</div>
 									<a class="move_detail"
-										href="viewProductDetail.jsp?prdNo=%= prdNo%>"> 자세히 보기 </a>
+										href="viewProductDetail.jsp?prdNo=<%= prdNo%>"> 자세히 보기 </a>
 								</div></li>
 							<%
 								}

@@ -130,36 +130,39 @@
 						if (!rs.next()) // 장바구니 내용없으면 굳이 비었다고 출력하는거보다 그냥 아무것도 없게 보이는것도 괜찮을거같음
 						{
 					%>
-					<div>
-						<a href="deleteAllcart.jsp"><input type="button"
-							class="deleteAllBtn" value="전체 상품 삭제"></a>
-					</div>
-
-					<table class="cartItem_list">
-						<tr class="cartItem_header" alt="캡슐 종류 구분용">
-							<th>두잔 캡슐</th>
-							<th></th>
-							<th>판매가</th>
-							<th>캡슐종류</th>
-							<th>구매수량<br>
-							<span>(10개 1세트 + 10캡슐)</span></th>
-							<th>합계</th>
-							<th></th>
-						</tr>
+					  <table class="cartItem_list">
+							<tr class="cartItem_header" alt="캡슐 종류 구분용">
+								<th></th>
+								<th></th>
+								<th>판매가</th>
+								<th>캡슐종류</th>
+								<th>구매수량<br>
+								<span>(10개 1세트 + 10캡슐)</span></th>
+								<th>합계</th>
+								<th></th>
+							</tr>
+						</table>
 						<%
 							} else {
 						%>
 
 						<%
-							String jsql2 = "select prdNo, ctQty, capType from cart where ctNo = ?";
+						String jsql2 = "select prdNo, ctQty, capType from cart where ctNo = ?";
 						PreparedStatement pstmt2 = con.prepareStatement(jsql2);
 						pstmt2.setString(1, ctNo);
 
 						ResultSet rs2 = pstmt2.executeQuery();
 
-						int Nomaltotal = 0; //  완제품 총가격
-						int Customtotal = 0; //  커스텀 총가격
-						int total = 0; //  완제품 + 커스텀 총가격
+
+						String jsql4 = "select csname, price, price2, machine, csQty from cscart where ctNo =?";
+						PreparedStatement pstmt4 = con.prepareStatement(jsql4);
+						pstmt4.setString(1, ctNo);
+
+						ResultSet rs4 = pstmt4.executeQuery();
+
+
+						int nomalT = 0;     // 완제품 총합산가격
+						int customT = 0;   //  커스텀 총합산가격
 						%>
 
 						<div>
@@ -169,7 +172,8 @@
 
 						<table class="cartItem_list">
 							<tr class="cartItem_header" alt="캡슐 종류 구분용">
-								<th>두잔 캡슐</th>
+								<th>캡슐</th>
+								<th>캡슐명</th>
 								<th>판매가</th>
 								<th>캡슐종류</th>
 								<th>구매수량<br>
@@ -179,7 +183,11 @@
 							</tr>
 
 							<%
+								
 								while (rs2.next()) {
+
+								int Nomaltotal = 0;       //  완제품 가격 개별 출력을 위해 반복마다 변수0선언
+								
 								String prdNo = rs2.getString("prdNo"); //  cart에서 상품번호 추출
 								int ctQty = rs2.getInt("ctQty"); //  cart에서 주문수량 추출 
 								String capType = rs2.getString("capType"); //  cart에서 캡슐타입 추출
@@ -197,48 +205,86 @@
 
 								int NomalAmount = prdPrice2 * ctQty;
 								Nomaltotal = Nomaltotal + NomalAmount;
+								nomalT = nomalT +  NomalAmount;
 
 								String comNomaltotal = String.format("%,d", Nomaltotal);
 							%>
 							<tr class="cartItem_product" alt="상세 상품">
-								<th><img src="../../images/sample/sample_<%=prdNo%>.png"><%=prdName%></th>
-								<th><%=prdPrice%> 원</th>
-								<th><%=capType%></th>
-								<th><input type="hidden" value="<%=ctQty%>"><%=ctQty%>세트</th>
-								<th><%=comNomaltotal%> 원</th>
-								<th><a href="deletecart.jsp?prdNo=<%=prdNo%>"><input
-										type="button" class="deleteBtn" value="삭제"></a></th>
+								<td><img src="../../images/sample/sample_<%=prdNo%>.png"></td>
+								<td><%=prdName%></td>
+								<td><%=prdPrice%> 원</td>
+								<td><%=capType%></td>
+								<td><input type="hidden" value="<%=ctQty%>"><%=ctQty%>세트</td>
+								<td><%=comNomaltotal%> 원</td>
+								<td><a href="deletecart.jsp?prdNo=<%=prdNo%>"><input
+										type="button" class="deleteBtn" value="삭제"></a></td>
 							</tr>
 
-							<%
-								} // while의 끝
-							} // 완제품 전용 if-else문의 끝    다음줄부터 커스텀 카트 전용 if-else문 jsql4 시작
-							%>
+						
+
+							<% } // (rs.2) while의 끝 %>
 
 
 							<tr class="cartItem_header" alt="캡슐 종류 구분용">
 								<th>커스텀 캡슐</th>
-								<th></th>
+								<th>커스텀 캡슐명</th>
 								<th>판매가</th>
 								<th>캡슐종류</th>
 								<th>구매수량<br>
-								<span>(10개 1세트)</span></th>
+								<span>(10개 1세트 + 10캡슐)</span></th>
 								<th>합계</th>
 								<th></th>
 							</tr>
+
+			<%  
+								while (rs4.next()) { 
+
+				                int Cstotal = 0;      // 커스텀 가격 개별 출력위해 반복때마다 변수 0선언
+				                
+								String name = rs4.getString("csname");
+								String price = rs4.getString("price");
+								int price2  = rs4.getInt("price2");
+								String cap = rs4.getString("machine");
+								int csQty = rs4.getInt("csQty");	
+
+								int CsAmount = price2 * csQty;
+								Cstotal = Cstotal + CsAmount;
+								customT = customT + CsAmount;
+								
+								String comCstotal = String.format("%,d", Cstotal);
+				%>
+
 							<tr class="cartItem_product" alt="상세 상품">
 								<td><img src="../../images/sample/sample_custom01.png"></td>
-								<td>커스텀제작명1</td>
-								<td>10,000 원</td>
-								<td>돌체구스토</td>
-								<td><input type="number" min="1" max="20" step="1"
-									value="1">세트</td>
-								<td>10,000 원</td>
-								<td><input type="button" class="deleteBtn" value="삭제"></td>
+								<td><%= name%></td>
+								<td><%= price%> 원</td>
+								<td><%= cap%></td>
+								<td><input type="hidden" value="<%=csQty%>"><%=csQty%>세트</td>
+								<td><%= comCstotal%> 원</td>
+								<td><a href="Csdeletecart.jsp?csname=<%= name%>">
+								<input type="button" class="deleteBtn" value="삭제"></a></td>
 							</tr>
-
+ <%  }  // (rs.4) while문의 끝  %>
 						</table>
 
+                    <%    
+						
+                        int shippingFee = 0;                // 배송비
+
+					    int productTotal = (nomalT + customT);    //  완제품 + 커스텀 총가격 
+
+						 // 총 주문 금액이 50000원을 넘는 경우 배송비는 없음
+                        if (productTotal > 50000) {
+                            shippingFee = 0;
+                      } else {
+                            shippingFee = 3000;
+                      }
+
+					    int total = productTotal + shippingFee;
+
+						String shippingFeeText = (shippingFee == 0) ? "무료" : "3,000 원";
+
+						%>
 						<div class="cartTotal">
 							<div>
 								<table class="cartTotal_box">
@@ -248,13 +294,13 @@
 										<th><span class="cartTotal_total">총 주문 금액</span></th>
 									</tr>
 									<tr class="cartTotal_box_number">
-										<th><span>40,000</span>원</th>
-										<th><span>3,000</span>원</th>
-										<th><span class="realTotal">43,000</span>원</th>
+										<th><span><%= String.format("%,d", productTotal) %> </span>원</th>
+										<th><span><%= shippingFeeText %></span></th>
+										<th><span class="realTotal"><%= String.format("%,d", total) %> </span>원</th>
 									</tr>
 								</table>
 							</div>
-
+<% }  %>
 
 
 							<div>

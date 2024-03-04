@@ -22,6 +22,13 @@ try {
 	
     pstmt.executeUpdate();
 
+    String jsql2 = "delete from cscart where ctNo=?";   
+	PreparedStatement pstmt2 = con.prepareStatement(jsql2);
+	pstmt2.setString(1, ctNo);
+
+	pstmt2.executeUpdate();
+
+
 	if(caseNo!= null)  //  주문완료로 인한 지우기
 	{                             
 %>
