@@ -6,9 +6,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>두잔 상품 상세 조회</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/style.css">
-<link rel="stylesheet" href="../../css/sub02.css">
 <link rel="stylesheet" href="../../css/productDetail.css">
 
 </head>
@@ -105,126 +103,84 @@ try{
 			String detail = rs.getString("prdDetail"); 
 		%>
 		<!-- 컨텐츠 -->
-		<div class="sub_container" name="sub_product">
-			<!-- 네비게이션 헤더 -->
-			<div class="sub_section1" name="sub_header">
-				<div class="sub_headerTitle">
-				<div class="sub_subTilte">두잔 캡슐</div><br><br>
-					<ul class="smap">
-						<!-- 미니 네비게이션 -->
-						<li><a href="index.html"><img
-								src="../../images/smap/icon_home_w.png" alt="홈으로"></a></li>
-						<li><img class="arrow" src="../../images/smap/icon_arrow_w.png"
-							alt="하위메뉴"></li>
-						<li class="en"><a href="index.html">두잔 캡슐</a></li>
-						<li><img class="arrow" src="../../images/smap/icon_arrow_w.png"
-							alt="하위메뉴"></li>
-						<li><a href="index.html">상품분류</a></li>
-						<li><img class="arrow" src="../../images/smap/icon_arrow_w.png"
-							alt="하위메뉴"></li>
-						<li><a href="index.html" class="this">상품명</a></li>
-					</ul>
-			</div>
-		</div>
-
 		<!-- 상품 소개 -->
-
-		<div class="productDetail_view">
-		
-        <h2><%=name%></h2>
-        <form action="../cart/incart.jsp" name="selectCapsule">
-        <!-- numEvent.js에 event.preventDefault(); 넣었는지 꼭 확인할것!! -->
-        <table>
-            <caption>
-                <details class="hide">
-                    <summary>상품정보</summary>
-                    판매가, 상품코드, 옵션 및 결제금액 안내
-                </details>
-            </caption>
-            <colgroup>
-            <col style="width: 173px;">
-            <col>
-            </colgroup>
-            <tbody>
-	        <input type=hidden name=prdNo  value="<%=num%>">
-                <tr>
-                    <th>로스팅 단계</th>
-                    <td><%= roast%></td>
-                </tr>
-                <tr>
-                    <th>향미</th>
-                    <td><%= smell %> + <%= taste %></td>
-                </tr>
-				
-				<tr>
-                    <th>상세 설명</th>
-                    <td><%= detail%></td>
-                </tr>
-				<tr>
-                    <th>기본 구성</th>
-                    <td>1세트(10개) + 10캡슐</td>
-                </tr>
-				<tr>
-                    <th>판매가</th>
-                    <td class="price"><%= price%></td>
-                </tr>
-				<tr>
-					<th>캡슐종류</th>
-					<td>
-						<select name=capType class="captype">
-							<option value="네스프레소 오리지널">네스프레소 오리지널</option>
-							<option value="네스프레소 버츄오">네스프레소 버츄오</option>
-							<option value="돌체구스토">돌체구스토</option>
-							<option value="일리">일리</option>
-							<option value="카누">카누</option>
-							<option value="큐리그">큐리그</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-                    <th>구매수량</th>
-                    <td>
-						<div class="length">
-                            <button id="decrement" onclick="stepper(this)"> - </button>
-        					<input name="qty" type="number" min="1" max="20" step="1" value="1" id="my-input" readonly>
-        					<button id="increment" onclick="stepper(this)"> + </button>
-                        </div>
-                    </td>
-                </tr>
-				<tr>
-                    <th>배송비</th>
-                    <td>3,000원 (3만원 이상 배송비 무료)</td>
-                </tr>
-				
-            </tbody>
-        </table>
-        </form>
-		
-	
+		<div class="containerWrap">
+      <div class="productDetail_view">   
         <div class="img">
-            <img src="../../images/sample/sample_<%=prdNo%>.png" alt="thumb" id="big">
-            <ul class="thumb_image">
-                <li><img src="../../images/sample/sample_small_<%=prdNo%>.png" onMouseOver="showBig('sample_<%=prdNo%>.png');"></li>
-                <li><img src="../../images/sample/sample_small_<%=prdNo%>.png" onMouseOver="showBig('sample_<%=prdNo%>.png');"></li>
-            </ul>
-        </div>
-			
-        <div class="btns">
-            <a href="#a" class="btn1">위시리스트에 담기</a>
-            <a href="#a" class="btn2" onclick="checkSelectCoffeeValue()">장바구니에 담기</a>
-        </div>
-    	</div>
-
-		</div>
+          
+          <ul class="thumb_image">
+            <li><img src="../../images/sample/sample_small_DB001.png" onMouseOver="showBig('../../images/productImg/productImg1.png');">
+            </li>
+            <li><img src="../../images/sample/sample_small_DB001.png" onMouseOver="showBig('../../images/productImg/productImg1.png');">
+            </li>
+          </ul>
+          <img src="../../images/productImg/productImg1.png" alt="thumb" id="big">
+        </div>   
+        <form action="../cart/incart.jsp" name="selectCapsule">
+          <div class="productDetail_list">
+            <h2><%=name%></h2>
+            <input type=hidden name=prdNo value="<%=num%>">
+            <div class="productDetail_detail">
+              <span class="productDetail_detail1">로스팅 단계</span>
+              <span class="productDetail_detail2"><%=roast%></span>
+            </div>
+            <div class="productDetail_detail">
+              <span class="productDetail_detail1">향미</span>
+              <span class="productDetail_detail2"><%=smell%></span>
+            </div>
+            <div class="productDetail_detail">
+              <span class="productDetail_detail1">기본 구성</span>
+              <span class="productDetail_detail2">1세트(10개입)</span>
+            </div>
+            <div class="productDetail_detail">
+              <span class="productDetail_detail1">가격</span>
+              <span class="productDetail_detail2"><%=price%> 원</span>
+            </div>
+            <div class="productDetail_detail">
+              <span class="productDetail_detail1">배송비</span>
+              <span class="productDetail_detail2">3,000 원</span>
+            </div>
+            <div class="productDetail_detail">
+              <span class="productDetail_detail1">캡슐 종류</span>
+              <span class="productDetail_detail2">
+                <select name=capType class="captype">
+                  <option value="네스프레소 오리지널">네스프레소 오리지널</option>
+                  <option value="네스프레소 버츄오">네스프레소 버츄오</option>
+                  <option value="돌체구스토">돌체구스토</option>
+                  <option value="일리">일리</option>
+                  <option value="카누">카누</option>
+                  <option value="큐리그">큐리그</option>
+                </select>
+              </span>
+            </div>
+            
+            <div class="productDetail_detail">
+              <span class="productDetail_detail1">구매 수량</span>
+              <span class="length">
+                <button id="decrement" onclick="stepper(this)"> - </button>
+                  <input name="qty" type="number" min="1" max="20" step="1" value="1" id="my-input" readonly>
+                <button id="increment" onclick="stepper(this)"> + </button>
+              </span>
+            </div>
+            <div class="productDetail_detail">
+              <span class="productDetail_detail1_explain"><%=detail %></span>
+            </div>
+            <div class="btns">
+              <a href="#a" class="btn1">위시리스트에 담기</a>
+              <a href="#a" class="btn2" onclick="checkSelectCoffeeValue()">장바구니에 담기</a>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div> 
 		<% } %>
 		<!-- 상품 상세 소개 영역 -->
-		
-		<div>
-			<img src="../../images/sample/sample_detail.png">
-		</div>
-					
 	</div>
 	
+	  <div>
+    <img src="../../images/sample/sample_detail.png">
+  </div>
 	<!-- 푸터 -->
 	<footer>
 		<div class="footer1">
