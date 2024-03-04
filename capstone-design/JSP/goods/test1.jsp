@@ -7,14 +7,10 @@
 </head>
 <body>
 <!--custome.html에서 입력값을 장바구니로 긁어오는 JSP 예제 참고용 -->
-<% 
-	String value1 = request.getParameter("baseName");
-	String value2 = request.getParameter("blendName");
-%>
+
 
 <h1>긁어오기 테스트</h1>
-<%= value1%>
-<%= value2%>
+<h2>정상 구동</h2>
 
 </body>
 </html>
