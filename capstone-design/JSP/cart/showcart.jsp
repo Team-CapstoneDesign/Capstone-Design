@@ -210,7 +210,7 @@
 								String comNomaltotal = String.format("%,d", Nomaltotal);
 							%>
 							<tr class="cartItem_product" alt="상세 상품">
-								<td><img src="../../images/sample/sample_<%=prdNo%>.png"></td>
+								<td><img src="../../images/capdesign/<%=prdNo%>.png"></td>
 								<td><%=prdName%></td>
 								<td><%=prdPrice%> 원</td>
 								<td><%=capType%></td>
