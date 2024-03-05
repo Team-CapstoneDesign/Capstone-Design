@@ -109,12 +109,12 @@ try{
         <div class="img">
           
           <ul class="thumb_image">
-            <li><img src="../../images/sample/sample_small_DB001.png" onMouseOver="showBig('../../images/productImg/productImg1.png');">
+            <li><img src="../../images/capdesign/<%=num%>.png" onMouseOver="showBig('../../images/capdesign/<%=num%>.png');">
             </li>
-            <li><img src="../../images/sample/sample_small_DB001.png" onMouseOver="showBig('../../images/productImg/productImg1.png');">
+            <li><img src="../../images/capdesign/<%=num%>.png" onMouseOver="showBig('../../images/capdesign/<%=num%>.png');">
             </li>
           </ul>
-          <img src="../../images/productImg/productImg1.png" alt="thumb" id="big">
+          <img src="../../images/capdesign/<%=num%>.png" alt="thumb" id="big">
         </div>   
         <form action="../cart/incart.jsp" name="selectCapsule">
           <div class="productDetail_list">

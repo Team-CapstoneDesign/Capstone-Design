@@ -239,7 +239,7 @@
 							%>
 						
 							<li class=""> <a href="viewProductDetail.jsp?prdNo=<%=prdNo%>"> 
-                                  <img src="../../images/productImg/productImg1.png" alt="<%=prdNo%>"></a>
+                                  <img src="../../images/capdesign/<%=prdNo%>.png" alt="<%=prdNo%>"></a>
 								<div class="product_info">
 									<p class="product_name"><%=prdName %></p>
 									<p class="blending"><%=prdType %></p>
