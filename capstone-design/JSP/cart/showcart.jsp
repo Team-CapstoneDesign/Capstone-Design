@@ -192,6 +192,37 @@
 								int ctQty = rs2.getInt("ctQty"); //  cart에서 주문수량 추출 
 								String capType = rs2.getString("capType"); //  cart에서 캡슐타입 추출
 
+								 String capTypeName = "";
+                             switch (capType) {
+								 case "nesOrigin":
+                                 capTypeName = "네스프레소 오리지널";
+                                 break;
+
+                                 case "nesVeryuo":
+                                 capTypeName = "네스프레소 버츄오";
+                                 break;
+
+                                 case "dolce":
+                                 capTypeName = "돌체구스토";
+                                 break;
+
+                                 case "illy":
+                                 capTypeName = "일리";
+                                 break;
+
+                                 case "kanu":
+                                 capTypeName = "카누";
+                                 break;
+
+                                 case "keurig":
+                                 capTypeName = "큐리그";
+                                 break;
+
+                                 default:
+                                 capTypeName = "알 수 없는 캡슐 타입";
+                                 break;
+        }
+
 								String jsql3 = "select prdName, prdPrice, prdPrice2 from goods where prdNo = ?";
 								PreparedStatement pstmt3 = con.prepareStatement(jsql3);
 								pstmt3.setString(1, prdNo);
@@ -208,12 +239,14 @@
 								nomalT = nomalT +  NomalAmount;
 
 								String comNomaltotal = String.format("%,d", Nomaltotal);
+
+
 							%>
 							<tr class="cartItem_product" alt="상세 상품">
 								<td><img src="../../images/capdesign/<%=prdNo%>.png"></td>
 								<td><%=prdName%></td>
 								<td><%=prdPrice%> 원</td>
-								<td><%=capType%></td>
+								<td><%=capTypeName%></td>
 								<td><input type="hidden" value="<%=ctQty%>"><%=ctQty%>세트</td>
 								<td><%=comNomaltotal%> 원</td>
 								<td><a href="deletecart.jsp?prdNo=<%=prdNo%>"><input

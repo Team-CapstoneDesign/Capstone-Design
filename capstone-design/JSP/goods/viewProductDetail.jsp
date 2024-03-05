@@ -144,12 +144,12 @@ try{
               <span class="productDetail_detail1">캡슐 종류</span>
               <span class="productDetail_detail2">
                 <select name=capType class="captype">
-                  <option value="네스프레소 오리지널">네스프레소 오리지널</option>
-                  <option value="네스프레소 버츄오">네스프레소 버츄오</option>
-                  <option value="돌체구스토">돌체구스토</option>
-                  <option value="일리">일리</option>
-                  <option value="카누">카누</option>
-                  <option value="큐리그">큐리그</option>
+                  <option value="nesOrigin">네스프레소 오리지널</option>
+                  <option value="nesVeryuo">네스프레소 버츄오</option>
+                  <option value="dolce">돌체구스토</option>
+                  <option value="illy">일리</option>
+                  <option value="kanu">카누</option>
+                  <option value="keurig">큐리그</option>
                 </select>
               </span>
             </div>
