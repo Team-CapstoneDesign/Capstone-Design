@@ -16,27 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cart`
+-- Table structure for table `cscart`
 --
 
-DROP TABLE IF EXISTS `cart`;
+DROP TABLE IF EXISTS `cscart`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `cart` (
+CREATE TABLE `cscart` (
   `ctNo` char(40) DEFAULT NULL,
-  `prdNo` char(20) DEFAULT NULL,
-  `ctqty` int(11) DEFAULT NULL
+  `csname` char(10) DEFAULT NULL,
+  `origin` char(30) DEFAULT NULL,
+  `blend` char(30) DEFAULT NULL,
+  `roast` char(30) DEFAULT NULL,
+  `machine` char(30) DEFAULT NULL,
+  `csQty` int(11) DEFAULT NULL,
+  `price` char(30) DEFAULT NULL,
+  `price2` char(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cart`
+-- Dumping data for table `cscart`
 --
 
-LOCK TABLES `cart` WRITE;
-/*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-INSERT INTO `cart` VALUES ('C9B689B878E00B22F74ED54FA6EA10D1','DO001',2),('C9B689B878E00B22F74ED54FA6EA10D1','DO002',3),('0ADD0DDD4D48D271042A6B46BB0B14B9','DS001',1),('0ADD0DDD4D48D271042A6B46BB0B14B9','DB002',2),('CDAE72E5B6DDECCCAA8CAB61D03623A5','DS002',3);
-/*!40000 ALTER TABLE `cart` ENABLE KEYS */;
+LOCK TABLES `cscart` WRITE;
+/*!40000 ALTER TABLE `cscart` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cscart` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-04  0:55:55
+-- Dump completed on 2024-03-05  4:00:23
