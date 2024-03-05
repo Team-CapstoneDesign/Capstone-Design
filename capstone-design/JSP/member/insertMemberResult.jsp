@@ -102,7 +102,7 @@
 	</table>
 <br>
 
- <a href="" >로그인화면으로 이동</a> 
+ <a href="login.jsp">로그인화면으로 이동</a> 
 
 </div>
 
