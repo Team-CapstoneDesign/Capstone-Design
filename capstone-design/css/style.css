@@ -190,7 +190,7 @@ opacity: 100;
   justify-content: center;
   align-items: center;
   padding: 0 100px;
-  height: 400px;
+  height: 600px;
   text-align: center;
   font-weight: 500;
   color: #fff;
@@ -201,7 +201,18 @@ opacity: 100;
   word-break: keep-all;
 
 }
+.slide.slide1{
+  background-image: url(../images/banner2.png);
+  background-size: contain;
+  background-position: 0 50% ;
 
+}
+.slide.slide2{
+  background-image: url(../images/seasonal_limited2.png);
+  background-size: contain;
+  background-position: 0 50% ;
+
+}
 .kvWrap .kvList .subTitle{
   font-size: 1.875em;
 }
@@ -229,14 +240,14 @@ opacity: 100;
 .bestCapsule{
   padding-top: 100px;
   display: flex;
+  justify-content: space-between;
 }
 .bestCapsule_left{
-  width: 432px;
+  width: 370px;
   float: left;
 }
 .bestCapsule_left img{
-  width: 284px;
-  height: 290px;
+  height: 315px;
 }
 .deco{
   position: absolute;
@@ -269,7 +280,6 @@ opacity: 100;
 .capsuleSlide1{
   position: relative;
   display: block;
-  width: 284px;
   height: 460px;
   margin: 0 auto;
 }
@@ -309,8 +319,8 @@ opacity: 100;
   justify-content: space-evenly;
 }
 .bestCapsule_right .bestOption .option img{
-  width: 150px;
-  
+  width: 210px;
+  cursor: pointer;
 }
 .bestCapsule_right .bestOption .option div{
   color: #fff;
@@ -358,6 +368,9 @@ opacity: 100;
   font-size: 50px;
   letter-spacing: 20px;
 }
+.signatureTitle.best{
+  margin-bottom: 50px;
+}
 .signature_time{
   display: flex;
   justify-content: center;
@@ -368,15 +381,29 @@ opacity: 100;
   width: 284px;
   height: 510px;
   margin-right: 20px;
-  background-color: #333;
+  transition: 0.3s ease-in-out;
 }
 .signature_time:last-child{
   margin-right: 0;
 }
+
+
+
 .morning{
   background-image: url(../images/morning.png);
   background-position: 50% 0;
 }
+.morning:hover, .afternoon:hover, .evening:hover{
+  margin-top: -20px;
+}
+.morning_back{
+  position: absolute;
+  z-index: 5;
+}
+.morning:hover + .morning_back{
+
+}
+
 .afternoon{
   background-image: url(../images/afternoon.jpg);
   background-position: 50% 0;
@@ -385,11 +412,18 @@ opacity: 100;
   background-image: url(../images/evening.png);
   background-position: 20% 0;
 }
-
+.signature_time_capusle{
+  display: flex;
+  width: 1200px;
+  margin-top: -240px;
+  margin-left: 200px;
+}
 .time_capsule{
-  position: relative;
+
+  width:315px;
   left: 78px;
   top: 258px;
+  filter: drop-shadow(rgba(100, 100, 111, 0.2) 10px 10px 10px);
 }
 .signature_explamation{
   margin-top: 54px;
@@ -412,13 +446,15 @@ opacity: 100;
 
 
 .signature_Origin{
+  position: relative;
   display: flex;
   margin: 0 auto;
   width: 678px;
   height: 316px;
   text-align: center;
-  margin-top: 78px;
-  margin-bottom: 36px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  top: 20px;
 }
 .signature_Origin .origin_left{
   display: block;
@@ -589,6 +625,10 @@ right: 0;
 
 /*section5*/
 #section5{
+  position: relative;
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
   margin-top: 150px;
   margin-bottom: 150px;
 }
@@ -602,23 +642,59 @@ right: 0;
 .section-title .title{
   font-size: 35px;
 }
-.goods-list ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.goods-list ul li{
-  margin-bottom: 20px;
-}
-.goods-list .goods{
-  border-radius: 200px 200px 0 0;
+.listSection1{
+  margin-bottom: 113px;
 }
 
-.goodsName{
-  font-size: 22px;
+.bestGoodsList .bestGoods{
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
-.goodPrice{
-  font-size: 18px;
+.bestGoods:hover{
+  margin-left: -20px;
+}
+.gabe{
+  position: absolute;
+  right: 0;
+  top: 366px;
+  width: 355px;
+
+}
+.bestGoods_capsule1{
+  display: inline-block;
+  position: absolute;
+  width: 254px;
+  z-index: 5;
+  top: 197px;
+  left: -199px;
+  filter: drop-shadow(rgba(100, 100, 111, 0.2) 10px 10px 10px);
+}
+.bestGoods_capsule2{
+  display: inline-block;
+  position: absolute;
+  width: 254px;
+  z-index: 5;
+  top: 325px;
+  left: -115px;
+  transform: rotate(199deg);
+  filter: drop-shadow(rgba(100, 100, 111, 0.2) 10px 10px 10px);
+}
+.bestGoods_capsule3{
+  display: inline-block;
+  position: absolute;
+  width: 254px;
+  z-index: 5;
+  top: 805px;
+  left: 1077px;
+  filter: drop-shadow(rgba(100, 100, 111, 0.2) 10px 10px 10px);
+}
+.listSection2 .blank{
+  width: 1200px;
+  height: 163px;
+  background-color: #dce9aebc;
+  margin-bottom: 5px;
 }
 
 /*footer*/

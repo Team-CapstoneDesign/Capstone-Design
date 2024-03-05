@@ -15,7 +15,7 @@ body{padding: 50px;}
 	width: 1920px;
 	height: 844px;
 	padding-top: 100px;
-	background-image: url(../images/detail_background2.png);
+	background-image: url(../images/detail_background.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -91,9 +91,8 @@ body{padding: 50px;}
 .productDetail_list{
 	position: relative;
 	width: 480px;
-	height: 580px;
 	float: right;
-	background-color: #e0b782d3;
+	background-color: #c5cea4d3;
 	backdrop-filter: blur(5px);
 	padding: 50px 40px;
 	border-radius: 20px;
@@ -108,6 +107,7 @@ body{padding: 50px;}
 }
 .productDetail_detail1_explain{
 	margin-top: 20px;
+	margin-bottom: 20px;
 	font-size: 18px;
 	line-height: 23px;
 }
@@ -167,8 +167,9 @@ body{padding: 50px;}
 .btns{
 	display: block;
 	position: relative;
-	top: 65px;
 	text-align: center;
+	height: 40px;
+	bottom: 0;
 }
 .btns > a{
 	display: inline-block; 

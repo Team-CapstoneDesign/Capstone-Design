@@ -80,12 +80,13 @@
         </div>
     </div>
 	</div>
+    
     <div class="containerMain" class="main">
       <div id="section1" class="kvWrap">
         <div class="kvList">
-          <div class="slide" style="background-color: rgb(190, 246, 246);"></div>
-          <div class="slide" style="background-color: #0092BF;;"></div>
-          <div class="slide" style="background-color: rgb(2, 110, 110);"></div>
+          <div class="slide slide1" style="background-color: rgb(190, 246, 246);">
+          </div>
+          <div class="slide slide2" style="background-color: #0092BF;;"></div>
         </div>
       </div>
       <div id="section2">
@@ -94,11 +95,10 @@
             <div class="bestCapsule_left">
               <div class="deco circle1"></div>
               <div class="deco circle2"></div>
-              <img class="capsuleSlide1" src="../images/capsule.png" alt="">
+              <img class="capsuleSlide1" src="../images/model02_3.png" alt="">
               <div class="bestCapsule_explanation">
-                <div class="capsuleSlide1_name">name</div>
-                <div class="capsuleSlide1_explanation">explanation</div>
-                <div class="capsuleSlide1_price">price</div>
+                <div class="capsuleSlide1_name">두잔 프리미엄 블렌딩</div>
+                <div class="capsuleSlide1_price">14,900 원</div>
               </div>
             </div>
             <div class="bestCapsule_right">
@@ -108,16 +108,16 @@
               </div>
               <div class="bestOption">
                 <div class="option">
-                  <img src="../images/capsule.png" alt="">
-                  <div>name</div>
+                  <a href=""><img src="../images/model02_3.png" alt=""></a>
+                  <div>두잔 프리미엄 블렌딩</div>
                 </div>
                 <div class="option">
-                  <img src="../images/capsule2.png" alt="">
-                  <div>name</div>
+                  <a href=""><img src="../images/model02_4.png" alt=""></a>
+                  <a href=""><div>두잔 모카 마타리</div></a>
                 </div>
                 <div class="option">
-                  <img src="../images/capsule3.png" alt="">
-                  <div>name</div>
+                  <a href=""><img src="../images/model02_6.png" alt=""></a>
+                  <a href=""><div>두잔 블루마운틴</div></a>
                 </div>
               </div>
             </div>
@@ -134,15 +134,14 @@
               <h2>두잔 오리진</h2>
             </div>
             <div class="signature_time">
-              <div class="time morning">
-                <img class="time_capsule" src="../images/capsule.png" alt="">
-              </div>
-              <div class="time afternoon">
-                <img class="time_capsule" src="../images/capsule2.png" alt="">
-              </div>
-              <div class="time evening">
-                <img class="time_capsule" src="../images/capsule3.png" alt="">
-              </div>
+              <a href=""><div class="time morning"></div></a>
+              <a href=""><div class="time afternoon"></div></a>
+              <a href=""><div class="time evening"></div></a>
+            </div>
+            <div class="signature_time_capusle">
+              <img class="time_capsule" src="../images/model02_3.png" alt="">
+              <img class="time_capsule" src="../images/model02_4.png" alt="">
+              <img class="time_capsule" src="../images/model02_6.png" alt="">
             </div>
             <div class="signature_explamation">
               <p>
@@ -152,7 +151,7 @@
                 <span>아침 · 점심 · 저녁</span>
               </p>
               <p>
-                1st(10개입) 균일가 9,999원
+                1st(10개입) 균일가 10,900원
               </p>
             </div>
             
@@ -263,83 +262,33 @@
 
         </div>
       </div>
-      <div id="section4">
-
-      </div>
       <div id="section5">
         <div class="cont">
-          <div class="section-title">
-            <img src="../images/binder.png" alt="">
-            <p class="title">인기상품 모아보기</p>
-            <img src="../images/binder.png" alt="">
+          <div class="signatureTitle best">
+            <p>재 주문률이 가장 높은</p>
+            <h2>두잔 베스트 캡슐</h2>
           </div>
-          <div class="goods-list">
-            <ul>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-              <li>
-                <img class="goods best" src="../images/goods.png" alt="">
-                <div class="goodsName">name</div>
-                <div class="goodPrice">price</div>
-              </li>
-            </ul>
+          <div class="bestGoodsList">
+            <div class="listSection1">
+              <a href=""><img class="bestGoods" src="../images/softBlending.png" alt=""></a>
+              <a href=""><img class="bestGoods" src="../images/AA.png" alt=""></a>
+              <img class="bestGoods_capsule1" src="../images/model02_3.png" alt="">
+              <img class="bestGoods_capsule2" src="../images/model02_4.png" alt="">
+            </div>
+            <div class="listSection2">
+              <img class="gabe" src="../images/gabe.png" alt="">
+              <a href=""><img class="bestGoods" src="../images/blueMountin.png" alt=""></a>
+              <a href=""><img class="bestGoods" src="../images/blueMountin.png" alt=""></a>
+              <a href=""><img class="bestGoods" src="../images/cocoa.png" alt=""></a>
+              <img class="bestGoods_capsule3" src="../images/model04_6.png" alt="">
+            </div>
+
+            
           </div>
         </div>
       </div>
     </div>
+    
     <footer>
       <div class="footer1">
         <ul>
