@@ -19,7 +19,7 @@
 <body>
 	<div class="wrap">
 		<div class="headerTitle">
-			<img class="logo" src="../../images/logo.png" alt="">
+			<a href="../index.jsp"><img class="logo" src="../../images/logo.png" alt=""></a>
 		</div>
 		<div id="header">
 			<div class="formbox">
