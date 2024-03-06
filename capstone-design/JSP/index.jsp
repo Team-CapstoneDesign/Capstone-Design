@@ -7,7 +7,7 @@
 <meta charset="EUC-KR">
   <title>capstone - dojan main page</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 <body>
@@ -24,7 +24,7 @@
         <div class="topmenuWrap">
           <ul class="topmenu">
             <li>
-              <a href="./goods/custome.html">캡슐 커스텀</a>
+              <a href="./goods/custome.jsp">캡슐 커스텀</a>
             </li>
             <li>
               <a>두잔 캡슐</a>
@@ -95,7 +95,7 @@
             <div class="bestCapsule_left">
               <div class="deco circle1"></div>
               <div class="deco circle2"></div>
-              <img class="capsuleSlide1" src="../images/model02_3.png" alt="">
+              <img class="capsuleSlide1" src="../images/model02_3.png" alt="" data-aos="fade-up">
               <div class="bestCapsule_explanation">
                 <div class="capsuleSlide1_name">두잔 프리미엄 블렌딩</div>
                 <div class="capsuleSlide1_price">14,900 원</div>
@@ -108,15 +108,15 @@
               </div>
               <div class="bestOption">
                 <div class="option">
-                  <a href=""><img src="../images/model02_3.png" alt=""></a>
+                  <a href=""><img src="../images/model02_3.png" alt="" data-aos="fade-up"></a>
                   <div>두잔 프리미엄 블렌딩</div>
                 </div>
                 <div class="option">
-                  <a href=""><img src="../images/model02_4.png" alt=""></a>
+                  <a href=""><img src="../images/model02_4.png" alt="" data-aos="fade-up"></a>
                   <a href=""><div>두잔 모카 마타리</div></a>
                 </div>
                 <div class="option">
-                  <a href=""><img src="../images/model02_6.png" alt=""></a>
+                  <a href=""><img src="../images/model02_6.png" alt="" data-aos="fade-up"></a>
                   <a href=""><div>두잔 블루마운틴</div></a>
                 </div>
               </div>
@@ -134,14 +134,14 @@
               <h2>두잔 오리진</h2>
             </div>
             <div class="signature_time">
-              <a href=""><div class="time morning"></div></a>
-              <a href=""><div class="time afternoon"></div></a>
-              <a href=""><div class="time evening"></div></a>
+              <a href=""><div class="time morning" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="800"></div></a>
+              <a href=""><div class="time afternoon" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="2000"></div></a>
+              <a href=""><div class="time evening" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="3000"></div></a>
             </div>
             <div class="signature_time_capusle">
-              <img class="time_capsule" src="../images/model02_3.png" alt="">
-              <img class="time_capsule" src="../images/model02_4.png" alt="">
-              <img class="time_capsule" src="../images/model02_6.png" alt="">
+              <img class="time_capsule" src="../images/model02_3.png" alt="" data-aos="fade-up">
+              <img class="time_capsule" src="../images/model02_4.png" alt="" data-aos="fade-up">
+              <img class="time_capsule" src="../images/model02_6.png" alt="" data-aos="fade-up">
             </div>
             <div class="signature_explamation">
               <p>
@@ -157,7 +157,7 @@
             
           </div>
 
-          <div class="signature_Origin">
+          <div class="signature_Origin" data-aos="fade-up">
             <div class="origin_left">
                <img src="../images/capsule.png" alt="">
                <button>자세히 보기</button>
@@ -208,7 +208,7 @@
               </div>
             </div>
           </div>
-          <div class="signature_Origin">
+          <div class="signature_Origin" data-aos="fade-up">
             <div class="origin_left">
                <img src="../images/capsule2.png" alt="">
                <button>자세히 보기</button>
@@ -270,16 +270,17 @@
           </div>
           <div class="bestGoodsList">
             <div class="listSection1">
-              <a href=""><img class="bestGoods" src="../images/softBlending.png" alt=""></a>
-              <a href=""><img class="bestGoods" src="../images/AA.png" alt=""></a>
+              <a href=""><img class="bestGoods" src="../images/softBlending.png" alt="" data-aos="fade-left"
+     data-aos-duration="500"></a>
+              <a href=""><img class="bestGoods" src="../images/AA.png" alt="" data-aos="fade-left" data-aos-duration="600"></a>
               <img class="bestGoods_capsule1" src="../images/model02_3.png" alt="">
               <img class="bestGoods_capsule2" src="../images/model02_4.png" alt="">
             </div>
             <div class="listSection2">
               <img class="gabe" src="../images/gabe.png" alt="">
-              <a href=""><img class="bestGoods" src="../images/blueMountin.png" alt=""></a>
-              <a href=""><img class="bestGoods" src="../images/blueMountin.png" alt=""></a>
-              <a href=""><img class="bestGoods" src="../images/cocoa.png" alt=""></a>
+              <a href=""><img class="bestGoods" src="../images/blueMountin.png" alt="" data-aos="fade-left" data-aos-duration="700"></a>
+              <a href=""><img class="bestGoods" src="../images/blueMountin.png" alt="" data-aos="fade-left" data-aos-duration="800"></a>
+              <a href=""><img class="bestGoods" src="../images/cocoa.png" alt="" data-aos="fade-left" data-aos-duration="900"></a>
               <img class="bestGoods_capsule3" src="../images/model04_6.png" alt="">
             </div>
 
@@ -351,6 +352,7 @@
   </div>
   <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="../JS/navEvent.js"></script>
   <script>
     $('.kvList').slick({
