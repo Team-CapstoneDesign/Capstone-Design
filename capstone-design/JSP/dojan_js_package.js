@@ -238,3 +238,17 @@ function searchpwd_focus()
    	document.searchpwd.id.focus();
    	return;
 }
+
+
+//////// order1.jsp //////////
+
+
+function submitForm() {
+        document.orderInfo.submit(); 
+    }
+
+//////// order2.jsp ////////
+
+function orderOK() {
+        document.everyCartInfo.submit(); 
+    }

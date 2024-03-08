@@ -337,7 +337,7 @@
 
 
 							<div>
-								<input type="button" class="orderButton1" value="주문하기">
+								<a href="order1.jsp"><input type="button" class="orderButton1" value="주문하기"></a>
 							</div>
 						</div>
 						</form>

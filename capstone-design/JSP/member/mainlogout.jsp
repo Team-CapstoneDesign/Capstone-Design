@@ -6,5 +6,5 @@
 
 <script>
     // JavaScript를 사용하여 index.html 페이지로 리디렉션
-    window.location.href = "index.html";
+    window.location.href = "../index.jsp";
 </script>

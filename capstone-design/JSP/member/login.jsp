@@ -7,6 +7,7 @@
 <title>두잔 로그인</title>
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/login.css">
+	<script src="../dojan_js_package.js"></script>
 </head>
 <body>
 <form name="login" method="post" action="loginOK.jsp">
@@ -35,7 +36,7 @@
 			<a href="">비회원 주문조회</a>
 		
 	</section>
-	<script src="../dojan_js_package.js"></script>
+	
 	
 </body>
 </html>
