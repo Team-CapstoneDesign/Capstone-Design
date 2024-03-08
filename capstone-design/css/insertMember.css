@@ -1,12 +1,20 @@
-@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 .insertNewMem {
+  font-family: 'Chosunilbo_myungjo';
   position: absolute;
   width: 410px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  letter-spacing : 1px;
 }
 .insertMemLogo img{
   margin-top: -50px;
@@ -38,6 +46,8 @@
   box-sizing: border-box;
   text-indent: 16px;
   /*들여쓰기*/
+  font-family: 'Chosunilbo_myungjo';
+  letter-spacing : 1px;
 }
 
 .insertNewMem>ul li input[id=tel1] {
@@ -67,12 +77,13 @@
   width: 28%;
   float: right;
   font-size: 14px;
+  font-weight: bold;
   text-align: center;
   text-indent: inherit;
   background: #0e5a6d;
   color: #fff;
   border-radius: 5px;
-  border: none;	
+  border: none;
 }
 .insertNewMem>ul li input[id=idCheckBtn]:hover {
   /*아이디 중복 확인 버튼 마우스오버*/
@@ -86,13 +97,16 @@
 
 .insertNewMem button {
   /*우편번호 찾기 버튼*/
+  font-family: 'Chosunilbo_myungjo';
   width: 38%;
   height: 46px;
   background: #0e5a6d;
   color: #fff;
   font-size: 14px;
+  font-weight: bold;
   border-radius: 5px;
   border: none;
+  letter-spacing : 1px;
 }
 .insertNewMem button:hover {
   /*우편번호 찾기 버튼 마우스오버*/
@@ -105,12 +119,16 @@
   background: #0e5a6d;
   color: #fff;
   border-radius: 5px;
-  border: none;
+  border: 2px solid #0e5a6d;
+  background-color: #fff;
+  color: #0e5a6d;
   font-size: 18px;
+  font-weight: bold;
 }
 .insertNewMem>ul li input[id=makeMemID]:hover {
   /*회원가입하기 버튼 마우스오버*/
-  background: #b83333;
+  background-color: #0e5a6d;
+  color: #fff;
 }
 
 .insertNewMem>ul li input::-webkit-input-placeholder {
@@ -144,7 +162,6 @@
   transform: rotate(25deg);
 }
 
-
 input[type=text], input[type=password]{
 	font-size: 13px;
     color: #373737;
@@ -159,3 +176,55 @@ input[type=text], input[type=password]{
 }
 
 
+/* insertMemberResult.jsp */
+.insertMemResult{
+	font-family: 'Chosunilbo_myungjo';
+	margin: 0 auto;
+	width: 410px;
+	margin-top: 30px;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	text-align: center;
+	letter-spacing : 1px;
+}
+.insertMemResult h2{
+	padding-bottom: 20px;
+	font-size: 25px;
+	border-bottom: 2px solid #0e5a6d;
+}
+.insertMemResult h3{
+	padding-top: 20px;
+	font-size: 20px;
+}
+.insertMemResult table{
+	width: 410px;
+	margin-top: 30px;
+}
+.insertMemResult table tr th{
+	padding: 10px;
+	text-align: left;
+}
+.insertMemResult table tr td{
+	padding: 10px;
+	padding-left: 20px;
+}
+.insertMemResult a{
+	text-decoration-line: none;
+}
+.insertMemResult a .go_login{
+	width: 400px;
+	height: 46px;
+	line-height: 50px;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: 2px solid #0e5a6d;
+	background-color: #fff;
+	color: #0e5a6d;
+	font-weight: bold;
+}
+.insertMemResult a .go_login:hover{
+	background-color: #0e5a6d;
+	color: #fff;
+}

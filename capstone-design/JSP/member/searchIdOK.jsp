@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<link rel="stylesheet" href="../../css/searchIDnPW.css">
 
 <title>아이디 찾기 결과</title>
 
@@ -38,16 +39,32 @@
 
 		if( rs.next() ) { 
 	%>       
-		입력하신 정보와 일치하는 아이디는 <%= rs.getString("memId") %> 입니다.<br><br>
-		<a href="dojan_login.jsp" >로그인 창으로 돌아가기</a>
+		
+		<div class="wrap_search">
+			
+		<h2>아이디 찾기 결과</h2>
+			
+		<h3>입력하신 정보와 일치하는 아이디는<br><br>
+			<%= rs.getString("memId") %> 입니다.</h3>
+			
+		<a href="login.jsp"><div class="go_login">로그인 화면으로 돌아가기</div></a>
+			
+		</div>
 	<%
 		}
 		else {
 	%>
-		입력하신 정보와 일치하는 아이디가 없습니다. <br>
-		다시 입력해주세요.<br><br>
-		<a href="dojan_login.jsp" >로그인 화면</a>
-		<a href="searchId.jsp" >다른 정보로 찾기</a>
+		<div class="wrap_search">
+		
+		<h2>아이디 찾기 결과</h2>
+		
+		<h3>입력하신 정보와 일치하는 아이디가 없습니다.<br><br>
+			다시 입력해주세요.</h3>
+			
+		<a href="login.jsp"><div class="go_login">로그인 화면으로 돌아가기</div></a>
+		<a href="searchID.jsp"><div class="go_back">다시 아이디 찾기</div></a>
+			
+		</div>
 	<%
 		}
 		con.close();

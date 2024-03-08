@@ -3,6 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+<link rel="stylesheet" href="../../css/searchIDnPW.css">
 
 <title>아이디 찾기</title>
 
@@ -13,19 +15,30 @@
 
 <body onLoad="searchid_focus()">  
 
-<div class="wrap_searchId">
+<div class="wrap_search">
+	
+	<div class="searchLogo">
+		<img src="../../images/logo_dark.png" alt="">
+	</div>
+	
     <form name="searchid" method="post" action="searchIdOK.jsp" target=_parent>
-
-        <div><input type="text"  name="name" placeholder="   이름"></div><br>
-        <div><input type="text"  name="tel1" placeholder="  전화번호 앞자리"> -
-		<input type="text"  name="tel2" placeholder="  전화번호 중간자리"> - 
-		<input type="text"  name="tel3" placeholder="  전화번호 앞자리"></div><br>
+		
+		<h2>아이디 찾기</h2>
+		
+        <div>
+			<input type="text" name="name" placeholder="이름을 입력해주세요">
+		</div><br>
+        <div>
+			<input type="text" name="tel1" id="tel1" placeholder="휴대폰" maxlength='3'>
+			<input type="text" name="tel2" id="tel2" placeholder="번호를" maxlength='4'> 
+			<input type="text" name="tel3" id="tel3" placeholder="입력해주세요" maxlength='4'>
+		</div><br>
 		  
-		<div><input type=button  value="내 아이디 찾기" onClick="search_id()"></div>
+		<div><input type="button" id="find_btn" value="내 아이디 찾기" onClick="search_id()"></div>
+		
+	</form>
+</div>
 
-      </div>
-
-    </form>
 </div>
 
                 

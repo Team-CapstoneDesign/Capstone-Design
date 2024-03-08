@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  	font-family: 'Chosunilbo_myungjo';
+  	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  	font-weight: normal;
+  	font-style: normal;
+}
+.wrap_search{
+	margin: 0 auto;
+	font-family: 'Chosunilbo_myungjo';
+	width: 400px;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	text-align: center;
+	letter-spacing : 1px;
+}
+.searchLogo img{
+  	margin-top: -50px;
+  	margin-bottom: 20px;
+  	width: 150px;
+}
+.wrap_search h2{
+	padding-bottom: 20px;
+	font-size: 25px;
+	border-bottom: 2px solid #0e5a6d;
+}
+.wrap_search input{
+	width: 100%;
+	height: 46px;
+	text-indent: 16px;
+	font-family: 'Chosunilbo_myungjo';
+}
+.wrap_search input[id=tel1] {
+  	/*전화번호 앞자리 입력칸*/
+  	width: 20%;
+}
+.wrap_search input[id=tel2] {
+  	/*전화번호 중간자리 입력칸*/
+  	width: 39%;
+  	float: center;
+}
+.wrap_search input[id=tel3] {
+  	/*전화번호 뒷자리 입력칸*/
+	width: 39%;
+  	float: right;
+}
+.wrap_search #find_btn{
+	margin-top: 20px;
+	border-radius: 5px;
+	border: 2px solid #0e5a6d;
+	background-color: #fff;
+	color: #0e5a6d;
+	font-weight: bold;
+	font-size: 18px;
+}
+.wrap_search #find_btn:hover{
+	background-color: #0e5a6d;
+	color: #fff;
+}
+
+
+/* searchIdOK.jsp */
+.wrap_search h3{
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+.wrap_search a{
+	text-decoration-line: none;
+}
+.wrap_search a .go_login,
+.wrap_search a .go_back{
+	width: 400px;
+	height: 46px;
+	line-height: 50px;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 2px solid #0e5a6d;
+	background-color: #fff;
+	color: #0e5a6d;
+	font-weight: bold;
+	font-size: 18px;
+}
+.wrap_search a .go_login:hover,
+.wrap_search a .go_back:hover{
+	background-color: #0e5a6d;
+	color: #fff;
+}
