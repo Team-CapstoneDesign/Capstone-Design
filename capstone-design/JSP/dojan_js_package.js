@@ -112,7 +112,7 @@ function DaumPostcode() {
 		}).open();
 	}
 
-///////////  dojan_login.jsp ////////////////
+/////////// login.jsp ////////////////
 
 
 function login_check()      
@@ -138,13 +138,13 @@ if(document.login.id.value=="")
 
 function noPwd() {
     alert("비밀번호를 잘못 입력하셨습니다");
-    window.location.href = 'dojan_login.jsp';
+    window.location.href = 'login.jsp';
     return;
 }
 
 function noID() {
     alert("존재하지 않는 ID입니다");
-    window.location.href = 'dojan_login.jsp';
+    window.location.href = 'login.jsp';
     return;
 }
 

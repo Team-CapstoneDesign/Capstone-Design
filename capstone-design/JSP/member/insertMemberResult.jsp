@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/insertMember.css">
 
 <title>회원가입 확인</title>
@@ -60,51 +59,59 @@
 	 pstmt.executeUpdate();
 
 %>
-
-    <h2> 정상적으로 가입이 완료되었습니다 </h2>
-	<p>회원 가입 정보</p>
+	
+	<div class="insertMemResult">
+		
+	<div class="insertMemLogo">
+		<img src="../../images/logo_dark.png" alt="">
+	</div>
+		
+    <h2>정상적으로 가입이 완료되었습니다.</h2>
+		
+	<h3>내 회원 가입 정보</h3>
 
 	<table>
 	<tr>
-		<td width=120>이름</td>
-		<td width=200><%=name%></td>
+		<th>이름</th>
+		<td><%=name%></td>
 	</tr>
 	<tr>
-		<td>생년월일</td>
+		<th>생년월일</th>
 		<td><%=birth%></td>
 	</tr>
 	<tr>
-		<td>전화번호</td>
+		<th>전화번호</th>
 		<td><%=tel%></td>
 	</tr>
 	<tr>
-		<td>아이디</td>
+		<th>아이디</th>
 		<td><%=id%></td>
 	</tr>
 	<tr>
-		<td>비밀번호</td>
+		<th>비밀번호</th>
 		<td><%=pwd%></td>
 	</tr>
 	<tr>
-		<td>이메일</td>
+		<th>이메일</th>
 		<td><%=email%></td>
 	</tr>
 	<tr>
-		<td>우편번호</td>
+		<th>우편번호</th>
 		<td><%=zipno%></td>
 	</tr>
 	<tr>
-		<td>상세 주소</td>
+		<th>주소</th>
 		<td><%=addr%>&nbsp<%=addrplus%></td>
 	</tr>
 
-
 	</table>
-<br>
+	<br>
 
- <a href="login.jsp">로그인화면으로 이동</a> 
-
-</div>
-
+	<a href="login.jsp">
+		<div class="go_login">로그인 화면으로 이동</div>
+	</a>
+		 
+	</div>
+		
 </body>
 </html>
