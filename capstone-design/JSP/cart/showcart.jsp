@@ -3,8 +3,7 @@
 <html>
 <head>
 <title>장바구니</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/cart.css">
 </head>
@@ -14,13 +13,12 @@
 		String id = (String) session.getAttribute("sid");
 	%>
 	<div class="wrap">
-		<div class="headerTitle">
-			<a href="../index.jsp"><img class="logo"
-				src="../../images/logo.png" alt=""> </a>
-		</div>
 		<div id="header">
 			<div class="formbox">
-				<input type="text" placeholder="검색">
+				<h1 class="logo">
+					<a href="#"> <span class="blind">두잔</span>
+					</a>
+				</h1>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a>캡슐 커스텀</a></li>
@@ -59,14 +57,14 @@
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="./member/login.jsp">로그인</a></span>
-					<span class="quick_menu"><a href="">회원가입</a></span> <span
+					<span class="quick_menu"><a href="">로그인</a></span> <span
+						class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
 					%>
-					<span class="quick_menu"><a href="">로그아웃</a></span> <span
-						class="quick_menu"><a href="">마이페이지</a></span> <span
+					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="">마이페이지</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						}

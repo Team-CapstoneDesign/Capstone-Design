@@ -33,32 +33,24 @@ body{
     min-width: 1200px;
     color: #333333;
 }
+.blind{
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+
 /*nav*/
 
-.headerTitle{
-  display: block;
-  position: relative;
-  width: 1920px;
-  min-width: 1920px;
-  height: 74px;
-  background-image: url(../images/header.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 5px solid #E8BB00;
-}
-.headerTitle .logo{
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  line-height: 74px;
-  padding-top: 15px;
-}
 #header{
+  padding-top: 30px;
+  margin: 0 auto;
   width: 1920px;
+  height: 100px;
   min-width: 1920px;
   z-index: 100;
   display: block;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -66,13 +58,14 @@ body{
 
 #header .formbox{
   display: flex;
-  position: absolute;
-  width: 1920px;
+  width: 1200px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-out;
   z-index: 100;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 #header .formbox input[type=text]{
 padding-left: 10px;
@@ -84,12 +77,27 @@ border: 1px solid #333;
 border-radius: 30px;
 }
 
+
+#header .logo{
+  line-height: 100px;
+  position: absolute;
+  display: block;
+  left: 388px;
+  top: 55px;
+  width: 130px;
+  height: 50px;
+  line-height: 100px;
+  background: url(../images/logo_dark.png) no-repeat;
+  background-size: cover;
+  background-size: 110px;
+}
+
 #header .nav_top{
   position: absolute;
   display: block;
-  right: 358px;
-  top: 0;
-  line-height: 100px;
+  right: 388px;
+  top: 30px;
+  line-height: 90px;
 }
 #header .nav_top .quick_menu{
 color: #333;
@@ -105,9 +113,7 @@ opacity: 100;
   left: 361px;
   top: 38px;
 }
-.topmenuWrap{
 
-}
 #header .topmenu{
   position: relative;
   
@@ -118,14 +124,15 @@ opacity: 100;
 }
 
 #header .topmenu > li{
-  width: 160px;
+  width: 120px;
   left: 40%;
+
 }
 #header .topmenu > li > a{
   position: relative;
   display: block;
-  font-size: 1.25em;
-  line-height: 100px;
+  font-size: 20px;
+  line-height: 90px;
   color: #333;
   text-decoration: none;
 }
@@ -144,6 +151,10 @@ opacity: 100;
 
   margin: 0 auto;
 
+}
+#header .topmenuWrap .submenu #productMenu > li{
+  margin-bottom: 5px;
+  width: 122px;
 }
 #header .topmenuWrap .submenu #productMenu > li > a:hover {
   color: #1C9FB3;
@@ -164,7 +175,37 @@ opacity: 100;
   display: block;
 }
 
+#header.scroll{
+  padding-top: 0;
+  
+}
+#header.scroll .formbox{
+  width: 1920px;
+}
+#header.scroll .logo{
+  height: 100px;
+  line-height: 100px;
+  position: absolute;
+  display: block;
+  left: 358px;
+  top: 20px;
+  line-height: 100px;
+}
 
+#header.scroll .nav_top{
+  position: absolute;
+  display: block;
+  right: 358px;
+  top: 0;
+  line-height: 90px;
+}
+#header.scroll .formbox{
+  background: #fff;
+
+}
+#header.scroll .topmenu > li > a{
+color: #333;
+}
 
 
 .header {
@@ -173,6 +214,7 @@ opacity: 100;
   background: linear-gradient(60deg, #0092BF 0%, #33A9AB 100%);
   color:white;
 }
+
 .inner-header {
   height: 210px;
   width:100%;
@@ -185,6 +227,12 @@ opacity: 100;
   width: 1920px;
 }
 
+.section1_background{
+  height: 100vh;
+  background-image: url(../images/main_title.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .kvWrap .kvList .slide{
   display: flex;
   justify-content: center;
@@ -224,11 +272,18 @@ opacity: 100;
   font-size: 1.25em;
 }
 
+/*sectoion1-1*/
+#section1-1{
+  display: block;
+  position: relative;
+  height: 100vh;
+  background-image: url(../images/section1-1.png);
+  z-index: -1;
+}
 /*section2*/
 #section2{
   display: block;
   position: relative;
-  margin-top: 50px;
   width: 1920px;
   min-width: 1200px;
   width: 1920px;
@@ -377,7 +432,7 @@ opacity: 100;
   margin-top: 50px;
 }
 
-.signature_time .time{
+.time{
   width: 284px;
   height: 510px;
   margin-right: 20px;
@@ -392,6 +447,7 @@ opacity: 100;
 .morning{
   background-image: url(../images/morning.png);
   background-position: 50% 0;
+  transition: 0.3s ease;
 }
 .morning:hover, .afternoon:hover, .evening:hover{
   margin-top: -20px;
@@ -839,4 +895,11 @@ footer{
   padding-bottom: 44px;
   font-size: 16px;
   color: #fff;
+}
+
+.webgl {
+  position: fixed;
+  top: 200px;
+  left: 0;
+  outline: none;
 }

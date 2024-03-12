@@ -17,25 +17,29 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		String id = (String) session.getAttribute("sid");
+	%>
 	<div class="wrap">
-		<div class="headerTitle">
-			<a href="../index.jsp"><img class="logo" src="../../images/logo.png" alt=""></a>
-		</div>
 		<div id="header">
 			<div class="formbox">
-				<input type="text" placeholder="검색">
+				<h1 class="logo">
+					<a href="#"> <span class="blind">두잔</span>
+					</a>
+				</h1>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a>캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="">시즌한정</a></li>
-									<li><a href="">시그니처</a></li>
-									<li><a href="">블렌딩</a></li>
-									<li><a href="">오리지널</a></li>
-									<li><a href="">디카페인</a></li>
-									<li><a href="">베버리지 / 논커피</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=beveridge">베버리지
+											/ 논커피</a></li>
 									<li><a href="">선물 패키지</a></li>
 								</ul>
 							</div></li>
@@ -58,9 +62,21 @@
 					</ul>
 				</div>
 				<div class="nav_top">
+					<%
+						if (id == null) {
+					%>
 					<span class="quick_menu"><a href="">로그인</a></span> <span
 						class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
+					<%
+						} else {
+					%>
+					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="">마이페이지</a></span> <span
+						class="quick_menu"><a href="">고객센터</a></span>
+					<%
+						}
+					%>
 				</div>
 			</div>
 		</div>
