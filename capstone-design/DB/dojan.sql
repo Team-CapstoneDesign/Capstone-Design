@@ -36,6 +36,7 @@ CREATE TABLE `cart` (
 
 LOCK TABLES `cart` WRITE;
 /*!40000 ALTER TABLE `cart` DISABLE KEYS */;
+INSERT INTO `cart` VALUES ('7660EFB44146B786F89A1E133D721EC0','DL002',2,'nesOrigin');
 /*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,8 +128,87 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES ('이준영','19910101','010-1234-1234','a123','a12345','a123@gmail.com','31020','충남 천안시 서북구 성환읍 대학로 91  남서울','대학교');
+INSERT INTO `member` VALUES ('이준영','19910101','010-1234-1234','a123','a12345','a123@gmail.com','31020','충남 천안시 서북구 성환읍 대학로 91  남서울','대학교'),('리준령','19980101','010-1313-2424','b123','b12345','b123@gmail.com','31020','충남 천안시 서북구 성환읍 매주리 21  공학관','학교');
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ordercustom`
+--
+
+DROP TABLE IF EXISTS `ordercustom`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `ordercustom` (
+  `ordNo` varchar(10) DEFAULT NULL,
+  `csName` varchar(10) DEFAULT NULL,
+  `ordQty` int(30) DEFAULT NULL,
+  `ordCap` char(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ordercustom`
+--
+
+LOCK TABLES `ordercustom` WRITE;
+/*!40000 ALTER TABLE `ordercustom` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ordercustom` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orderinfo`
+--
+
+DROP TABLE IF EXISTS `orderinfo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `orderinfo` (
+  `ordNo` int(30) NOT NULL,
+  `memId` char(20) DEFAULT NULL,
+  `ordDate` char(30) DEFAULT NULL,
+  `ordReceiver` char(30) DEFAULT NULL,
+  `ordZipno` char(50) DEFAULT NULL,
+  `ordAddress` char(50) DEFAULT NULL,
+  `ordAddrplus` char(50) DEFAULT NULL,
+  `ordTel` char(20) DEFAULT NULL,
+  `ordPay` char(20) DEFAULT NULL,
+  `ordRec` char(30) DEFAULT NULL,
+  PRIMARY KEY (`ordNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orderinfo`
+--
+
+LOCK TABLES `orderinfo` WRITE;
+/*!40000 ALTER TABLE `orderinfo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orderinfo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orderproduct`
+--
+
+DROP TABLE IF EXISTS `orderproduct`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `orderproduct` (
+  `ordNo` varchar(10) DEFAULT NULL,
+  `prdNo` varchar(10) DEFAULT NULL,
+  `ordQty` int(30) DEFAULT NULL,
+  `ordCap` char(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orderproduct`
+--
+
+LOCK TABLES `orderproduct` WRITE;
+/*!40000 ALTER TABLE `orderproduct` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orderproduct` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -140,4 +220,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-05 21:23:16
+-- Dump completed on 2024-03-12 22:05:58
