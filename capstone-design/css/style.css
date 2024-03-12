@@ -287,8 +287,9 @@ color: #333;
   width: 1920px;
   min-width: 1200px;
   width: 1920px;
-  height: 611px;
-  background-image: url(../images/DOZAN_best.jpg);
+  height: 800px;
+  margin-top: 200px;
+  background-image: url(../images/seasonal_limited.jpg);
   background-repeat: no-repeat;
   background-size: center / contain;
 }
