@@ -25,7 +25,7 @@
 				</h1>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
-						<li><a>캡슐 커스텀</a></li>
+						<li><a href="./goods/custome.jsp">캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
@@ -33,8 +33,8 @@
 									<li><a href="./goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
 									<li><a href="./goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
 									<li><a href="./goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=beveridge">베버리지
+									<li><a href="./goods/viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=beverage">베버리지
 											/ 논커피</a></li>
 									<li><a href="">선물 패키지</a></li>
 								</ul>
@@ -67,7 +67,7 @@
 					<%
 						} else {
 					%>
-					<span class="quick_menu"><a href="./member/logout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="./member/mainlogout.jsp">로그아웃</a></span>
 					<span class="quick_menu"><a href="">마이페이지</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%

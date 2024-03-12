@@ -171,7 +171,7 @@
 							onclick="customeResult()">완성</button>
 					</div>
 				</div>
-				<form name="result" action="test1.jsp" class="custome_section"
+				<form name="result" action="../cart/csIncart.jsp" class="custome_section"
 					id="select-result" style="display: none;">
 					<h2>캡슐 커피 완성</h2>
 					<div id="custome_result">
@@ -191,6 +191,7 @@
 							가격:<span id="custome_price"></span>
 						</p>
             <input type="text" name="customeName" placeholder="커피의 이름을 지어주세요">
+			<input type="number" name="customeQty" min="1" max="10">
 					</div>
 					<div id="hiddenInputRadio"></div>
 					<div class="buttonWrap">

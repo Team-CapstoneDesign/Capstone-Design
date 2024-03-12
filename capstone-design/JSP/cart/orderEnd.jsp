@@ -1,9 +1,7 @@
-<!-- //.jsp로 변환 시 해당 줄 삭제
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*"%>
-//.jsp로 변환 시 해당 줄 삭제 -->
-<!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -13,14 +11,14 @@
 <link rel="stylesheet" href="../../css/cart.css">
 </head>
 <body>
-	<!-- //.jsp로 변환 시 해당 줄 삭제
+	
 	<%
 		String id = (String) session.getAttribute("sid");
 	%> 
-	//.jsp로 변환 시 해당 줄 삭제 --> 
+	
 	<div class="wrap">
 		<div class="headerTitle">
-			<a href="../../index.jsp"><img class="logo" src="../../images/logo.png"
+			<a href="../index.jsp"><img class="logo" src="../../images/logo.png"
 				alt=""> </a>
 		</div>
 		<div id="header">

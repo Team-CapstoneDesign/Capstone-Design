@@ -30,10 +30,10 @@ try {
 
 
 	if(caseNo!= null)  //  주문완료로 인한 지우기
-	{                             
-%>
-<!-- 주문완료시 나오는 페이지 -->
-<%
+	{         
+		
+      response.sendRedirect("orderEnd.jsp");
+
 	}
 	  else   //  그냥 장바구니 전체삭제시
 	 {  %>
