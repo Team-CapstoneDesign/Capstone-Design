@@ -1,23 +1,64 @@
-<!-- //.jsp로 변환 시 해당 줄 삭제
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*"%>
-//.jsp로 변환 시 해당 줄 삭제 -->
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>리뷰 작성하기</title>
+<title>캡슐 조합 리뷰</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/review.css">
 </head>
+
+ <%    
+       String id = (String)session.getAttribute("sid");
+
+       String DB_URL="jdbc:mysql://localhost:3306/dojan";  
+       String DB_ID="multi";  
+       String DB_PASSWORD="abcd"; 
+ 	 
+	   Class.forName("org.gjt.mm.mysql.Driver");  
+ 	   Connection con = DriverManager.getConnection(DB_URL, DB_ID, DB_PASSWORD); 
+
+		request.setCharacterEncoding("euc-kr");
+
+		String group;
+		int list_index;
+
+		group = request.getParameter("group");
+		   
+		if (group != null) 	
+				list_index = Integer.parseInt(group);  
+		else 
+				list_index = 0;      
+
+		String jsql = "select count(*) from board";
+		PreparedStatement pstmt1 = con.prepareStatement(jsql);
+		ResultSet cntRs = pstmt1.executeQuery();	
+
+		cntRs.next();
+		int cnt = cntRs.getInt(1);  
+
+		
+		int cntList = cnt/6;  
+		int remainder = cnt%6; 
+		int cntList_1;   
+			
+		if (cntList != 0) 
+		{
+			   if (remainder == 0)	 		
+				  cntList_1 = cntList;           
+			   else                    
+				   cntList_1 = cntList + 1; 		  
+		 } 
+		 else 		 
+			  cntList_1 = cntList + 1; 		
+
+			   
+
+   %>
+
 <body>
-	<!-- //.jsp로 변환 시 해당 줄 삭제
-	<%
-		String id = (String) session.getAttribute("sid");
-	%> 
-	//.jsp로 변환 시 해당 줄 삭제 --> 
 	<div class="wrap">
 		<div class="headerTitle">
 			<a href="../../index.jsp"><img class="logo" src="../../images/logo.png"
@@ -64,14 +105,14 @@
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="">로그인</a></span> <span
+					<span class="quick_menu"><a href="./member/login.jsp">로그인</a></span> <span
 						class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
 					%>
-					<span class="quick_menu"><a href="">로그인</a></span> <span
-						class="quick_menu"><a href="">회원가입</a></span> <span
+					<span class="quick_menu"><a href="./member/mainlogout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="">마이페이지</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						}
@@ -104,55 +145,110 @@
 			<!-- 업로드 된 리뷰 리스트 보기 -->
 			<div class="reviewPage">
 				<div class="reviewPage_title">
-					캡슐 커스텀은 어떠셨나요? 후기를 작성해주세요!
+					나만의 캡슐 커스텀 조합법을 공유해보세요!
 				</div>
 				
-				<form name="reveiw" method="post" action="">
-					<div class="writeRV">
-					<table>
-						<tr>
-							<th>작성자</th>
-							<td>김바다</td>
-						</tr>
-						<tr>
-							<th>리뷰 제목</th>
-							<td><input type="text" value="제목을 입력해주세요." name="reviewTitle"></td>
-						</tr>
-						<tr>
-							<th>커스텀 이름</th>
-							<td>
-								<select name="customName">
-									<option>커스텀 캡슐제작1</option>
-									<option>커스텀 캡슐제작2</option>
-									<option>커스텀 캡슐제작3</option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<th>베이스 원두</th>
-							<td><span>브라질 산토스</span></td>
-						</tr>
-						<tr>
-							<th>블렌드 원두</th>
-							<td>
-								<span>케냐AA</span>
-								<span>예멘 모카 마타리</span>
-								<span>자메이카 블루마운틴</span>
-							</td>
-						</tr>
-						<tr>
-							<th>로스팅 단계</th>
-							<td><span>6단계(풀시티)</span></td>
-						</tr>
-						<tr>
-							<th>후기 내용</th>
-							<td><textarea name="reviewContent">내용을 입력해주세요.</textarea></td>
-						</tr>
-					</table>
-						
-						<div class="uploadRV"><input type="button" class="uploadBtn" value="작성 완료"></div>
-						
+				<form name="reveiwList" method="post" action="">
+					
+				<div class="rvBtn"><a href="rwWrite.jsp"><input type="button" class="rvBtn1" value="내 캡슐 조합 리뷰 작성하기" ></a></div>
+					
+				<div class="reviewContents">
+					<!-- 리뷰 박스 시작. 최대 노출 개수 9개.-->
+		<%	  	
+			                	String jsql2 = "select * from board order by idx desc, no";
+		                        PreparedStatement pstmt2 = con.prepareStatement(jsql2);
+								ResultSet rs = pstmt2.executeQuery();	
+				%>	
+				<%
+									if (!rs.wasNull()) 
+									{
+									   for(int i = 0; i < list_index * 6; i++) 
+									      rs.next();
+								
+								       int cursor = 0;
+								       while (rs.next()) 
+									   {
+								              int idx = rs.getInt("idx");
+								              int no = rs.getInt("no");
+								              String name = rs.getString("name");
+											  String subject = rs.getString("subject");
+								              String base = rs.getString("base");
+											  String blend = rs.getString("blend");
+								              String roast = rs.getString("roasting");
+											  String content = rs.getString("content");
+
+								
+								    %> 	
+					<div class="reviewBox">
+						<div class="RVname"><a href="view_review.jsp?idx=<%=idx%>">[<%= name%>]님의 조합</a></div>
+						<div class="RVtitle"><a href="view_review.jsp?idx=<%=idx%>"><%= subject%></div>
+						<div class="RVbean1">
+							베이스 원두
+							<p class="RVbase"><%= base%></p>
+						</div>
+						<div class="RVbean2">
+							블렌드 원두
+						<%
+                       String[] blend_list = blend.split("  ");   
+                       for (int i = 0; i < blend_list.length; i++) {
+                       %>
+							<div class="RVblend"><%= blend_list[i]%></div>
+							<%
+            }
+                      %>
+						</div>
+						<div class="RVroast">
+							로스팅 단계
+							<div class="RVlevel"><%= roast%> 단계</div>
+						</div>
+						<div class="RVconts"><%= content%></div>
 					</div>
+					 <%
+										cntRs.close();
+									   
+										 cursor ++;
+								         if (cursor >= 6) break; 
+								        }   
+								    }  
+								%>
+					<!-- 여기까지 박스 반복. -->
+				</div>
+					
+				<!-- 페이지 넘기기 버튼. -->
+				<div class="pageBtn" >
+ <a href="review_list.jsp?group=<%= list_index - 1 %>">◀ 이전</a>
+
+	<% 
+   
+               int start=1;
+               int max = cntList_1;
+               int end = start + max -1;
+
+	
+           for (int j=start; j<=end; j++) 
+	   {
+		   
+           if(j == list_index+1) 
+		   {
+			   
+   %>
+	   
+            <%= j %>
+
+
+   <%
+            } 
+            else 
+			{
+   %>
+        <a href="review_list.jsp?group=<%= j - 1 %>"><%= j %></a>   <!-- 선택된 숫자는 검은색 안된 숫자는 파란색 -->
+   <%
+            }
+       }
+   %> 
+					 <a href="review_list.jsp?group=<%= list_index + 1 %>">다음 ▶</a>
+				</div>	
+					
 				</form>
 			</div>
 

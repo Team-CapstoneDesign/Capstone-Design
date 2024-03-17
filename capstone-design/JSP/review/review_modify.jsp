@@ -1,9 +1,5 @@
-<!-- //.jsp로 변환 시 해당 줄 삭제
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*"%>
-//.jsp로 변환 시 해당 줄 삭제 -->
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -12,15 +8,45 @@
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/review.css">
 </head>
+<script language="javascript">
+      function modify_check()
+	 {
+ 			document.modify.submit();
+	}
+   </script> 
+
 <body>
-	<!-- //.jsp로 변환 시 해당 줄 삭제
 	<%
-		String id = (String) session.getAttribute("sid");
-	%> 
-	//.jsp로 변환 시 해당 줄 삭제 --> 
+	   String id = (String) session.getAttribute("sid");
+	
+	  
+       String DB_URL="jdbc:mysql://localhost:3306/dojan";  
+       String DB_ID="multi";  
+       String DB_PASSWORD="abcd"; 
+ 	 
+	   Class.forName("org.gjt.mm.mysql.Driver");  
+ 	   Connection con = DriverManager.getConnection(DB_URL, DB_ID, DB_PASSWORD); 
+
+		request.setCharacterEncoding("euc-kr");
+		response.setContentType("text/html;charset=euc-kr");
+
+		String idx = request.getParameter("idx");      
+                
+		String jsql = "select * from board where idx = ?";
+		PreparedStatement pstmt = con.prepareStatement(jsql);
+		pstmt.setInt(1, Integer.parseInt(idx));
+		ResultSet rs = pstmt.executeQuery();
+
+       if(!rs.wasNull()) {
+           rs.next();
+		   String name = rs.getString("name");
+           String subject = rs.getString("subject");
+     	   String content = rs.getString("content");
+   %>
+
 	<div class="wrap">
 		<div class="headerTitle">
-			<a href="../../index.jsp"><img class="logo" src="../../images/logo.png"
+			<a href="../index.jsp"><img class="logo" src="../../images/logo.png"
 				alt=""> </a>
 		</div>
 		<div id="header">
@@ -64,15 +90,15 @@
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="">로그인</a></span> <span
+					<span class="quick_menu"><a href="./member/login.jsp">로그인</a></span> <span
 						class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
 					%>
-					<span class="quick_menu"><a href="">로그인</a></span> <span
-						class="quick_menu"><a href="">회원가입</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+					<span class="quick_menu"><a href="./member/logout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="">마이페이지</a></span> 
+					<span class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						}
 					%>
@@ -107,46 +133,31 @@
 					후기 수정
 				</div>
 				
-				<form name="reveiw" method="post" action="">
+				<form name="modify" method="post" action="review_modifyResult.jsp">
 					<div class="writeRV">
+					<input type="hidden" name="idx" value="<%= idx%>">
 					<table>
 						<tr>
 							<th>작성자</th>
-							<td>김바다</td>
+							<td><%= name%></td>
 						</tr>
 						<tr>
 							<th>리뷰 제목</th>
-							<td><input type="text" value="입력값 가져오기" name="reviewTitle"></td>
-						</tr>
-						<tr>
-							<th>커스텀 이름</th>
-							<td>
-								선택값 가져오기
-							</td>
-						</tr>
-						<tr>
-							<th>베이스 원두</th>
-							<td><span>브라질 산토스</span></td>
-						</tr>
-						<tr>
-							<th>블렌드 원두</th>
-							<td>
-								<span>케냐AA</span>
-								<span>예멘 모카 마타리</span>
-								<span>자메이카 블루마운틴</span>
-							</td>
-						</tr>
-						<tr>
-							<th>로스팅 단계</th>
-							<td><span>6단계(풀시티)</span></td>
+							<td><input type="text" value="<%= subject%>" name="subject"></td>
 						</tr>
 						<tr>
 							<th>후기 내용</th>
-							<td><textarea name="reviewContent">입력값 가져오기.</textarea></td>
+							<td><textarea name="content"><%=content%></textarea></td>
 						</tr>
 					</table>
+	<% 
+        }
+       rs.close();
+       con.close();
+%>
 						
-						<div class="uploadRV"><input type="button" class="uploadBtn" value="수정 완료"></div>
+						<div class="uploadRV"><input type="button" class="uploadBtn" value="수정 완료" OnClick="modify_check()">
+						<a href="view_review.jsp?idx=<%=idx%>"><input type="button" class="uploadBtn" value="이전으로"></a></div>
 						
 					</div>
 				</form>

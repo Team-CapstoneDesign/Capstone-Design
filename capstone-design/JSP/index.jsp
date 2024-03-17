@@ -84,7 +84,44 @@
 				<div class="section1_background"></div>
 			</div>
 			<div id="section1-1"></div>
+			<div id="section2">
+				<div class="cont">
+					<div class="bestCapsule">
+						<div class="bestCapsule_left">
+							<div class="deco circle1"></div>
+							<div class="deco circle2"></div>
+							<img class="capsuleSlide1" src="../images/model02_3.png" alt=""
+								data-aos="fade-up">
+							<div class="bestCapsule_explanation">
+								<div class="capsuleSlide1_name">두잔 프리미엄 블렌딩</div>
+								<div class="capsuleSlide1_price">14,900 원</div>
+							</div>
+						</div>
+						<div class="bestCapsule_right">
+							<div class="bestTitle">
+								<h2>두잔의 명작 캡슐 3선</h2>
+								<span>두잔에서 가장 인기가 많은 명작 캡슐 BEST3를 소개합니다.</span>
+							</div>
+							<div class="bestOption">
+								<div class="option">
+									<a href=""><img src="../images/model02_3.png" alt=""
+										data-aos="fade-up"></a>
+									<div>두잔 프리미엄 블렌딩</div>
+								</div>
+								<div class="option">
+									<a href=""><img src="../images/model02_4.png" alt=""
+										data-aos="fade-up"></a> <a href=""><div>두잔 모카 마타리</div></a>
+								</div>
+								<div class="option">
+									<a href=""><img src="../images/model02_6.png" alt=""
+										data-aos="fade-up"></a> <a href=""><div>두잔 블루마운틴</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
 
+				</div>
+			</div>
 			<div id="section3">
 				<div class="cont">
 					<div class="signature_timeOrigin">
@@ -225,10 +262,6 @@
 					</div>
 
 				</div>
-			</div>
-			
-			<div id="section2">
-
 			</div>
 			<div id="section5">
 				<div class="cont">
