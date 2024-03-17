@@ -1,9 +1,6 @@
-<!-- //.jsp로 변환 시 해당 줄 삭제
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*"%>
-//.jsp로 변환 시 해당 줄 삭제 -->
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -12,12 +9,8 @@
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/review.css">
 </head>
+<%  String id = (String)session.getAttribute("sid"); %>
 <body>
-	<!-- //.jsp로 변환 시 해당 줄 삭제
-	<%
-		String id = (String) session.getAttribute("sid");
-	%> 
-	//.jsp로 변환 시 해당 줄 삭제 --> 
 	<div class="wrap">
 		<div class="headerTitle">
 			<a href="../../index.jsp"><img class="logo" src="../../images/logo.png"
@@ -64,14 +57,14 @@
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="">로그인</a></span> <span
+					<span class="quick_menu"><a href="./member/login.jsp">로그인</a></span> <span
 						class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
 					%>
-					<span class="quick_menu"><a href="">로그인</a></span> <span
-						class="quick_menu"><a href="">회원가입</a></span> <span
+					<span class="quick_menu"><a href="./member/logout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="">마이페이지</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						}
@@ -102,54 +95,97 @@
 			</div><br>
 			
 			<!-- 업로드 된 리뷰 리스트 보기 -->
+			   <% 
+
+   
+       String DB_URL="jdbc:mysql://localhost:3306/dojan";  
+       String DB_ID="multi";  
+       String DB_PASSWORD="abcd"; 
+ 	 
+	   Class.forName("org.gjt.mm.mysql.Driver");  
+ 	   Connection con = DriverManager.getConnection(DB_URL, DB_ID, DB_PASSWORD); 
+
+	   String idx = request.getParameter("idx");              
+	   String  jsql = "select * from board where idx = ?";
+       PreparedStatement pstmt = con.prepareStatement(jsql);
+       pstmt.setInt(1, Integer.parseInt(idx));
+       ResultSet rs = pstmt.executeQuery();
+
+
+   if(!rs.wasNull()) {
+           rs.next();
+
+	   String name = rs.getString("name");
+       String subject = rs.getString("subject");
+       String base = rs.getString("base");
+	   String blend = rs.getString("blend");
+       String roast = rs.getString("roasting");   
+       String content = rs.getString("content");
+           
+   %>
 			<div class="reviewPage">
 				<div class="reviewPage_title">
 					후기 자세히 확인하기
 				</div>
-				
-				<form name="reveiw" method="post" action="">
+				<form>
 					<div class="writeRV">
 					<table>
 						<tr>
+						<input type="hidden" name="idx" value="<%= idx%>">
 							<th>작성자</th>
-							<td>김바다</td>
+							<td><input type="hidden" name="name" value="<%= name%>"><%=name%></td>
 						</tr>
 						<tr>
 							<th>리뷰 제목</th>
-							<td class="RVcontents">입력값 가져오기입력값 가져오기입력값 가져오기입력값 가져오기입력값 가져오기입력값 가져오기</td>
-						</tr>
-						<tr>
-							<th>커스텀 이름</th>
-							<td>
-								선택값 가져오기
-							</td>
+							<td class="RVcontents"><input type="hidden" name="subject" value="<%= subject%>"><%= subject%></td>
 						</tr>
 						<tr>
 							<th>베이스 원두</th>
-							<td><span>브라질 산토스</span></td>
+							<td><span><input type="hidden" name="base" value="<%= base%>"><%= base%></span></td>
 						</tr>
 						<tr>
 							<th>블렌드 원두</th>
 							<td>
-								<span>케냐AA</span>
-								<span>예멘 모카 마타리</span>
-								<span>자메이카 블루마운틴</span>
+						<%
+                       String[] blend_list = blend.split("  ");   
+                       for (int i = 0; i < blend_list.length; i++) {
+                       %>
+								<span><%= blend_list[i]%></span>
+								<% } %>
 							</td>
 						</tr>
 						<tr>
 							<th>로스팅 단계</th>
-							<td><span>6단계(풀시티)</span></td>
+							<td><span><input type="hidden" name="roast" value="<%= roast%>"><%= roast%> 단계</span></td>
 						</tr>
 						<tr>
 							<th>후기 내용</th>
-							<td class="RVcontents">입력값 가져오기.입력값 가져오기.입력값 가져오기.입력값 가져오기.입력값 가져오기.입력값 가져오기.입력값 가져오기.</td>
+							<td class="RVcontents"><input type="hidden" name="content" value="<%= content%>"><%=content%></td>
 						</tr>
-					</table>
-						
-						<div class="modifyRV"><input type="button" class="modifyBtn" value="수정 하기"></div>
-						
+						</table>
+					<%
+							    if(!(id == null)){    // 로그인 했을때 아이디가 일치하지않으면 수정버튼 안뜨게함 
+							    	String  jsql2 = "select * from member where memId = ?";
+								    PreparedStatement pstmt2 = con.prepareStatement(jsql2);
+								    pstmt2.setString(1, id);
+								    ResultSet rs2 = pstmt2.executeQuery();
+								    rs2.next();
+								    
+								    String memName = rs2.getString("memName");
+								    if(name.equals(memName)){
+									%>
+						<div class="modifyRV"><a href="review_modify.jsp?idx=<%=idx%>"><input type="button" class="modifyBtn" value="수정 하기"></a></div>
+						<div class="modifyRV"><a href="review_list.jsp"><input type="button" class="modifyBtn" value="목록으로"></a></div>
+						<% 
+						       } 
+									else{ %>
+						<div class="modifyRV"><a href="review_list.jsp"><input type="button" class="modifyBtn" value="목록으로"></a></div>
+									<% }
+			            	}
+					%>
 					</div>
 				</form>
+				<% } %>
 			</div>
 
 		</div>

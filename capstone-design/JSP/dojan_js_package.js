@@ -252,3 +252,9 @@ function submitForm() {
 function orderOK() {
         document.everyCartInfo.submit(); 
     }
+
+////////  ¸®ºä /////////////
+
+ function reviewOK() {
+        document.rwWrite.submit();
+    }

@@ -72,7 +72,7 @@ try{
 	 }
 
 
-    String jsql5 = "select csname, csQty, machine from cscart where ctNo = ?";
+    String jsql5 = "select csname, csQty, machine, roast, origin, blend from cscart where ctNo = ?";
 	PreparedStatement pstmt5 = con.prepareStatement(jsql5);
 	pstmt5.setString(1, ctNo);		
 
@@ -84,13 +84,20 @@ try{
 			String csName = rs5.getString("csname");	
     		int csQty = rs5.getInt("csQty");
 			String csCap = rs5.getString("machine");
+			String csRoast = rs5.getString("roast");
+			String csOrigin = rs5.getString("origin");
+			String csBlend = rs5.getString("blend");
 
-			String jsql6 = "INSERT INTO ordercustom (ordNo, csName, ordQty, ordCap) VALUES (?,?,?,?)";
+
+			String jsql6 = "INSERT INTO ordercustom (ordNo, csName, ordQty, ordCap, ordRoast, ordOrigin, ordBlend) VALUES (?,?,?,?,?,?,?)";
 			PreparedStatement pstmt6 = con.prepareStatement(jsql6);
 			pstmt6.setString(1, Integer.toString(oNum));
 			pstmt6.setString(2, csName);
 			pstmt6.setInt(3, csQty);
 			pstmt6.setString(4, csCap);
+			pstmt6.setString(5, csRoast);
+			pstmt6.setString(6, csOrigin);
+			pstmt6.setString(7, csBlend);
 
 			pstmt6.executeUpdate();
 	 }

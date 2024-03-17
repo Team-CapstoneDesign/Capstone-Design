@@ -16,6 +16,37 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `board`
+--
+
+DROP TABLE IF EXISTS `board`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `board` (
+  `idx` int(19) NOT NULL,
+  `no` int(19) DEFAULT NULL,
+  `name` char(20) DEFAULT NULL,
+  `subject` char(30) DEFAULT NULL,
+  `base` char(20) DEFAULT NULL,
+  `blend` char(50) DEFAULT NULL,
+  `roasting` char(20) DEFAULT NULL,
+  `content` text,
+  `ymd` char(30) DEFAULT NULL,
+  PRIMARY KEY (`idx`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `board`
+--
+
+LOCK TABLES `board` WRITE;
+/*!40000 ALTER TABLE `board` DISABLE KEYS */;
+INSERT INTO `board` VALUES (1,1,'이준영','안녕하세요ㅕ','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','바이용','2024. 3. 16. 오전 5:55:36'),(2,2,'이준영','한글 되라고','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','12451256','2024. 3. 17. 오후 11:52:34'),(3,3,'이준영','제목을 입력해주세요.','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.','2024. 3. 17. 오후 11:52:42'),(4,4,'이준영','제목을 입력해주세요.124','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.124','2024. 3. 17. 오후 11:52:45'),(5,5,'이준영','제목을 입력해주세요.15126','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.126126','2024. 3. 17. 오후 11:52:54'),(6,6,'이준영','제목을 입력해주세요.161237127','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.1261256126','2024. 3. 17. 오후 11:52:59'),(7,7,'이준영','제목을 입력해주세요.72342345737','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.234623462346346','2024. 3. 17. 오후 11:53:05');
+/*!40000 ALTER TABLE `board` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `cart`
 --
 
@@ -36,7 +67,6 @@ CREATE TABLE `cart` (
 
 LOCK TABLES `cart` WRITE;
 /*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-INSERT INTO `cart` VALUES ('7660EFB44146B786F89A1E133D721EC0','DL002',2,'nesOrigin');
 /*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,7 +173,10 @@ CREATE TABLE `ordercustom` (
   `ordNo` varchar(10) DEFAULT NULL,
   `csName` varchar(10) DEFAULT NULL,
   `ordQty` int(30) DEFAULT NULL,
-  `ordCap` char(20) DEFAULT NULL
+  `ordCap` char(20) DEFAULT NULL,
+  `ordRoast` char(50) DEFAULT NULL,
+  `ordOrigin` char(50) DEFAULT NULL,
+  `ordBlend` char(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -153,6 +186,7 @@ CREATE TABLE `ordercustom` (
 
 LOCK TABLES `ordercustom` WRITE;
 /*!40000 ALTER TABLE `ordercustom` DISABLE KEYS */;
+INSERT INTO `ordercustom` VALUES ('1','coffee',2,'일리','5','탄자니아 AA','콜롬비아 수프리모  케냐AA');
 /*!40000 ALTER TABLE `ordercustom` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -184,6 +218,7 @@ CREATE TABLE `orderinfo` (
 
 LOCK TABLES `orderinfo` WRITE;
 /*!40000 ALTER TABLE `orderinfo` DISABLE KEYS */;
+INSERT INTO `orderinfo` VALUES (1,'a123','2024. 3. 16. 오전 5:54:55','이준영','15003','경기 시흥시 군자로 159  응아니야',' (거모동)','010-1321-1241','카카오페이','recycle');
 /*!40000 ALTER TABLE `orderinfo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -208,6 +243,7 @@ CREATE TABLE `orderproduct` (
 
 LOCK TABLES `orderproduct` WRITE;
 /*!40000 ALTER TABLE `orderproduct` DISABLE KEYS */;
+INSERT INTO `orderproduct` VALUES ('1','DB002',3,'nesOrigin');
 /*!40000 ALTER TABLE `orderproduct` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -220,4 +256,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-12 22:05:58
+-- Dump completed on 2024-03-18  6:24:06
