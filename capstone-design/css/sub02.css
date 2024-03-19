@@ -154,6 +154,9 @@ div.product_view_tab_wrap {
 	margin: 0 auto;
 }
 
+div.product_view_tab_wrap div.product_list{
+	padding-top: 30px;
+}
 .product_list > ul{
     display: flex;
     flex-wrap: wrap;

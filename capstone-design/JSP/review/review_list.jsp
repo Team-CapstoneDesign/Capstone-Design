@@ -5,7 +5,6 @@
 <head>
 <meta charset="EUC-KR">
 <title>캡슐 조합 리뷰</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/review.css">
 </head>
@@ -60,25 +59,25 @@
 
 <body>
 	<div class="wrap">
-		<div class="headerTitle">
-			<a href="../../index.jsp"><img class="logo" src="../../images/logo.png"
-				alt=""> </a>
-		</div>
+
 		<div id="header">
 			<div class="formbox">
-				<input type="text" placeholder="검색">
+				<h1 class="logo">
+					<a href="#"> <span class="blind">두잔</span>
+					</a>
+				</h1>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a>캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="./goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=beveridge">베버리지
+									<li><a href="./viewProduct.jsp?ctgType=season">시즌한정</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=signature">시그니처</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=blending">블렌딩</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=original">오리지널</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=beverage">베버리지
 											/ 논커피</a></li>
 									<li><a href="">선물 패키지</a></li>
 								</ul>
@@ -105,13 +104,13 @@
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="./member/login.jsp">로그인</a></span> <span
+					<span class="quick_menu"><a href="../member/login.jsp">로그인</a></span> <span
 						class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
 					%>
-					<span class="quick_menu"><a href="./member/mainlogout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
 					<span class="quick_menu"><a href="">마이페이지</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%

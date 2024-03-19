@@ -203,10 +203,12 @@ input[type=text], input[type=password]{
 	margin-top: 30px;
 }
 .insertMemResult table tr th{
+	width: 30%;
 	padding: 10px;
 	text-align: left;
 }
 .insertMemResult table tr td{
+	width: 70%;
 	padding: 10px;
 	padding-left: 20px;
 }
