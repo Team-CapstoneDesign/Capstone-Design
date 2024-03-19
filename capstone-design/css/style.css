@@ -78,6 +78,10 @@ border-radius: 30px;
 }
 
 
+#header .formbox > a{
+  width: 130px;
+  height: 50px;
+}
 #header .logo{
   line-height: 100px;
   position: absolute;
@@ -87,7 +91,7 @@ border-radius: 30px;
   width: 130px;
   height: 50px;
   line-height: 100px;
-  background: url(../images/logo_dark.png) no-repeat;
+  background: url(../images/logo.png) no-repeat;
   background-size: cover;
   background-size: 110px;
 }
@@ -224,15 +228,18 @@ color: #333;
 
 /*container*/
 .containerMain{
+  display: block;
+  position: relative;
   width: 1920px;
 }
 
 .section1_background{
   height: 100vh;
-  background-image: url(../images/main_title.png);
+  background-image: url(../images/section1_background.png);
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .kvWrap .kvList .slide{
   display: flex;
   justify-content: center;
@@ -274,11 +281,17 @@ color: #333;
 
 /*sectoion1-1*/
 #section1-1{
+
+  background-image: url(../images/section2_background.png);
+  z-index: -3;
+}
+.section1-1_wrap{
+  margin-top: -100px;
   display: block;
   position: relative;
-  height: 100vh;
-  background-image: url(../images/section1-1.png);
-  z-index: -1;
+  width: 1200px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  z-index: 0;
 }
 /*section2*/
 #section2{
@@ -288,7 +301,6 @@ color: #333;
   min-width: 1200px;
   width: 1920px;
   height: 800px;
-  margin-top: 200px;
   background-image: url(../images/seasonal_limited.jpg);
   background-repeat: no-repeat;
   background-size: center / contain;
@@ -418,7 +430,7 @@ color: #333;
   margin: 0 auto;
   width: 310px;
   height: 2px;
-  background-color: #1C9FB3;
+  background-color: #992b2b;
 }
 .signatureTitle h2{
   font-size: 50px;
@@ -518,11 +530,11 @@ color: #333;
   position: relative;
   background-color: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 10px 20px 20px 20px;
 }
 .signature_Origin .origin_left img{
   display: block;
   position: relative;
-  margin: 32px 28px 20px 28px;
   width: 190px;
   filter: drop-shadow(9px 2px 17px rgba(0, 0, 0, 0.07));
 }
@@ -900,7 +912,11 @@ footer{
 
 .webgl {
   position: fixed;
-  top: 200px;
   left: 0;
   outline: none;
+  z-index: 1;
+}
+
+#section3, #section5{
+  z-index: 3;
 }

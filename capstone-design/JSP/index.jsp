@@ -19,10 +19,11 @@
 		<canvas id="canvas" class="webgl"></canvas>
 		<div id="header">
 			<div class="formbox">
-				<h1 class="logo">
-					<a href="#"> <span class="blind">두잔</span>
-					</a>
-				</h1>
+				<a href="./index.jsp">
+					<h1 class="logo">
+						<span class="blind">두잔</span>
+					</h1>
+				</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a href="./goods/custome.jsp">캡슐 커스텀</a></li>
@@ -36,7 +37,6 @@
 									<li><a href="./goods/viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
 									<li><a href="./goods/viewProduct.jsp?ctgType=beverage">베버리지
 											/ 논커피</a></li>
-									<li><a href="">선물 패키지</a></li>
 								</ul>
 							</div></li>
 						<li><a>커피 이야기</a>
@@ -61,8 +61,8 @@
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="./member/login.jsp">로그인</a></span> <span
-						class="quick_menu"><a href="">회원가입</a></span> <span
+					<span class="quick_menu"><a href="./member/login.jsp">로그인</a></span>
+					<span class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
@@ -83,43 +83,9 @@
 
 				<div class="section1_background"></div>
 			</div>
-			<div id="section1-1"></div>
-			<div id="section2">
+			<div id="section1-1">
 				<div class="cont">
-					<div class="bestCapsule">
-						<div class="bestCapsule_left">
-							<div class="deco circle1"></div>
-							<div class="deco circle2"></div>
-							<img class="capsuleSlide1" src="../images/model02_3.png" alt=""
-								data-aos="fade-up">
-							<div class="bestCapsule_explanation">
-								<div class="capsuleSlide1_name">두잔 프리미엄 블렌딩</div>
-								<div class="capsuleSlide1_price">14,900 원</div>
-							</div>
-						</div>
-						<div class="bestCapsule_right">
-							<div class="bestTitle">
-								<h2>두잔의 명작 캡슐 3선</h2>
-								<span>두잔에서 가장 인기가 많은 명작 캡슐 BEST3를 소개합니다.</span>
-							</div>
-							<div class="bestOption">
-								<div class="option">
-									<a href=""><img src="../images/model02_3.png" alt=""
-										data-aos="fade-up"></a>
-									<div>두잔 프리미엄 블렌딩</div>
-								</div>
-								<div class="option">
-									<a href=""><img src="../images/model02_4.png" alt=""
-										data-aos="fade-up"></a> <a href=""><div>두잔 모카 마타리</div></a>
-								</div>
-								<div class="option">
-									<a href=""><img src="../images/model02_6.png" alt=""
-										data-aos="fade-up"></a> <a href=""><div>두잔 블루마운틴</div></a>
-								</div>
-							</div>
-						</div>
-					</div>
-
+					<img class="section1-1_wrap" src="../images/section1-1.png" alt="">
 				</div>
 			</div>
 			<div id="section3">
@@ -132,11 +98,11 @@
 							<h2>두잔 오리진</h2>
 						</div>
 						<div class="signature_time">
-							<a href=""><div class="time morning" data-aos="flip-left"
+							<a href="./goods/viewProductDetail.jsp?prdNo=DS003"><div class="time morning" data-aos="flip-left"
 									data-aos-easing="ease-out-cubic" data-aos-duration="800"></div></a>
-							<a href=""><div class="time afternoon" data-aos="flip-left"
+							<a href="./goods/viewProductDetail.jsp?prdNo=DS004"><div class="time afternoon" data-aos="flip-left"
 									data-aos-easing="ease-out-cubic" data-aos-duration="2000"></div></a>
-							<a href=""><div class="time evening" data-aos="flip-left"
+							<a href="./goods/viewProductDetail.jsp?prdNo=DS005"><div class="time evening" data-aos="flip-left"
 									data-aos-easing="ease-out-cubic" data-aos-duration="3000"></div></a>
 						</div>
 						<div class="signature_time_capusle">
@@ -158,7 +124,7 @@
 
 					<div class="signature_Origin" data-aos="fade-up">
 						<div class="origin_left">
-							<img src="../images/capsule.png" alt="">
+							<img src="../images/capdesign/DS001.png" alt="">
 							<button>자세히 보기</button>
 						</div>
 						<div class="origin_right">
@@ -169,16 +135,16 @@
 									증가해<br> 전체적으로 균형잡힌 맛을 느낄 수 있는<br> 두잔의 대표 시그니처 메뉴입니다.
 								</p>
 							</div>
-							<div class="price">9,999 원</div>
+							<div class="price">9,900 원</div>
 							<div class="progress-wrap">
 								<h3 class="progress-name">
 									<strong>로스팅</strong>
 								</h3>
 								<div class="progress">
 									<div class="progress-bar color-1" role="progressbar"
-										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-										style="width: 70%">
-										<span>70% Complete</span>
+										aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+										style="width: 65%">
+										<span>6단계 로스팅 하이</span>
 									</div>
 								</div>
 							</div>
@@ -188,9 +154,9 @@
 								</h3>
 								<div class="progress">
 									<div class="progress-bar color-2" role="progressbar"
-										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-										style="width: 70%">
-										<span>70% Complete</span>
+										aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+										style="width: 50%">
+										<span>50%</span>
 									</div>
 								</div>
 							</div>
@@ -200,9 +166,9 @@
 								</h3>
 								<div class="progress">
 									<div class="progress-bar color-3" role="progressbar"
-										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-										style="width: 70%">
-										<span>70% Complete</span>
+										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
+										style="width: 30%">
+										<span>30%</span>
 									</div>
 								</div>
 							</div>
@@ -210,27 +176,27 @@
 					</div>
 					<div class="signature_Origin" data-aos="fade-up">
 						<div class="origin_left">
-							<img src="../images/capsule2.png" alt="">
+							<img src="../images/capdesign/DS002.png" alt="">
 							<button>자세히 보기</button>
 						</div>
 						<div class="origin_right">
 							<div class="originTitle">두잔 시그니처 블랜드 / 로스팅 시티</div>
 							<div class="origin_explanation">
 								<p>
-									마일드하고 부드러운 맛이 특징인 브라질 원두 산토스를<br> 사용하여 산미가 억제되고 쓴맛과 단맛이
-									증가해<br> 전체적으로 균형잡힌 맛을 느낄 수 있는<br> 두잔의 대표 시그니처 메뉴입니다.
+									브라질 산토스+콜롬비아 수프리모+베트남 로부스타를<br> 사용하여 이태리 커피의 묵직한 커피의 풍미와
+									진한 바디감이 특징
 								</p>
 							</div>
-							<div class="price">9,999 원</div>
+							<div class="price">10,900 원</div>
 							<div class="progress-wrap">
 								<h3 class="progress-name">
 									<strong>로스팅</strong>
 								</h3>
 								<div class="progress">
 									<div class="progress-bar color-1" role="progressbar"
-										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-										style="width: 70%">
-										<span>70% Complete</span>
+										aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+										style="width: 50%">
+										<span>5단계 로스팅 시티</span>
 									</div>
 								</div>
 							</div>
@@ -242,7 +208,7 @@
 									<div class="progress-bar color-2" role="progressbar"
 										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
 										style="width: 70%">
-										<span>70% Complete</span>
+										<span>70%</span>
 									</div>
 								</div>
 							</div>
@@ -252,9 +218,9 @@
 								</h3>
 								<div class="progress">
 									<div class="progress-bar color-3" role="progressbar"
-										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-										style="width: 70%">
-										<span>70% Complete</span>
+										aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+										style="width: 50%">
+										<span>50%</span>
 									</div>
 								</div>
 							</div>
