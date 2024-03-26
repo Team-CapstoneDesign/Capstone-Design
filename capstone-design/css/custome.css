@@ -1,11 +1,11 @@
 .customeWrap{
-  margin-top: 100px;
   display: block;
   position: relative;
   width: 1920px;
+  height: 100vh;
 }
 .custome_main{
-  background-image: url("../images/custome_1.jpg");
+  background-image: url("../images/custome_background.png");
   background-repeat: no-repeat;
 }
 .custome_page{
@@ -59,31 +59,61 @@
   margin-bottom: 30px;
 }
 
-#select-coffee{
-  display: block;
-  width: 100%;
-  height: 80vh;
-  text-align: center;
-  flex-direction: column;
 
-}
 #coffee-checkbox{
   display: flex;
-  text-align: center;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
-.custome_section{
-  text-align: center;
+.coffee_content{
+  position: relative;
+  display: flex;
+  width: 100%;
   height: 80vh;
   padding-top: 150px;
+}
+.result_content{
+  padding-top: 200px;
+}
+.custome_section .coffee_left ul{
+  display: flex;
+  width: 550px;
+  height: 780px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  
+}
+#custome_result > p{
+  color: #fff;
+}
+#custome_result  span{
+  color: #fff;
+}
+.coffee_left ::-webkit-scrollbar {
+  width: 10px;  /* 세로축 스크롤바 폭 너비 */
+  height: 20px;  /* 가로축 스크롤바 폭 너비 */
+}
+.coffee_left ::-webkit-scrollbar-thumb {
+  background: #e89a3e; /* 스크롤바 막대 색상 */
+  border: 2px solid #9b6a2f; /* 스크롤바 막대 테두리 설정  */
+  border-radius: 12px 12px 12px 12px;
+}
+.coffee_left ::-webkit-scrollbar-thumb:hover {
+	background-color:#a0a0a5;
+}
+
+.custome_section .coffee_right{
+  padding-top: 250px;
+  top: 250px;
+  width: 350px;
+  margin: 0 auto;
 }
 .custome_section h2{
   margin-bottom: 20px;
   font-size: 40px;
   font-weight: bold;
-  text-align: center;
+  color: #fff;
 }
 .custome_section img{
   display: block;
@@ -117,52 +147,35 @@ input[type="radio"] {
   display: none;
 }
 #select-coffee-explain{
+  
   display: block;
   height: 80px;
 }
 #select-coffee-explain > div:first-child{
+  color: #fff;
   font-size: 25px;
   font-weight: bold;
 }
 #select-coffee-explain > div:nth-child(2){
+  color: #fff;
   font-size: 18px;
 }
 
 /*radio*/
 .customeRadio label{
   display: inline-block;
-  background-color: rgba(255, 255, 255, .9);
-  border: 2px solid rgba(139, 139, 139, .3);
-  color: #626262;
+  background-image: url("../images/coffee_list_08.png");
+  width: 175px;
+  height: 236px;
   border-radius: 25px;
   white-space: nowrap;
-  margin: 3px 0px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
   transition: all .2s;
-}
-
-.customeRadio label {
-  padding: 8px 12px;
   cursor: pointer;
 }
 
-.customeRadio label::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 12px;
-  padding: 2px 6px 2px 2px;
-  content: "\f067";
-  transition: transform .3s ease-in-out;
+input[type="checkbox"] {
+  display: none;
 }
 
 .customeRadio input[type="radio"]:checked + label::before {
@@ -170,7 +183,27 @@ input[type="radio"] {
   transform: rotate(-360deg);
   transition: transform .3s ease-in-out;
 }
-
+.blend_content{
+  padding-top: 160px;
+}
+.blend_content .blend_top{
+  display: flex;
+}
+.blend_top_left{
+  width: 600px;
+}
+.blend_top_left .blend_svg{
+  width: 200px;
+  margin-left: 30px;
+}
+.blend_top_right{
+  width: 530px;
+  padding-bottom: 40px;
+  margin-right: 20px;
+}
+.blend_bottom{
+  width: 1200px;
+}
 .customeRadio input[type="radio"]:checked + label {
   border: 2px solid #bccc74;
   background-color: #6f853a;
@@ -180,50 +213,33 @@ input[type="radio"] {
 
 #blend-checkbox{
   display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+}
+.blend_bottom ul{
+  display: flex;
+  overflow-x: scroll;
+}
+.blend_bottom ::-webkit-scrollbar {
+  height: 5px;  /* 가로축 스크롤바 폭 너비 */
+}
+.blend_bottom ::-webkit-scrollbar-thumb {
+  background: #e89a3e; /* 스크롤바 막대 색상 */
+  border-radius: 12px 12px 12px 12px;
+}
+.blend_bottom ::-webkit-scrollbar-thumb:hover {
+	background-color:#a0a0a5;
 }
 /*checkbox*/
 #blend-checkbox label{
-  display: inline-block;
-  background-color: rgba(255, 255, 255, .9);
-  border: 2px solid rgba(139, 139, 139, .3);
-  color: #626262;
-  border-radius: 25px;
+  position: relative;
+  display: block;
+  background-image: url("../images/coffee_list_08.png");
+  background-size: cover;
+  width: 131px;
+  height: 177px;
   white-space: nowrap;
-  margin: 3px 0px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
   transition: all .2s;
-}
-
-#blend-checkbox label {
-  padding: 8px 12px;
   cursor: pointer;
-}
-
-#blend-checkbox label::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 12px;
-  padding: 2px 6px 2px 2px;
-  content: "\f067";
-  transition: transform .3s ease-in-out;
-}
-
-#blend-checkbox input[type="checkbox"]:checked + label::before {
-  content: "\f00c";
-  transform: rotate(-360deg);
-  transition: transform .3s ease-in-out;
 }
 
 #blend-checkbox input[type="checkbox"]:checked + label {
@@ -246,12 +262,16 @@ border: 2px solid #f0dc41;
   background-color: #ffffff81;
   transition: 0.5s;
 }
+.roasting_content{
+  padding-top: 250px;
+}
 .roastingPost{
   margin-top: 20px;
   margin-bottom: 50px;
 }
 .roastingPost span{
   display: block;
+  color: #fff;
 }
 #roastingNum{
   font-size: 30px;
@@ -265,11 +285,27 @@ border: 2px solid #f0dc41;
 #custome_result span{
   font-size: 20px;
 }
-
+.machine_content{
+  padding-top: 200px;
+}
 canvas {
   z-index: 10;
   pointer-events: none;
   position: fixed;
   top: 0;
   transform: scale(1.1);
+}
+.moveTest {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  animation-name: moveLeft;
+  animation-duration: 2s;
+
+}
+
+@keyframes moveLeft {
+  from {left: 0;}
+  to {left: -200px;}
 }
