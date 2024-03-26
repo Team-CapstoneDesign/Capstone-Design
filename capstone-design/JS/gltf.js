@@ -35,6 +35,9 @@ directionalLight.position.set(0, 10, 0);
 directionalLight.castShadow = true;
 scene.add(directionalLight);
 
+
+
+
 // Loading Bar and Manager
 const loadingBarElement = document.querySelector('.loading-bar');
 const bodyElement = document.querySelector('body');
@@ -57,7 +60,7 @@ const loadingManager = new THREE.LoadingManager(
 let donut = null;
 const loader = new THREE.GLTFLoader(loadingManager);
 loader.load(
-  '../gltf/model7.glb',
+  '../gltf/model02.glb',
   (glb) => {
     console.log(glb);
     donut = glb.scene;
