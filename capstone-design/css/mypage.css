@@ -3449,7 +3449,7 @@
 
 @media(min-width: 1152px) {
     .Layout_container__2ryFm {
-        max-width:960px;
+        max-width:1200px;
         padding: 40px 0
     }
 
@@ -3468,5 +3468,115 @@
 }
 
 .mypage_wrap{
+    max-width: 1920px;
     padding-top: 300px;
+    margin: 0 auto;
+}
+.emKjNy {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+    color: rgb(61, 61, 61);
+    margin: 0px 0px 10px;
+}
+.dzEqxt {
+    border-width: 1px 0px;
+
+    border-image: initial;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+.jlXZQ:first-of-type {
+    border-top: none;
+}
+.doDmmI {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    display: flex;
+}
+.jlXZQ {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+.jlrvfN {
+    width: 107px;
+    height: 80px;
+    font-size: 64px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 14px;
+    cursor: pointer;
+    background: url(https://tumblbug-pci.imgix.net/39ea294…/673ce65…/4005ffb…/73573e62-73fe-4555-94c4-bd81e5e1e530.png?auto=format%2Ccompress&fit=crop&h=232&lossless=true&w=308&s=480dcec…) 50% 50% / cover no-repeat;
+}
+.eybslm {
+    display: flex;
+    flex-direction: column;
+}
+.VDSvq {
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: -0.005em;
+    color: rgb(109, 109, 109);
+    position: relative;
+}
+.cQXRRi {
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    max-height: 48px;
+    margin-bottom: 4px;
+}
+.glqfra {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: -0.005em;
+    color: rgb(61, 61, 61);
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.gkHbvS {
+    font-size: 12px;
+}
+.dqbKMS {
+    width: max-content;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    display: flex;
+    padding: 2px 6px;
+    align-items: flex-start;
+    gap: 6px;
+    border-radius: 2px;
+    background: rgb(245, 244, 243);
+    margin-top: 4px;
+}
+.gQaKUK {
+    color: rgb(248, 100, 83);
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    margin: 8px 0px 0px;
+}
+p:last-child {
+    margin-bottom: 0em;
 }
