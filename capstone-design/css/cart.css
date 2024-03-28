@@ -30,19 +30,18 @@ input{
 .cart_headerTitle{
     display: flex;
     position: relative;
-    line-height: 350px;
     width: 1920px;
     min-width: 1200px;
     text-align: center;
     flex-direction: column;
     justify-content: center;
 }
-.cart_subTilte{
+.cart_subTitle{
 	display: block;
-  position: relative;
+  	position: relative;
 	color: #fff;
-  width: 100%;
-  height: 50px;
+  	width: 100%;
+  	height: 50px;
 	font-size: 50px;
 	text-align: center;
 	word-break: keep-all;

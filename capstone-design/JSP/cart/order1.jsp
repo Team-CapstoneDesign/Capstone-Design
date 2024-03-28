@@ -85,7 +85,7 @@
 			<!-- 네비게이션 헤더 -->
 			<div class="cart_section1" name="cart_header">
 				<div class="cart_headerTitle">
-					<div class="cart_subTilte">주문/결제</div>
+					<div class="cart_subTitle">주문/결제</div>
 					<br>
 					<br>
 				</div>
@@ -114,7 +114,7 @@
 			</div>
 
 			<%
-				String DB_URL = "jdbc:mysql://localhost:3306/dojan";
+			String DB_URL = "jdbc:mysql://localhost:3306/dojan";
 			String DB_ID = "multi";
 			String DB_PASSWORD = "abcd";
 

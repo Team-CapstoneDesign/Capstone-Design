@@ -81,7 +81,7 @@
 			<!-- 네비게이션 헤더 -->
 			<div class="cart_section1" name="cart_header">
 				<div class="cart_headerTitle">
-					<div class="cart_subTilte">주문완료</div>
+					<div class="cart_subTitle">주문완료</div>
 					<br>
 					<br>
 				</div>
