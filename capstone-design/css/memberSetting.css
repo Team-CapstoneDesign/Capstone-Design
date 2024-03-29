@@ -1,0 +1,60 @@
+body{
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    font-family: 'Chosunilbo_myungjo';
+    min-width: 1920px;
+}
+.info_cont{
+    width: 960px;
+    margin: 0 auto;
+}
+.memberSetting_wrap{
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+.member_info{
+    margin-bottom: 20px;
+    width: 960px;
+    background-color: #fff;
+    padding: 30px 20px 70px 50px;
+    border-radius: 12px;
+}
+.member_info h3{
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+.member_list{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 76px auto;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 10px 24px;
+}
+.gray-40{
+    color: #969696;
+}
+.inputText{
+    width: 500px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(243, 243, 243);
+}
+.memberUpdate_btn{
+    cursor: pointer;
+    display: block;
+    float: right;
+    background-color: #dddddd;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.memberUpdate_btn:hover{
+    background-color: #c53333;
+    color: #fff;
+}

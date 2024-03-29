@@ -8,80 +8,74 @@
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/cart.css">
 
-  <script language="javascript" src="../dojan_js_package.js">
-  </script>
-
 </head>
 
 <body>
- 
 	<%
-		String id = (String) session.getAttribute("sid");
-	%> 
-	
-  <div class="wrap">
-    <div class="headerTitle">
-      <a href="../index.jsp"><img class="logo" src="../../images/logo.png" alt=""> </a>
-    </div>
-    <div id="header">
-      <div class="formbox">
-        <input type="text" placeholder="검색">
-        <div class="topmenuWrap">
-          <ul class="topmenu">
-            <li><a>캡슐 커스텀</a></li>
-            <li><a>두잔 캡슐</a>
-              <div class="submenu">
-                <ul id="productMenu">
-                  <li><a href="./goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
-                  <li><a href="./goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
-                  <li><a href="./goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
-                  <li><a href="./goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
-                  <li><a href="./goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
-                  <li><a href="./goods/viewProduct.jsp?ctgType=beveridge">베버리지
-                      / 논커피</a></li>
-                  <li><a href="">선물 패키지</a></li>
-                </ul>
-              </div>
-            </li>
-            <li><a>커피 이야기</a>
-              <div class="submenu">
-                <ul id="productMenu">
-                  <li><a href="#">캡슐 조합 리뷰</a></li>
-                  <li><a href="#">원두소개</a></li>
-                  <li><a href="#">커피 응용 레시피</a></li>
-                  <li><a href="#">나와 어울리는 커피</a></li>
-                </ul>
-              </div>
-            </li>
-            <li><a>두잔 이야기</a>
-              <div class="submenu">
-                <ul id="productMenu">
-                  <li><a href="#">두 잔의 여유</a></li>
-                  <li><a href="#">두 잔의 환경가치</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="nav_top">
-          <%
+	String id = (String) session.getAttribute("sid");
+	%>
+
+	<div class="wrap">
+		<div id="header">
+			<div class="formbox">
+				<a href="../index.jsp">
+					<h1 class="logo">
+						<span class="blind">두잔</span>
+					</h1>
+				</a>
+				<div class="topmenuWrap">
+					<ul class="topmenu">
+						<li><a>캡슐 커스텀</a></li>
+						<li><a>두잔 캡슐</a>
+							<div class="submenu">
+								<ul id="productMenu">
+									<li><a href="./goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=beveridge">베버리지
+											/ 논커피</a></li>
+									<li><a href="">선물 패키지</a></li>
+								</ul>
+							</div></li>
+						<li><a>커피 이야기</a>
+							<div class="submenu">
+								<ul id="productMenu">
+									<li><a href="#">캡슐 조합 리뷰</a></li>
+									<li><a href="#">원두소개</a></li>
+									<li><a href="#">커피 응용 레시피</a></li>
+									<li><a href="#">나와 어울리는 커피</a></li>
+								</ul>
+							</div></li>
+						<li><a>두잔 이야기</a>
+							<div class="submenu">
+								<ul id="productMenu">
+									<li><a href="#">두 잔의 여유</a></li>
+									<li><a href="#">두 잔의 환경가치</a></li>
+								</ul>
+							</div></li>
+					</ul>
+				</div>
+				<div class="nav_top">
+					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="./member/login.jsp">로그인</a></span>
-					<span class="quick_menu"><a href="">회원가입</a></span> <span
+					<span class="quick_menu"><a href="">로그인</a></span> <span
+						class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
 					%>
-					<span class="quick_menu"><a href="">로그아웃</a></span> <span
-						class="quick_menu"><a href="">마이페이지</a></span> <span
+					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="">마이페이지</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						}
 					%>
-        </div>
-      </div>
-    </div>
+				</div>
+			</div>
+		</div>
 
     <!-- 컨텐츠 -->
     <div class="cart_container" name="cart_product">
@@ -113,6 +107,9 @@
           </div>
         </div>
       </div>
+		
+	<!-- 장바구니 상품 리스트 -->
+		
      <div class="cartItem_content">
       <form name="everyCartInfo" method="post" action="orderOK.jsp">
 					<%
@@ -202,10 +199,6 @@
 						int customT = 0;   //  커스텀 총합산가격
 						%>
 
-						<div>
-							<a href="deleteAllcart.jsp"><input type="button"
-								class="deleteAllBtn" value="전체 상품 삭제"></a>
-						</div>
 
 						<table class="cartItem_list">
 							<tr class="cartItem_header" alt="캡슐 종류 구분용">
@@ -340,7 +333,7 @@
 
         <!-- 캡슐 재활용 회수 신청 여부 -->
         <div class="recycleCap">
-          <label for="recycle_rq"> 
+          <label for="recycle_rq" class="recycle_comment"> 
             <% 
              String rec = request.getParameter("recycle");
              if ("recycle".equals(rec)) {
@@ -360,38 +353,42 @@
         </div>
         <!-- 주문 / 결제 정보 입력 -->
         <div class="cart_Info">
-          <table>
-            <tr class="cart_orderInfo">
-              <th><span>주문자 정보(내 정보 그대로 불러오기. 수정 불가.)</span></th>
-            </tr>
-            <tr>
-              <th>주문자<br><%=Mname%></th>
-              <th>번호<br><%=Mtel%></th>
-              <th>이메일<br><%=Memail%></th>
-            </tr>
-            <tr class="cart_addrInfo">
-              <th><span>배송지 정보(이전 단계 정보 그대로 불러오기. 수정 불가.)</span></th>
-            </tr>
-            <tr>
-              <th>받는 사람<br>
-                <input type="hidden" name="oName" value="<%=oName%>"><%=oName%>
-              </th>
-              <th>번호<br>
-                <input type="hidden" name="otel" value="<%=otel%>"><%=otel%>
-              </th>
-              <th>주소<br>
-               <input type="hidden" name="oZipno" value="<%=oZipno%>"> <%=oZipno%> (우편번호)
-                <br>
-               <input type="hidden" name="oAddress1" value="<%=oAddress1%>"> <%=oAddress1%> (기본주소)
-               <input type="hidden" name="oAddrplus" value="<%=oAddrplus%>"> <%=oAddrplus%> (참고주소)<br>
-               <input type="hidden" name="oAddress2" value="<%=oAddress2%>"> <%=oAddress2%> (상세 주소)
-              </th>
-            </tr>
-            <tr class="cart_payInfo">
-              <th><span>결제 수단</span><br><input type="hidden" name="payment" value="<%= pay%>"><%= pay%></th>
-            </tr>
-          </table>
-
+          <div class="cart_section5">
+				  <table>
+					<tr class="cart_orderInfo">
+					  <th><span>주문자 정보(내 정보 그대로 불러오기. 수정 불가.)</span></th>
+					</tr>
+					<tr>
+					  <th>주문자<br><span class="myinfo2"><%=Mname%></span></th>
+					  <th>번호<br><span class="myinfo2"><%=Mtel%></span></th>
+					  <th>이메일<br><span class="myinfo2"><%=Memail%></span></th>
+					</tr>
+					<tr class="cart_addrInfo">
+					  <th><span>배송지 정보(이전 단계 정보 그대로 불러오기. 수정 불가.)</span></th>
+					</tr>
+					<tr>
+					  <th>받는 사람<br>
+						<span class="myinfo2"><input type="hidden" name="oName" value="<%=oName%>"><%=oName%></span>
+					  </th>
+					  <th>번호<br>
+						<span class="myinfo2"><input type="hidden" name="otel" value="<%=otel%>"><%=otel%></span>
+					  </th>
+					  <th>주소<br>
+					    <span class="myinfo2"><input type="hidden" name="oZipno" value="<%=oZipno%>"> <%=oZipno%> (우편번호)</span>
+						<br>
+						<span class="myinfo2"><input type="hidden" name="oAddress1" value="<%=oAddress1%>"> <%=oAddress1%></span>
+						<span class="myinfo2"><input type="hidden" name="oAddrplus" value="<%=oAddrplus%>"> <%=oAddrplus%></span><br>
+						<span class="myinfo2"><input type="hidden" name="oAddress2" value="<%=oAddress2%>"> <%=oAddress2%></span>
+					  </th>
+					</tr>
+					<tr class="cart_payInfo">
+					  	<th><span>결제 수단</span></th>
+					</tr>
+					<tr>
+						<th><span class="myinfo2_last"><input type="hidden" name="payment" value="<%= pay%>"><%= pay%></span></th>
+					</tr>
+				  </table>
+			</div>
         </div>
 <%    
 						
@@ -502,7 +499,8 @@
     </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="../../JS/dojan_js_package.js"></script>
+    <script language="javascript" src="../dojan_js_package.js"></script>
+	<script src="../../JS/navEvent.js"></script>
 
 </body>
 

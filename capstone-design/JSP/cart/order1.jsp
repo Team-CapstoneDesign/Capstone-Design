@@ -9,8 +9,6 @@
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/cart.css">
 
-<script language="javascript" src="../dojan_js_package.js"></script>
-
 </head>
 
 <body>
@@ -22,10 +20,11 @@
 	<div class="wrap">
 		<div id="header">
 			<div class="formbox">
-				<h1 class="logo">
-					<a href="#"> <span class="blind">두잔</span>
-					</a>
-				</h1>
+				<a href="../index.jsp">
+					<h1 class="logo">
+						<span class="blind">두잔</span>
+					</h1>
+				</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a>캡슐 커스텀</a></li>
@@ -133,7 +132,7 @@
 								<br>사용하신 캡슐을 재활용 백 안에 넣어주세요.
 								<br>다음 배송일자에 맞추어 기사님이 재활용 백을 수거해드립니다.
 							</p> <input type="checkbox" name="recycle" value="recycle"
-							id="recycleCheckbox">
+							id="recycle_rq">
 						</label>
 					</div>
 
@@ -172,25 +171,19 @@
 					<div class="cart_section3">
 						<div class="cart_title">배송지 정보(내 정보를 가져오되 수정 가능하게)</div>
 						<div class="cartWrap">
-							<th>받는 사람<br> <input type="text" name="name" id="name"
-								placeholder="이름을 입력해주세요"><br>
+							<th>받는 사람<br> <input type="text" name="name" id="name" placeholder="이름을 입력해주세요" value="<%=name%>"><br>
 							</th>
-							<th>번호<br> <input type="text" name="tel1" id="tel1"
-								placeholder="휴대폰" maxlength='3'> <input type="text"
-								name="tel2" id="tel2" placeholder="번호를" maxlength='4'> <input
-								type="text" name="tel3" id="tel3" placeholder="입력해주세요"
-								maxlength='4'><br>
+							<th>번호<br> 
+								<input type="text" name="tel1" id="tel1" placeholder="휴대폰" maxlength='3'>
+								<input type="text" name="tel2" id="tel2" placeholder="번호를" maxlength='4'>
+								<input type="text" name="tel3" id="tel3" placeholder="입력해주세요" maxlength='4'><br>
 							</th>
 							<th>주소<br>
-							<input type="text" name="zipNo" id="zipNo"
-								placeholder="우편번호를 입력해주세요">
-								<button type="button" class="findZipNo"
-									onclick="DaumPostcode();">우편번호 찾기</button>
-								<br> <input type="text" name="address" id="address"
-								placeholder="기본주소를 입력해주세요"> <input type="text"
-								name="addrplus" id="addrplus" placeholder="주소 참고항목을 입력해주세요"><br>
-								<input type="text" name="addressdetail" id="addressdetail"
-								placeholder="상세주소를 입력해주세요">
+								<input type="text" name="zipNo" id="zipNo" placeholder="우편번호를 입력해주세요" readonly>
+								<button type="button" class="findZipNo" onclick="DaumPostcode();">우편번호 찾기</button><br>
+								<input type="text" name="address" id="address" placeholder="기본주소를 입력해주세요">
+								<input type="text" name="addrplus" id="addrplus" placeholder="주소 참고항목을 입력해주세요"><br>
+								<input type="text" name="addressdetail" id="addressdetail" placeholder="상세주소를 입력해주세요">
 							</th>
 						</div>
 					</div>
@@ -198,20 +191,14 @@
 					<div class="cart_section4">
 						<div class="cart_title">결제 수단</div>
 						<div class="cartWrap">
-							<tr class="cart_payInfo">
-								<th><span>결제 수단</span></th>
-							</tr>
 							<tr>
 								<th>
-									<p>
-										<label> <input type="radio" name="payment"
-											value="신용카드" id="card"> 신용카드
-										</label> <br> <label> <input type="radio" name="payment"
-											value="카카오페이" id="kakao"> 카카오페이
-										</label> <br> <label> <input type="radio" name="payment"
-											value="무통장입금" id="bank"> 무통장입금
-										</label> <br>
-									</p>
+									<label> <input type="radio" name="payment" value="신용카드" id="card"> 신용카드
+									</label> <br> 
+									<label> <input type="radio" name="payment" value="카카오페이" id="kakao"> 카카오페이
+									</label> <br> 
+									<label> <input type="radio" name="payment" value="무통장입금" id="bank"> 무통장입금
+									</label> <br>
 								</th>
 							</tr>
 						</div>
@@ -297,7 +284,7 @@
 		</div>
 
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script src="../../JS/dojan_js_package.js"></script>
+		<script language="javascript" src="../dojan_js_package.js"></script>
 		<script src="../../JS/navEvent.js"></script>
 		<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 		<script>
