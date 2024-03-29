@@ -5,9 +5,12 @@
 <html>
 <head>
 <meta charset="EUC-KR">
+
 <title>주문 완료</title>
+
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/cart.css">
+
 </head>
 <body>
 
@@ -18,10 +21,11 @@
 	<div class="wrap">
 		<div id="header">
 			<div class="formbox">
-				<h1 class="logo">
-					<a href="#"> <span class="blind">두잔</span>
-					</a>
-				</h1>
+				<a href="../index.jsp">
+					<h1 class="logo">
+						<span class="blind">두잔</span>
+					</h1>
+				</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a>캡슐 커스텀</a></li>
@@ -81,7 +85,7 @@
 			<!-- 네비게이션 헤더 -->
 			<div class="cart_section1" name="cart_header">
 				<div class="cart_headerTitle">
-					<div class="cart_subTilte">주문완료</div>
+					<div class="cart_subTitle">주문완료</div>
 					<br>
 					<br>
 				</div>
@@ -94,15 +98,15 @@
 						<div class="step-counter">1</div>
 						<div class="step-name">장바구니</div>
 					</div>
-					<div class="stepper-item">
+					<div class="stepper-item completed">
 						<div class="step-counter">2</div>
 						<div class="step-name">배송지 및 결제 정보 입력</div>
 					</div>
-					<div class="stepper-item">
+					<div class="stepper-item completed">
 						<div class="step-counter">3</div>
 						<div class="step-name">주문 상세 내역 확인</div>
 					</div>
-					<div class="stepper-item">
+					<div class="stepper-item completed">
 						<div class="step-counter">4</div>
 						<div class="step-name">주문 완료 및 확인</div>
 					</div>
@@ -115,7 +119,7 @@
 				<h3>주문이 완료되었습니다. 구매해주셔서 감사합니다.</h3>
 
 				<div class="orderClear_button">
-					<input type="button" class="btn_goMain" value="메인으로 돌아가기">
+					<a href="../index.jsp"><input type="button" class="btn_goMain" value="메인으로 돌아가기"></a>
 					<input type="button" class="btn_goMypage"
 						value="내 주문내역 확인하기(마이페이지)">
 				</div>

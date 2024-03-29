@@ -126,7 +126,7 @@
 				</div>
 			</div><br>
 			
-			<!-- 업로드 된 리뷰 리스트 보기 -->
+			<!-- 리뷰 내용 수정하기 -->
 			<div class="reviewPage">
 				<div class="reviewPage_title">
 					후기 수정
@@ -155,8 +155,10 @@
        con.close();
 %>
 						
-						<div class="uploadRV"><input type="button" class="uploadBtn" value="수정 완료" OnClick="modify_check()">
-						<a href="view_review.jsp?idx=<%=idx%>"><input type="button" class="uploadBtn" value="이전으로"></a></div>
+						<div class="uploadRV">
+							<input type="button" class="uploadBtn" value="수정 완료" OnClick="modify_check()">
+							<a href="view_review.jsp?idx=<%=idx%>"><input type="button" class="uploadBtn" value="이전으로"></a>
+						</div>
 						
 					</div>
 				</form>

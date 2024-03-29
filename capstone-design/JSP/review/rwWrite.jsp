@@ -99,7 +99,7 @@
 				</div>
 			</div><br>
 			
-			<!-- 업로드 된 리뷰 리스트 보기 -->
+			<!-- 리뷰 작성하기 -->
 			<div class="reviewPage">
 				<div class="reviewPage_title">
 					캡슐 커스텀은 어떠셨나요? 후기를 작성해주세요!

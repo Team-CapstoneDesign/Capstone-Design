@@ -139,6 +139,8 @@
 					</ul>
 					
 				</div>
+
+
 			</div><br>
 			
 			<!-- 업로드 된 리뷰 리스트 보기 -->
@@ -182,11 +184,11 @@
 						<div class="RVname"><a href="view_review.jsp?idx=<%=idx%>">[<%= name%>]님의 조합</a></div>
 						<div class="RVtitle"><a href="view_review.jsp?idx=<%=idx%>"><%= subject%></div>
 						<div class="RVbean1">
-							베이스 원두
-							<p class="RVbase"><%= base%></p>
+							<span class="RV_line">베이스 원두</span>
+							<div class="RVbase"><%= base%></div>
 						</div>
 						<div class="RVbean2">
-							블렌드 원두
+							<span class="RV_line">블렌드 원두</span>
 						<%
                        String[] blend_list = blend.split("  ");   
                        for (int i = 0; i < blend_list.length; i++) {
@@ -197,7 +199,7 @@
                       %>
 						</div>
 						<div class="RVroast">
-							로스팅 단계
+							<span class="RV_line">로스팅 단계</span>
 							<div class="RVlevel"><%= roast%> 단계</div>
 						</div>
 						<div class="RVconts"><%= content%></div>
@@ -240,7 +242,7 @@
             else 
 			{
    %>
-        <a href="review_list.jsp?group=<%= j - 1 %>"><%= j %></a>   <!-- 선택된 숫자는 검은색 안된 숫자는 파란색 -->
+        <a href="review_list.jsp?group=<%= j - 1 %>"><%= j %></a>   <!-- 선택된 숫자는 검은색. 안된 숫자는 파란색 -->
    <%
             }
        }

@@ -62,7 +62,7 @@
 						if (id == null) {
 					%>
 					<span class="quick_menu"><a href="./member/login.jsp">로그인</a></span>
-					<span class="quick_menu"><a href="">회원가입</a></span> <span
+					<span class="quick_menu"><a href="./member/insertMember.jsp">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
