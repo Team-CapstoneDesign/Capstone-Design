@@ -1,37 +1,148 @@
+/*fade animation*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fadeIn{
+  animation: fadeIn;
+  animation-duration: 0.8s;
+}
+
+.fadeOut{
+  animation: fadeOut;
+  animation-duration: 0.8s;
+}
+
+
 .customeWrap{
   display: block;
   position: relative;
   width: 1920px;
   height: 100vh;
 }
-.custome_main{
-  background-image: url("../images/custome_background.png");
-  background-repeat: no-repeat;
-}
-.custome_page{
-  background-image: url("../images/custom_2.jpg");
+#start-screen{
+  width: 1920px;
+  height: 1080px;
+  background-image: url(../images/custome_background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
+.start_content{
+  position: absolute;
+}
+.content1, .content2, .content3, .content4{
+  width: 1920px;
+  top: -130px;
+}
+.content1{
+  transition: 1.2s;
+}
+.content2{
+  transition: 1.5s;
+}
+.content3{
+  right: 0;
+  transition: 0.6s;
+}
+.content4{
+  left: 0;
+  transition: 0.6s;
+}
+.content5{
+  width: 400px;
+  top: 30px;
+  transition: 0.9s;
+  animation: shake1 2s infinite alternate;
+}
+.content6{
+  top: 132px;
+  right: 243px;
+  transition: 0.9s;
+  animation: shake2 2s infinite alternate;
+}
+.content7{
+  top: -1000px;
+  transition: 1.5s;
+}
+@keyframes shake1 {
+  0% {
+    top: 30px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+@keyframes shake2 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate( -5deg );
+  }
+}
+#slider_right{
+  display: block;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  z-index: 55;
+  right: -1300px;
+  transition: all 1s ;
+}
+#slider_left{
+  display: block;
+  top: 0;
+  position: absolute;
+  height: 100vh;
+  z-index: 55;
+  left: -1300px;
+  transition: all 1s ease;
+}
+
+.background{
+  height: 100vh;
+  width: 1920px;
+
+}
+
 #startBtn{
-  cursor: pointer;;
-  display: inline-block;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  text-align: center;
   background: transparent;
   text-transform: uppercase;
   font-weight: 500;
-  font-style: normal;
   font-size: 20px;
   letter-spacing: 0.3em;
   color: rgba(223,190,106,0.7);
   border-radius: 0;
   padding: 18px 80px 20px;
-  transition: all 0.5s ease-out;
-  background: linear-gradient(45deg, rgba(223,190,106,15.8), rgba(146,111,52,0.8));
+  background: linear-gradient(45deg, rgba(223,190,106,15.8), rgba(146,111,52));
   color: #333;
+  transition: 0.3s;
   background-position: 1% 50%;
   background-size: 300% 300%;
   text-decoration: none;
-  margin: 0.625rem;
   border: none;
   border: 1px solid rgba(223,190,106,0.3);
 }
@@ -41,14 +152,7 @@
   color: white;
   background-position: 99% 50%;
 }
-#start-screen {
-  display: block;
-  position: relative;
-  padding-top: 200px;
-  height: 80vh;
-  text-align: right;
-  flex-direction: column;
-}
+
 #start-screen h2{
   font-size: 40px;
   margin-bottom: 20px;
@@ -69,34 +173,61 @@
   position: relative;
   display: flex;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   padding-top: 150px;
 }
 .result_content{
-  padding-top: 200px;
+  padding: 100px 200px;
+  display: block;
+  position: absolute;
+  margin-top: 180px;
+  margin-left: -90px;
+  width: 1300px;
+  height: 80vh;
+  background-image: url(../images/custome_result.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.result_h2{
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.custome_qty{
+  display: block;
+}
+.personalCoffeeName{
+  width: 300px;
+  margin-top: 30px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #644330;
+  font-size: 23px;
+}
+input[type=text]{
+  outline: none;
+}
+input[type=text]::placeholder{
+  color: #00000034;
+}
+.custome_section{
+  background-image: url(../images/custome_background.png);
+  height: 100vh;
 }
 .custome_section .coffee_left ul{
   display: flex;
-  width: 550px;
-  height: 780px;
+  width: 462px;
+  height: 702px;
   flex-direction: row;
   flex-wrap: wrap;
   overflow-y: scroll;
   
 }
-#custome_result > p{
-  color: #fff;
-}
-#custome_result  span{
-  color: #fff;
-}
 .coffee_left ::-webkit-scrollbar {
-  width: 10px;  /* 세로축 스크롤바 폭 너비 */
+  width: 5px;  /* 세로축 스크롤바 폭 너비 */
   height: 20px;  /* 가로축 스크롤바 폭 너비 */
 }
 .coffee_left ::-webkit-scrollbar-thumb {
   background: #e89a3e; /* 스크롤바 막대 색상 */
-  border: 2px solid #9b6a2f; /* 스크롤바 막대 테두리 설정  */
   border-radius: 12px 12px 12px 12px;
 }
 .coffee_left ::-webkit-scrollbar-thumb:hover {
@@ -104,16 +235,29 @@
 }
 
 .custome_section .coffee_right{
-  padding-top: 250px;
-  top: 250px;
-  width: 350px;
+  position: absolute;
+  width: 600px;
+  right: 0;
+}
+.coffee_svg{
+  width: 200px;
+  display: block;
+  width: 300px;
   margin: 0 auto;
 }
-.custome_section h2{
-  margin-bottom: 20px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #fff;
+.wave{
+  width: 500px;
+  margin-top: 50px;
+}
+.base_h2{
+  display: block;
+  font-size: 38px;
+  text-align: right;
+}
+.custome_section h2 + div{
+  color: #a0a0a5;
+  margin-bottom: 30px;
+  
 }
 .custome_section img{
   display: block;
@@ -128,50 +272,68 @@
   width: 500px;
   margin: 0 auto;
 }
+.roastingSlide{
+  margin-bottom: 80px;
+}
 .buttonWrap{
   display: block;
   position: absolute;
   bottom: 80px;
   text-align: center;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 0;
 }
-.custome_btn{
+.custome_btn, .roasting_btn{
   position: relative;
   bottom: 0;
   padding: 10px 50px;
 }
-
-
+#blend-prev{
+  float: left;
+}
+#blend-next{
+  float: right;
+}
+#roasting-prev{
+  float: left;
+}
+#roasting-next{
+  float: right;
+}
 input[type="radio"] {
   display: none;
 }
 #select-coffee-explain{
-  
+  margin-top: 20px;
   display: block;
   height: 80px;
 }
 #select-coffee-explain > div:first-child{
-  color: #fff;
+  text-align: center;
   font-size: 25px;
   font-weight: bold;
+  margin: 0 auto;
+
 }
 #select-coffee-explain > div:nth-child(2){
-  color: #fff;
   font-size: 18px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /*radio*/
 .customeRadio label{
   display: inline-block;
-  background-image: url("../images/coffee_list_08.png");
-  width: 175px;
-  height: 236px;
-  border-radius: 25px;
+  background-image: url("../images/coffee_list.png");
+  background-size: cover;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 139px;
+  height: 226px;
   white-space: nowrap;
   user-select: none;
   transition: all .2s;
   cursor: pointer;
+  opacity: 0.6;
 }
 
 input[type="checkbox"] {
@@ -192,21 +354,24 @@ input[type="checkbox"] {
 .blend_top_left{
   width: 600px;
 }
+.blend_h2{
+  font-size: 35px;
+
+}
 .blend_top_left .blend_svg{
   width: 200px;
   margin-left: 30px;
 }
 .blend_top_right{
   width: 530px;
-  padding-bottom: 40px;
-  margin-right: 20px;
+  padding-bottom: 50px;
+  margin-right: 50px;
 }
 .blend_bottom{
   width: 1200px;
 }
 .customeRadio input[type="radio"]:checked + label {
-  border: 2px solid #bccc74;
-  background-color: #6f853a;
+  opacity: 1;
   color: #ffffff;
   transition: all .2s;
 }
@@ -232,10 +397,12 @@ input[type="checkbox"] {
 #blend-checkbox label{
   position: relative;
   display: block;
-  background-image: url("../images/coffee_list_08.png");
+  margin-right: 5px;
+  margin-bottom: 10px;
+  background-image: url("../images/coffee_list.png");
   background-size: cover;
-  width: 131px;
-  height: 177px;
+  width: 138px;
+    height: 228px;
   white-space: nowrap;
   user-select: none;
   transition: all .2s;
@@ -243,8 +410,8 @@ input[type="checkbox"] {
 }
 
 #blend-checkbox input[type="checkbox"]:checked + label {
-  border: 2px solid #bccc74;
-  background-color: #6f853a;
+  filter: drop-shadow(rgb(255, 255, 255) 1px 5px 10px);
+  margin-top: 15px;
   color: #ffffff;
   transition: all .2s;
 }
@@ -260,10 +427,20 @@ border: 2px solid #f0dc41;
 }
 #blend-checkbox input[type=checkbox]:disabled + label{
   background-color: #ffffff81;
+  opacity: 0.3;
   transition: 0.5s;
 }
 .roasting_content{
   padding-top: 250px;
+}
+.roasting_h2{
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.roasting_explanation{
+  text-align: center;
+
 }
 .roastingPost{
   margin-top: 20px;
@@ -271,13 +448,32 @@ border: 2px solid #f0dc41;
 }
 .roastingPost span{
   display: block;
-  color: #fff;
+  text-align: center;
+}
+.roasting_Num{
+  display: block;
+  position: relative;
+  width: 330px;
+  height: 174px;
+  background: url(../images/raosting_stage.png);
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 #roastingNum{
+  display: block;
+  position: absolute;
   font-size: 30px;
+  top: 100px;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #roastingName{
-  font-size: 20px;
+  margin-bottom: 5px;
+  font-size: 30px;
 }
 #custome_result p{
   font-size: 20px;
@@ -285,8 +481,46 @@ border: 2px solid #f0dc41;
 #custome_result span{
   font-size: 20px;
 }
+.machine_h2{
+  font-size: 50px;
+  text-align: center;
+}
 .machine_content{
   padding-top: 200px;
+}
+.machineRadio label{
+    display: inline-block;
+    background-image: url("../images/coffee_list.png");
+    background-size: cover;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 139px;
+    height: 226px;
+    white-space: nowrap;
+    user-select: none;
+    transition: all .2s;
+    cursor: pointer;
+    opacity: 0.6;
+  
+}
+.machineRadio input[type="radio"]:checked + label::before {
+  transform: rotate(-360deg);
+  transition: transform .3s ease-in-out;
+}
+.machineRadio input[type="radio"]:checked + label {
+  opacity: 1;
+  color: #ffffff;
+  transition: all .2s;
+}
+.machine_buttonWrap{
+  display: block;
+  bottom: 80px;
+}
+#machine-prev{
+  float: left;
+}
+#machine-next{
+  float: right;
 }
 canvas {
   z-index: 10;
@@ -308,4 +542,25 @@ canvas {
 @keyframes moveLeft {
   from {left: 0;}
   to {left: -200px;}
+}
+
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

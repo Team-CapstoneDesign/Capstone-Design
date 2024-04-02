@@ -28,22 +28,27 @@ const $custome_roasting = document.getElementById('custome_roasting');
 const $custome_machin = document.getElementById('custome_machin');
 const $custome_price = document.getElementById('custome_price');
 
+const $bodyProgress = document.getElementById('body_progress');
+const $smellProgress = document.getElementById('smell_progress');
+const $taste1Progress = document.getElementById('taste1_progress');
+const $taste2Progress = document.getElementById('taste2_progress');
+const $taste3Progress = document.getElementById('taste3_progress');
 class Game {
   constructor() {
-    //name:ì›ë‘ì´ë¦„, feature:íŠ¹ì§•, compatible:ì–´ìš¸ë¦¬ëŠ” ì›ë‘ ì¢…ë¥˜, price:ê°€ê²©(ì¶”ê°€ì˜ˆì •)
+    //name:¿øµÎÀÌ¸§, feature:Æ¯Â¡, compatible:¾î¿ï¸®´Â ¿øµÎ Á¾·ù, price:°¡°İ(Ãß°¡¿¹Á¤)
     this.coffeeList = [
-      { id: 1, name: 'ë¸Œë¼ì§ˆ ì‚°í† ìŠ¤', feature: 'í–¥ì´ ë›°ì–´ë‚˜ê³  ì‹ ë§›ì˜ ì—¬ìš´ì— í’ë¯¸ê°€ ìˆëŠ” ì“´ë§›ì„ ë‚¨ê¸°ë©´ì„œë„ ë‹¨ë§›ê³¼ ì‹ ë§› ë“±ì˜ í–¥ë¯¸ê°€ ê³ ë¥´ê²Œ ì¡°í™”ë¥¼ ì´ë£¨ëŠ” ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 2, name: 'ì½œë¡¬ë¹„ì•„ ìˆ˜í”„ë¦¬ëª¨', feature: 'ì‹ ë§›ê³¼ ë‹¨ë§›, ë°”ë””ê°ìœ¼ë¡œ í‘œí˜„ë˜ëŠ” ì“´ë§›ì´ ì ì ˆí•˜ê²Œ ì¡°í™”ë¥¼ ì´ë£¬ ë³µí•©ì ì´ë©´ì„œë„ ê¹”ë”í•œ ë§›ì˜ ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 3, name: 'ìë©”ì´ì¹´ ë¸”ë£¨ë§ˆìš´í‹´', feature: 'ì„¸ê³„ 3ëŒ€ ì»¤í”¼, ì˜…ì€ ì‹ ë§›ê³¼ ë¶€ë“œëŸ¬ìš´ ì“´ë§›, ê·¸ë¦¬ê³  ê³ ì†Œí•œ ë‹¨ë§›, ìŒ‰ìŒ€í•œ ì´ˆì½œë¦¿ì˜ ë§›, ìŠ¤ëª¨í¬í–¥ ë“± ì»¤í”¼ê°€ ë‚¼ ìˆ˜ ìˆëŠ” ê±°ì˜ ëª¨ë“  ë§›ì„ ê°–íˆ¬ê³  ìˆì–´ì„œ ìµœê³ ì˜ ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 4, name: 'ì—í‹°ì˜¤í”¼ì•„ ì˜ˆê°€ì²´í”„', feature: 'ê³¼ì¼í–¥ê³¼ ì‹  ë§›ì´ ë§¤ìš° ê°•í•œ ìƒí¼í•œ ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 5, name: 'ì½”ìŠ¤íƒ€ë¦¬ì¹´ ë”°ë¼ì£¼', feature: 'ì…ì•ˆì„ ê°€ë“ ë©”ê¾¸ëŠ” ë“¯í•œ ì‚¬íƒ•ìˆ˜ìˆ˜ì˜ ë‹¨ë§›ê³¼ ê³ ì†Œí•œ ê²¬ê³¼ë¥˜ì˜ í–¥ë¯¸ê°€ íŠ¹ì§•ì¸ ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 6, name: 'íƒ„ìë‹ˆì•„ AA', feature: 'ì‚°ë¯¸ì™€ ë‹¨ë§›ì˜ ë°¸ëŸ°ìŠ¤ê°€ ì¢‹ê³  ë†ë„ê°€ ì§™ì–´ ì•„ì´ìŠ¤ê°€ ì–´ìš¸ë¦¬ëŠ” ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 7, name: 'ì˜ˆë©˜ ëª¨ì¹´ ë§ˆíƒ€ë¦¬', feature: 'ë‹¤í¬ ì´ˆì½œë¦¿ì˜ í’ë¯¸ì™€ ì˜ˆë©˜ì»¤í”¼ íŠ¹ìœ ì˜ ë…íŠ¹í•œ ê½ƒí–¥, ìƒˆì½¤í•œ ê³¼ì¼í–¥, ë¬µì§í•œ ë°”ë””ê°ì´ ì¡°í™”ë¥¼ ì´ë£¨ëŠ” ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 8, name: 'í•˜ì™€ì´ ì½”ë‚˜', feature: 'ê³¼ì¼ì²˜ëŸ¼ ì‹ ë§›, ì˜…ì€ ë‹¨ë§›, ì‚°ëœ»í•œ í–¥ì´ í’ë¶€í•˜ê³  ê°•ë ¬í•œ ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 9, name: 'ê³¼í…Œ ë§ë¼ ì•ˆí‹°êµ¬ì•„', feature: 'ë‹¤í¬ì´ˆì½”ì˜ ìŒ‰ì‹¸ë¦„í•¨ê³¼ ì§„í•œ ìŠ¤ëª¨í‚¤í–¥ìœ¼ë¡œ ë›°ì–´ë‚œ ê°ì¹ ë§›ê³¼ ë‹¨ë§›ì˜ í’ë¯¸ê°€ ë›°ì–´ë‚œ ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 10, name: 'íŒŒë‚˜ë§ˆ ê²Œì´ìƒ¤', feature: 'í’ë¶€í•˜ê³  í™”ì‚¬í•œ ê½ƒí–¥ê¸°, ìƒˆì½¤ë‹¬ì½¤í•œ ê°ê·¤ì˜ ê³¼ì¼í–¥, ë‹¬ì½¤í•˜ê³  ê¸´ ì—¬ìš´ì˜ ë’·ë§›ì´ íŠ¹ì§•ì¸ ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 11, name: 'ì—˜ì‚´ë°”ë„ë¥´', feature: 'ì—·ì€ ì‹ ë§›ê³¼ ì“´ë§›ì´ ì¡°í™”ë¥¼ ì´ë£¨ëŠ”, ë¶€ë“œëŸ¬ìš°ë©´ì„œ ë‹¬ì½¤í•œ ì´ˆì½œë¦¿ í–¥ê³¼ ë§›ì„ ê°€ì§„ ì»¤í”¼', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
-      { id: 12, name: 'ì¼€ëƒAA', feature: 'ì™€ì¸ í–¥ê³¼ ê³¼ì¼ í–¥ì´ í’ë¶€í•˜ê³  ì¤‘í›„í•˜ë©´ì„œë„ ê¹Šì€ ë§›ì´ ë§¤ë ¥ì ì¸ ì»¤í”¼. ë’·ë§›ì´ ë§¤ë„ëŸ½ê³  ì€ê·¼í•œ ì´ˆì½œë¦¿ í–¥ì´ ëŠê»´ì§‘ë‹ˆë‹¤.', compatible: 'ì›ë‘1 ì›ë‘2 ì›ë‘3' },
+      { id: 1, name: 'ºê¶óÁú »êÅä½º', feature: 'ÇâÀÌ ¶Ù¾î³ª°í ½Å¸ÀÀÇ ¿©¿î¿¡ Ç³¹Ì°¡ ÀÖ´Â ¾´¸ÀÀ» ³²±â¸é¼­µµ ´Ü¸À°ú ½Å¸À µîÀÇ Çâ¹Ì°¡ °í¸£°Ô Á¶È­¸¦ ÀÌ·ç´Â Ä¿ÇÇ', coffeeBody: '20', coffeeSmell: '80', coffeeTaste1: '60', coffeeTaste2: '30', coffeeTaste3: '20' },
+      { id: 2, name: 'Äİ·Òºñ¾Æ ¼öÇÁ¸®¸ğ', feature: '½Å¸À°ú ´Ü¸À, ¹Ùµğ°¨À¸·Î Ç¥ÇöµÇ´Â ¾´¸ÀÀÌ ÀûÀıÇÏ°Ô Á¶È­¸¦ ÀÌ·é º¹ÇÕÀûÀÌ¸é¼­µµ ±ò²ûÇÑ ¸ÀÀÇ Ä¿ÇÇ', coffeeBody: '30', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'  },
+      { id: 3, name: 'ÀÚ¸ŞÀÌÄ« ºí·ç¸¶¿îÆ¾', feature: '¼¼°è 3´ë Ä¿ÇÇ, ¿¶Àº ½Å¸À°ú ºÎµå·¯¿î ¾´¸À, ±×¸®°í °í¼ÒÇÑ ´Ü¸À, ½Ô½ÒÇÑ ÃÊÄİ¸´ÀÇ ¸À, ½º¸ğÅ©Çâ µî Ä¿ÇÇ°¡ ³¾ ¼ö ÀÖ´Â °ÅÀÇ ¸ğµç ¸ÀÀ» °®Åõ°í ÀÖ¾î¼­ ÃÖ°íÀÇ Ä¿ÇÇ', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'  },
+      { id: 4, name: '¿¡Æ¼¿ÀÇÇ¾Æ ¿¹°¡Ã¼ÇÁ', feature: '°úÀÏÇâ°ú ½Å ¸ÀÀÌ ¸Å¿ì °­ÇÑ »óÅ­ÇÑ Ä¿ÇÇ', coffeeBody: '70', coffeeSmell: '90', coffeeTaste1: '70', coffeeTaste2: '30', coffeeTaste3: '50'},
+      { id: 5, name: 'ÄÚ½ºÅ¸¸®Ä« µû¶óÁÖ', feature: 'ÀÔ¾ÈÀ» °¡µæ ¸Ş²Ù´Â µíÇÑ »çÅÁ¼ö¼öÀÇ ´Ü¸À°ú °í¼ÒÇÑ °ß°ú·ùÀÇ Çâ¹Ì°¡ Æ¯Â¡ÀÎ Ä¿ÇÇ', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
+      { id: 6, name: 'ÅºÀÚ´Ï¾Æ AA', feature: '»ê¹Ì¿Í ´Ü¸ÀÀÇ ¹ë·±½º°¡ ÁÁ°í ³óµµ°¡ Â£¾î ¾ÆÀÌ½º°¡ ¾î¿ï¸®´Â Ä¿ÇÇ', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
+      { id: 7, name: '¿¹¸à ¸ğÄ« ¸¶Å¸¸®', feature: '´ÙÅ© ÃÊÄİ¸´ÀÇ Ç³¹Ì¿Í ¿¹¸àÄ¿ÇÇ Æ¯À¯ÀÇ µ¶Æ¯ÇÑ ²ÉÇâ, »õÄŞÇÑ °úÀÏÇâ, ¹¬Á÷ÇÑ ¹Ùµğ°¨ÀÌ Á¶È­¸¦ ÀÌ·ç´Â Ä¿ÇÇ', },
+      { id: 8, name: 'ÇÏ¿ÍÀÌ ÄÚ³ª', feature: '°úÀÏÃ³·³ ½Å¸À, ¿¶Àº ´Ü¸À, »ê¶æÇÑ ÇâÀÌ Ç³ºÎÇÏ°í °­·ÄÇÑ Ä¿ÇÇ', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
+      { id: 9, name: '°úÅ× ¸»¶ó ¾ÈÆ¼±¸¾Æ', feature: '´ÙÅ©ÃÊÄÚÀÇ ½Ô½Î¸§ÇÔ°ú ÁøÇÑ ½º¸ğÅ°ÇâÀ¸·Î ¶Ù¾î³­ °¨Ä¥¸À°ú ´Ü¸ÀÀÇ Ç³¹Ì°¡ ¶Ù¾î³­ Ä¿ÇÇ', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
+      { id: 10, name: 'ÆÄ³ª¸¶ °ÔÀÌ»ş', feature: 'Ç³ºÎÇÏ°í È­»çÇÑ ²ÉÇâ±â, »õÄŞ´ŞÄŞÇÑ °¨±ÖÀÇ °úÀÏÇâ, ´ŞÄŞÇÏ°í ±ä ¿©¿îÀÇ µŞ¸ÀÀÌ Æ¯Â¡ÀÎ Ä¿ÇÇ', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
+      { id: 11, name: '¿¤»ì¹Ùµµ¸£', feature: '¿¯Àº ½Å¸À°ú ¾´¸ÀÀÌ Á¶È­¸¦ ÀÌ·ç´Â, ºÎµå·¯¿ì¸é¼­ ´ŞÄŞÇÑ ÃÊÄİ¸´ Çâ°ú ¸ÀÀ» °¡Áø Ä¿ÇÇ', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
+      { id: 12, name: 'ÄÉ³ÄAA', feature: '¿ÍÀÎ Çâ°ú °úÀÏ ÇâÀÌ Ç³ºÎÇÏ°í ÁßÈÄÇÏ¸é¼­µµ ±íÀº ¸ÀÀÌ ¸Å·ÂÀûÀÎ Ä¿ÇÇ. µŞ¸ÀÀÌ ¸Å²ô·´°í Àº±ÙÇÑ ÃÊÄİ¸´ ÇâÀÌ ´À²¸Áı´Ï´Ù.', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
     ]
     this.start();
   }
@@ -56,21 +61,25 @@ class Game {
     $coffeeNext.addEventListener('click', (event) => {
       event.preventDefault();
       this.moveToNextScreen('select-coffee', 'select-blend');
+      $selectBlend.style.animation = "fadeIn 1s";
     });
 
     $blendNext.addEventListener('click', (event) => {
       event.preventDefault();
       this.moveToNextScreen('select-blend', 'select-roasting');
+      $selectRoasting.style.animation = "fadeIn 1s";
     });
 
     $roastingNext.addEventListener('click', (event) => {
       event.preventDefault();
       this.moveToNextScreen('select-roasting', 'select-machine');
+      $selectMachine.style.animation = "fadeIn 1s";
     });
 
     $roastingNext.addEventListener('click', (event) => {
       event.preventDefault();
       this.moveToNextScreen('select-roasting', 'select-machine');
+      $selectResult.style.animation = "fadeIn 1s";
     });
 
     $machineNext.addEventListener('click', (event) => {
@@ -122,10 +131,10 @@ class Game {
     if (currentIndex < screens.length - 1) {
       const nextScreen = screens[currentIndex + 1];
       if (currentScreen === 'select-coffee') {
-        // #select-coffeeì—ì„œ ë¼ë””ì˜¤ ë²„íŠ¼ ì²´í¬ ì—¬ë¶€ í™•ì¸
+        // #select-coffee¿¡¼­ ¶óµğ¿À ¹öÆ° Ã¼Å© ¿©ºÎ È®ÀÎ
         const selectedCoffee = document.querySelector('input[name="baseCoffee"]:checked');
         if (!selectedCoffee) {
-          alert("ë² ì´ìŠ¤ ì›ë‘ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.");
+          alert("º£ÀÌ½º ¿øµÎ¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.");
           return;
         }
       }
@@ -135,27 +144,27 @@ class Game {
 
   selectCoffee() {
     this.coffeeList.forEach(coffee => {
-      const { name, feature } = coffee;
+      const { name, feature, coffeeBody, coffeeSmell, coffeeTaste1, coffeeTaste2, coffeeTaste3 } = coffee;
 
-      // ë¼ë””ì˜¤ ë²„íŠ¼ ìƒì„±
+      // ¶óµğ¿À ¹öÆ° »ı¼º
       const checkboxList = document.createElement("input");
       checkboxList.type = "radio";
       checkboxList.id = name;
       checkboxList.name = "baseCoffee";
       checkboxList.value = name;
 
-      // ë¼ë²¨ ìƒì„± (name + feature)
+      // ¶óº§ »ı¼º (name + feature)
       const checkboxLabel = document.createElement("label");
       checkboxLabel.htmlFor = name;
 
-      checkboxList.addEventListener('click', () => this.showCoffeeFeature(name, feature));
-      // ì»¤í”¼ ì²´í¬ë°•ìŠ¤ ì˜ì—­ì— ì¶”ê°€
+      checkboxList.addEventListener('click', () => this.showCoffeeFeature(name, feature, coffeeBody, coffeeSmell, coffeeTaste1, coffeeTaste2, coffeeTaste3));
+      // Ä¿ÇÇ Ã¼Å©¹Ú½º ¿µ¿ª¿¡ Ãß°¡
       $coffeeCheckbox.appendChild(checkboxList);
       $coffeeCheckbox.appendChild(checkboxLabel);
     });
   }
 
-  showCoffeeFeature(name, feature) {
+  showCoffeeFeature(name, feature, coffeeBody, coffeeSmell, coffeeTaste1, coffeeTaste2, coffeeTaste3) {
     /*selectCoffeeExplain*/
     this.clearFeature();
     const coffeeName = document.createElement("div");
@@ -167,6 +176,13 @@ class Game {
 
     $selectCoffeeExplain.appendChild(coffeeName);
     $selectCoffeeExplain.appendChild(coffeeFeature);
+
+    $bodyProgress.style.width = coffeeBody + "%";
+    $smellProgress.style.width = coffeeSmell + "%";
+    $taste1Progress.style.width = coffeeTaste1 + "%";
+    $taste2Progress.style.width = coffeeTaste2 + "%";
+    $taste3Progress.style.width = coffeeTaste3 + "%";
+
   }
 
   clearFeature() {
@@ -177,33 +193,19 @@ class Game {
     this.coffeeList.forEach(coffee => {
       const { name, feature } = coffee;
 
-      // ë¼ë””ì˜¤ ë²„íŠ¼ ìƒì„±
-      const blendList = document.createElement("input");
-      blendList.type = "checkbox";
-      blendList.id = name + "blend";
-      blendList.name = "blendCoffee";
-      blendList.value = name;
 
-      // ë¼ë²¨ ìƒì„± (name + feature)
-      const blendLabel = document.createElement("label");
-      blendLabel.htmlFor = name + "blend";
-
-      // ì»¤í”¼ ì²´í¬ë°•ìŠ¤ ì˜ì—­ì— ì¶”ê°€
-      $blendCheckbox.appendChild(blendList);
-      $blendCheckbox.appendChild(blendLabel);
       // $blendCheckbox.appendChild(checkboxLabel);
     });
     this.checkboxLimit();
-    this.blendNullDisableCheckbox();
 
     $blendNull.addEventListener('change', () => {
-      // #blend_null ì²´í¬ë°•ìŠ¤ê°€ ì„ íƒë˜ì—ˆì„ ë•Œ
+      // #blend_null Ã¼Å©¹Ú½º°¡ ¼±ÅÃµÇ¾úÀ» ¶§
       if ($blendNull.checked) {
-        // ë‚˜ë¨¸ì§€ ì²´í¬ë°•ìŠ¤ ë¹„í™œì„±í™”
+        // ³ª¸ÓÁö Ã¼Å©¹Ú½º ºñÈ°¼ºÈ­
         this.disableOtherBlendCheckboxes();
       } else {
-        // #blend_null ì²´í¬ë°•ìŠ¤ê°€ í•´ì œë˜ì—ˆì„ ë•Œ
-        // ëª¨ë“  ì²´í¬ë°•ìŠ¤ í™œì„±í™”
+        // #blend_null Ã¼Å©¹Ú½º°¡ ÇØÁ¦µÇ¾úÀ» ¶§
+        // ¸ğµç Ã¼Å©¹Ú½º È°¼ºÈ­
         this.enableAllBlendCheckboxes();
       }
     });
@@ -211,19 +213,21 @@ class Game {
     const blendCheckboxes = document.querySelectorAll('input[name="blendCoffee"]:not(#blend_null)');
     blendCheckboxes.forEach(checkbox => {
       checkbox.addEventListener('change', () => {
-        // ë‹¤ë¥¸ blend ì²´í¬ë°•ìŠ¤ ì¤‘ í•˜ë‚˜ë¼ë„ ì„ íƒë˜ì—ˆì„ ë•Œ
+        // ´Ù¸¥ blend Ã¼Å©¹Ú½º Áß ÇÏ³ª¶óµµ ¼±ÅÃµÇ¾úÀ» ¶§
         if (this.isAnyOtherBlendCheckboxChecked()) {
-          // #blend_null ì²´í¬ë°•ìŠ¤ ë¹„í™œì„±í™”
+          // #blend_null Ã¼Å©¹Ú½º ºñÈ°¼ºÈ­
           $blendNull.disabled = true;
         } else {
-          // ëª¨ë“  ë‹¤ë¥¸ blend ì²´í¬ë°•ìŠ¤ê°€ í•´ì œë˜ì—ˆì„ ë•Œ
-          // #blend_null ì²´í¬ë°•ìŠ¤ í™œì„±í™”
+          // ¸ğµç ´Ù¸¥ blend Ã¼Å©¹Ú½º°¡ ÇØÁ¦µÇ¾úÀ» ¶§
+          // #blend_null Ã¼Å©¹Ú½º È°¼ºÈ­
           $blendNull.disabled = false;
         }
       });
     });
 
+
   }
+  
   isAnyOtherBlendCheckboxChecked() {
     const blendCheckboxes = document.querySelectorAll('input[name="blendCoffee"]:not(#blend_null)');
     return Array.from(blendCheckboxes).some(checkbox => checkbox.checked);
@@ -242,15 +246,11 @@ class Game {
     });
   }
 
-  blendNullDisableCheckbox() {
-    if ($blendNull.checked) {
-      console.log('1234');
-    }
-  }
+ 
 
   checkboxLimit() {
     const checkboxes = document.querySelectorAll('input[name="blendCoffee"]');
-    const limit = 3; // ìµœëŒ€ ì„ íƒ ê°€ëŠ¥í•œ ê°œìˆ˜
+    const limit = 3; // ÃÖ´ë ¼±ÅÃ °¡´ÉÇÑ °³¼ö
 
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', () => {
@@ -268,27 +268,59 @@ class Game {
         }
       });
     });
+
   }
 
 }
 
+const $startBackground = document.querySelector('#startBackground');
+const $content1 = document.querySelector('#content1');
+const $content2 = document.querySelector('#content2');
+const $content3 = document.querySelector('#content3');
+const $content4 = document.querySelector('#content4');
+const $content5 = document.querySelector('#content5');
+const $content6 = document.querySelector('#content6');
+const $content7 = document.querySelector('#content7');
+const $slider_right = document.querySelector('#slider_right');
+const $slider_left = document.querySelector('#slider_left');
 $startBtn.addEventListener('click', (event) => {
   event.preventDefault();
+  const rotationSpeed = 2; // in seconds
+  $content5.style.animationDuration = rotationSpeed + 's';
 
-  setTimeout(function(){
+  $content1.style.top = 60 + "px";
+  $content1.style.width = 2200 + "px";
+  $content2.style.top = 100 + "px";
+  $content2.style.width = 2300 + "px";
+  $content3.style.right = 200 + "px";
+  $content3.style.top = 20 + "px";
+  $content4.style.left = 300 + "px";
+  $content4.style.top = 30 + "px";
+  $content5.style.top = 80 + "px";
+  $content6.style.top = 160 + "px";
+  $content7.style.top = 100 + "px";
+  $slider_right.style.right = -35 + "px";
+  $slider_left.style.left = -35 + "px";
+  setTimeout(() => {
+    $slider_right.style.right = -1300 + "px";
+    $slider_left.style.left = -1300 + "px";
+    $startBackground.style.animation = "fadeOut 1s";
+  }, 1500)
+  setTimeout(() => {
+    $selectCoffee.style.animation = "fadeIn 1s";
     game = new Game();
-  }, 100);
+  }, 2000)
 });
 
 const roastingStages = [
-  { step: 1, name: 'Raw/Green', description: 'ì²˜ìŒì— ì›ë‘ê°€ ë“¤ì–´ì˜¤ëŠ” ìƒíƒœë¡œ ì•„ì§ ë¡œìŠ¤íŒ…ë˜ì§€ ì•Šì€ ìƒíƒœ' },
-  { step: 2, name: 'Drying', description: 'ì›ë‘ ë‚´ë¶€ì˜ ë¬¼ê¸°ë¥¼ ì œê±°í•˜ì—¬ ë¡œìŠ¤íŒ… í”„ë¡œì„¸ìŠ¤ë¥¼ ì‹œì‘' },
-  { step: 3, name: 'First Crack', description: 'ì›ë‘ ë‚´ë¶€ì˜ ìˆ˜ë¶„ê³¼ ê¸°ì²´ê°€ ë¹ ì ¸ë‚˜ê°€ë©´ì„œ ì²«ë²ˆì§¸ í¬ë™ì´ ë°œìƒ' },
-  { step: 4, name: 'Cinnamon Roast', description: 'ê°€ë³ê²Œ ë¡œìŠ¤íŒ…ëœ ìƒíƒœë¡œ ì½˜ë‚´ì´ˆë³´ë‹¤ ì¡°ê¸ˆ ë” ì§„í•œ ê°ˆìƒ‰' },
-  { step: 5, name: 'City Roast', description: 'ë¡œìŠ¤íŒ…ì´ ì§„í–‰ë˜ë©´ì„œ ë‹¨ë§›ì´ ê°•ì¡°ë˜ê³  ì€ì€í•œ ì‚°ë¯¸ê°€ ë‚˜íƒ€ë‚¨' },
-  { step: 6, name: 'Full City Roast', description: 'ë”ìš± ì§„í•œ ê°ˆìƒ‰, ì˜¤ì¼ì´ ì¡°ê¸ˆ ë‚˜ì˜¤ê¸° ì‹œì‘í•˜ë©° ë¡œìŠ¤íŒ… íŠ¹ìœ ì˜ í’ë¯¸ê°€ ê°•í•´ì§' },
-  { step: 7, name: 'Second Crack', description: 'ë‘ë²ˆì§¸ í¬ë™ì´ ë°œìƒí•˜ë©° ë¡œìŠ¤íŒ…ì´ ê¹Šì–´ì§€ê³  ì˜¤ì¼ì´ ë” ë‚˜ì˜¤ëŠ” ë‹¨ê³„' },
-  { step: 8, name: 'Dark Roast', description: 'ë¡œìŠ¤íŒ…ì´ ë§¤ìš° ê¹Šê²Œ ì´ë£¨ì–´ì ¸ ì˜¤ì¼ì´ ë§ì´ ë‚˜ì˜¤ë©° ì“´ë§›ê³¼ í’ë¶€í•œ íŠ¹ìœ ì˜ í–¥ì´ ë‚˜íƒ€ë‚¨' }
+  { step: 1, name: 'Raw/Green', description: 'Ã³À½¿¡ ¿øµÎ°¡ µé¾î¿À´Â »óÅÂ·Î ¾ÆÁ÷ ·Î½ºÆÃµÇÁö ¾ÊÀº »óÅÂ' },
+  { step: 2, name: 'Drying', description: '¿øµÎ ³»ºÎÀÇ ¹°±â¸¦ Á¦°ÅÇÏ¿© ·Î½ºÆÃ ÇÁ·Î¼¼½º¸¦ ½ÃÀÛ' },
+  { step: 3, name: 'First Crack', description: '¿øµÎ ³»ºÎÀÇ ¼öºĞ°ú ±âÃ¼°¡ ºüÁ®³ª°¡¸é¼­ Ã¹¹øÂ° Å©·¢ÀÌ ¹ß»ı' },
+  { step: 4, name: 'Cinnamon Roast', description: '°¡º±°Ô ·Î½ºÆÃµÈ »óÅÂ·Î ÄÜ³»ÃÊº¸´Ù Á¶±İ ´õ ÁøÇÑ °¥»ö' },
+  { step: 5, name: 'City Roast', description: '·Î½ºÆÃÀÌ ÁøÇàµÇ¸é¼­ ´Ü¸ÀÀÌ °­Á¶µÇ°í ÀºÀºÇÑ »ê¹Ì°¡ ³ªÅ¸³²' },
+  { step: 6, name: 'Full City Roast', description: '´õ¿í ÁøÇÑ °¥»ö, ¿ÀÀÏÀÌ Á¶±İ ³ª¿À±â ½ÃÀÛÇÏ¸ç ·Î½ºÆÃ Æ¯À¯ÀÇ Ç³¹Ì°¡ °­ÇØÁü' },
+  { step: 7, name: 'Second Crack', description: 'µÎ¹øÂ° Å©·¢ÀÌ ¹ß»ıÇÏ¸ç ·Î½ºÆÃÀÌ ±í¾îÁö°í ¿ÀÀÏÀÌ ´õ ³ª¿À´Â ´Ü°è' },
+  { step: 8, name: 'Dark Roast', description: '·Î½ºÆÃÀÌ ¸Å¿ì ±í°Ô ÀÌ·ç¾îÁ® ¿ÀÀÏÀÌ ¸¹ÀÌ ³ª¿À¸ç ¾´¸À°ú Ç³ºÎÇÑ Æ¯À¯ÀÇ ÇâÀÌ ³ªÅ¸³²' }
 ];
 
 const roastingRange = document.getElementById('roasting-range');
@@ -297,7 +329,7 @@ const roastingName = document.getElementById('roastingName');
 const roastingEx = document.getElementById('roastingEx');
 function showRoastingInfo(step) {
   const selectedRoastingStage = roastingStages.find(stage => stage.step == step);
-  roastingNum.textContent = `${selectedRoastingStage.step} ë‹¨ê³„`;
+  roastingNum.textContent = `${selectedRoastingStage.step}`;
   roastingName.textContent = `${selectedRoastingStage.name}`;
   roastingEx.textContent = `${selectedRoastingStage.description}`;
 
@@ -309,7 +341,7 @@ roastingRange.addEventListener('input', (event) => {
   showRoastingInfo(event.target.value);
 });
 
-/*ê²°ê³¼í‘œì‹œ*/
+/*°á°úÇ¥½Ã*/
 function customeResult() {
   const baseCoffeeChecked = document.querySelector('input[name="baseCoffee"]:checked');
   const blendCoffeeChecked = document.querySelectorAll('input[name="blendCoffee"]:checked');
@@ -317,7 +349,7 @@ function customeResult() {
   const machineChecked = document.querySelector('input[name="machine"]:checked');
 
   let baseResult = "";
-  baseResult += baseCoffeeChecked ? baseCoffeeChecked.value : 'ì„ íƒ ì—†ìŒ';
+  baseResult += baseCoffeeChecked ? baseCoffeeChecked.value : '¼±ÅÃ ¾øÀ½';
 
   let blendResult = "";
   if (blendCoffeeChecked.length > 0) {
@@ -325,17 +357,17 @@ function customeResult() {
       blendResult += checkbox.value + '  ';
     });
   } else {
-    blendResult += 'ì„ íƒ ì—†ìŒ';
+    blendResult += '¼±ÅÃ ¾øÀ½';
   }
 
   let roastingResult = roastingValue;
 
   let machineResult = "";
-  machineResult += machineChecked ? machineChecked.value : 'ì„ íƒì—†ìŒ';
+  machineResult += machineChecked ? machineChecked.value : '¼±ÅÃ¾øÀ½';
 
   let price = 0;
   let price_comma = "";
-  if (baseResult === "ìë©”ì´ì¹´ ë¸”ë£¨ë§ˆìš´í‹´" || baseResult === "í•˜ì™€ì´ì•ˆ ì½”ë‚˜" || baseResult === "ì˜ˆë©˜ ëª¨ì¹´ ë§ˆíƒ€ë¦¬") {
+  if (baseResult === "ÀÚ¸ŞÀÌÄ« ºí·ç¸¶¿îÆ¾" || baseResult === "ÇÏ¿ÍÀÌ¾È ÄÚ³ª" || baseResult === "¿¹¸à ¸ğÄ« ¸¶Å¸¸®") {
     price = 15900;
     price_comma = "15,900";
     $custome_price.innerHTML = price_comma;
@@ -358,7 +390,7 @@ function customeResult() {
   hiddenInput('machineName', machineResult);
   hiddenInput('price', price);
   hiddenInput('price_comma', price_comma);
-  // ìƒì„±í•œ inputì„ divì— ì¶”ê°€
+  // »ı¼ºÇÑ inputÀ» div¿¡ Ãß°¡
 }
 
 function hiddenInput(name, value) {
@@ -375,3 +407,21 @@ function checkCustomeValue() {
   result.submit();
 }
 
+function updateSelectedOptions(checkboxId) {
+  console.log(checkboxId);
+  var selectedOptions = [];
+  var checkboxes = document.querySelectorAll('input[type="checkbox"][name="blendCoffee"]:checked');
+  checkboxes.forEach(function(checkbox) {
+    selectedOptions.push(checkbox.value); // value ¼Ó¼ºÀ» »ç¿ëÇÏ¿© ¿É¼Ç °ªÀ» °¡Á®¿É´Ï´Ù.
+  });
+
+  // Output selected options to respective divs
+  for (var i = 0; i < 3; i++) {
+    var selectOptionDiv = document.querySelector('.selectOption' + (i + 1));
+    if (selectOptionDiv && selectedOptions[i]) {
+      selectOptionDiv.textContent = selectedOptions[i];
+    } else if (selectOptionDiv) {
+      selectOptionDiv.textContent = '';
+    }
+  }
+}
