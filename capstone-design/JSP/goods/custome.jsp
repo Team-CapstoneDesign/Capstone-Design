@@ -23,22 +23,23 @@
 	<div class="wrap">
 		<div id="header">
 			<div class="formbox">
-				<h1 class="logo">
-					<a href="#"> <span class="blind">두잔</span>
+			<a href="../index.jsp">
+					<h1 class="logo">
+						<span class="blind">두잔</span>
+					</h1>
 					</a>
-				</h1>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a>캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="./goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=beveridge">베버리지
+									<li><a href="../goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=beveridge">베버리지
 											/ 논커피</a></li>
 									<li><a href="">선물 패키지</a></li>
 								</ul>
@@ -598,7 +599,7 @@
             </div>
             <div id="hiddenInputRadio"></div>
             <div class="buttonWrap">
-              <button class="custome_btn" onclick="location.href='custome.html'">처음으로
+              <button class="custome_btn" onclick="location.href='custome.jsp'">처음으로
 							돌아가기</button>
 						<button class="custome_btn" onclick="checkCustomeValue()">장바구니에
 							담기</button>

@@ -37,13 +37,14 @@ try{
 
 		<div id="header">
 			<div class="formbox">
-				<h1 class="logo">
-					<a href="#"> <span class="blind">두잔</span>
+				<a href="../index.jsp">
+					<h1 class="logo">
+						<span class="blind">두잔</span>
+					</h1>
 					</a>
-				</h1>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
-						<li><a>캡슐 커스텀</a></li>
+						<li><a href="./custome.jsp">캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
@@ -60,7 +61,7 @@ try{
 						<li><a>커피 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="#">캡슐 조합 리뷰</a></li>
+									<li><a href="../review/review_list.jsp">캡슐 조합 리뷰</a></li>
 									<li><a href="#">원두소개</a></li>
 									<li><a href="#">커피 응용 레시피</a></li>
 									<li><a href="#">나와 어울리는 커피</a></li>
@@ -86,7 +87,7 @@ try{
 						} else {
 					%>
 					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
-					<span class="quick_menu"><a href="">마이페이지</a></span> <span
+					<span class="quick_menu"><a href="../mypage.jsp">마이페이지</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						}
@@ -168,11 +169,11 @@ try{
               <span class="productDetail_detail1_explain"><%=detail %></span>
             </div>
             <div class="btns">
-              <a href="#a" class="btn1">위시리스트에 담기</a>
+             <a href="inWish.jsp?prdNo=<%=prdNo%>" class="btn1"> 위시리스트에 담기</a>
               <a href="#a" class="btn2" onclick="checkSelectCoffeeValue()">장바구니에 담기</a>
             </div>
           </div>
-          
+          </form>
         </form>
       </div>
     </div> 
@@ -268,7 +269,6 @@ try{
 	function checkSelectCoffeeValue(){
 		selectCapsule.submit();
 	}
-	
 	</script>
 </body>
 </html>

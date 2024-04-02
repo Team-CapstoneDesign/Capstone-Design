@@ -19,11 +19,11 @@
 		<canvas id="canvas" class="webgl"></canvas>
 		<div id="header">
 			<div class="formbox">
-				<a href="./index.jsp">
+			<a href="./index.jsp">
 					<h1 class="logo">
 						<span class="blind">두잔</span>
 					</h1>
-				</a>
+					</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a href="./goods/custome.jsp">캡슐 커스텀</a></li>
@@ -68,8 +68,8 @@
 						} else {
 					%>
 					<span class="quick_menu"><a href="./member/mainlogout.jsp">로그아웃</a></span>
-					<span class="quick_menu"><a href="">마이페이지</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+					<span class="quick_menu"><a href="mypage.jsp">마이페이지</a></span> <span
+						class="quick_menu"><a href="./cart/showcart.jsp">고객센터</a></span>
 					<%
 						}
 					%>
