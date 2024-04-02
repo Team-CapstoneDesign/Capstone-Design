@@ -14,22 +14,23 @@
 
 		<div id="header">
 			<div class="formbox">
-				<h1 class="logo">
-					<a href="#"> <span class="blind">두잔</span>
+				<a href="../index.jsp">
+					<h1 class="logo">
+						<span class="blind">두잔</span>
+					</h1>
 					</a>
-				</h1>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
-						<li><a>캡슐 커스텀</a></li>
+						<li><a href="../goods/custome.jsp">캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="./viewProduct.jsp?ctgType=season">시즌한정</a></li>
-									<li><a href="./viewProduct.jsp?ctgType=signature">시그니처</a></li>
-									<li><a href="./viewProduct.jsp?ctgType=blending">블렌딩</a></li>
-									<li><a href="./viewProduct.jsp?ctgType=original">오리지널</a></li>
-									<li><a href="./viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
-									<li><a href="./viewProduct.jsp?ctgType=beverage">베버리지
+									<li><a href="../goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=beverage">베버리지
 											/ 논커피</a></li>
 									<li><a href="">선물 패키지</a></li>
 								</ul>
@@ -37,7 +38,7 @@
 						<li><a>커피 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="#">캡슐 조합 리뷰</a></li>
+									<li><a href="./review_list.jsp">캡슐 조합 리뷰</a></li>
 									<li><a href="#">원두소개</a></li>
 									<li><a href="#">커피 응용 레시피</a></li>
 									<li><a href="#">나와 어울리는 커피</a></li>
@@ -63,7 +64,7 @@
 						} else {
 					%>
 					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
-					<span class="quick_menu"><a href="">마이페이지</a></span> <span
+					<span class="quick_menu"><a href="../mypage.jsp">마이페이지</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						}
@@ -173,8 +174,9 @@
 								    String memName = rs2.getString("memName");
 								    if(name.equals(memName)){
 									%>
-						<div class="modifyRV"><a href="review_modify.jsp?idx=<%=idx%>"><input type="button" class="modifyBtn" value="수정 하기"></a></div>
-						<div class="modifyRV"><a href="review_list.jsp"><input type="button" class="modifyBtn" value="목록으로"></a></div>
+						<div class="modifyRV">
+						<a href="review_modify.jsp?idx=<%=idx%>"><input type="button" class="modifyBtn" value="수정 하기"></a>
+						<a href="review_list.jsp"><input type="button" class="modifyBtn" value="목록으로"></a></div>
 						<% 
 						       } 
 									else{ %>

@@ -120,8 +120,8 @@
 
 				<div class="orderClear_button">
 					<a href="../index.jsp"><input type="button" class="btn_goMain" value="메인으로 돌아가기"></a>
-					<input type="button" class="btn_goMypage"
-						value="내 주문내역 확인하기(마이페이지)">
+					<a href="../mypage.jsp"><input type="button" class="btn_goMypage"
+						value="내 주문내역 확인하기(마이페이지)"></a>
 				</div>
 			</div>
 

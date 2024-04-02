@@ -24,19 +24,19 @@
 					<h1 class="logo">
 						<span class="blind">두잔</span>
 					</h1>
-				</a>
+					</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a>캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="./goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
-									<li><a href="./goods/viewProduct.jsp?ctgType=beveridge">베버리지
+									<li><a href="../goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
+									<li><a href="../goods/viewProduct.jsp?ctgType=beveridge">베버리지
 											/ 논커피</a></li>
 									<li><a href="">선물 패키지</a></li>
 								</ul>
@@ -44,7 +44,7 @@
 						<li><a>커피 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="#">캡슐 조합 리뷰</a></li>
+									<li><a href="../review/review_list.jsp">캡슐 조합 리뷰</a></li>
 									<li><a href="#">원두소개</a></li>
 									<li><a href="#">커피 응용 레시피</a></li>
 									<li><a href="#">나와 어울리는 커피</a></li>
@@ -63,14 +63,14 @@
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="">로그인</a></span> <span
+					<span class="quick_menu"><a href="../member/login.jsp">로그인</a></span> <span
 						class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
 					%>
-					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
-					<span class="quick_menu"><a href="">마이페이지</a></span> <span
+					<span class="quick_menu"><a href="../member/mainlogout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="../mypage.jsp">마이페이지</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						}
