@@ -42,7 +42,7 @@ CREATE TABLE `board` (
 
 LOCK TABLES `board` WRITE;
 /*!40000 ALTER TABLE `board` DISABLE KEYS */;
-INSERT INTO `board` VALUES (1,1,'이준영','안녕하세요ㅕ','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','바이용','2024. 3. 16. 오전 5:55:36'),(2,2,'이준영','한글 되라고','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','12451256','2024. 3. 17. 오후 11:52:34'),(3,3,'이준영','제목을 입력해주세요.','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.','2024. 3. 17. 오후 11:52:42'),(4,4,'이준영','제목을 입력해주세요.124','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.124','2024. 3. 17. 오후 11:52:45'),(5,5,'이준영','제목을 입력해주세요.15126','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.126126','2024. 3. 17. 오후 11:52:54'),(6,6,'이준영','제목을 입력해주세요.161237127','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.1261256126','2024. 3. 17. 오후 11:52:59'),(7,7,'이준영','제목을 입력해주세요.72342345737','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','내용을 입력해주세요.234623462346346','2024. 3. 17. 오후 11:53:05');
+INSERT INTO `board` VALUES (1,1,'김지은','탄자니아 AA 맛있어요','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','커피 맛이 아주 좋아요! 진한 향과 부드러운 맛이 일품이에요.','2024. 3. 16. 오전 5:55:36'),(2,2,'박지연','너무 즐거운 커피 탐험','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','커피를 마시면서 즐거운 시간을 보냈어요. 다양한 풍미를 느낄 수 있었어요.','2024. 3. 17. 오후 11:52:34'),(3,3,'최지현','맛있는 커피의 세계로','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','커피의 다양한 맛과 향을 경험하고 싶다면 여기가 최고입니다. 다양한 원두를 즐길 수 있어요.','2024. 3. 17. 오후 11:52:42'),(4,4,'이지운','한 잔의 커피로 시작하는 하루','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','매일 아침 한 잔의 커피로 하루를 시작하니 기분이 좋아져요. 간편하게 즐길 수 있는 커피라서 좋아요.','2024. 3. 17. 오후 11:52:45'),(5,5,'신슬기','커피를 느끼는 특별한 순간','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','커피를 마시며 특별한 순간을 느꼈어요. 여러 가지 원두를 즐기면서 커피의 다양한 매력을 경험할 수 있었어요.','2024. 3. 17. 오후 11:52:54'),(6,6,'이준영','커피의 세계로 떠나는 여행','탄자니아 AA','콜롬비아 수프리모  케냐AA','5','커피를 마시며 여행을 떠나는 기분이었어요. 다양한 원두를 맛보면서 커피의 매력에 빠져들었어요.','2024. 3. 17. 오후 11:52:59');
 /*!40000 ALTER TABLE `board` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,6 +67,7 @@ CREATE TABLE `cart` (
 
 LOCK TABLES `cart` WRITE;
 /*!40000 ALTER TABLE `cart` DISABLE KEYS */;
+INSERT INTO `cart` VALUES ('473297504FF1A214D7BF948D9E56037C','DL001',2,'kanu'),('001055A3ACF59EB97D2D5833906C76AF','DB002',1,'nesOrigin'),('4A6631A37145A93CBDBC31DBDDD1AE40','DS002',1,'nesOrigin');
 /*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,6 +97,7 @@ CREATE TABLE `cscart` (
 
 LOCK TABLES `cscart` WRITE;
 /*!40000 ALTER TABLE `cscart` DISABLE KEYS */;
+INSERT INTO `cscart` VALUES ('001055A3ACF59EB97D2D5833906C76AF','','코스타리카 따라주','브라질 산토스  자메이카 블루마운틴  코스타리카 따라주','6','일리',1,'13,900','13900');
 /*!40000 ALTER TABLE `cscart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,7 +160,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES ('이준영','19910101','010-1234-1234','a123','a12345','a123@gmail.com','31020','충남 천안시 서북구 성환읍 대학로 91  남서울','대학교'),('리준령','19980101','010-1313-2424','b123','b12345','b123@gmail.com','31020','충남 천안시 서북구 성환읍 매주리 21  공학관','학교');
+INSERT INTO `member` VALUES ('이준영','19910101','010-2323-1212','a123','a12345','a123@gmail.com','31020','충남 천안시 서북구 성환읍 대학로 91  남서울','대학교'),('리준령','19980101','010-1313-2424','b123','b12345','b123@gmail.com','31020','충남 천안시 서북구 성환읍 매주리 21  공학관','학교');
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -218,7 +220,7 @@ CREATE TABLE `orderinfo` (
 
 LOCK TABLES `orderinfo` WRITE;
 /*!40000 ALTER TABLE `orderinfo` DISABLE KEYS */;
-INSERT INTO `orderinfo` VALUES (1,'a123','2024. 3. 16. 오전 5:54:55','이준영','15003','경기 시흥시 군자로 159  응아니야',' (거모동)','010-1321-1241','카카오페이','recycle');
+INSERT INTO `orderinfo` VALUES (1,'a123','2024. 3. 16. 오전 5:54:55','이준영','15003','경기 시흥시 군자로 159  응아니야',' (거모동)','010-1321-1241','카카오페이','recycle'),(2,'a123','2024. 4. 2. 오후 8:51:25','이준영','08632','서울 금천구 시흥동 995-29  안해안해','','010-1234-1234','신용카드','recycle');
 /*!40000 ALTER TABLE `orderinfo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -243,8 +245,34 @@ CREATE TABLE `orderproduct` (
 
 LOCK TABLES `orderproduct` WRITE;
 /*!40000 ALTER TABLE `orderproduct` DISABLE KEYS */;
-INSERT INTO `orderproduct` VALUES ('1','DB002',3,'nesOrigin');
+INSERT INTO `orderproduct` VALUES ('1','DB002',3,'nesOrigin'),('2','DB002',1,'nesOrigin');
 /*!40000 ALTER TABLE `orderproduct` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wish`
+--
+
+DROP TABLE IF EXISTS `wish`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `wish` (
+  `ctNo` char(40) DEFAULT NULL,
+  `prdNo` char(15) DEFAULT NULL,
+  `prdName` char(15) DEFAULT NULL,
+  `prdPrice` char(15) DEFAULT NULL,
+  `prdRoasting` char(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wish`
+--
+
+LOCK TABLES `wish` WRITE;
+/*!40000 ALTER TABLE `wish` DISABLE KEYS */;
+INSERT INTO `wish` VALUES ('AF7A8FB258B5DF31F7D5150A0FF65E0A','DB003','두잔 초코 블렌딩','12,900','시티'),('AF7A8FB258B5DF31F7D5150A0FF65E0A','DL002','두잔 블루드래곤 로부스타','11,900','하이');
+/*!40000 ALTER TABLE `wish` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -256,4 +284,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-18  6:24:06
+-- Dump completed on 2024-04-03 22:25:56

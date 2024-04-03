@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*"%>
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -12,46 +11,11 @@
 <link rel="stylesheet" href="../../css/sub_beans.css">
 
 </head>
-<body>
-<!--
-	<%
+<%
 		String id = (String) session.getAttribute("sid");
-
-	try {
-		String DB_URL = "jdbc:mysql://localhost:3306/dojan";
-		String DB_ID = "multi";
-		String DB_PASSWORD = "abcd";
-
-		Class.forName("org.gjt.mm.mysql.Driver");
-		Connection con = DriverManager.getConnection(DB_URL, DB_ID, DB_PASSWORD);
-
-		request.setCharacterEncoding("euc-kr");
-
-		String ctgType = request.getParameter("ctgType");
-
-		String category_name;
-
-		if (ctgType.equals("season"))
-			category_name = "시즌한정 캡슐";
-		else if (ctgType.equals("signature"))
-			category_name = "시그니처 캡슐";
-		else if (ctgType.equals("blending"))
-			category_name = "블렌딩 캡슐";
-		else if (ctgType.equals("original"))
-			category_name = "오리지널 캡슐";
-		else if (ctgType.equals("decaffeine"))
-			category_name = "디카페인 캡슐";
-		else if (ctgType.equals("beverage"))
-			category_name = "베버리지 캡슐 / 논커피";
-		else
-			category_name = "선물 패키지";
-
-		String jsql = "select * from goods where ctgType = ?";
-		PreparedStatement pstmt = con.prepareStatement(jsql);
-		pstmt.setString(1, ctgType);
-		ResultSet rs = pstmt.executeQuery();
 	%>
--->
+<body>
+
 	<div class="wrap">
 		<div id="header">
 			<div class="formbox">
@@ -80,8 +44,8 @@
 							<div class="submenu">
 								<ul id="productMenu">
 									<li><a href="../review/review_list.jsp">캡슐 조합 리뷰</a></li>
-									<li><a href="#">원두소개</a></li>
-									<li><a href="#">커피 응용 레시피</a></li>
+									<li><a href="coffee_bean.jsp">원두소개</a></li>
+									<li><a href="coffee_recipe.jsp">커피 응용 레시피</a></li>
 									<li><a href="#">나와 어울리는 커피</a></li>
 								</ul>
 							</div></li>
@@ -176,7 +140,7 @@
 					<div class="beans_info">
 					  <img src="../../images/beansinfo/08_CT.png">
 					  <h4>코스타리카 따라주</h4>
-					  <p>중남미의 유럽이라 불리는 코스타리카는 1800년대부터 커피를 재배하여 세계 9위의 커피대국 입니다. 아라비카종만 경작하며, 따라주는 가장 최고급 등급을 받은 커피를 말합니다. 은은하게 퍼지는 단맛과 신맛에 댝간의 쌉싸름한 맛이 조화롭고, 몰트의 구수함과 묵직한 바디감이 좋은 커피입니다.</p>
+					  <p>중남미의 유럽이라 불리는 코스타리카는 1800년대부터 커피를 재배하여 세계 9위의 커피대국 입니다. 아라비카종만 경작하며, 따라주는 가장 최고급 등급을 받은 커피를 말합니다. 은은하게 퍼지는 단맛과 신맛에 약간의 쌉싸름한 맛이 조화롭고, 몰트의 구수함과 묵직한 바디감이 좋은 커피입니다.</p>
 					</div>
 					<div class="beans_info">
 					  <img src="../../images/beansinfo/09_HC.png">
@@ -289,11 +253,6 @@
 
 
 	</div>
-	<%
-		} catch (Exception e) {
-	out.println(e);
-	}
-	%>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="../../JS/navEvent.js"></script>
 </body>
