@@ -1,3 +1,8 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
 /*fade animation*/
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -175,29 +180,36 @@
   width: 100%;
   height: 100vh;
   padding-top: 150px;
+  
 }
 .result_content{
   padding: 100px 200px;
-  display: block;
-  position: absolute;
-  margin-top: 180px;
-  margin-left: -90px;
-  width: 1300px;
   height: 80vh;
-  background-image: url(../images/custome_result.png);
-  background-size: contain;
+  width: 900px;
+  text-align: left;
+  background-image: url(../images/result_background4.png);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .result_h2{
   font-size: 45px;
   margin-bottom: 20px;
 }
 .custome_qty{
+  position: relative;
   display: block;
 }
+.coffeeNaming{
+  position: relative;
+  display: block;
+  margin-top: 50px;
+}
 .personalCoffeeName{
+  position: relative;
+  display: block;
   width: 300px;
   margin-top: 30px;
+  padding-bottom: 10px;
   border: none;
   background: none;
   border-bottom: 1px solid #644330;
@@ -243,7 +255,7 @@ input[type=text]::placeholder{
   width: 200px;
   display: block;
   width: 300px;
-  margin: 0 auto;
+  margin: 0 172px;
 }
 .wave{
   width: 500px;
@@ -254,11 +266,14 @@ input[type=text]::placeholder{
   font-size: 38px;
   text-align: right;
 }
-.custome_section h2 + div{
-  color: #a0a0a5;
+.base_h2 + div{
+  text-align: right;
+  color: #7e7e7e;
+  font-size: 15px;
+  margin-top: 10px;
   margin-bottom: 30px;
-  
 }
+
 .custome_section img{
   display: block;
   text-align: center;
@@ -312,16 +327,17 @@ input[type="radio"] {
   font-size: 25px;
   font-weight: bold;
   margin: 0 auto;
-
+  font-family: 'Noto Sans KR', sans-serif;
 }
 #select-coffee-explain > div:nth-child(2){
   font-size: 18px;
   text-align: center;
   margin: 0 auto;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /*radio*/
-.customeRadio label{
+/* .customeRadio label{
   display: inline-block;
   background-image: url("../images/coffee_list.png");
   background-size: cover;
@@ -334,6 +350,66 @@ input[type="radio"] {
   transition: all .2s;
   cursor: pointer;
   opacity: 0.6;
+} */
+
+.baseName{
+  display: inline-block;
+  /* background-image: url("../images/coffee_list.png"); */
+  background-size: cover;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 139px;
+  height: 226px;
+  white-space: nowrap;
+  user-select: none;
+  transition: all .2s;
+  cursor: pointer;
+  opacity: 0.6;
+}
+#blendNULL{
+  background-image: url("../images/custome_beans/coffee_list_1.png");
+}
+#base1, #blend1{
+  background-image: url("../images/custome_beans/coffee_list_1.png");
+}
+#base2, #blend2{
+  background-image: url("../images/custome_beans/coffee_list_2.png");
+}
+#base3, #blend3{
+  background-image: url("../images/custome_beans/coffee_list_3.png");
+}
+#base4, #blend4{
+  background-image: url("../images/custome_beans/coffee_list_4.png");
+}
+#base5, #blend5{
+  background-image: url("../images/custome_beans/coffee_list_5.png");
+}
+#base6, #blend6{
+  background-image: url("../images/custome_beans/coffee_list_6.png");
+}
+#base7, #blend7{
+  background-image: url("../images/custome_beans/coffee_list_7.png");
+}
+#base8, #blend8{
+  background-image: url("../images/custome_beans/coffee_list_8.png");
+}
+#base9, #blend9{
+  background-image: url("../images/custome_beans/coffee_list_9.png");
+}
+#base10, #blend10{
+  background-image: url("../images/custome_beans/coffee_list_10.png");
+}
+#base11, #blend11{
+  background-image: url("../images/custome_beans/coffee_list_11.png");
+}
+#base12, #blend12{
+  background-image: url("../images/custome_beans/coffee_list_12.png");
+}
+#base13, #blend13{
+  background-image: url("../images/custome_beans/coffee_list_13.png");
+}
+#base14, #blend14{
+  background-image: url("../images/custome_beans/coffee_list_14.png");
 }
 
 input[type="checkbox"] {
@@ -358,9 +434,38 @@ input[type="checkbox"] {
   font-size: 35px;
 
 }
+.blend_h2 + div{
+  color: #686868;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 17px;
+  line-height: 24px;
+}
+.blend_h2 + div > span{
+  font-weight: bold;
+  color: #9c2525;
+  font-size: 20px;
+}
 .blend_top_left .blend_svg{
   width: 200px;
   margin-left: 30px;
+}
+.blendSelect{
+  background-image: url(../images/blend_selectWrap.png);
+  width: 420px;
+  height: 80px;
+  font-size: 20px;
+  font-family: notosanskr;
+  letter-spacing: -2px;
+  text-align: right;
+  padding-top: 23px;
+  padding-right: 42px;
+}
+.selectOption2{
+  margin-left: 50px;
+}
+.selectOption3{
+  margin-left: 100px;
 }
 .blend_top_right{
   width: 530px;
@@ -399,7 +504,7 @@ input[type="checkbox"] {
   display: block;
   margin-right: 5px;
   margin-bottom: 10px;
-  background-image: url("../images/coffee_list.png");
+  /* background-image: url("../images/coffee_list.png"); */
   background-size: cover;
   width: 138px;
     height: 228px;
@@ -408,6 +513,7 @@ input[type="checkbox"] {
   transition: all .2s;
   cursor: pointer;
 }
+
 
 #blend-checkbox input[type="checkbox"]:checked + label {
   filter: drop-shadow(rgb(255, 255, 255) 1px 5px 10px);
@@ -432,6 +538,19 @@ border: 2px solid #f0dc41;
 }
 .roasting_content{
   padding-top: 250px;
+
+}
+.roasting_content{
+  padding: 100px 200px;
+  display: block;
+  position: absolute;
+  margin-top: 140px;
+  margin-left: -90px;
+  width: 1300px;
+  height: 80vh;
+  background-image: url(../images/custome_result.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .roasting_h2{
   font-size: 50px;
@@ -440,7 +559,13 @@ border: 2px solid #f0dc41;
 }
 .roasting_explanation{
   text-align: center;
-
+  font-size: 18px;
+  line-height: 24px;
+}
+.roasting_explanation span{
+  color: #9c2525;
+  font-size: 20px;
+  font-weight: bold;
 }
 .roastingPost{
   margin-top: 20px;
@@ -475,33 +600,106 @@ border: 2px solid #f0dc41;
   margin-bottom: 5px;
   font-size: 30px;
 }
+.result_background3 > img{
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 300px;
+  height: 100vh;
+  left: 2px;
+  transition: 2.3s;
+}
+.result_background1{
+  background-image: url(../images/result_background2.png);
+  transform: scaleY(-1);
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 150px;
+}
+.result_background2{
+  display: block;
+  position: absolute;
+  background-image: url(../images/result_background2.png);
+  background-repeat: no-repeat;
+  bottom: 0;
+  width: 1920px;
+  height: 150px;
+}
+.result_background{
+  display: block;
+  height: 80vh;
+  text-align: center;
+}
+#custome_result{
+  display: grid;
+  grid-template-columns: 115px 540px;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 10px 24px;
+}
 #custome_result p{
   font-size: 20px;
+  line-height: 25px;
+  color: #626262;
 }
 #custome_result span{
   font-size: 20px;
+}
+.machine_content{
+  padding: 100px 200px;
+  display: block;
+  position: absolute;
+  margin-top: 140px;
+  margin-left: -90px;
+  width: 1300px;
+  height: 80vh;
+  background-image: url(../images/machine_background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.result_buttonWrap{
+  margin-top: 50px;
 }
 .machine_h2{
   font-size: 50px;
   text-align: center;
 }
 .machine_content{
-  padding-top: 200px;
 }
 .machineRadio label{
     display: inline-block;
-    background-image: url("../images/coffee_list.png");
     background-size: cover;
     margin-left: 10px;
     margin-bottom: 10px;
-    width: 139px;
-    height: 226px;
+    width: 106px;
+    height: 384px;
     white-space: nowrap;
     user-select: none;
     transition: all .2s;
     cursor: pointer;
     opacity: 0.6;
-  
+    filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.218));
+}
+#nespressoOriginal__{
+  background-image: url("../images/custome_machine/nespresso.png");
+}
+#nespressoVertuo__{
+  background-image: url("../images/custome_machine/nespresso.png");
+}
+#dolceGusto__{
+  background-image: url("../images/custome_machine/nespresso.png");
+}
+#illy__{
+  background-image: url("../images/custome_machine/nespresso.png");
+}
+#kanu__{
+  background-image: url("../images/custome_machine/nespresso.png");
+}
+#keurig__{
+  background-image: url("../images/custome_machine/nespresso.png");
+}
+.machineRadio{
+  text-align: center;
 }
 .machineRadio input[type="radio"]:checked + label::before {
   transform: rotate(-360deg);
