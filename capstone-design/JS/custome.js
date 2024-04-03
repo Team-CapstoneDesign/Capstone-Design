@@ -21,6 +21,7 @@ const $roastingNext = document.querySelector('#roasting-next');
 const $machinePrev = document.querySelector('#machine-prev');
 const $machineNext = document.querySelector('#machine-next');
 const $selectCoffeeWrap = document.querySelector('#select-coffee-wrap');
+const $resultBackground3 = document.querySelector('#resultBackground3');
 
 const $custome_base = document.getElementById('custome_base');
 const $custome_blend = document.getElementById('custome_blend');
@@ -35,7 +36,7 @@ const $taste2Progress = document.getElementById('taste2_progress');
 const $taste3Progress = document.getElementById('taste3_progress');
 class Game {
   constructor() {
-    //name:원두이름, feature:특징, compatible:어울리는 원두 종류, price:가격(추가예정)
+    //name:원두이름, feature:특징, coffeeBody:바디, coffeeSmell:향 ,coffeeTaste1:신맛 , coffeeTaste2:쓴맛 ,coffeeTaste3:단맛
     this.coffeeList = [
       { id: 1, name: '브라질 산토스', feature: '향이 뛰어나고 신맛의 여운에 풍미가 있는 쓴맛을 남기면서도 단맛과 신맛 등의 향미가 고르게 조화를 이루는 커피', coffeeBody: '20', coffeeSmell: '80', coffeeTaste1: '60', coffeeTaste2: '30', coffeeTaste3: '20' },
       { id: 2, name: '콜롬비아 수프리모', feature: '신맛과 단맛, 바디감으로 표현되는 쓴맛이 적절하게 조화를 이룬 복합적이면서도 깔끔한 맛의 커피', coffeeBody: '30', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'  },
@@ -144,7 +145,7 @@ class Game {
 
   selectCoffee() {
     this.coffeeList.forEach(coffee => {
-      const { name, feature, coffeeBody, coffeeSmell, coffeeTaste1, coffeeTaste2, coffeeTaste3 } = coffee;
+      const { id, name, feature, coffeeBody, coffeeSmell, coffeeTaste1, coffeeTaste2, coffeeTaste3 } = coffee;
 
       // 라디오 버튼 생성
       const checkboxList = document.createElement("input");
@@ -156,6 +157,8 @@ class Game {
       // 라벨 생성 (name + feature)
       const checkboxLabel = document.createElement("label");
       checkboxLabel.htmlFor = name;
+      checkboxLabel.id = "base" + id;
+      checkboxLabel.classList = "baseName"
 
       checkboxList.addEventListener('click', () => this.showCoffeeFeature(name, feature, coffeeBody, coffeeSmell, coffeeTaste1, coffeeTaste2, coffeeTaste3));
       // 커피 체크박스 영역에 추가
@@ -272,7 +275,7 @@ class Game {
   }
 
 }
-
+/**startpage animation */
 const $startBackground = document.querySelector('#startBackground');
 const $content1 = document.querySelector('#content1');
 const $content2 = document.querySelector('#content2');
@@ -283,6 +286,11 @@ const $content6 = document.querySelector('#content6');
 const $content7 = document.querySelector('#content7');
 const $slider_right = document.querySelector('#slider_right');
 const $slider_left = document.querySelector('#slider_left');
+$machineNext.addEventListener('click', (event) => {
+  event.preventDefault();
+  $resultBackground3.style.left = 1700 + "px";
+});
+
 $startBtn.addEventListener('click', (event) => {
   event.preventDefault();
   const rotationSpeed = 2; // in seconds
@@ -391,6 +399,8 @@ function customeResult() {
   hiddenInput('price', price);
   hiddenInput('price_comma', price_comma);
   // 생성한 input을 div에 추가
+
+
 }
 
 function hiddenInput(name, value) {
