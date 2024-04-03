@@ -43,8 +43,8 @@
 							<div class="submenu">
 								<ul id="productMenu">
 									<li><a href="./review/review_list.jsp">캡슐 조합 리뷰</a></li>
-									<li><a href="#">원두소개</a></li>
-									<li><a href="#">커피 응용 레시피</a></li>
+									<li><a href="./sub/coffee_bean.jsp">원두소개</a></li>
+									<li><a href="./sub/coffee_recipe.jsp">커피 응용 레시피</a></li>
 									<li><a href="#">나와 어울리는 커피</a></li>
 								</ul>
 							</div></li>

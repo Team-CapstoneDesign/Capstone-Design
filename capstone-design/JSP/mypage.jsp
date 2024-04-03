@@ -140,9 +140,24 @@ pageEncoding="EUC-KR"%>
 		 int wishCount = rs3.getInt("rowCount");
 
 
-		 
+		 String jsql4 = "SELECT o.ordDate, g.prdName, g.prdPrice2, p.ordQty, p.prdNo " +
+                        "FROM orderinfo o " +
+                        "JOIN orderproduct p ON o.ordNo = p.ordNo " +
+                        "JOIN goods g ON p.prdNo = g.prdNo " +
+                        "WHERE o.memId = ?";
+    
+   
+         PreparedStatement pstmt4 = con.prepareStatement(jsql4);
+         pstmt4.setString(1, id);
+    
+         ResultSet rs4 = pstmt4.executeQuery();
 
+         
+		 String jsql5 = "select * from wish where ctNo = ?";
+		 PreparedStatement pstmt5 = con.prepareStatement(jsql5);
+		 pstmt5.setString(1, ctNo);
 
+		 ResultSet rs5 = pstmt5.executeQuery();
     
 
 		 %>
@@ -151,7 +166,7 @@ pageEncoding="EUC-KR"%>
                 <%= name%>
                 님, <br>
                 반갑습니다!<br><br>
-                <button class="ProfileSection_btn_setting__vsvWM N=myh.set">내 정보 관리</button>
+                <a href="memberSetting.jsp"><button class="ProfileSection_btn_setting__vsvWM N=myh.set">내 정보 관리</button></a>
 
 
                 <div class="CardSection_card_section__yIeTK CardSection_my_menu__JaXF2" data-cy="card_section">
@@ -226,32 +241,48 @@ pageEncoding="EUC-KR"%>
 
                     </div>
                 </div>
+				<%  
+
+					while (rs4.next()) {
+         			String ordDate = rs4.getString("ordDate");
+        			String prdName = rs4.getString("prdName");
+        			int prdPrice2 = rs4.getInt("prdPrice2");
+        			int ordQty = rs4.getInt("ordQty");
+        			String prdNo = rs4.getString("prdNo");  
+					
+					int total = prdPrice2 * ordQty; 
+					 
+					String comtotal = String.format("%,d", total);
+
+					
+					%>
                 <div class="CardSection_card_section__yIeTK" data-cy="card_section">
 
-                    <div class="OrderDeliverySection_list_order__0upVF">
-                        <div class="RoundedWrapper__Wrapper-w9wnao-0 dzEqxt">
+                 <div class="OrderDeliverySection_list_order__0upVF">  
+				
+                        <div class="RoundedWrapper__Wrapper-w9wnao-0 dzEqxt">  
                             <div class="WarrantyCard__CardWrapper-mj30e3-0 jlXZQ">
                                 <div class="WarrantyCard__DescWrapper-mj30e3-1 doDmmI">
-                                    <div class="WarrantyCard__ImageWrapper-mj30e3-2 jlrvfN"></div>
+                                    <div class="WarrantyCard__ImageWrapper-mj30e3-2 jlrvfN"><img src="../../images/capdesign/<%=prdNo%>.png"></div> 
+									<!-- 이미지 링크 -->
                                     <div class="WarrantyCard__WarrantyInfo-mj30e3-3 eybslm">
-                                        <div class="WarrantyCard__DateWithWarrantyNumber-mj30e3-4 VDSvq">결제완료일 2023. 06.
-                                            27
+                                      <div class="WarrantyCard__DateWithWarrantyNumber-mj30e3-4 VDSvq">
+									  <%= ordDate%>
                                         </div>
-                                        <a href="/pledges/6869332"><span
-                                                class="WarrantyCard__Title-mj30e3-5 cQXRRi">구름처럼 동글동글 포근한 내 친구, '뱁'
-                                                인형&amp;냉감쿠션</span></a>
+                                        <a href="/pledges/6869332">
+										<span class="WarrantyCard__Title-mj30e3-5 cQXRRi"><%= prdName%></span></a>
                                         <ul class="RewardItems__Items-sc-6cegjp-0 glqfra">
-                                            <li><span class="RewardItems__Title-sc-6cegjp-2 gkHbvS">1 개</span></li><span
-                                                class="RewardItems__DateWrapper-sc-6cegjp-1 dqbKMS"><span>28,500원 결제 완료</span>
+                                            <li><span class="RewardItems__Title-sc-6cegjp-2 gkHbvS"><%= ordQty%> 개</span></li><span
+                                                class="RewardItems__DateWrapper-sc-6cegjp-1 dqbKMS"><span><%= comtotal%> 원</span>
                                         </ul>
-
                                     </div>
                                 </div>
-                            </div>
+                            </div>				
                         </div>
                     </div>
 
-                </div>
+                </div>  
+					<% } %>
 
                 <div class="CardSection_card_section__yIeTK" data-cy="card_section">
                     <div class="CardSection_head_area__UjvOi">
@@ -308,68 +339,48 @@ pageEncoding="EUC-KR"%>
                 </div>
                 <div class="CardSection_card_section__yIeTK" data-cy="card_section">
                     <div class="CardSection_head_area__UjvOi">
-                        <h2 class="CardSection_title__0vhx3 CardSection_skeleton__yZWur" data-cy="title">찜한 상품</h2>
-                        <span class="CardSection_number__0bBcs CardSection_skeleton__yZWur"></span>
+                        <h2 class="CardSection_title__0vhx3 CardSection_skeleton__yZWur" data-cy="title">여기 글자안나옴</h2>
+						<!-- 여기 글자가 안나옴 -->
+                        <span class="CardSection_number__0bBcs CardSection_skeleton__yZWur">24</span>
                     </div>
                     <div class="ZzimProductsSection_zzim_items__JRX7_">
                         <div class="ZzimCategory_zzim_item__BuS_N">
                             <a class="ZzimCategory_head_area__ITLKb">
-                                <h2 class="ZzimCategory_title__wpGlN ZzimCategory_skeleton__PcHUd"></h2>
+                                <h2 class="ZzimCategory_title__wpGlN ZzimCategory_skeleton__PcHUd">찜한 상품</h2>
                             </a>
                             <div class="ScrollableCommonProducts_flicking_wrap__qsVL0">
                                 <div class="ScrollableCommonProducts_flicking_area__5pJ1G">
+                           
+
+					 <%  
+
+					while (rs5.next()) {
+                    
+					String wishNo = rs5.getString("prdNo");
+					String wishName = rs5.getString("prdName");
+					String wishRoast = rs5.getString("prdRoasting");
+					String wishPrice = rs5.getString("prdPrice");					
+					
+					%>
                                     <div
                                         class="ScrollableCommonProducts_product_item__4oBG_ ScrollableCommonProducts_skeleton__jysvq">
                                         <div class="link_item">
-                                            <div class="ScrollableCommonProducts_thumb__l7PBq"></div>
+                                            <div class="ScrollableCommonProducts_thumb__l7PBq"><img src="../../images/capdesign/<%=wishNo%>.png"></div>
+											<!-- 이미지 링크 수정 해야됨 -->
                                             <div class="ScrollableCommonProducts_info_area__oZNC0">
-                                                <div class="ScrollableCommonProducts_price__I2bI7"></div>
-                                                <div class="ScrollableCommonProducts_name__MTpce"></div>
-                                                <div class="ScrollableCommonProducts_info_label___0DSe"></div>
+                                                <div class="ScrollableCommonProducts_price__I2bI7"><%= wishName%></div>
+                                                <div class="ScrollableCommonProducts_name__MTpce"><%= wishRoast%></div>
+                                                <div class="ScrollableCommonProducts_info_label___0DSe"><%= wishPrice%> 원</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div
-                                        class="ScrollableCommonProducts_product_item__4oBG_ ScrollableCommonProducts_skeleton__jysvq">
-                                        <div class="link_item">
-                                            <div class="ScrollableCommonProducts_thumb__l7PBq"></div>
-                                            <div class="ScrollableCommonProducts_info_area__oZNC0">
-                                                <div class="ScrollableCommonProducts_price__I2bI7"></div>
-                                                <div class="ScrollableCommonProducts_name__MTpce"></div>
-                                                <div class="ScrollableCommonProducts_info_label___0DSe"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="ScrollableCommonProducts_product_item__4oBG_ ScrollableCommonProducts_skeleton__jysvq">
-                                        <div class="link_item">
-                                            <div class="ScrollableCommonProducts_thumb__l7PBq"></div>
-                                            <div class="ScrollableCommonProducts_info_area__oZNC0">
-                                                <div class="ScrollableCommonProducts_price__I2bI7"></div>
-                                                <div class="ScrollableCommonProducts_name__MTpce"></div>
-                                                <div class="ScrollableCommonProducts_info_label___0DSe"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="ScrollableCommonProducts_product_item__4oBG_ ScrollableCommonProducts_skeleton__jysvq">
-                                        <div class="link_item">
-                                            <div class="ScrollableCommonProducts_thumb__l7PBq"></div>
-                                            <div class="ScrollableCommonProducts_info_area__oZNC0">
-                                                <div class="ScrollableCommonProducts_price__I2bI7"></div>
-                                                <div class="ScrollableCommonProducts_name__MTpce"></div>
-                                                <div class="ScrollableCommonProducts_info_label___0DSe"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="ScrollableCommonProducts_product_item__4oBG_ ScrollableCommonProducts_skeleton__jysvq">
-                                        <div class="link_item">
-                                            <div class="ScrollableCommonProducts_thumb__l7PBq"></div>
-                                            <div class="ScrollableCommonProducts_info_area__oZNC0">
-                                                <div class="ScrollableCommonProducts_price__I2bI7"></div>
-                                                <div class="ScrollableCommonProducts_name__MTpce"></div>
-                                                <div class="ScrollableCommonProducts_info_label___0DSe"></div>
+                        <% } %>
+                                  
+									
+
+
+                                   
+                                    
                                             </div>
                                         </div>
                                     </div>
