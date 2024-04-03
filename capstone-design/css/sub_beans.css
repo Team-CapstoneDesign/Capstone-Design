@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 헤더 영역 */
+.sub_section1{
+    width: 100%;
+    height: 400px;
+    word-break: keep-all;
+    background-image: url(../images/sub02_title3.png);
+	margin-top: 100px;
+}
+.ctgTitle{
+    position: relative;
+    display: block;
+    padding-top: 50px;
+    width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    text-align: right;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #b9971d;
+}
+.ctgTitle > span{
+    font-weight: normal;
+    font-size: 40px;
+}
+
+.smap{
+	display: block;
+    position: relative;
+	color: #fff;
+    width: 1200px;
+	font-size: 15px;
+	text-align: right;
+    margin: 0 auto;
+}
+.smap a{
+	color: #333;
+	text-decoration-color: none;
+	text-decoration-line: none;
+}
+.smap li{
+	padding: 5px;
+	display: inline-block;
+}
+
+/* 메인 컨텐츠 영역 */
+/* 기본 스타일 */
+.beans_contents {
+  max-width: 1200px; /* 최대 너비 지정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 20px;
+}
+
+.beans_info {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.beans_info h4{
+	font-size: 25px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+.beans_info p{
+	font-size: 22px;
+}
+.beans_info img{
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    float: left;
+    border-radius: 10px;
+}
+.beans_title{
+	font-size: 25px;
+	padding: 50px;
+	text-align: center;
+}
+/* 반응형 스타일 */
+@media (min-width: 768px) {
+  .coffee_beans_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .beans_info {
+    width: 100%; /* 각 beans_info가 한 블록을 차지하도록 변경 */
+    margin-right: 0; /* 오른쪽 여백 제거 */
+  }
+}
+

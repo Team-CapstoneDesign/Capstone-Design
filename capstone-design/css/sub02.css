@@ -38,7 +38,6 @@ body{
 .sub_headerTitle{
     display: flex;
     position: relative;
-    height: 400px;
     width: 1920px;
     min-width: 1200px;
     text-align: center;
