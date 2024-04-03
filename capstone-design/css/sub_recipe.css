@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 헤더 영역 */
+.sub_section1{
+    width: 100%;
+    height: 400px;
+    word-break: keep-all;
+    background-image: url(../images/sub02_title3.png);
+	margin-top: 100px;
+}
+.ctgTitle{
+    position: relative;
+    display: block;
+    padding-top: 50px;
+    width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    text-align: right;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #b9971d;
+}
+.ctgTitle > span{
+    font-weight: normal;
+    font-size: 40px;
+}
+
+.smap{
+	display: block;
+    position: relative;
+	color: #fff;
+    width: 1200px;
+	font-size: 15px;
+	text-align: right;
+    margin: 0 auto;
+}
+.smap a{
+	color: #333;
+	text-decoration-color: none;
+	text-decoration-line: none;
+}
+.smap li{
+	padding: 5px;
+	display: inline-block;
+}
+
+/* 메인 컨텐츠 영역 */
+* {
+	box-sizing: border-box;
+}
+.recipe_contents {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 30px;
+    letter-spacing: 1;	
+}
+.recipe_box {
+  	width: calc(33.33% - 20px);
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin-bottom: 30px;
+	/* 배경 이미지 추가 */
+    background-size: cover;
+    background-position: center;
+	height: 400px;
+	/* 안에 들어가는 내용 */
+	text-align: center;
+	position: relative; /* 부모 요소를 기준으로 자식 요소의 위치를 지정하기 위해 */
+}
+/* 각각에 백그라운드로 이미지 넣기 */
+.recipe_box:nth-of-type(1){
+	background-image: url("../images/recipe/01.jpg");
+}
+.recipe_box:nth-of-type(2){
+	background-image: url("../images/recipe/02.jpg");
+}
+.recipe_box:nth-of-type(3){
+	background-image: url("../images/recipe/03.jpg");
+}
+.recipe_box:nth-of-type(4){
+	background-image: url("../images/recipe/04.jpg");
+}
+.recipe_box:nth-of-type(5){
+	background-image: url("../images/recipe/05.jpg");
+}
+.recipe_box:nth-of-type(6){
+	background-image: url("../images/recipe/06.jpg");
+}
+.recipe_box:nth-of-type(7){
+	background-image: url("../images/recipe/07.jpg");
+}
+.recipe_box:nth-of-type(8){
+	background-image: url("../images/recipe/08.jpg");
+}
+.recipe_box:nth-of-type(9){
+	background-image: url("../images/recipe/09.jpg");
+}
+/* 각각에 백그라운드로 이미지 넣기 끝 */
+
+.recipe_box::before {
+  content: ""; /* 가상 요소를 생성 */
+  position: absolute; /* 절대 위치로 설정 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* 투명한 검은색 배경 */
+  transition: background 0.3s ease; /* 배경 색상 변화를 애니메이션화 */
+}
+
+.recipe_box:hover::before {
+  background: rgba(0, 0, 0, 0.3); /* 투명도를 조절하여 어둡게 */
+}
+.recipe_box h2,
+.recipe_box .modal_btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative; /* 상대 위치로 설정하여 z-index가 적용되도록 함 */
+  z-index: 2; /* 가상 요소보다 위에 위치하도록 설정 */
+}
+
+.recipe_box h2{
+	font-size: 25px;
+	margin-top: 100px;
+	border-radius: 30px;
+	background-color: #fff;
+	padding: 7px;
+	display: inline-block;
+}
+.recipe_box .modal_btn{
+	display: block;
+	margin: 0 auto;
+	margin-top: 70px;
+	padding: 10px 20px;
+	cursor: pointer;
+	border: 1px solid #fff;
+	color: #fff;
+	background-color:rgba(0, 0, 0, 0.3);
+	/*background-color: transparent;*/
+}
+
+@media (max-width: 764px) {
+.recipe_contents {
+    width: calc(100% - 20px);
+	}
+.recipe_box {
+    width: 750px;
+	height: 300px;
+	}
+}
+
+/* 모달 팝업 창 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modal.on {
+    display: block;
+}
+
+.modal_popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+	width: 900px;
+	height: 500px;
+	text-align: left;
+}
+
+.modal_popup h3 {
+    margin: 30px 0 20px 30px;
+	font-size: 30px;
+}
+.modal_popup h4 {
+	font-size: 25px;
+	border-radius: 20px;
+	background-color: #b32020;
+	padding: 5px 10px;
+	margin-left: 30px;
+	display: inline;
+	color: #fff;
+}
+.modal_popup ul {
+	margin: 30px 0 10px 0;
+	font-size: 25px;
+	text-align: left;
+}
+.modal_popup ul li{
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.close_btn {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
