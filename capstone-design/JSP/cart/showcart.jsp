@@ -289,7 +289,7 @@
 				%>
 
 							<tr class="cartItem_product" alt="상세 상품">
-								<td><img src="../../images/sample/sample_custom01.png"></td>
+								<td><img src="../../images/capdesign/cs_img.png"></td>
 								<td><%= name%></td>
 								<td><%= price%> 원</td>
 								<td><%= cap%></td>
