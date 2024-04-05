@@ -38,18 +38,18 @@ class Game {
   constructor() {
     //name:원두이름, feature:특징, coffeeBody:바디, coffeeSmell:향 ,coffeeTaste1:신맛 , coffeeTaste2:쓴맛 ,coffeeTaste3:단맛
     this.coffeeList = [
-      { id: 1, name: '브라질 산토스', feature: '향이 뛰어나고 신맛의 여운에 풍미가 있는 쓴맛을 남기면서도 단맛과 신맛 등의 향미가 고르게 조화를 이루는 커피', coffeeBody: '20', coffeeSmell: '80', coffeeTaste1: '60', coffeeTaste2: '30', coffeeTaste3: '20' },
-      { id: 2, name: '콜롬비아 수프리모', feature: '신맛과 단맛, 바디감으로 표현되는 쓴맛이 적절하게 조화를 이룬 복합적이면서도 깔끔한 맛의 커피', coffeeBody: '30', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'  },
-      { id: 3, name: '자메이카 블루마운틴', feature: '세계 3대 커피, 옅은 신맛과 부드러운 쓴맛, 그리고 고소한 단맛, 쌉쌀한 초콜릿의 맛, 스모크향 등 커피가 낼 수 있는 거의 모든 맛을 갖투고 있어서 최고의 커피', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'  },
-      { id: 4, name: '에티오피아 예가체프', feature: '과일향과 신 맛이 매우 강한 상큼한 커피', coffeeBody: '70', coffeeSmell: '90', coffeeTaste1: '70', coffeeTaste2: '30', coffeeTaste3: '50'},
-      { id: 5, name: '코스타리카 따라주', feature: '입안을 가득 메꾸는 듯한 사탕수수의 단맛과 고소한 견과류의 향미가 특징인 커피', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
-      { id: 6, name: '탄자니아 AA', feature: '산미와 단맛의 밸런스가 좋고 농도가 짙어 아이스가 어울리는 커피', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
-      { id: 7, name: '예멘 모카 마타리', feature: '다크 초콜릿의 풍미와 예멘커피 특유의 독특한 꽃향, 새콤한 과일향, 묵직한 바디감이 조화를 이루는 커피', },
-      { id: 8, name: '하와이 코나', feature: '과일처럼 신맛, 옅은 단맛, 산뜻한 향이 풍부하고 강렬한 커피', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
-      { id: 9, name: '과테 말라 안티구아', feature: '다크초코의 쌉싸름함과 진한 스모키향으로 뛰어난 감칠맛과 단맛의 풍미가 뛰어난 커피', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
-      { id: 10, name: '파나마 게이샤', feature: '풍부하고 화사한 꽃향기, 새콤달콤한 감귤의 과일향, 달콤하고 긴 여운의 뒷맛이 특징인 커피', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
-      { id: 11, name: '엘살바도르', feature: '엷은 신맛과 쓴맛이 조화를 이루는, 부드러우면서 달콤한 초콜릿 향과 맛을 가진 커피', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
-      { id: 12, name: '케냐AA', feature: '와인 향과 과일 향이 풍부하고 중후하면서도 깊은 맛이 매력적인 커피. 뒷맛이 매끄럽고 은근한 초콜릿 향이 느껴집니다.', coffeeBody: '0', coffeeSmell: '50', coffeeTaste1: '50', coffeeTaste2: '50', coffeeTaste3: '50'},
+      { id: 1, name: '브라질 산토스', feature: '향이 뛰어나고 신맛의 여운에 풍미가 있는 쓴맛을 남기면서도 단맛과 신맛 등의 향미가 고르게 조화를 이루는 커피', coffeeBody: '80', coffeeSmell: '40', coffeeTaste1: '40', coffeeTaste2: '40', coffeeTaste3: '60' },
+      { id: 2, name: '콜롬비아 수프리모', feature: '신맛과 단맛, 바디감으로 표현되는 쓴맛이 적절하게 조화를 이룬 복합적이면서도 깔끔한 맛의 커피', coffeeBody: '60', coffeeSmell: '80', coffeeTaste1: '40', coffeeTaste2: '40', coffeeTaste3: '60'  },
+      { id: 3, name: '자메이카 블루마운틴', feature: '세계 3대 커피, 옅은 신맛과 부드러운 쓴맛, 그리고 고소한 단맛, 쌉쌀한 초콜릿의 맛, 스모크향 등 커피가 낼 수 있는 거의 모든 맛을 갖투고 있어서 최고의 커피', coffeeBody: '80', coffeeSmell: '60', coffeeTaste1: '50', coffeeTaste2: '20', coffeeTaste3: '60'  },
+      { id: 4, name: '에티오피아 예가체프', feature: '과일향과 신 맛이 매우 강한 상큼한 커피', coffeeBody: '40', coffeeSmell: '80', coffeeTaste1: '65', coffeeTaste2: '20', coffeeTaste3: '60'},
+      { id: 5, name: '코스타리카 따라주', feature: '입안을 가득 메꾸는 듯한 사탕수수의 단맛과 고소한 견과류의 향미가 특징인 커피', coffeeBody: '40', coffeeSmell: '80', coffeeTaste1: '40', coffeeTaste2: '60', coffeeTaste3: '60'},
+      { id: 6, name: '탄자니아 AA', feature: '산미와 단맛의 밸런스가 좋고 농도가 짙어 아이스가 어울리는 커피', coffeeBody: '60', coffeeSmell: '80', coffeeTaste1: '60', coffeeTaste2: '80', coffeeTaste3: '80'},
+      { id: 7, name: '예멘 모카 마타리', feature: '다크 초콜릿의 풍미와 예멘커피 특유의 독특한 꽃향, 새콤한 과일향, 묵직한 바디감이 조화를 이루는 커피', coffeeBody: '80', coffeeSmell: '80', coffeeTaste1: '60', coffeeTaste2: '50', coffeeTaste3: '85'},
+      { id: 8, name: '하와이 코나', feature: '과일처럼 신맛, 옅은 단맛, 산뜻한 향이 풍부하고 강렬한 커피', coffeeBody: '80', coffeeSmell: '80', coffeeTaste1: '40', coffeeTaste2: '60', coffeeTaste3: '60'},
+      { id: 9, name: '과테 말라 안티구아', feature: '다크초코의 쌉싸름함과 진한 스모키향으로 뛰어난 감칠맛과 단맛의 풍미가 뛰어난 커피', coffeeBody: '80', coffeeSmell: '55', coffeeTaste1: '40', coffeeTaste2: '40', coffeeTaste3: '80'},
+      { id: 10, name: '파나마 게이샤', feature: '풍부하고 화사한 꽃향기, 새콤달콤한 감귤의 과일향, 달콤하고 긴 여운의 뒷맛이 특징인 커피', coffeeBody: '40', coffeeSmell: '100', coffeeTaste1: '85', coffeeTaste2: '15', coffeeTaste3: '55'},
+      { id: 11, name: '엘살바도르', feature: '엷은 신맛과 쓴맛이 조화를 이루는, 부드러우면서 달콤한 초콜릿 향과 맛을 가진 커피', coffeeBody: '60', coffeeSmell: '80', coffeeTaste1: '60', coffeeTaste2: '40', coffeeTaste3: '80'},
+      { id: 12, name: '케냐AA', feature: '와인 향과 과일 향이 풍부하고 중후하면서도 깊은 맛이 매력적인 커피. 뒷맛이 매끄럽고 은근한 초콜릿 향이 느껴집니다.', coffeeBody: '80', coffeeSmell: '60', coffeeTaste1: '30', coffeeTaste2: '40', coffeeTaste3: '100'},
     ]
     this.start();
   }

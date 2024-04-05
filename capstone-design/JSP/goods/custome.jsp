@@ -14,7 +14,7 @@
 <script language="javascript" src="../dojan_js_package.js">
 </script>
 
-<title>Insert title here</title>
+<title>д╦╫╤ д©╫╨ер</title>
 </head>
 <body>
 	<%
