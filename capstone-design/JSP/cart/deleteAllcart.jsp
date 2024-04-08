@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=euc-kr" %>
 <%@ page import="java.sql.*" %>
-<html><head><title> 장바구니내용 전체 삭제 </title></head>
+<html><head><title> 장바구니 내용 전체 삭제 </title></head>
 <body>
 <center>
 

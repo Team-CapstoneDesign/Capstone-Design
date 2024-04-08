@@ -5,7 +5,7 @@
 <html>
 
 <head>
-<title>배송/결제</title>
+<title>주문/결제</title>
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/cart.css">
 
@@ -81,11 +81,19 @@
 		<!-- 컨텐츠 -->
 		<div class="cart_container" name="cart_product">
 			<!-- 네비게이션 헤더 -->
-			<div class="cart_section1" name="cart_header">
-				<div class="cart_headerTitle">
-					<div class="cart_subTitle">주문/결제</div>
-					<br>
-					<br>
+			<div class="sub_section1" name="sub_header">
+				<div class="ctgTitle">
+					주문/결제
+				</div>
+				<div class="sub_headerTitle">
+					<ul class="smap">
+						<!-- 미니 네비게이션 -->
+						<li><a href="index.html">home</a></li>
+						<li>></li>
+						<li class="en"><a href="index.html">장바구니</a></li>
+						<li>></li>
+						<li><a href="index.html" class="this">주문/결제</a></li>
+					</ul>
 				</div>
 			</div>
 
