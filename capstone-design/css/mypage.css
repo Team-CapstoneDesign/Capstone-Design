@@ -1,3 +1,14 @@
+.profile{
+	font-size: 40px;
+}
+.ProfileSection_btn_setting__vsvWM{
+	    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background: #af6565;
+    color: #fff;
+}
 @keyframes Filter_loader__H67VP {
     0% {
         background-position: -100% 0
@@ -66,7 +77,7 @@
 }
 
 .Filter_btn_option__cRa1l[aria-selected=true] {
-    color: #03c75a;
+    color: #a2413a;
     font-weight: 500
 }
 
@@ -111,7 +122,6 @@
 
 .CardSection_head_area__UjvOi .CardSection_title__0vhx3.CardSection_skeleton__yZWur {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: CardSection_loader__BaFqV 1s infinite reverse;
     display: inline-block;
@@ -124,13 +134,12 @@
     letter-spacing: -.75px;
     margin-left: 4px;
     line-height: 24px;
-    color: #03c75a;
+    color: #a2413a;
     font-weight: 700
 }
 
 .CardSection_head_area__UjvOi .CardSection_number__0bBcs.CardSection_skeleton__yZWur {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: CardSection_loader__BaFqV 1s infinite reverse;
     width: 32px;
@@ -557,7 +566,6 @@
 }
 
 .ScrollableCommonProducts_flicking_wrap__qsVL0 .ScrollableCommonProducts_product_item__4oBG_.ScrollableCommonProducts_skeleton__jysvq .ScrollableCommonProducts_thumb__l7PBq {
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ScrollableCommonProducts_loader__j9m12 1s infinite reverse
 }
@@ -572,7 +580,6 @@
 
 .ScrollableCommonProducts_flicking_wrap__qsVL0 .ScrollableCommonProducts_product_item__4oBG_.ScrollableCommonProducts_skeleton__jysvq .ScrollableCommonProducts_info_area__oZNC0 .ScrollableCommonProducts_price__I2bI7 {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ScrollableCommonProducts_loader__j9m12 1s infinite reverse;
     height: 16px
@@ -580,7 +587,6 @@
 
 .ScrollableCommonProducts_flicking_wrap__qsVL0 .ScrollableCommonProducts_product_item__4oBG_.ScrollableCommonProducts_skeleton__jysvq .ScrollableCommonProducts_info_area__oZNC0 .ScrollableCommonProducts_info_label___0DSe,.ScrollableCommonProducts_flicking_wrap__qsVL0 .ScrollableCommonProducts_product_item__4oBG_.ScrollableCommonProducts_skeleton__jysvq .ScrollableCommonProducts_info_area__oZNC0 .ScrollableCommonProducts_name__MTpce {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ScrollableCommonProducts_loader__j9m12 1s infinite reverse;
     height: 16px;
@@ -760,7 +766,6 @@
 }
 
 .FrequentlyPurchasedCategoryTabs_frequently_purchased_tabs__3imcq.FrequentlyPurchasedCategoryTabs_skeleton__3UjC7 {
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: FrequentlyPurchasedCategoryTabs_loader__Ys_78 1s infinite reverse
 }
@@ -874,7 +879,6 @@
 }
 
 .KeepStore_list_item__LJ8_U.KeepStore_skeleton__lAGzF .KeepStore_name__R4KYb,.KeepStore_list_item__LJ8_U.KeepStore_skeleton__lAGzF .KeepStore_thumb__LfJ8F {
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: KeepStore_loader__7vT_0 1s infinite reverse
 }
@@ -1007,7 +1011,7 @@
     letter-spacing: -.75px;
     float: right;
     font-weight: 700;
-    color: #03c75a
+    color: #a2413a
 }
 
 .NPaySection_point_wrap__GMnRx .NPaySection_my_point__jHJuv .NPaySection_point__7DkfR .NPaySection_point_text__XFDei {
@@ -1020,7 +1024,7 @@
 }
 
 .NPaySection_point_wrap__GMnRx .NPaySection_my_point__jHJuv .NPaySection_point__7DkfR .NPaySection_svg_arrow__IuvBa path {
-    stroke: #03c75a
+    stroke: #a2413a
 }
 
 .NPaySection_point_wrap__GMnRx .NPaySection_my_point__jHJuv .NPaySection_point__7DkfR.NPaySection_non_expose__KU_YT {
@@ -1062,10 +1066,10 @@
     line-height: 14px;
     margin-left: 4px;
     padding: 0 3px;
-    border: 1px solid #03c75a;
+    border: 1px solid #a2413a;
     border-radius: 4px;
     font-weight: 500;
-    color: #03c75a;
+    color: #a2413a;
     vertical-align: top;
     box-sizing: border-box
 }
@@ -1085,7 +1089,7 @@
 }
 
 .NPaySection_point_wrap__GMnRx .NPaySection_my_membership__r97KV em {
-    color: #03c75a
+    color: #a2413a
 }
 
 .NPaySection_point_wrap__GMnRx .NPaySection_skeleton__2zxkT {
@@ -1279,7 +1283,6 @@
 
 .ProductOrder_list_item__bsNek.ProductOrder_skeleton__45B8l .ProductOrder_info_area__W1mJX .ProductOrder_info_order__77c31 {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ProductOrder_loader__Q9JLG 1s infinite reverse;
     height: 16px
@@ -1287,7 +1290,6 @@
 
 .ProductOrder_list_item__bsNek.ProductOrder_skeleton__45B8l .ProductOrder_info_area__W1mJX .ProductOrder_info_price__LUbAR,.ProductOrder_list_item__bsNek.ProductOrder_skeleton__45B8l .ProductOrder_info_area__W1mJX .ProductOrder_name__NPloM {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ProductOrder_loader__Q9JLG 1s infinite reverse;
     height: 16px;
@@ -1517,7 +1519,6 @@
 
 .OrderDeliverySection_list_order__0upVF .OrderDeliverySection_recommend_area__WRp_9 .OrderDeliverySection_title_area__upF5J .OrderDeliverySection_title__MQAT_.OrderDeliverySection_skeleton__aWo3X:before {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: OrderDeliverySection_loader__pi_XV 1s infinite reverse;
     display: block;
@@ -1543,7 +1544,6 @@
 @media(max-width: 359px) {
     .OrderDeliverySection_recommend_area__WRp_9 .OrderDeliverySection_title_area__upF5J .OrderDeliverySection_title__MQAT_.OrderDeliverySection_skeleton__aWo3X:after {
         border-radius:4px;
-        background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
         background-size: 200%;
         animation: OrderDeliverySection_loader__pi_XV 1s infinite reverse;
         display: block;
@@ -1824,7 +1824,6 @@
 }
 
 .ProfileSection_profile__3EEz3.ProfileSection_skeleton__s2e1R .ProfileSection_name__a_ZIs,.ProfileSection_profile__3EEz3.ProfileSection_skeleton__s2e1R .ProfileSection_thumbnail__n8_G7 {
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ProfileSection_loader__zux1v 1s infinite reverse
 }
@@ -2048,7 +2047,6 @@
 }
 
 .PaginationPersonalizedAiTEMSProducts_product_list__t2fBE .PaginationPersonalizedAiTEMSProducts_product_item__aVy98.PaginationPersonalizedAiTEMSProducts_skeleton__XBDbq .PaginationPersonalizedAiTEMSProducts_thumb__OzOWJ {
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: PaginationPersonalizedAiTEMSProducts_loader__urFAT 1s infinite reverse
 }
@@ -2063,7 +2061,6 @@
 
 .PaginationPersonalizedAiTEMSProducts_product_list__t2fBE .PaginationPersonalizedAiTEMSProducts_product_item__aVy98.PaginationPersonalizedAiTEMSProducts_skeleton__XBDbq .PaginationPersonalizedAiTEMSProducts_info_area__dfvni .PaginationPersonalizedAiTEMSProducts_price__Ifboa {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: PaginationPersonalizedAiTEMSProducts_loader__urFAT 1s infinite reverse;
     height: 16px
@@ -2071,7 +2068,6 @@
 
 .PaginationPersonalizedAiTEMSProducts_product_list__t2fBE .PaginationPersonalizedAiTEMSProducts_product_item__aVy98.PaginationPersonalizedAiTEMSProducts_skeleton__XBDbq .PaginationPersonalizedAiTEMSProducts_info_area__dfvni .PaginationPersonalizedAiTEMSProducts_name___kMxV {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: PaginationPersonalizedAiTEMSProducts_loader__urFAT 1s infinite reverse;
     height: 16px;
@@ -2172,7 +2168,6 @@
 
 .RecommendCategoryTabs_flicking_wrap__o4V6C .RecommendCategoryTabs_flicking_area__EBIE_ .RecommendCategoryTabs_btn_category__U6J7I.RecommendCategoryTabs_skeleton__F8IDu {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: RecommendCategoryTabs_loader__U9MaC 1s infinite reverse;
     display: inline-block;
@@ -2356,7 +2351,6 @@
 }
 
 .ScrollablePersonalizedAiTEMSProducts_flicking_wrap__UlDNR .ScrollablePersonalizedAiTEMSProducts_product_item__W79Hd.ScrollablePersonalizedAiTEMSProducts_skeleton__MTKJw .ScrollablePersonalizedAiTEMSProducts_thumb__cMMD8 {
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ScrollablePersonalizedAiTEMSProducts_loader___byIN 1s infinite reverse
 }
@@ -2371,7 +2365,6 @@
 
 .ScrollablePersonalizedAiTEMSProducts_flicking_wrap__UlDNR .ScrollablePersonalizedAiTEMSProducts_product_item__W79Hd.ScrollablePersonalizedAiTEMSProducts_skeleton__MTKJw .ScrollablePersonalizedAiTEMSProducts_info_area___hQlF .ScrollablePersonalizedAiTEMSProducts_price__iQQL4 {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ScrollablePersonalizedAiTEMSProducts_loader___byIN 1s infinite reverse;
     height: 16px
@@ -2379,7 +2372,6 @@
 
 .ScrollablePersonalizedAiTEMSProducts_flicking_wrap__UlDNR .ScrollablePersonalizedAiTEMSProducts_product_item__W79Hd.ScrollablePersonalizedAiTEMSProducts_skeleton__MTKJw .ScrollablePersonalizedAiTEMSProducts_info_area___hQlF .ScrollablePersonalizedAiTEMSProducts_info_label__fgqxa,.ScrollablePersonalizedAiTEMSProducts_flicking_wrap__UlDNR .ScrollablePersonalizedAiTEMSProducts_product_item__W79Hd.ScrollablePersonalizedAiTEMSProducts_skeleton__MTKJw .ScrollablePersonalizedAiTEMSProducts_info_area___hQlF .ScrollablePersonalizedAiTEMSProducts_name__g_2Jx {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ScrollablePersonalizedAiTEMSProducts_loader___byIN 1s infinite reverse;
     height: 16px;
@@ -2538,7 +2530,6 @@
 
 .RecommendSection_recommend_section__EkhAJ .RecommendSection_head_area__AWTcl .RecommendSection_title__R_WOe.RecommendSection_skeleton__xYhOw:before {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: RecommendSection_loader__UH5k5 1s infinite reverse;
     display: block;
@@ -2550,7 +2541,6 @@
 @media(max-width: 359px) {
     .RecommendSection_recommend_section__EkhAJ .RecommendSection_head_area__AWTcl .RecommendSection_title__R_WOe.RecommendSection_skeleton__xYhOw:after {
         border-radius:4px;
-        background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
         background-size: 200%;
         animation: RecommendSection_loader__UH5k5 1s infinite reverse;
         display: block;
@@ -2653,7 +2643,7 @@
 }
 
 .DotIndicator_pagination__hO5F0 .DotIndicator_page__XlzO0.DotIndicator_active__g55ky {
-    background-color: #03c75a
+    background-color: #a2413a
 }
 
 .DotIndicator_pagination__hO5F0 .DotIndicator_page__XlzO0+.DotIndicator_page__XlzO0 {
@@ -2793,7 +2783,7 @@
     border-radius: 8px;
     margin-left: 3px;
     padding: 0 4px;
-    background-color: #03c75a;
+    background-color: #a2413a;
     font-weight: 700;
     white-space: nowrap;
     color: #fff
@@ -2811,7 +2801,6 @@
 
 .SubmenuSection_my_menu_top__5E47e .SubmenuSection_btn_item__SRyp_ .SubmenuSection_number__JoIZ1.SubmenuSection_skeleton__ZUH_d {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: SubmenuSection_loader__nm0Gu 1s infinite reverse;
     width: 16px;
@@ -2916,7 +2905,7 @@
         height: 24px;
         line-height: 24px;
         background-color: transparent;
-        color: #03c75a
+        color: #a2413a
     }
 
     .SubmenuSection_my_menu_top__5E47e .SubmenuSection_btn_item__SRyp_ .SubmenuSection_number__JoIZ1.SubmenuSection_is_zero__vkCU_ {
@@ -3024,7 +3013,6 @@
 
 .ZzimCategory_head_area__ITLKb .ZzimCategory_title__wpGlN.ZzimCategory_skeleton__PcHUd {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ZzimCategory_loader__R__zq 1s infinite reverse;
     width: 80px;
@@ -3149,7 +3137,7 @@
 }
 
 .GiftShopSection_head_area__xDFbx .GiftShopSection_highlight__NEEqe {
-    color: #03c75a
+    color: #a2413a
 }
 
 .GiftShopSection_head_area__xDFbx .GiftShopSection_count___Xshp {
@@ -3158,7 +3146,7 @@
     display: inline-block;
     padding: 0 7px;
     margin: 3px 0 0 4px;
-    background-color: #03c75a;
+    background-color: #a2413a;
     border-radius: 9px;
     font-weight: 600;
     line-height: 18px;
@@ -3168,7 +3156,6 @@
 
 .GiftShopSection_head_area__xDFbx.GiftShopSection_skeleton__Q_35R .GiftShopSection_count___Xshp {
     border-radius: 4px;
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: GiftShopSection_loader__UtRJt 1s infinite reverse;
     width: 23px;
@@ -3301,7 +3288,7 @@
     margin-top: 2px;
     font-weight: 500;
     line-height: 16px;
-    color: #03c75a
+    color: #a2413a
 }
 
 .ListFriend_item_friend__Ma1Nq.ListFriend_type_today__8Qp3_ .ListFriend_day__IjE74 {
@@ -3309,7 +3296,6 @@
 }
 
 .ListFriend_item_friend__Ma1Nq.ListFriend_skeleton__yV5Mx .ListFriend_link__d590Q {
-    background: linear-gradient(90deg,#dce0e5,#f0f2f4,#dce0e5);
     background-size: 200%;
     animation: ListFriend_loader__NJCRw 1s infinite reverse;
     width: 120px;
@@ -3469,7 +3455,7 @@
 
 .mypage_wrap{
     max-width: 1920px;
-    padding-top: 300px;
+    padding-top: 200px;
     margin: 0 auto;
 }
 .emKjNy {
