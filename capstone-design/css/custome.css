@@ -288,6 +288,7 @@ input[type=text]::placeholder{
   margin: 0 auto;
 }
 .roastingSlide{
+  text-align: center;
   margin-bottom: 80px;
 }
 .buttonWrap{
