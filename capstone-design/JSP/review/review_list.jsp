@@ -123,23 +123,21 @@
 		<div class="sub_container" name="sub_product">
 			<!-- 네비게이션 헤더 -->
 			<div class="sub_section1" name="sub_header">
+				<div class="ctgTitle">
+					캡슐 조합 리뷰 <br> <span>모두의 캡슐 커스텀 조합법을 확인해보세요! </span>
+				</div>
 				<div class="sub_headerTitle">
-				<div class="sub_subTilte">캡슐 조합 리뷰</div><br><br>
 					<ul class="smap">
 						<!-- 미니 네비게이션 -->
-						<li><a href="index.html"><img
-								src="../../images/smap/icon_home_w.png" alt="홈으로"></a></li>
-						<li><img class="arrow" src="../../images/smap/icon_arrow_w.png"
-							alt="하위메뉴"></li>
+						<li><a href="index.html">home</a></li>
+						<li>></li>
 						<li class="en"><a href="index.html">커피 이야기</a></li>
-						<li><img class="arrow" src="../../images/smap/icon_arrow_w.png"
-							alt="하위메뉴"></li>
+						<li>></li>
 						<li><a href="index.html" class="this">캡슐 조합 리뷰</a></li>
 					</ul>
-					
 				</div>
-
-
+			</div>
+			
 			</div><br>
 			
 			<!-- 업로드 된 리뷰 리스트 보기 -->
@@ -153,7 +151,7 @@
 				<div class="rvBtn"><a href="rwWrite.jsp"><input type="button" class="rvBtn1" value="내 캡슐 조합 리뷰 작성하기" ></a></div>
 					
 				<div class="reviewContents">
-					<!-- 리뷰 박스 시작. 최대 노출 개수 9개.-->
+					<!-- 리뷰 박스 시작. 최대 노출 개수 6개.-->
 		<%	  	
 			                	String jsql2 = "select * from board order by idx desc, no";
 		                        PreparedStatement pstmt2 = con.prepareStatement(jsql2);
