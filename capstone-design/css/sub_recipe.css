@@ -216,3 +216,10 @@
     top: 10px;
     right: 10px;
 }
+
+@media (max-width: 764px) {
+.modal_popup {
+	overflow: auto;
+}
+}
+

@@ -45,14 +45,13 @@
 									<li><a href="../review/review_list.jsp">캡슐 조합 리뷰</a></li>
 									<li><a href="coffee_bean.jsp">원두소개</a></li>
 									<li><a href="coffee_recipe.jsp">커피 응용 레시피</a></li>
-									<li><a href="#">나와 어울리는 커피</a></li>
 								</ul>
 							</div></li>
 						<li><a>두잔 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="#">두 잔의 여유</a></li>
-									<li><a href="#">두 잔의 환경가치</a></li>
+									<li><a href="brand_intro.jsp">두 잔의 여유</a></li>
+									<li><a href="brand_recycle.jsp">두 잔의 환경가치</a></li>
 								</ul>
 							</div></li>
 					</ul>
@@ -154,7 +153,7 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>두잔 초코치노 레시피</h3>
-					<h4>두잔 코코아</h4><h4>두잔 디카페인 과테말라</h4>
+					<h4>두잔 코코아</h4><br><br><h4>두잔 디카페인 과테말라</h4>
 					<ul>
 						<li>1. 두잔 코코아를 추출 해주세요</li>
 						<li>2. 두잔 디카페인 과테말라를 추출 해주세요</li>
@@ -167,7 +166,7 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>아이스 히비스커스프레소 레시피</h3>
-					<h4>두잔 히비스커스 티</h4><h4>두잔 예가체프 블렌딩</h4>
+					<h4>두잔 히비스커스 티</h4><br><br><h4>두잔 예가체프 블렌딩</h4>
 					<ul>
 						<li>1. 두잔 히비스커스 티를 추출 해주세요</li>
 						<li>2. 얼음으로 컵을 가득 채워주세요</li>
@@ -180,7 +179,7 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>자몽 커피 에이드 레시피</h3>
-					<h4>두잔 AA</h4><h4>두잔 자몽허니 블랙 티</h4>
+					<h4>두잔 AA</h4><br><br><h4>두잔 자몽허니 블랙 티</h4>
 					<ul>
 						<li>1. 얼음으로 컵을 2/3 채워주세요</li>
 						<li>2. 그 위에 두잔 자몽허니 블랙 티를 추출 해주세요</li>
