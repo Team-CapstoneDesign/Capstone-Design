@@ -34,46 +34,37 @@ pageEncoding="EUC-KR"%>
                 </a>
                 <div class="topmenuWrap">
                     <ul class="topmenu">
-                        <li>
-                            <a>캡슐 커스텀</a>
-                        </li>
-                        <li>
-                            <a>두잔 캡슐</a>
-                            <div class="submenu">
-                                <ul id="productMenu">
-                                    <li><a href="">시즌한정</a></li>
-                                    <li><a href="">시그니처</a></li>
-                                    <li><a href="">블렌딩</a></li>
-                                    <li><a href="">오리지널</a></li>
-                                    <li><a href="">디카페인</a></li>
-                                    <li><a href="">베버리지 / 논커피</a></li>
-                                    <li><a href="">선물 패키지</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a>커피 이야기</a>
-                            <div class="submenu">
-                                <ul id="productMenu">
-                                    <li><a href="#">캡슐 조합 리뷰</a></li>
-                                    <li><a href="#">원두소개</a></li>
-                                    <li><a href="#">커피 응용 레시피</a></li>
-                                    <li><a href="#">나와 어울리는 커피</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a>두잔 이야기</a>
-                            <div class="submenu">
-                                <ul id="productMenu">
-                                    <li><a href="#">두 잔의 여유</a></li>
-                                    <li><a href="#">두 잔의 환경가치</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav_top">
+						<li><a href="./goods/custome.jsp">캡슐 커스텀</a></li>
+						<li><a>두잔 캡슐</a>
+							<div class="submenu">
+								<ul id="productMenu">
+									<li><a href="./goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=beverage">베버리지
+											/ 논커피</a></li>
+								</ul>
+							</div></li>
+						<li><a>커피 이야기</a>
+							<div class="submenu">
+								<ul id="productMenu">
+									<li><a href="./review/review_list.jsp">캡슐 조합 리뷰</a></li>
+									<li><a href="./sub/coffee_bean.jsp">원두소개</a></li>
+									<li><a href="./sub/coffee_recipe.jsp">커피 응용 레시피</a></li>
+								</ul>
+							</div></li>
+						<li><a>두잔 이야기</a>
+							<div class="submenu">
+								<ul id="productMenu">
+									<li><a href="./sub/brand_intro.jsp">두 잔의 여유</a></li>
+									<li><a href="./sub/brand_recycle.jsp">두 잔의 환경가치</a></li>
+								</ul>
+							</div></li>
+					</ul>
+				</div>
+				<div class="nav_top">
 					<%
 						if (id == null) {
 					%>
@@ -84,14 +75,16 @@ pageEncoding="EUC-KR"%>
 						} else {
 					%>
 					<span class="quick_menu"><a href="./member/mainlogout.jsp">로그아웃</a></span>
-					<span class="quick_menu"><a href="">마이페이지</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+					<span class="quick_menu"><a href="mypage.jsp">마이페이지</a></span> <span
+						class="quick_menu"><a href="./cart/showcart.jsp">고객센터</a></span>
 					<%
 						}
 					%>
 				</div>
-            </div>
-        </div>
+			</div>
+		</div>
+
+
         <div class="mypage_wrap">
             <div class="Layout_container__2ryFm">
 			<%
@@ -220,7 +213,7 @@ pageEncoding="EUC-KR"%>
                                 </div>
                                 포인트
                                 <em class="SubmenuSection_number__JoIZ1">
-                                   50,000<span class="SubmenuSection_unit__0lQ7f">원</span>
+                                   3,620<span class="SubmenuSection_unit__0lQ7f">원</span>
                                 </em>
                             </a>
                             <a class="SubmenuSection_btn_item__SRyp_ N=myh.coupon" data-cy="submenu_link"
@@ -263,7 +256,9 @@ pageEncoding="EUC-KR"%>
                         <div class="RoundedWrapper__Wrapper-w9wnao-0 dzEqxt">  
                             <div class="WarrantyCard__CardWrapper-mj30e3-0 jlXZQ">
                                 <div class="WarrantyCard__DescWrapper-mj30e3-1 doDmmI">
-                                    <div class="WarrantyCard__ImageWrapper-mj30e3-2 jlrvfN"><img src="../../images/capdesign/<%=prdNo%>.png"></div> 
+                                   <div class="WarrantyCard__ImageWrapper-mj30e3-2 jlrvfN"  style="
+                                      background-image: url('../images/capdesign/<%=prdNo%>.png');
+                                       background-size: contain;  background-repeat: no-repeat;  background-position: center;"><img src="../../images/capdesign/<%=prdNo%>.png"></div> 
 									<!-- 이미지 링크 -->
                                     <div class="WarrantyCard__WarrantyInfo-mj30e3-3 eybslm">
                                       <div class="WarrantyCard__DateWithWarrantyNumber-mj30e3-4 VDSvq">
@@ -284,69 +279,17 @@ pageEncoding="EUC-KR"%>
                 </div>  
 					<% } %>
 
+                
                 <div class="CardSection_card_section__yIeTK" data-cy="card_section">
                     <div class="CardSection_head_area__UjvOi">
-                        <h2 class="CardSection_title__0vhx3 CardSection_skeleton__yZWur" data-cy="title">관심 스토어</h2>
-                        <span class="CardSection_number__0bBcs CardSection_skeleton__yZWur"></span>
-                    </div>
-                    <div class="KeepStoreSection_flicking_wrap__KzBNS">
-                        <div class="KeepStoreSection_flicking_area__UcW_D">
-                            <div class="KeepStore_list_item__LJ8_U KeepStore_skeleton__lAGzF">
-                                <div class="link_item">
-                                    <div class="KeepStore_thumb__LfJ8F"></div>
-                                    <div class="KeepStore_name__R4KYb"></div>
-                                </div>
-                            </div>
-                            <div class="KeepStore_list_item__LJ8_U KeepStore_skeleton__lAGzF">
-                                <div class="link_item">
-                                    <div class="KeepStore_thumb__LfJ8F"></div>
-                                    <div class="KeepStore_name__R4KYb"></div>
-                                </div>
-                            </div>
-                            <div class="KeepStore_list_item__LJ8_U KeepStore_skeleton__lAGzF">
-                                <div class="link_item">
-                                    <div class="KeepStore_thumb__LfJ8F"></div>
-                                    <div class="KeepStore_name__R4KYb"></div>
-                                </div>
-                            </div>
-                            <div class="KeepStore_list_item__LJ8_U KeepStore_skeleton__lAGzF">
-                                <div class="link_item">
-                                    <div class="KeepStore_thumb__LfJ8F"></div>
-                                    <div class="KeepStore_name__R4KYb"></div>
-                                </div>
-                            </div>
-                            <div class="KeepStore_list_item__LJ8_U KeepStore_skeleton__lAGzF">
-                                <div class="link_item">
-                                    <div class="KeepStore_thumb__LfJ8F"></div>
-                                    <div class="KeepStore_name__R4KYb"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="CardSection_more_area__gEN_K">
-                        <a class="CardSection_link_more__D5XWm N=mys.more"
-                            href="https://m.shopping.naver.com/my/keep-stores">
-                            관심 스토어 모두 보기
-                            <!-- -->
-                            모두 보기
-                            <svg xmlns="http://www.w3.org/2000/svg" width="6" viewBox="0 0 6 12"
-                                class="CardSection_svg_more__NGVZB">
-                                <path fill="none" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="0.8" d="m.5 11 5-5-5-5"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="CardSection_card_section__yIeTK" data-cy="card_section">
-                    <div class="CardSection_head_area__UjvOi">
-                        <h2 class="CardSection_title__0vhx3 CardSection_skeleton__yZWur" data-cy="title">여기 글자안나옴</h2>
+                        <h2 class="CardSection_title__0vhx3 CardSection_skeleton__yZWur" data-cy="title">내 위시리스트</h2>
 						<!-- 여기 글자가 안나옴 -->
-                        <span class="CardSection_number__0bBcs CardSection_skeleton__yZWur">24</span>
+                        <span class="CardSection_number__0bBcs CardSection_skeleton__yZWur">2</span>
                     </div>
                     <div class="ZzimProductsSection_zzim_items__JRX7_">
                         <div class="ZzimCategory_zzim_item__BuS_N">
                             <a class="ZzimCategory_head_area__ITLKb">
-                                <h2 class="ZzimCategory_title__wpGlN ZzimCategory_skeleton__PcHUd">찜한 상품</h2>
+                                <h2 class="ZzimCategory_title__wpGlN ZzimCategory_skeleton__PcHUd">찜한 상품 </h2>
                             </a>
                             <div class="ScrollableCommonProducts_flicking_wrap__qsVL0">
                                 <div class="ScrollableCommonProducts_flicking_area__5pJ1G">
@@ -365,7 +308,7 @@ pageEncoding="EUC-KR"%>
                                     <div
                                         class="ScrollableCommonProducts_product_item__4oBG_ ScrollableCommonProducts_skeleton__jysvq">
                                         <div class="link_item">
-                                            <div class="ScrollableCommonProducts_thumb__l7PBq"><img src="../../images/capdesign/<%=wishNo%>.png"></div>
+                                            <div class="ScrollableCommonProducts_thumb__l7PBq"><img src="../images/capdesign/<%=wishNo%>.png"></div>
 											<!-- 이미지 링크 수정 해야됨 -->
                                             <div class="ScrollableCommonProducts_info_area__oZNC0">
                                                 <div class="ScrollableCommonProducts_price__I2bI7"><%= wishName%></div>
@@ -390,10 +333,10 @@ pageEncoding="EUC-KR"%>
                     </div>
                     <div class="CardSection_more_area__gEN_K">
                         <a class="CardSection_link_more__D5XWm N=myz.more"
-                            href="https://m.shopping.naver.com/my/keep-products">
+                            href="">
                             찜한 상품 모두 보기
                             <!-- -->
-                            모두 보기
+                          
                             <svg xmlns="http://www.w3.org/2000/svg" width="6" viewBox="0 0 6 12"
                                 class="CardSection_svg_more__NGVZB">
                                 <path fill="none" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"
