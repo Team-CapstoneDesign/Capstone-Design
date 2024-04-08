@@ -321,7 +321,7 @@ input[type="radio"] {
 #select-coffee-explain{
   margin-top: 20px;
   display: block;
-  height: 80px;
+  margin-bottom: 10px;
 }
 #select-coffee-explain > div:first-child{
   text-align: center;
