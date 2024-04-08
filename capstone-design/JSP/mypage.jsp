@@ -155,10 +155,12 @@ pageEncoding="EUC-KR"%>
 
 		 %>
 
+               <div class="profile">
                 두 잔의 여유를 즐기는
                 <%= name%>
                 님, <br>
                 반갑습니다!<br><br>
+                </div>
                 <a href="memberSetting.jsp"><button class="ProfileSection_btn_setting__vsvWM N=myh.set">내 정보 관리</button></a>
 
 
@@ -167,7 +169,7 @@ pageEncoding="EUC-KR"%>
                         <div class="SubmenuSection_my_menu_top__5E47e" data-cy="submenu_top_section"
                             data-menu-length="4">
                             <a class="SubmenuSection_btn_item__SRyp_ N=myh.order" data-cy="submenu_link"
-                                href="https://new-m.pay.naver.com/historybenefit/paymenthistory?serviceGroup=SHOPPING&amp;page=1">
+                                href="">
                                 <div class="SubmenuSection_icon_area__dJ4Hu">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
                                         class="SubmenuSection_svg_icon__n5gPQ" data-cy="submenu_icon">
@@ -183,7 +185,7 @@ pageEncoding="EUC-KR"%>
                                 주문횟수<em class="SubmenuSection_number__JoIZ1 SubmenuSection_is_zero__vkCU_"><%=totalOrd%></em>
                             </a>
                             <a class="SubmenuSection_btn_item__SRyp_ N=myh.cart" data-cy="submenu_link"
-                                href="https://m.shopping.naver.com/cart">
+                                href="">
                                 <div class="SubmenuSection_icon_area__dJ4Hu">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
                                         class="SubmenuSection_svg_icon__n5gPQ" data-cy="submenu_icon">
@@ -199,7 +201,7 @@ pageEncoding="EUC-KR"%>
                                 위시리스트<em class="SubmenuSection_number__JoIZ1 SubmenuSection_is_zero__vkCU_"><%= wishCount%></em>
                             </a>
                             <a class="SubmenuSection_btn_item__SRyp_ N=myh.review" data-cy="submenu_link"
-                                href="https://m.shopping.naver.com/my/writable-reviews">
+                                href="">
                                 <div class="SubmenuSection_icon_area__dJ4Hu">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
                                         class="SubmenuSection_svg_icon__n5gPQ" data-cy="submenu_icon">
@@ -217,7 +219,7 @@ pageEncoding="EUC-KR"%>
                                 </em>
                             </a>
                             <a class="SubmenuSection_btn_item__SRyp_ N=myh.coupon" data-cy="submenu_link"
-                                href="https://new-m.pay.naver.com/coupon/main/usable?category=all">
+                                href="">
                                 <div class="SubmenuSection_icon_area__dJ4Hu">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
                                         class="SubmenuSection_svg_icon__n5gPQ" data-cy="submenu_icon">

@@ -828,6 +828,7 @@ footer{
 .footer2 .call_center .footer_text .footer_bold{
   color: #fff;
   font-weight: bold;
+  line-height: 40px;
 }
 
 .footer3::before{
@@ -855,6 +856,7 @@ footer{
 .footer2 .company .footer_text .footer_bold{
   color: #fff;
   font-weight: bold;
+  line-height: 25px;
 }
 .footer2 .delivery .footer_title{
   padding-bottom: 44px;
@@ -869,6 +871,7 @@ footer{
 
 .footer2 .delivery .footer_text{
   color: #fff;
+  line-height: 28px;
 }
 .footer2 .delivery .footer_text .footer_bold{
   color: #fff;

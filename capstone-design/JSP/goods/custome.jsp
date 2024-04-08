@@ -375,6 +375,7 @@
               <span id="roastingName"></span> <span id="roastingEx"></span>
             </div>
             <div class="roastingSlide">
+            *드래그를 통해 로스팅 단계를 변경할 수 있습니다.
               <input class="roasting-step" id="roasting-range" type="range" name="roasting" id="temp3" min="1" max="8"
                 value="5" step="1" list="markers" required />
               <datalist id="markers">
