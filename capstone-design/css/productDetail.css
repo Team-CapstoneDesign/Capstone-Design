@@ -7,23 +7,15 @@ body{padding: 50px;}
 
 .containerWrap{
 	display: block;
-	width: 1920px;
-	height: 844px;
+	width: 100vw;
+	height: 100vh;
 	padding-top: 100px;
 	background-image: url(../images/detail_background.png);
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 }
-.productDetail_view{
-	margin: 0 auto;
-	min-width: 1200px;
-	width: 1200px; 
-	height: 300px;
-	position: relative; 
-	padding: 30px 0 50px 450px; 
-	box-sizing: border-box;
 
-}
 .productDetail_view{
 	margin: 0 auto;
 	position: relative; 
@@ -31,16 +23,16 @@ body{padding: 50px;}
 	width: 1200px; 
 	height: 680px;
 	box-sizing: border-box;
+	
 }
 
 
 /* 이미지 부분 */
 .productDetail_view .img{
 	display: flex;
-	position: absolute; 
-	left: 0; 
-	padding-top: 30px;
-	bottom: 0;
+    position: absolute;
+    left: 0;
+    margin-top: 170px;
 } 
 .productDetail_view .img > img {
 	position: relative;
@@ -62,9 +54,12 @@ body{padding: 50px;}
 	border: 1px solid #000;
 }
 .productDetail_view .img li img {
-	width: 80px; 
-	height: 80px;  
-	border: 1px solid #e8e8e8;
+	    width: 80px;
+    height: 80px;
+    border: 1px solid #e8e8e8;
+    background-color: #e8e8e8;
+    border-radius: 50px;
+    padding: 10px;
 }
 .thumb_image{
 	display: flex;
@@ -87,6 +82,7 @@ body{padding: 50px;}
 	position: relative;
 	margin-top: 30px;
 	width: 480px;
+	height: 70vh;
 	float: right;
 	background-color: #c5cea4d3;
 	backdrop-filter: blur(5px);
@@ -161,11 +157,11 @@ body{padding: 50px;}
 
 /* 버튼 부분 */
 .btns{
-	display: block;
-	position: relative;
-	text-align: center;
-	height: 40px;
-	bottom: 0;
+	    display: block;
+    position: absolute;
+    text-align: center;
+    height: 40px;
+    bottom: 30px;
 }
 .btns > a{
 	display: inline-block; 
@@ -192,4 +188,36 @@ body{padding: 50px;}
 .btns > a.btn2:hover{
 	background: #b83333;
 }
-
+.goods_detail_detail > img{
+	width: 100%;
+}
+@media screen and ( max-width: 630px ) {
+	.containerWrap{
+	    display: flex;
+	    padding: 0;
+	    flex-direction: column;
+	    flex-wrap: nowrap;
+	    margin-bottom: 620px;
+	}
+	.thumb_image{
+		margin: 0 auto;
+	}
+	.productDetail_view{
+	    position: relative;
+	    padding: 0;
+	    width: auto;
+	    height: 680px;
+	    box-sizing: border-box;
+	    margin: 0 auto;
+	}
+	.productDetail_view .img{
+		position: relative;
+		margin-top: 282px;
+	}
+	.productDetail_list{
+		width: auto;
+	}
+	.goods_detail_detail{
+		position: relative;
+	}
+}

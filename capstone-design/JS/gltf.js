@@ -27,16 +27,23 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 // Lights
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+const ambientLight = new THREE.AmbientLight(0xffffff, 8.8);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 50);
-directionalLight.position.set(0, 10, 0);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 30);
+directionalLight.position.set(1, 2, 0);
 directionalLight.castShadow = true;
 scene.add(directionalLight);
 
+const directionalLight2 = new THREE.DirectionalLight(0xffffff, 20);
+directionalLight2.position.set(1, -2, 0);
+directionalLight2.castShadow = true;
+scene.add(directionalLight2);
 
-
+const directionalLight3 = new THREE.DirectionalLight(0xffffff, 30);
+directionalLight3.position.set(-3, 2, 0);
+directionalLight3.castShadow = true;
+scene.add(directionalLight3);
 
 // Loading Bar and Manager
 const loadingBarElement = document.querySelector('.loading-bar');
@@ -60,7 +67,7 @@ const loadingManager = new THREE.LoadingManager(
 let donut = null;
 const loader = new THREE.GLTFLoader(loadingManager);
 loader.load(
-  '../gltf/model02.glb',
+  '../gltf/model0006.glb',
   (glb) => {
     console.log(glb);
     donut = glb.scene;
@@ -121,7 +128,7 @@ const tick = () => {
 
   if (!!donut) {
     donut.position.y = Math.sin(elapsedTime * 1.5) * 0.1 - 0.1;
-    donut.rotation.y += deltaTime * 0.3; // yì¶• ì£¼ìœ„ë¡œ íšŒì „
+    donut.rotation.y += deltaTime * 0.3; // yÃà ÁÖÀ§·Î È¸Àü
   }
 
   renderer.render(scene, camera);

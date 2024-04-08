@@ -30,36 +30,35 @@
 					</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
-						<li><a>캡슐 커스텀</a></li>
+						<li><a href="./custome.jsp">캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="../goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
-									<li><a href="../goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
-									<li><a href="../goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
-									<li><a href="../goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
-									<li><a href="../goods/viewProduct.jsp?ctgType=decaf">디카페인</a></li>
-									<li><a href="../goods/viewProduct.jsp?ctgType=beveridge">베버리지
+									<li><a href="./viewProduct.jsp?ctgType=season">시즌한정</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=signature">시그니처</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=blending">블렌딩</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=original">오리지널</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
+									<li><a href="./viewProduct.jsp?ctgType=beverage">베버리지
 											/ 논커피</a></li>
-									<li><a href="">선물 패키지</a></li>
 								</ul>
 							</div></li>
 						<li><a>커피 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="#">캡슐 조합 리뷰</a></li>
-									<li><a href="#">원두소개</a></li>
-									<li><a href="#">커피 응용 레시피</a></li>
-									<li><a href="#">나와 어울리는 커피</a></li>
+									<li><a href="../review/review_list.jsp">캡슐 조합 리뷰</a></li>
+									<li><a href="../sub/coffee_bean.jsp">원두소개</a></li>
+									<li><a href="../sub/coffee_recipe.jsp">커피 응용 레시피</a></li>
 								</ul>
 							</div></li>
 						<li><a>두잔 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="#">두 잔의 여유</a></li>
-									<li><a href="#">두 잔의 환경가치</a></li>
+									<li><a href="../sub/brand_intro.jsp">두 잔의 여유</a></li>
+									<li><a href="../sub/brand_recycle.jsp">두 잔의 환경가치</a></li>
 								</ul>
-							</div></li>
+							</div>
+						</li>
 					</ul>
 				</div>
 				<div class="nav_top">
@@ -166,7 +165,7 @@
 
               <div id="select-coffee-explain"></div>
               <div class="coffee-progress">
-                <div class="progress-wrap">
+                <div class="custome-progress-wrap">
                   <h3 class="progress-name">
                     <strong>바디감</strong>
                   </h3>
@@ -176,7 +175,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="progress-wrap">
+                <div class="custome-progress-wrap">
                   <h3 class="progress-name">
                     <strong>향미</strong>
                   </h3>
@@ -186,7 +185,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="progress-wrap">
+                <div class="custome-progress-wrap">
                   <h3 class="progress-name">
                     <strong>신맛</strong>
                   </h3>
@@ -196,22 +195,22 @@
                     </div>
                   </div>
                 </div>
-                <div class="progress-wrap">
+                <div class="custome-progress-wrap">
                   <h3 class="progress-name">
                     <strong>쓴맛</strong>
                   </h3>
                   <div class="progress">
-                    <div id="taste2_progress" class="progress-bar color-3" role="progressbar" aria-valuenow="30"
+                    <div id="taste2_progress" class="progress-bar color-4" role="progressbar" aria-valuenow="30"
                       aria-valuemin="0" aria-valuemax="100" style="width:30%">
                     </div>
                   </div>
                 </div>
-                <div class="progress-wrap">
+                <div class="custome-progress-wrap">
                   <h3 class="progress-name">
                     <strong>단맛</strong>
                   </h3>
                   <div class="progress">
-                    <div id="taste3_progress" class="progress-bar color-3" role="progressbar" aria-valuenow="30"
+                    <div id="taste3_progress" class="progress-bar color-5" role="progressbar" aria-valuenow="30"
                       aria-valuemin="0" aria-valuemax="100" style="width:30%">
                     </div>
                   </div>
@@ -291,7 +290,7 @@
               <ul>
                 <li>
                   <div id="blend-checkbox">
-                    <input type="checkbox" id="blend_null" name="blendCoffee" onchange="updateSelectedOptions('선택안함')">
+                    <input type="checkbox" id="blend_null" name="blendCoffee" value="선택 안함" onchange="updateSelectedOptions('선택안함')">
                     <label for="blend_null" id="blendNULL"></label>
 
                     <input type="checkbox" id="브라질 산토스blend" name="blendCoffee" value="브라질 산토스"
@@ -438,6 +437,9 @@
         </div>
         <div class="result_background1"></div>
         <div class="result_background2"></div>
+        <img id="result_deco1" src="../../images/model02_5.png" alt="">
+        <img id="result_deco2" src="../../images/result_deco.png" alt="">
+        <img id="result_deco3" src="../../images/result_deco.png" alt="">
         <div class="result_background">
           <div class="cont">
           <div class="result_content">
@@ -485,9 +487,10 @@
               </div>
 
             </div>
+            
             <div id="hiddenInputRadio"></div>
             <div class="result_buttonWrap">
-              <a class="custome_btn" href="./custome.jsp">처음으로
+              <a class="custome_btn" href="./custome.jsp" id="reset">처음으로
                 돌아가기</a>
               <button class="custome_btn" onclick="checkCustomeValue()">장바구니에
                 담기</button>

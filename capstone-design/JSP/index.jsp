@@ -45,14 +45,13 @@
 									<li><a href="./review/review_list.jsp">캡슐 조합 리뷰</a></li>
 									<li><a href="./sub/coffee_bean.jsp">원두소개</a></li>
 									<li><a href="./sub/coffee_recipe.jsp">커피 응용 레시피</a></li>
-									<li><a href="#">나와 어울리는 커피</a></li>
 								</ul>
 							</div></li>
 						<li><a>두잔 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="#">두 잔의 여유</a></li>
-									<li><a href="#">두 잔의 환경가치</a></li>
+									<li><a href="./sub/brand_intro.jsp">두 잔의 여유</a></li>
+									<li><a href="./sub/brand_recycle.jsp">두 잔의 환경가치</a></li>
 								</ul>
 							</div></li>
 					</ul>
@@ -79,168 +78,165 @@
 
 		<div class="loading-bar"></div>
 		<div class="containerMain" class="main">
-			<div id="section1" class="kvWrap">
+		<div id="section1" class="kvWrap">
+        
+        <div class="section1_background">
 
-				<div class="section1_background"></div>
-			</div>
-			<div id="section1-1">
-				<div class="cont">
-					<img class="section1-1_wrap" src="../images/section1-1.png" alt="">
-				</div>
-			</div>
-			<div id="section3">
-				<div class="cont">
-					<div class="signature_timeOrigin">
-						<img class="cignatureText"
-							src="../images/DOZAN_signature_origin.png" alt="">
-						<div class="signatureTitle">
-							<p>두잔의 첫번째 시그니처 캡슐 커피</p>
-							<h2>두잔 오리진</h2>
-						</div>
-						<div class="signature_time">
-							<a href="./goods/viewProductDetail.jsp?prdNo=DS003"><div class="time morning" data-aos="flip-left"
-									data-aos-easing="ease-out-cubic" data-aos-duration="800"></div></a>
-							<a href="./goods/viewProductDetail.jsp?prdNo=DS004"><div class="time afternoon" data-aos="flip-left"
-									data-aos-easing="ease-out-cubic" data-aos-duration="2000"></div></a>
-							<a href="./goods/viewProductDetail.jsp?prdNo=DS005"><div class="time evening" data-aos="flip-left"
-									data-aos-easing="ease-out-cubic" data-aos-duration="3000"></div></a>
-						</div>
-						<div class="signature_time_capusle">
-							<img class="time_capsule" src="../images/model02_3.png" alt=""
-								data-aos="fade-up"> <img class="time_capsule"
-								src="../images/model02_4.png" alt="" data-aos="fade-up"> <img
-								class="time_capsule" src="../images/model02_6.png" alt=""
-								data-aos="fade-up">
-						</div>
-						<div class="signature_explamation">
-							<p>
-								아침, 점심, 저녁이라는 삼시를 테마로<br> 시간대 별 마시기 좋은 원두와 로스팅 단계를 선정해 탄생한<br>
-								두잔의 시그니처 메뉴<br> <span>아침 · 점심 · 저녁</span>
-							</p>
-							<p>1st(10개입) 균일가 10,900원</p>
-						</div>
+        </div>
+      </div>
+      <div id="section1-1">
+        <div class="cont">
+          <img class="section1-1_wrap" src="../images/section1-1.png" alt="">
+          <img class="section1-1_mobile_wrap" src="../images/section1-1_mobile.png" alt="">
+        </div>
+      </div>
+      <div id="section3">
+        <div class="cont">
+          <div class="signature_timeOrigin">
+            <img class="cignatureText" src="../images/DOZAN_signature_origin.png" alt="">
+            <div class="signatureTitle">
+              <p>두잔의 첫번째 시그니처 캡슐 커피</p>
+              <h2>두잔 오리진</h2>
+            </div>
+            <div class="signature_time">
+              <a href=""><div class="time morning" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="800"></div></a>
+              <a href=""><div class="time afternoon" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="2000"></div></a>
+              <a href=""><div class="time evening" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="3000"></div></a>
+            </div>
+            <div class="signature_time_capusle">
+              <img class="time_capsule" src="../images/model02_3.png" alt="" data-aos="fade-up">
+              <img class="time_capsule" src="../images/model02_4.png" alt="" data-aos="fade-up">
+              <img class="time_capsule" src="../images/model02_6.png" alt="" data-aos="fade-up">
+            </div>
+            <div class="signature_explamation">
+              <p>
+                아침, 점심, 저녁이라는 삼시를 테마로<br>
+                시간대 별 마시기 좋은 원두와 로스팅 단계를 선정해 탄생한<br>
+                두잔의 시그니처 메뉴<br>
+                <span>아침 · 점심 · 저녁</span>
+              </p>
+              <p>
+                1st(10개입) 균일가 10,900원
+              </p>
+            </div>
+            
+          </div>
 
-					</div>
+          <div class="signature_Origin" data-aos="fade-up">
+            <div class="origin_left">
+               <img src="../images/capdesign/DS001.png" alt="">
+               <button>자세히 보기</button>
+            </div>
+            <div class="origin_right">
+              <div class="originTitle">두잔 시그니처 오리진 / 로스팅 하이</div>
+              <div class="origin_explanation">
+                <p>
+                  마일드하고 부드러운 맛이 특징인 브라질 원두 산토스를<br>
+                  사용하여 산미가 억제되고 쓴맛과 단맛이 증가해<br>
+                  전체적으로 균형잡힌 맛을 느낄 수 있는<br>
+                  두잔의 대표 시그니처 메뉴입니다.
+                </p>
+              </div>
+              <div class="price">9,900 원</div>
+              <div class="progress-wrap">
+                <h3 class="progress-name">
+                  <strong>로스팅</strong>
+                </h3>
+                <div class="progress">
+                  <div class="progress-bar color-1" role="progressbar" aria-valuenow="65"
+                  aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                    <span>6단계 로스팅 하이</span>
+                  </div>
+                </div>   
+              </div>
+              <div class="progress-wrap">
+                <h3 class="progress-name">
+                  <strong>감도</strong>
+                </h3>
+                <div class="progress">
+                  <div class="progress-bar color-2" role="progressbar" aria-valuenow="50"
+                  aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                    <span>50%</span>
+                  </div>
+                </div>   
+              </div>
+              <div class="progress-wrap">
+                <h3 class="progress-name">
+                  <strong>산미</strong>
+                </h3>
+                <div class="progress">
+                  <div class="progress-bar color-3" role="progressbar" aria-valuenow="30"
+                  aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                    <span>30%</span>
+                  </div>
+                </div>   
+              </div>
+            </div>
+          </div>
+          <div class="signature_Origin" data-aos="fade-up">
+            <div class="origin_left">
+               <img src="../images/capdesign/DS002.png" alt="">
+               <button>자세히 보기</button>
+            </div>
+            <div class="origin_right">
+              <div class="originTitle">두잔 시그니처 블랜드 / 로스팅 시티</div>
+              <div class="origin_explanation">
+                <p>
+                  브라질 산토스+콜롬비아 수프리모+베트남 로부스타를<br> 사용하여
+                  이태리 커피의 묵직한 커피의 풍미와 진한 바디감이 특징
+                </p>
+              </div>
+              <div class="price">10,900 원</div>
+              <div class="progress-wrap">
+                <h3 class="progress-name">
+                  <strong>로스팅</strong>
+                </h3>
+                <div class="progress">
+                  <div class="progress-bar color-1" role="progressbar" aria-valuenow="50"
+                  aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                    <span>5단계 로스팅 시티</span>
+                  </div>
+                </div>   
+              </div>
+              <div class="progress-wrap">
+                <h3 class="progress-name">
+                  <strong>감도</strong>
+                </h3>
+                <div class="progress">
+                  <div class="progress-bar color-2" role="progressbar" aria-valuenow="70"
+                  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                    <span>70%</span>
+                  </div>
+                </div>   
+              </div>
+              <div class="progress-wrap">
+                <h3 class="progress-name">
+                  <strong>산미</strong>
+                </h3>
+                <div class="progress">
+                  <div class="progress-bar color-3" role="progressbar" aria-valuenow="50"
+                  aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                    <span>50%</span>
+                  </div>
+                </div>   
+              </div>
+            </div>
+          </div>
 
-					<div class="signature_Origin" data-aos="fade-up">
-						<div class="origin_left">
-							<img src="../images/capdesign/DS001.png" alt="">
-							<button>자세히 보기</button>
-						</div>
-						<div class="origin_right">
-							<div class="originTitle">두잔 시그니처 오리진 / 로스팅 하이</div>
-							<div class="origin_explanation">
-								<p>
-									마일드하고 부드러운 맛이 특징인 브라질 원두 산토스를<br> 사용하여 산미가 억제되고 쓴맛과 단맛이
-									증가해<br> 전체적으로 균형잡힌 맛을 느낄 수 있는<br> 두잔의 대표 시그니처 메뉴입니다.
-								</p>
-							</div>
-							<div class="price">9,900 원</div>
-							<div class="progress-wrap">
-								<h3 class="progress-name">
-									<strong>로스팅</strong>
-								</h3>
-								<div class="progress">
-									<div class="progress-bar color-1" role="progressbar"
-										aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-										style="width: 65%">
-										<span>6단계 로스팅 하이</span>
-									</div>
-								</div>
-							</div>
-							<div class="progress-wrap">
-								<h3 class="progress-name">
-									<strong>감도</strong>
-								</h3>
-								<div class="progress">
-									<div class="progress-bar color-2" role="progressbar"
-										aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-										style="width: 50%">
-										<span>50%</span>
-									</div>
-								</div>
-							</div>
-							<div class="progress-wrap">
-								<h3 class="progress-name">
-									<strong>산미</strong>
-								</h3>
-								<div class="progress">
-									<div class="progress-bar color-3" role="progressbar"
-										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
-										style="width: 30%">
-										<span>30%</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="signature_Origin" data-aos="fade-up">
-						<div class="origin_left">
-							<img src="../images/capdesign/DS002.png" alt="">
-							<button>자세히 보기</button>
-						</div>
-						<div class="origin_right">
-							<div class="originTitle">두잔 시그니처 블랜드 / 로스팅 시티</div>
-							<div class="origin_explanation">
-								<p>
-									브라질 산토스+콜롬비아 수프리모+베트남 로부스타를<br> 사용하여 이태리 커피의 묵직한 커피의 풍미와
-									진한 바디감이 특징
-								</p>
-							</div>
-							<div class="price">10,900 원</div>
-							<div class="progress-wrap">
-								<h3 class="progress-name">
-									<strong>로스팅</strong>
-								</h3>
-								<div class="progress">
-									<div class="progress-bar color-1" role="progressbar"
-										aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-										style="width: 50%">
-										<span>5단계 로스팅 시티</span>
-									</div>
-								</div>
-							</div>
-							<div class="progress-wrap">
-								<h3 class="progress-name">
-									<strong>감도</strong>
-								</h3>
-								<div class="progress">
-									<div class="progress-bar color-2" role="progressbar"
-										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
-										style="width: 70%">
-										<span>70%</span>
-									</div>
-								</div>
-							</div>
-							<div class="progress-wrap">
-								<h3 class="progress-name">
-									<strong>산미</strong>
-								</h3>
-								<div class="progress">
-									<div class="progress-bar color-3" role="progressbar"
-										aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-										style="width: 50%">
-										<span>50%</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div id="section5">
-				<div class="cont">
-					<div class="signatureTitle best">
-						<p>재 주문률이 가장 높은</p>
-						<h2>두잔 베스트 캡슐</h2>
-					</div>
-					<div class="bestGoodsList">
+        </div>
+      </div>
+      <div id="section5">
+        <div class="cont">
+          <div class="signatureTitle best">
+            <p>재 주문률이 가장 높은</p>
+            <h2>두잔 베스트 캡슐</h2>
+          </div>
+          <div class="bestGoodsList">
 						<div class="listSection1">
 							<a href=""><img class="bestGoods"
-								src="../images/softBlending.png" alt="" data-aos="fade-left"
+								src="../images/bestgoods1.png" alt="" data-aos="fade-left"
 								data-aos-duration="500"></a> <a href=""><img
-								class="bestGoods" src="../images/AA.png" alt=""
+								class="bestGoods" src="../images/bestgoods5.png" alt=""
 								data-aos="fade-left" data-aos-duration="600"></a> <img
 								class="bestGoods_capsule1" src="../images/model02_3.png" alt="">
 							<img class="bestGoods_capsule2" src="../images/model02_4.png"
@@ -249,19 +245,16 @@
 						<div class="listSection2">
 							<img class="gabe" src="../images/gabe.png" alt=""> <a
 								href=""><img class="bestGoods"
-								src="../images/blueMountin.png" alt="" data-aos="fade-left"
+								src="../images/bestgoods2.png" alt="" data-aos="fade-left"
 								data-aos-duration="700"></a> <a href=""><img
-								class="bestGoods" src="../images/blueMountin.png" alt=""
+								class="bestGoods" src="../images/bestgoods3.png" alt=""
 								data-aos="fade-left" data-aos-duration="800"></a> <a href=""><img
-								class="bestGoods" src="../images/cocoa.png" alt=""
+								class="bestGoods" src="../images/bestgoods6.png" alt=""
 								data-aos="fade-left" data-aos-duration="900"></a> <img
 								class="bestGoods_capsule3" src="../images/model04_6.png" alt="">
 						</div>
-
-
-					</div>
-				</div>
-			</div>
+        </div>
+      </div>
 		</div>
 
 		<footer>
