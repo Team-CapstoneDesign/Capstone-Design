@@ -34,46 +34,37 @@ pageEncoding="EUC-KR"%>
                 </a>
                 <div class="topmenuWrap">
                     <ul class="topmenu">
-                        <li>
-                            <a>캡슐 커스텀</a>
-                        </li>
-                        <li>
-                            <a>두잔 캡슐</a>
-                            <div class="submenu">
-                                <ul id="productMenu">
-                                    <li><a href="">시즌한정</a></li>
-                                    <li><a href="">시그니처</a></li>
-                                    <li><a href="">블렌딩</a></li>
-                                    <li><a href="">오리지널</a></li>
-                                    <li><a href="">디카페인</a></li>
-                                    <li><a href="">베버리지 / 논커피</a></li>
-                                    <li><a href="">선물 패키지</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a>커피 이야기</a>
-                            <div class="submenu">
-                                <ul id="productMenu">
-                                    <li><a href="#">캡슐 조합 리뷰</a></li>
-                                    <li><a href="#">원두소개</a></li>
-                                    <li><a href="#">커피 응용 레시피</a></li>
-                                    <li><a href="#">나와 어울리는 커피</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a>두잔 이야기</a>
-                            <div class="submenu">
-                                <ul id="productMenu">
-                                    <li><a href="#">두 잔의 여유</a></li>
-                                    <li><a href="#">두 잔의 환경가치</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav_top">
+						<li><a href="./goods/custome.jsp">캡슐 커스텀</a></li>
+						<li><a>두잔 캡슐</a>
+							<div class="submenu">
+								<ul id="productMenu">
+									<li><a href="./goods/viewProduct.jsp?ctgType=season">시즌한정</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=signature">시그니처</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=blending">블렌딩</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=original">오리지널</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
+									<li><a href="./goods/viewProduct.jsp?ctgType=beverage">베버리지
+											/ 논커피</a></li>
+								</ul>
+							</div></li>
+						<li><a>커피 이야기</a>
+							<div class="submenu">
+								<ul id="productMenu">
+									<li><a href="./review/review_list.jsp">캡슐 조합 리뷰</a></li>
+									<li><a href="./sub/coffee_bean.jsp">원두소개</a></li>
+									<li><a href="./sub/coffee_recipe.jsp">커피 응용 레시피</a></li>
+								</ul>
+							</div></li>
+						<li><a>두잔 이야기</a>
+							<div class="submenu">
+								<ul id="productMenu">
+									<li><a href="./sub/brand_intro.jsp">두 잔의 여유</a></li>
+									<li><a href="./sub/brand_recycle.jsp">두 잔의 환경가치</a></li>
+								</ul>
+							</div></li>
+					</ul>
+				</div>
+				<div class="nav_top">
 					<%
 						if (id == null) {
 					%>
@@ -84,14 +75,14 @@ pageEncoding="EUC-KR"%>
 						} else {
 					%>
 					<span class="quick_menu"><a href="./member/mainlogout.jsp">로그아웃</a></span>
-					<span class="quick_menu"><a href="">마이페이지</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+					<span class="quick_menu"><a href="mypage.jsp">마이페이지</a></span> <span
+						class="quick_menu"><a href="./cart/showcart.jsp">고객센터</a></span>
 					<%
 						}
 					%>
 				</div>
-            </div>
-        </div>
+			</div>
+		</div>
 
 		<% 
 		 String DB_URL="jdbc:mysql://localhost:3306/dojan";  
