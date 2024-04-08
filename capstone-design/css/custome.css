@@ -187,7 +187,7 @@
   height: 80vh;
   width: 900px;
   text-align: left;
-  background-image: url(../images/result_background4.png);
+  background-image: url(../images/result_background4-4.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -660,6 +660,26 @@ border: 2px solid #f0dc41;
 .result_buttonWrap{
   margin-top: 50px;
 }
+#result_deco1{
+  position: absolute;
+  right: 350px;
+  bottom: 100px;
+  width: 500px;
+  filter: drop-shadow(0px 7px 29px rgba(100, 100, 111, 0.5)) ;
+}
+#result_deco2{
+  position: absolute;
+  width: 400px;
+  bottom: -20px;
+    right: 118px;
+}
+#result_deco3{
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 400px;
+  transform: scaleX(-1);
+}
 .machine_h2{
   font-size: 50px;
   text-align: center;
@@ -684,19 +704,19 @@ border: 2px solid #f0dc41;
   background-image: url("../images/custome_machine/nespresso.png");
 }
 #nespressoVertuo__{
-  background-image: url("../images/custome_machine/nespresso.png");
+  background-image: url("../images/custome_machine/vertuo.png");
 }
 #dolceGusto__{
-  background-image: url("../images/custome_machine/nespresso.png");
+  background-image: url("../images/custome_machine/dolceGusto.png");
 }
 #illy__{
-  background-image: url("../images/custome_machine/nespresso.png");
+  background-image: url("../images/custome_machine/illy.png");
 }
 #kanu__{
-  background-image: url("../images/custome_machine/nespresso.png");
+  background-image: url("../images/custome_machine/kanu.png");
 }
 #keurig__{
-  background-image: url("../images/custome_machine/nespresso.png");
+  background-image: url("../images/custome_machine/keurig.png");
 }
 .machineRadio{
   text-align: center;
@@ -761,4 +781,176 @@ swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/*progress*/
+
+.custome-progress-wrap{
+  display: block;
+  position: relative;
+  width: 400px;
+  height: 40px;
+  font-size: 14px;
+    line-height: 30px;
+  margin: 0 auto;
+}
+.progress-name{
+  font-size: 15px;
+font-family: "Quicksand", Arial, sans-serif;
+margin-bottom: 10px;
+font-weight: 500;
+line-height: 1.1;
+color: inherit;
+}
+.custome-progress-wrap .progress{
+  height: 6px;
+-webkit-box-shadow: none;
+box-shadow: none;
+background: #f2f3f7;
+overflow: visible;
+}
+.custome-progress-wrap .progress {
+  height: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: none;
+    background: #f2f3f7;
+    overflow: visible;
+}
+.custome-progress-wrap .progress-bar.color-1{
+  background: #663d17;
+}
+.custome-progress-wrap .progress-bar.color-2{
+  background: #d66868;
+}
+.custome-progress-wrap .progress-bar.color-3{
+  background: #ffb829;
+}
+.custome-progress-wrap .progress-bar.color-4{
+  background: #69882c;
+}
+.custome-progress-wrap .progress-bar.color-5{
+  background: #2c88c5;
+}
+.custome-progress-wrap .progress-bar{
+box-shadow: none;
+font-size: 12px;
+line-height: 1.2;
+color: #000;
+font-weight: 600;
+text-align: right;
+position: relative;
+overflow: visible;
+border-radius: 8px;
+}
+.custome-progress-wrap .progress-bar {
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #337ab7;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
+}
+.custome-progress-wrap .progress-bar.color-1::after{
+  position: absolute;
+  top: -2px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  content: '';
+  background: #663d17;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.custome-progress-wrap .progress-bar.color-2::after{
+  position: absolute;
+top: -2px;
+right: 0;
+width: 10px;
+height: 10px;
+content: '';
+background: #d66868;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+border-radius: 50%;
+}
+.custome-progress-wrap .progress-bar.color-3::after{
+  position: absolute;
+top: -2px;
+right: 0;
+width: 10px;
+height: 10px;
+content: '';
+background: #ffb829;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+border-radius: 50%;
+}
+.custome-progress-wrap .progress-bar.color-4::after{
+  position: absolute;
+top: -2px;
+right: 0;
+width: 10px;
+height: 10px;
+content: '';
+background: #69882c;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+border-radius: 50%;
+}
+.custome-progress-wrap .progress-bar.color-5::after{
+  position: absolute;
+top: -2px;
+right: 0;
+width: 10px;
+height: 10px;
+content: '';
+background: #337ab7;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+border-radius: 50%;
+}
+.custome-progress-wrap .progress-bar span{
+  position: absolute;
+top: -22px;
+right: 0;
+}
+button{
+  cursor: pointer;
+  margin-top: 5px;
+  padding: 3px 0;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(223, 190, 106);
+  transition: 0.3s;
+  opacity: 1;
+}
+button:hover{
+  background-color: rgba(208, 171, 78, 0.7);;
+}
+#reset{
+  padding: 10px 45px;
+  border-radius: 20px;
+  background-color: rgb(213 108 108);
+  font-family: 'notosans';
+  font-size: 13px;
+  transition: 0.3s;
+}
+#reset:hover{
+  background-color: rgb(203, 95, 95);
 }

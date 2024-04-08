@@ -8,8 +8,6 @@ body{
 }
 .sub_container{
     margin-top: 100px;
-  width: 1920px;
-  /* height: 900px; */
 }
 
 /* subPage header */
@@ -18,18 +16,20 @@ body{
     height: 400px;
     word-break: keep-all;
     background-image: url(../images/sub02_title3.png);
+        background-size: cover;
+    background-position: center;
 }
 .ctgTitle{
     position: relative;
     display: block;
     padding-top: 50px;
-    width: 1200px;
     margin: 0 auto;
     color: #333;
     text-align: right;
     font-size: 50px;
     letter-spacing: 2px;
     color: #b9971d;
+    text-align: center;
 }
 .ctgTitle > span{
     font-weight: normal;
@@ -38,8 +38,6 @@ body{
 .sub_headerTitle{
     display: flex;
     position: relative;
-    width: 1920px;
-    min-width: 1200px;
     text-align: center;
 }
 .sub_subTilte{
@@ -148,7 +146,7 @@ div.product_kind_wrap div.product_select_wrap ul li input {
 
 /* subPage Content */
 div.product_view_tab_wrap {
-    width: 1200px;
+    max-width: 1200px;
     position: relative;
 	margin: 0 auto;
 }
@@ -247,4 +245,10 @@ div.product_view_tab_wrap div.product_list{
     color: #000;
     text-align: center;
     margin: 0 auto;
+}
+@media screen and ( max-width: 630px ) {
+	.product_list > ul{
+	    flex-wrap: wrap;
+	    justify-content: center;
+	   }
 }

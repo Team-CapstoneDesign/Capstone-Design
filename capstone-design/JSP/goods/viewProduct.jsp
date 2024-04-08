@@ -56,7 +56,7 @@
 					<h1 class="logo">
 						<span class="blind">두잔</span>
 					</h1>
-					</a>
+				</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
 						<li><a href="./custome.jsp">캡슐 커스텀</a></li>
@@ -70,33 +70,32 @@
 									<li><a href="./viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
 									<li><a href="./viewProduct.jsp?ctgType=beverage">베버리지
 											/ 논커피</a></li>
-									<li><a href="">선물 패키지</a></li>
 								</ul>
 							</div></li>
 						<li><a>커피 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
 									<li><a href="../review/review_list.jsp">캡슐 조합 리뷰</a></li>
-									<li><a href="#">원두소개</a></li>
-									<li><a href="#">커피 응용 레시피</a></li>
-									<li><a href="#">나와 어울리는 커피</a></li>
+									<li><a href="../sub/coffee_bean.jsp">원두소개</a></li>
+									<li><a href="../sub/coffee_recipe.jsp">커피 응용 레시피</a></li>
 								</ul>
 							</div></li>
 						<li><a>두잔 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="#">두 잔의 여유</a></li>
-									<li><a href="#">두 잔의 환경가치</a></li>
+									<li><a href="../sub/brand_intro.jsp">두 잔의 여유</a></li>
+									<li><a href="../sub/brand_recycle.jsp">두 잔의 환경가치</a></li>
 								</ul>
-							</div></li>
+							</div>
+						</li>
 					</ul>
 				</div>
 				<div class="nav_top">
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="../member/login.jsp">로그인</a></span> <span
-						class="quick_menu"><a href="">회원가입</a></span> <span
+					<span class="quick_menu"><a href="../member/login.jsp">로그인</a></span>
+					<span class="quick_menu"><a href="">회원가입</a></span> <span
 						class="quick_menu"><a href="">고객센터</a></span>
 					<%
 						} else {
@@ -128,149 +127,61 @@
 					</ul>
 				</div>
 			</div>
+		</div>
+		<div class="product_result_wrap product_result_wrap01"
+			style="display: block;">
 
-			<!-- 카테고리 필터. 현재 구동 안 함. 
-			<div class="product_kind_wrap">
-				<p class="tit">분류 보기</p>
-				<div class="product_select_wrap">
-					<form method="post">
-						<fieldset>
-							<legend class="hid">캡슐 카테고리 별 분류 보기</legend>
-							<ul class="cate_list">
-								<div>
-									<li><input type="checkbox" name="product_all"
-										id="product_all" onclick="filterObjects('all')"> <label
-										for="product_all">전체 캡슐 보기</label></li>
-									<li><input type="checkbox" name="product_season"
-										id="product_season" onclick="filterObjects('season')">
-										<label for="product_season">시즌한정 캡슐</label></li>
-									<li><input type="checkbox" name="product_signature"
-										id="product_signature" onclick="filterObjects('signature')">
-										<label for="product_signature">시그니쳐 캡슐</label></li>
-									<li><input type="checkbox" name="product_blending"
-										id="product_blending" onclick="filterObjects('blending')">
-										<label for="product_blending">블렌딩 캡슐</label></li>
-									<li><input type="checkbox" name="product_original"
-										id="product_original" onclick="filterObjects('original')">
-										<label for="product_original">오리지널 캡슐</label></li>
-									<li><input type="checkbox" name="product_decaf"
-										id="product_decaf" onclick="filterObjects('decaffeine')">
-										<label for="product_decaf">디카페인 캡슐</label></li>
-									<li><input type="checkbox" name="product_beverage"
-										id="product_beverage" onclick="filterObjects('beverage')">
-										<label for="product_beverage">베버리지 캡슐</label></li>
+			<div class="product_view_tab_wrap">
+				<div class="product_list">
+					<!-- 컨텐츠 나오는 부분 -->
+					<ul class="">
+						<%
+							while (rs.next()) {
+							String prdNo = rs.getString("prdNo");
+							String prdType = rs.getString("prdType");
+							String prdName = rs.getString("prdName");
+							String prdRoasting = rs.getString("prdRoasting");
+							String prdPrice = rs.getString("prdPrice");
+							String prdSmell = rs.getString("prdSmell");
+							String prdTaste = rs.getString("prdTaste");
+						%>
 
-									<li><input type="checkbox" name="product_Tsour"
-										id="product_Tsour" onclick="filterObjects('Tsour')"> <label
-										for="product_Tsour">신 맛</label></li>
-									<li><input type="checkbox" name="product_Tsweet"
-										id="product_Tsweet" onclick="filterObjects('Tsweet')">
-										<label for="product_Tsweet">단 맛</label></li>
-									<li><input type="checkbox" name="product_Tbitter"
-										id="product_Tbitter" onclick="filterObjects('Tbitter')">
-										<label for="product_Tbitter">쓴 맛</label></li>
-
-									<li><input type="checkbox" name="product_beanBS"
-										id="product_beanBS" onclick="filterObjects('beanBS')">
-										<label for="product_beanBS">브라질 산토스</label></li>
-									<li><input type="checkbox" name="product_beanCS"
-										id="product_beanCS" onclick="filterObjects('beanCS')">
-										<label for="product_beanCS">콜롬비아 수프리모</label></li>
-									<li><input type="checkbox" name="product_beanJB"
-										id="product_beanJB" onclick="filterObjects('beanJB')">
-										<label for="product_beanJB">자메이카 블루마운틴</label></li>
-									<li><input type="checkbox" name="product_beanEY"
-										id="product_beanEY" onclick="filterObjects('beanEY')">
-										<label for="product_beanEY">에티오피아 예가체프</label></li>
-									<li><input type="checkbox" name="product_beanKA"
-										id="product_beanKA" onclick="filterObjects('beanKA')">
-										<label for="product_beanKA">케냐 AA</label></li>
-									<li><input type="checkbox" name="product_beanCT"
-										id="product_beanCT" onclick="filterObjects('beanCT')">
-										<label for="product_beanCT">코스타리카 따라주</label></li>
-									<li><input type="checkbox" name="product_beanTA"
-										id="product_beanTA" onclick="filterObjects('beanTA')">
-										<label for="product_beanTA">탄자니아 AA</label></li>
-									<li><input type="checkbox" name="product_beanYM"
-										id="product_beanYM" onclick="filterObjects('beanYM')">
-										<label for="product_beanYM">예멘 모카 마타리</label></li>
-									<li><input type="checkbox" name="product_beanHK"
-										id="product_beanHK" onclick="filterObjects('beanHK')">
-										<label for="product_beanHK">하와이 코나</label></li>
-									<li><input type="checkbox" name="product_beanGA"
-										id="product_beanGA" onclick="filterObjects('beanGA')">
-										<label for="product_beanGA">과테말라 안티구아</label></li>
-									<li><input type="checkbox" name="product_beanPG"
-										id="product_beanPG" onclick="filterObjects('beanPG')">
-										<label for="product_beanPG">파나마 게이샤</label></li>
-									<li><input type="checkbox" name="product_beanES"
-										id="product_beanES" onclick="filterObjects('beanES')">
-										<label for="product_beanES">엘살바도르 SHG</label></li>
-									<li><input type="checkbox" name="product_beanIM"
-										id="product_beanIM" onclick="filterObjects('beanIM')">
-										<label for="product_beanIM">인도네시아 만델링</label></li>
-									<li><input type="checkbox" name="product_beanBR"
-										id="product_beanBR" onclick="filterObjects('beanBR')">
-										<label for="product_beanBR">베트남 로부스타</label></li>
-								</div>
-							</ul>
-						</fieldset>
-					</form>
-				</div>
-			</div>
-
-			 카테고리 필터 끝. 현재 구동 안 함. -->
-
-			<div class="product_result_wrap product_result_wrap01"
-				style="display: block;">
-				<div class="product_view_tab_wrap">
-					<div class="product_list">
-						<!-- 컨텐츠 나오는 부분 -->
-						<ul class="">
-							<%
-								while (rs.next()) {
-								String prdNo = rs.getString("prdNo");
-								String prdType = rs.getString("prdType");
-								String prdName = rs.getString("prdName");
-								String prdRoasting = rs.getString("prdRoasting");
-								String prdPrice = rs.getString("prdPrice");
-								String prdSmell = rs.getString("prdSmell");
-								String prdTaste = rs.getString("prdTaste");
-							%>
-						
-							<li class=""> <a href="viewProductDetail.jsp?prdNo=<%=prdNo%>"> 
-                                  <img src="../../images/capdesign/<%=prdNo%>.png" alt="<%=prdNo%>"></a>
-								<div class="product_info">
-									<p class="product_name"><%=prdName %></p>
-									<p class="blending"><%=prdType %></p>
-									<div class="product_info_detail">
-										<div class="detail">
-											<span class="detail1">로스팅</span> <span class="detail2"><%=prdRoasting %></span>
-										</div>
-
-										<div class="detail">
-							
-											<span class="detail1">향</span> <span class="detail2"><%=prdSmell %></span>
-										</div>
-										<div class="detail">
-											<span class="detail1">맛</span> <span class="detail2"><%=prdTaste %></span>
-										</div>
-										<div class="detail">
-											<span class="detail1">가격</span> <span class="detail2"><%=prdPrice %></span>
-										</div>
+						<li class=""><a href="viewProductDetail.jsp?prdNo=<%=prdNo%>">
+								<img src="../../images/capdesign/<%=prdNo%>.png"
+								alt="<%=prdNo%>">
+						</a>
+							<div class="product_info">
+								<p class="product_name"><%=prdName%></p>
+								<p class="blending"><%=prdType%></p>
+								<div class="product_info_detail">
+									<div class="detail">
+										<span class="detail1">로스팅</span> <span class="detail2"><%=prdRoasting%></span>
 									</div>
-									<a class="move_detail"
-										href="viewProductDetail.jsp?prdNo=<%= prdNo%>"> 자세히 보기 </a>
-								</div></li>
-							<%
-								}
-							%>
-						</ul>
-					</div>
+
+									<div class="detail">
+
+										<span class="detail1">향</span> <span class="detail2"><%=prdSmell%></span>
+									</div>
+									<div class="detail">
+										<span class="detail1">맛</span> <span class="detail2"><%=prdTaste%></span>
+									</div>
+									<div class="detail">
+										<span class="detail1">가격</span> <span class="detail2"><%=prdPrice%></span>
+									</div>
+								</div>
+								<a class="move_detail"
+									href="viewProductDetail.jsp?prdNo=<%=prdNo%>"> 자세히 보기 </a>
+							</div></li>
+						<%
+							}
+						%>
+					</ul>
 				</div>
 			</div>
 
 		</div>
+
+	</div>
 	</div>
 
 	<footer>

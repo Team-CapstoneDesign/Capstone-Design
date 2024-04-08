@@ -32,23 +32,21 @@
 									<li><a href="../goods/viewProduct.jsp?ctgType=decaffeine">디카페인</a></li>
 									<li><a href="../goods/viewProduct.jsp?ctgType=beverage">베버리지
 											/ 논커피</a></li>
-									<li><a href="">선물 패키지</a></li>
 								</ul>
 							</div></li>
 						<li><a>커피 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
 									<li><a href="./review_list.jsp">캡슐 조합 리뷰</a></li>
-									<li><a href="#">원두소개</a></li>
-									<li><a href="#">커피 응용 레시피</a></li>
-									<li><a href="#">나와 어울리는 커피</a></li>
+									<li><a href="../sub/coffee_bean.jsp">원두소개</a></li>
+									<li><a href="../sub/coffee_recipe.jsp">커피 응용 레시피</a></li>
 								</ul>
 							</div></li>
 						<li><a>두잔 이야기</a>
 							<div class="submenu">
 								<ul id="productMenu">
-									<li><a href="#">두 잔의 여유</a></li>
-									<li><a href="#">두 잔의 환경가치</a></li>
+									<li><a href="../sub/brand_intro.jsp">두 잔의 여유</a></li>
+									<li><a href="../sub/brand_recycle.jsp">두 잔의 환경가치</a></li>
 								</ul>
 							</div></li>
 					</ul>

@@ -49,9 +49,8 @@ body{
 #header{
   padding-top: 30px;
   margin: 0 auto;
-  width: 1920px;
+  width: 1200px;
   height: 100px;
-  min-width: 1920px;
   z-index: 100;
   display: block;
   position: fixed;
@@ -82,15 +81,12 @@ border-radius: 30px;
 }
 
 
-#header .formbox > a{
-  width: 130px;
-  height: 50px;
-}
 #header .logo{
+  margin-left: 40px;
   line-height: 100px;
   position: absolute;
   display: block;
-  left: 388px;
+  left: 0;
   top: 55px;
   width: 130px;
   height: 50px;
@@ -103,9 +99,11 @@ border-radius: 30px;
 #header .nav_top{
   position: absolute;
   display: block;
-  right: 388px;
+  right: 0;
+  text-align: right;
   top: 30px;
   line-height: 90px;
+  margin-right: 40px;
 }
 #header .nav_top .quick_menu{
 color: #333;
@@ -132,7 +130,7 @@ opacity: 100;
 }
 
 #header .topmenu > li{
-  width: 120px;
+  width: 140px;
   left: 40%;
 
 }
@@ -162,10 +160,10 @@ opacity: 100;
 }
 #header .topmenuWrap .submenu #productMenu > li{
   margin-bottom: 5px;
-  width: 122px;
+  width: 140px;
 }
 #header .topmenuWrap .submenu #productMenu > li > a:hover {
-  color: #1C9FB3;
+  color: #992b2b;
   transition: 0.2s;
 }
 #header .topmenuWrap .submenu li a{
@@ -184,26 +182,29 @@ opacity: 100;
 }
 
 #header.scroll{
+  width: auto;
   padding-top: 0;
-  
+  margin: 0;
 }
 #header.scroll .formbox{
-  width: 1920px;
+  width: 100%;
 }
 #header.scroll .logo{
   height: 100px;
   line-height: 100px;
   position: absolute;
   display: block;
-  left: 358px;
+  left: 0px;
   top: 20px;
   line-height: 100px;
 }
-
+#header.scroll .topmenuWrap{
+  text-align: center;
+}
 #header.scroll .nav_top{
   position: absolute;
   display: block;
-  right: 358px;
+  right: 0px;
   top: 0;
   line-height: 90px;
 }
@@ -234,7 +235,6 @@ color: #333;
 .containerMain{
   display: block;
   position: relative;
-  width: 1920px;
 }
 
 .section1_background{
@@ -296,6 +296,9 @@ color: #333;
   width: 1200px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   z-index: 0;
+}
+.section1-1_mobile_wrap{
+  display: none;
 }
 /*section2*/
 #section2{
@@ -483,7 +486,7 @@ color: #333;
 }
 .evening{
   background-image: url(../images/evening.png);
-  background-position: 20% 0;
+  background-position: 50% 0;
 }
 .signature_time_capusle{
   display: flex;
@@ -733,7 +736,6 @@ right: 0;
   right: 0;
   top: 366px;
   width: 355px;
-
 }
 .bestGoods_capsule1{
   display: inline-block;
@@ -923,4 +925,136 @@ footer{
 
 #section3, #section5{
   z-index: 3;
+}
+
+.headerBtn{
+  display: none;
+}
+@media screen and ( max-width: 630px ) {
+  #wrap{
+    width: auto;
+    min-width: auto;
+  }
+  #canvas{
+    display: none;
+  }
+  .cont{
+    width: auto;
+  }
+  #header{
+    padding-top: 0;
+    width: auto;
+  }
+  #header .logo{
+    display: block;
+    position: absolute;
+    margin-left: 0;
+    width: 60px;
+    height: 30px;
+    top: 0;
+    left:50%;
+    transform: translate(-50%, 50%);
+    background-size: cover;
+  }
+  #header .formbox{
+    width: auto;
+  }
+  #header .topmenu{
+    padding-top: 45px;
+  }
+  #header .topmenu > li > a{
+    line-height: 60px;
+  }
+  #header .nav_top{
+    display: block;
+    position: absolute;
+    padding-top: 20px;
+    top: 0;
+    line-height: 20px;
+    margin-right: 0;
+    right: 10px;
+  }
+  #header.scroll .logo{
+    display: block;
+    position: absolute;
+    margin-left: 0;
+    width: 60px;
+    height: 30px;
+    top: 0;
+    left:50%;
+    transform: translate(-50%, 50%);
+    background-size: cover;
+  }
+  #header.scroll .nav_top{
+    display: block;
+    position: absolute;
+    padding-top: 20px;
+    top: 0;
+    line-height: 20px;
+    margin-right: 0;
+    right: 10px;
+  }
+  .section1_background{
+    background-image: url(../images/section1_background_mobile.png);
+    width: 100%;
+    background-position: 0;
+  }
+  .section1-1_wrap{
+    display: none;
+  }
+  .section1-1_mobile_wrap{
+    display: block;
+    width: 100%;
+  }
+  .signature_time{
+    display: flex;
+    flex-direction: column;
+  }
+  .time{
+    width: 100%;
+    height: 189px;
+    background-repeat: no-repeat;
+    margin-right: 0;
+  }
+  .time:hover{
+
+  }
+  .morning{
+    background-image: url(../images/morning_mobile.png) 
+  }
+  .morning:hover, .afternoon:hover, .evening:hover{
+    margin-top: 0;
+  }
+  .afternoon{
+    background-image: url(../images/afternoon_mobile.png) 
+  }
+  .evening{
+    background-image: url(../images/evening_mobile.png) ;
+    
+  }
+  .signature_origin{
+    width: auto;
+    height: auto;
+  }
+  .signature_time_capusle{
+    display: none;
+  }
+  .origin_right{
+    width: auto;
+  }
+  .progress-wrap{
+    width: auto;
+  }
+  #section5{
+    width: auto;
+  }
+  .bestGoods{
+    width: 100%;
+  }
+  .bestGoods_capsule1, .bestGoods_capsule2 {
+    width: 30%;
+  }
+  .gabe{
+    top: 265px;
+  }
 }
