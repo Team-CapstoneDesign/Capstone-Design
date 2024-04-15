@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../../css/sub_recipe.css">
 
 </head>
-<%
+	<%
 		String id = (String) session.getAttribute("sid");
 	%>
 <body>
@@ -99,7 +99,7 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>말차 슈페너 레시피</h3>
-					<h4>두잔 시그니처 오리진</h4>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DS001">두잔 시그니처 오리진</a></h4>
 					<ul>
 						<li>1. 말차 파우더를 따뜻한 물로 녹여주세요</li>
 						<li>2. 아이스 트레이에 넣고 얼려주세요</li>
@@ -113,7 +113,7 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>아이스 흑당 라테 레시피</h3>
-					<h4>두잔 따라주</h4>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DO005">두잔 따라주</a></h4>
 					<ul>
 						<li>1. 잔에 흑당 시럽 드리즐을 둘러주세요</li>
 						<li>2. 잔의 반을 얼음으로 채워주세요</li>
@@ -126,7 +126,7 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>콜드 블루 라테 레시피</h3>
-					<h4>두잔 프리미엄 블렌딩</h4>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DB004">두잔 프리미엄 블렌딩</a></h4>
 					<ul>
 						<li>1. 블루 큐라소 시럽 1티스푼에 따뜻한 우유를 넣고 섞어주세요</li>
 						<li>2. 얼음과 우유를 부어주세요</li>
@@ -139,7 +139,7 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>달고나 라테 레시피</h3>
-					<h4>두잔 SHG</h4>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DO007">두잔 SHG</a></h4>
 					<ul>
 						<li>1. 연유, 바닐라시럽, 우유를 넣고 섞어주세요</li>
 						<li>2. 얼음을 원하는 만큼 넣어주세요</li>
@@ -152,7 +152,8 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>두잔 초코치노 레시피</h3>
-					<h4>두잔 코코아</h4><br><br><h4>두잔 디카페인 과테말라</h4>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DT003">두잔 코코아</a></h4><br><br>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DD002">두잔 디카페인 과테말라</a></h4>
 					<ul>
 						<li>1. 두잔 코코아를 추출 해주세요</li>
 						<li>2. 두잔 디카페인 과테말라를 추출 해주세요</li>
@@ -165,7 +166,8 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>아이스 히비스커스프레소 레시피</h3>
-					<h4>두잔 히비스커스 티</h4><br><br><h4>두잔 예가체프 블렌딩</h4>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DT001">두잔 히비스커스 티</a></h4><br><br>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DB002">두잔 예가체프 블렌딩</a></h4>
 					<ul>
 						<li>1. 두잔 히비스커스 티를 추출 해주세요</li>
 						<li>2. 얼음으로 컵을 가득 채워주세요</li>
@@ -178,7 +180,8 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>자몽 커피 에이드 레시피</h3>
-					<h4>두잔 AA</h4><br><br><h4>두잔 자몽허니 블랙 티</h4>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DO008">두잔 AA</a></h4><br><br>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DT004">두잔 자몽허니 블랙 티</a></h4>
 					<ul>
 						<li>1. 얼음으로 컵을 2/3 채워주세요</li>
 						<li>2. 그 위에 두잔 자몽허니 블랙 티를 추출 해주세요</li>
@@ -191,7 +194,7 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>두잔 라테 레시피</h3>
-					<h4>두잔 런치 오리진</h4>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DS004">두잔 런치 오리진</a></h4>
 					<ul>
 						<li>1. 연유, 휘핑 크림, 바닐라 시럽, 우유를 넣고 스푼으로 잘 섞어주세요</li>
 						<li>2. 그 위로 두잔 런치 오리진을 추출해 주세요</li>
@@ -203,7 +206,7 @@
 			<div class="modal">
 				<div class="modal_popup">
 					<h3>아이스 두잔 버블티 레시피</h3>
-					<h4>두잔 가을 블렌딩</h4>
+					<h4><a href="../goods/viewProductDetail.jsp?prdNo=DB007">두잔 가을 블렌딩</a></h4>
 					<ul>
 						<li>1. 펄을 원하는 만큼 넣어주세요</li>
 						<li>2. 연유, 바닐라 시럽을 넣고 펄과 잘 섞어주세요</li>

@@ -187,48 +187,14 @@ pageEncoding="EUC-KR"%>
                             <a class="SubmenuSection_btn_item__SRyp_ N=myh.cart" data-cy="submenu_link"
                                 href="">
                                 <div class="SubmenuSection_icon_area__dJ4Hu">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
-                                        class="SubmenuSection_svg_icon__n5gPQ" data-cy="submenu_icon">
-                                        <path stroke="#121212" stroke-linecap="round" stroke-width="1.6"
-                                            d="M20.528 14.287V9.288c0-2.5-2.026-4.526-4.526-4.526v0a4.526 4.526 0 0 0-4.526 4.526v4.999">
-                                        </path>
-                                        <path stroke="#121212" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="1.6"
-                                            d="M25.877 10.857H6.123a1 1 0 0 0-.975 1.224l2.93 12.755A1.5 1.5 0 0 0 9.542 26H22.46a1.5 1.5 0 0 0 1.462-1.164l2.93-12.755a1 1 0 0 0-.974-1.224Z">
-                                        </path>
-                                    </svg>
+                                    <img src="../images/heart_icon.png" class="new_icon">
                                 </div>
                                 위시리스트<em class="SubmenuSection_number__JoIZ1 SubmenuSection_is_zero__vkCU_"><%= wishCount%></em>
-                            </a>
-                            <a class="SubmenuSection_btn_item__SRyp_ N=myh.review" data-cy="submenu_link"
-                                href="">
-                                <div class="SubmenuSection_icon_area__dJ4Hu">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
-                                        class="SubmenuSection_svg_icon__n5gPQ" data-cy="submenu_icon">
-                                        <path stroke="#121212" stroke-miterlimit="10" stroke-width="1.6"
-                                            d="M23.186 4.58H8.822a3.478 3.478 0 0 0-3.475 3.475V26.36c0 1.24 1.5 1.859 2.374.984l2.85-2.85a2.319 2.319 0 0 1 1.64-.677h10.98a3.478 3.478 0 0 0 3.476-3.476V8.055A3.478 3.478 0 0 0 23.19 4.58h-.005Z">
-                                        </path>
-                                        <path stroke="#121212" stroke-width="1.6"
-                                            d="M15.82 8.996a.2.2 0 0 1 .357 0l1.479 2.906a.2.2 0 0 0 .147.107l3.22.508a.2.2 0 0 1 .111.34l-2.308 2.303a.2.2 0 0 0-.056.173l.513 3.22a.2.2 0 0 1-.289.21l-2.904-1.482a.2.2 0 0 0-.182 0l-2.904 1.482a.2.2 0 0 1-.289-.21l.513-3.22a.2.2 0 0 0-.057-.173l-2.307-2.304a.2.2 0 0 1 .11-.339l3.221-.508a.2.2 0 0 0 .147-.107l1.479-2.906Z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                포인트
-                                <em class="SubmenuSection_number__JoIZ1">
-                                   3,620<span class="SubmenuSection_unit__0lQ7f">원</span>
-                                </em>
                             </a>
                             <a class="SubmenuSection_btn_item__SRyp_ N=myh.coupon" data-cy="submenu_link"
                                 href="">
                                 <div class="SubmenuSection_icon_area__dJ4Hu">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"
-                                        class="SubmenuSection_svg_icon__n5gPQ" data-cy="submenu_icon">
-                                        <path fill="#121212"
-                                            d="m27.501 20.303.1-.794-.1.794ZM4.8 9A1.2 1.2 0 0 1 6 7.8V6.2A2.8 2.8 0 0 0 3.2 9h1.6Zm0 14.667V9H3.2v14.667h1.6Zm1.2 1.2a1.2 1.2 0 0 1-1.2-1.2H3.2a2.8 2.8 0 0 0 2.8 2.8v-1.6Zm20 0H6v1.6h20v-1.6Zm1.2-1.2a1.2 1.2 0 0 1-1.2 1.2v1.6a2.8 2.8 0 0 0 2.8-2.8h-1.6Zm0-2.833v2.833h1.6v-2.833h-1.6Zm.4-1.325a3.201 3.201 0 0 1-2.8-3.175h-1.6a4.801 4.801 0 0 0 4.202 4.763l.198-1.588Zm-2.8-3.175a3.201 3.201 0 0 1 2.8-3.176l-.198-1.588a4.801 4.801 0 0 0-4.202 4.764h1.6ZM27.2 9v2.833h1.6V9h-1.6ZM26 7.8A1.2 1.2 0 0 1 27.2 9h1.6A2.8 2.8 0 0 0 26 6.2v1.6Zm-20 0h20V6.2H6v1.6Zm21.6 5.358c.612-.076 1.2-.585 1.2-1.325h-1.6a.29.29 0 0 1 .077-.199.208.208 0 0 1 .125-.064l.198 1.588Zm1.2 7.676c0-.74-.588-1.248-1.2-1.325l-.198 1.588a.208.208 0 0 1-.125-.064.29.29 0 0 1-.077-.199h1.6Z">
-                                        </path>
-                                        <path stroke="#121212" stroke-dasharray="1 2" stroke-linecap="round"
-                                            stroke-width="1.6" d="M10.667 8v16"></path>
-                                    </svg>
+                                    <img src="../images/recycle_icon.png" class="new_icon2">
                                 </div>
                                 재활용<em class="SubmenuSection_number__JoIZ1"><%= recCount%></em>
                             </a>
@@ -260,7 +226,7 @@ pageEncoding="EUC-KR"%>
                                 <div class="WarrantyCard__DescWrapper-mj30e3-1 doDmmI">
                                    <div class="WarrantyCard__ImageWrapper-mj30e3-2 jlrvfN"  style="
                                       background-image: url('../images/capdesign/<%=prdNo%>.png');
-                                       background-size: contain;  background-repeat: no-repeat;  background-position: center;"><img src="../../images/capdesign/<%=prdNo%>.png"></div> 
+                                       background-size: contain;  background-repeat: no-repeat;  background-position: center;"></div> 
 									<!-- 이미지 링크 -->
                                     <div class="WarrantyCard__WarrantyInfo-mj30e3-3 eybslm">
                                       <div class="WarrantyCard__DateWithWarrantyNumber-mj30e3-4 VDSvq">
@@ -284,15 +250,10 @@ pageEncoding="EUC-KR"%>
                 
                 <div class="CardSection_card_section__yIeTK" data-cy="card_section">
                     <div class="CardSection_head_area__UjvOi">
-                        <h2 class="CardSection_title__0vhx3 CardSection_skeleton__yZWur" data-cy="title">내 위시리스트</h2>
-						<!-- 여기 글자가 안나옴 -->
-                        <span class="CardSection_number__0bBcs CardSection_skeleton__yZWur">2</span>
+                        <h2 class="CardSection_title__0vhx3 CardSection_skeleton__yZWur" data-cy="title">내 위시리스트</h2> 
                     </div>
                     <div class="ZzimProductsSection_zzim_items__JRX7_">
                         <div class="ZzimCategory_zzim_item__BuS_N">
-                            <a class="ZzimCategory_head_area__ITLKb">
-                                <h2 class="ZzimCategory_title__wpGlN ZzimCategory_skeleton__PcHUd">찜한 상품 </h2>
-                            </a>
                             <div class="ScrollableCommonProducts_flicking_wrap__qsVL0">
                                 <div class="ScrollableCommonProducts_flicking_area__5pJ1G">
                            
@@ -310,8 +271,9 @@ pageEncoding="EUC-KR"%>
                                     <div
                                         class="ScrollableCommonProducts_product_item__4oBG_ ScrollableCommonProducts_skeleton__jysvq">
                                         <div class="link_item">
-                                            <div class="ScrollableCommonProducts_thumb__l7PBq"><img src="../images/capdesign/<%=wishNo%>.png"></div>
-											<!-- 이미지 링크 수정 해야됨 -->
+                                            <div class="ScrollableCommonProducts_thumb__l7PBq">
+											<a href="../goods/viewProductDetail.jsp?prdNo=<%=wishNo%>"><img src="../images/capdesign/<%=wishNo%>.png"></a>
+											</div>
                                             <div class="ScrollableCommonProducts_info_area__oZNC0">
                                                 <div class="ScrollableCommonProducts_price__I2bI7"><%= wishName%></div>
                                                 <div class="ScrollableCommonProducts_name__MTpce"><%= wishRoast%></div>
@@ -332,19 +294,6 @@ pageEncoding="EUC-KR"%>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="CardSection_more_area__gEN_K">
-                        <a class="CardSection_link_more__D5XWm N=myz.more"
-                            href="">
-                            찜한 상품 모두 보기
-                            <!-- -->
-                          
-                            <svg xmlns="http://www.w3.org/2000/svg" width="6" viewBox="0 0 6 12"
-                                class="CardSection_svg_more__NGVZB">
-                                <path fill="none" stroke="#7A7A7A" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="0.8" d="m.5 11 5-5-5-5"></path>
-                            </svg>
-                        </a>
                     </div>
                 </div>
 

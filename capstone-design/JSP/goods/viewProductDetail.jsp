@@ -29,9 +29,7 @@ try{
 	PreparedStatement pstmt = con.prepareStatement(jsql);
 	pstmt.setString(1, prdNo);
 	ResultSet rs = pstmt.executeQuery();
-    
-	
-					
+    				
 	%>
 	<div class="wrap">
 

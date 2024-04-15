@@ -73,6 +73,7 @@
 	text-align: center;
 	position: relative; /* 부모 요소를 기준으로 자식 요소의 위치를 지정하기 위해 */
 }
+
 /* 각각에 백그라운드로 이미지 넣기 */
 .recipe_box:nth-of-type(1){
 	background-image: url("../images/recipe/01.jpg");
@@ -195,7 +196,11 @@
 	background-color: #b32020;
 	padding: 5px 10px;
 	margin-left: 30px;
-	display: inline;
+	display: inline-block;
+	color: #fff;
+}
+.modal_popup h4 a{
+	text-decoration: none;
 	color: #fff;
 }
 .modal_popup ul {
