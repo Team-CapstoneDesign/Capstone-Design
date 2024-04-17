@@ -61,14 +61,13 @@
 						if (id == null) {
 					%>
 					<span class="quick_menu"><a href="">로그인</a></span> <span
-						class="quick_menu"><a href="">회원가입</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+						class="quick_menu"><a href="">회원가입</a></span>
 					<%
 						} else {
 					%>
 					<span class="quick_menu"><a href="">로그인</a></span> <span
 						class="quick_menu"><a href="">회원가입</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+						class="quick_menu"><a href="">장바구니</a></span>
 					<%
 						}
 					%>

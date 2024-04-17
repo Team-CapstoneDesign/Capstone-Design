@@ -77,15 +77,14 @@ try{
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="../member/login.jsp">로그인</a></span> <span
-						class="quick_menu"><a href="">회원가입</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+					<span class="quick_menu"><a href="../member/login.jsp">로그인</a></span>
+					<span class="quick_menu"><a href="../member/insertMember.jsp">회원가입</a></span>
 					<%
 						} else {
 					%>
 					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
 					<span class="quick_menu"><a href="../mypage.jsp">마이페이지</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+						class="quick_menu"><a href="../cart/showcart.jsp">고객센터</a></span>
 					<%
 						}
 					%>
@@ -112,7 +111,7 @@ try{
           <ul class="thumb_image">
             <li><img src="../../images/capdesign/<%=num%>.png" onMouseOver="showBig('../../images/capdesign/<%=num%>.png');">
             </li>
-            <li><img src="../../images/capdesign/<%=num%>.png" onMouseOver="showBig('../../images/capdesign/<%=num%>.png');">
+            <li><img src="../../images/capdesign/cap_<%=ctgType%>.png" onMouseOver="showBig('../../images/capdesign/cap_<%=ctgType%>.png');">
             </li>
           </ul>
           <img src="../../images/capdesign/<%=num%>.png" alt="thumb" id="big">

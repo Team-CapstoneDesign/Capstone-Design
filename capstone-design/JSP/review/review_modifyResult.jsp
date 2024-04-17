@@ -2,7 +2,7 @@
 <%@ page import="java.sql.*" %>         
 <html>
    <head>
-       <title>게시판 내용 수정 처리</title>
+       <title>리뷰 내용 수정 처리</title>
    </head>   
 
 <%

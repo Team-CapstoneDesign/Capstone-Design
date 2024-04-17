@@ -28,7 +28,7 @@
 				</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
-						<li><a href="./custome.jsp">캡슐 커스텀</a></li>
+						<li><a href="../custome.jsp">캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
@@ -63,15 +63,14 @@
 					<%
 						if (id == null) {
 					%>
-					<span class="quick_menu"><a href="">로그인</a></span> <span
-						class="quick_menu"><a href="">회원가입</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+					<span class="quick_menu"><a href="../member/login.jsp">로그인</a></span> <span
+						class="quick_menu"><a href="../member/insertMember.jsp">회원가입</a></span>
 					<%
 						} else {
 					%>
-					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
-					<span class="quick_menu"><a href="">마이페이지</a></span> <span
-						class="quick_menu"><a href="">고객센터</a></span>
+					<span class="quick_menu"><a href="../member/mainlogout.jsp">로그아웃</a></span>
+					<span class="quick_menu"><a href="../mypage.jsp">마이페이지</a></span> <span
+						class="quick_menu"><a href="./showcart.jsp">장바구니</a></span>
 					<%
 						}
 					%>
