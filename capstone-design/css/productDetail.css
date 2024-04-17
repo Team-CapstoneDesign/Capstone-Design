@@ -32,11 +32,12 @@ body{padding: 50px;}
 	display: flex;
     position: absolute;
     left: 0;
-    margin-top: 170px;
+    margin-top: 120px;
 } 
 .productDetail_view .img > img {
 	position: relative;
 	width: 450px; 
+	margin-left: 40px;
 }
 .productDetail_view .img li:after{
 	content: ""; 

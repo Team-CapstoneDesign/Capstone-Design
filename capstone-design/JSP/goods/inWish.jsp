@@ -2,7 +2,7 @@
 <%@ page import="java.sql.*" %>
 <html>
 <head>
-<title>찜하기</title>
+<title>위시리스트</title>
 
 
 </head>
