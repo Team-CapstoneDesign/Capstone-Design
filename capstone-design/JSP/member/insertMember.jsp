@@ -19,7 +19,7 @@
     <div class="insertNewMem">
 		
 		<div class="insertMemLogo">
-			<img src="../../images/logo_dark.png" alt="">
+			<img src="../../images/logo.png" width="95px" alt="">
 		</div>
 		
 		<h2>회원가입</h2>

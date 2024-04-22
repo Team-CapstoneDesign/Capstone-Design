@@ -18,7 +18,7 @@
 <div class="wrap_search">
 	
 	<div class="searchLogo">
-		<img src="../../images/logo_dark.png" alt="">
+		<img src="../../images/logo.png" alt="">
 	</div>
 	
     <form name="searchid" method="post" action="searchIdOK.jsp" target=_parent>
