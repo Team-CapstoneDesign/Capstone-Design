@@ -23,13 +23,14 @@ body{
     position: relative;
     display: block;
     padding-top: 50px;
+	max-width: 1200px; /* 최대 너비를 1200px로 설정 */
+    width: 90%; /* 너비를 화면 너비의 90%로 설정 */
     margin: 0 auto;
     color: #333;
     text-align: right;
     font-size: 50px;
     letter-spacing: 2px;
     color: #b9971d;
-    text-align: center;
 }
 .ctgTitle > span{
     font-weight: normal;
@@ -57,10 +58,11 @@ body{
 	display: block;
     position: relative;
 	color: #fff;
-    width: 1200px;
 	font-size: 15px;
 	text-align: right;
     margin: 0 auto;
+	max-width: 1200px; /* 최대 너비를 1200px로 설정 */
+    width: 90%; /* 너비를 화면 너비의 90%로 설정 */
 }
 .smap a{
 	color: #333;

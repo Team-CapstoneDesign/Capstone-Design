@@ -121,7 +121,7 @@
    %>
 			<div class="reviewPage">
 				<div class="reviewPage_title">
-					후기 자세히 확인하기
+					리뷰 자세히 확인하기
 				</div>
 				<form>
 					<div class="writeRV">
@@ -155,7 +155,7 @@
 							<td><span><input type="hidden" name="roast" value="<%= roast%>"><%= roast%> 단계</span></td>
 						</tr>
 						<tr>
-							<th>후기 내용</th>
+							<th>리뷰 내용</th>
 							<td class="RVcontents"><input type="hidden" name="content" value="<%= content%>"><%=content%></td>
 						</tr>
 						</table>

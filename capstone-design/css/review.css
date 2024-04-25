@@ -70,15 +70,17 @@
     height: 50px;
     font-size: 18px;
 	font-weight: bold;
+	font-family: 'Chosunilbo_myungjo';
+	cursor: pointer;
     float: right;
 	border-radius: 10px;
-	background-color: #fff;
-	border: 2px solid #000;
+	background-color: #0e5a6d;
+	border: 2px solid #0e5a6d;
+	color: #fff;
 }
 .rvBtn1:hover{
-	background-color: gray;
-	color: #fff;
-	border: none;
+	background-color: #0e5a6d;
+	color: #ffd62c;
 }
 
 /* 리뷰 보기 */
@@ -263,14 +265,17 @@ table tr td textarea{
     width: 300px;
     height: 70px;
     border-radius: 35px;
-    background-color: #ccc;
-    border: 1px solid #ccc;
+    background-color: #0e5a6d;
+	border: 2px solid #0e5a6d;
+	color: #fff;
     font-size: 20px;
 	font-weight: bold;
+	font-family: 'Chosunilbo_myungjo';
+	cursor: pointer;
 }
 .uploadBtn:hover, .modifyBtn:hover{
-	background-color: #B9B9B9;
-	border: 1px solid #B9B9B9;
+	background-color: #0e5a6d;
+	color: #ffd62c;
 }
 table tr .RVcontents{
 	padding-right: 50px;
@@ -311,12 +316,13 @@ table tr .RVcontents{
 	font-weight: bold;
 	font-size: 18px;
 	border-radius: 30px;
-	background-color: #fff;
-	color: #333;
-	border: 2px solid #333;
+	background-color: #0e5a6d;
+	border: 2px solid #0e5a6d;
+	color: #fff;
+	font-family: 'Chosunilbo_myungjo';
+	cursor: pointer;
 }
 .selectRVbtn:hover{
-    background-color: #333;
-    color: #fff;
-    border: 2px solid #333;
+    background-color: #0e5a6d;
+	color: #ffd62c;
 }
