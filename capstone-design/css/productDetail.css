@@ -184,10 +184,10 @@ body{padding: 50px;}
 	background: #ff555d;
 }
 .btns > a.btn2{
-	background: #ff555d;
+	background: #0e5a6d;
 }
 .btns > a.btn2:hover{
-	background: #b83333;
+	color: #ffd62c;
 }
 .goods_detail_detail > img{
 	width: 100%;

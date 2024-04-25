@@ -104,6 +104,7 @@ border-radius: 30px;
   top: 30px;
   line-height: 90px;
   margin-right: 40px;
+  font-weight: bold;
 }
 #header .nav_top .quick_menu{
 color: #333;
@@ -122,7 +123,6 @@ opacity: 100;
 
 #header .topmenu{
   position: relative;
-  
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -132,7 +132,7 @@ opacity: 100;
 #header .topmenu > li{
   width: 140px;
   left: 40%;
-
+  font-weight: bold;
 }
 #header .topmenu > li > a{
   position: relative;
@@ -154,13 +154,12 @@ opacity: 100;
 }
 #header .topmenuWrap .submenu{
   display: none;
-
   margin: 0 auto;
-
 }
 #header .topmenuWrap .submenu #productMenu > li{
   margin-bottom: 5px;
   width: 140px;
+  padding: 5px;
 }
 #header .topmenuWrap .submenu #productMenu > li > a:hover {
   color: #992b2b;
@@ -168,6 +167,7 @@ opacity: 100;
 }
 #header .topmenuWrap .submenu li a{
   color: #333;
+  font-size: 17px;
 }
 #header.open .formbox{
     background: #fff;

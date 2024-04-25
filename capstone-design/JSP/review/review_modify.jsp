@@ -126,7 +126,7 @@
 			<!-- 리뷰 내용 수정하기 -->
 			<div class="reviewPage">
 				<div class="reviewPage_title">
-					후기 수정
+					리뷰 수정
 				</div>
 				
 				<form name="modify" method="post" action="review_modifyResult.jsp">
@@ -142,7 +142,7 @@
 							<td><input type="text" value="<%= subject%>" name="subject"></td>
 						</tr>
 						<tr>
-							<th>후기 내용</th>
+							<th>리뷰 내용</th>
 							<td><textarea name="content"><%=content%></textarea></td>
 						</tr>
 					</table>

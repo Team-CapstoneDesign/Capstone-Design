@@ -99,7 +99,7 @@
 			<!-- 리뷰 작성하기 -->
 			<div class="reviewPage">
 				<div class="reviewPage_title">
-					캡슐 커스텀은 어떠셨나요? 후기를 작성해주세요!
+					캡슐 커스텀은 어떠셨나요? 리뷰를 작성해주세요!
 				</div>
 				<%
 
@@ -171,7 +171,7 @@
 							<td><input type="hidden" value="<%=ordRoast%>" name="rwRoast"><span><%=ordRoast%>단계</span></td>
 						</tr>
 						<tr>
-							<th>후기 내용</th>
+							<th>리뷰 내용</th>
 							<td><textarea name="rwContent">내용을 입력해주세요.</textarea></td>
 						</tr>
 					</table>
