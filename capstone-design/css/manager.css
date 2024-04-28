@@ -7,22 +7,21 @@
 }
 
 * {
+	margin: 0;
+	padding: 0;
 	font-family: "Noto Sans KR", sans-serif;
 }
 a {
 	text-decoration: none;
 	color: inherit;
 }
-.container {
-    /*background-color: #F7F7F7;*/
-}
+
 
 /* 사이드 바 */
 .sidebar {
 	width: 200px;
 	height: 90%;
-	background-color: #0e5a6d;
-	border-radius: 10px;
+	background-color: #c15858;
 	color: #fff;
 	padding: 40px 0px;
 	position: fixed;
@@ -81,10 +80,10 @@ iframe {
 	width: 350px;
 	height: 200px;
 	border-radius: 10px;
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	background-color: #fff;
+	box-shadow: rgba(60, 64, 67, 0.05) 0px 1px 2px 0px, rgba(60, 64, 67, 0.02) 0px 2px 6px 2px;
 	margin-right: 20px;
-	padding-left: 30px;
-	overflow: auto;
+	text-align: center;
 }
 .board3 {
 	margin-right: 0;
@@ -92,9 +91,10 @@ iframe {
 
 /* 콘텐츠 영역 */
 .main {
-	margin-left: 230px;
+	padding-left: 230px;
 	width: 87%;
 	display: inline-block;
+	background: #f9f9f9;
 }
 .main .title h1 {
 	font-size: 25px;
@@ -106,8 +106,7 @@ section {
 	width: auto;
 	border-radius: 10px;
 	margin-bottom: 20px;
-	/*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	box-shadow: rgba(60, 64, 67, 0.01) 0px 1px 2px 0px, rgba(60, 64, 67, 0.05) 0px 2px 6px 2px;
 	padding: 20px;
 }
 section h2 {
@@ -115,21 +114,21 @@ section h2 {
 	margin-bottom: 20px;
 }
 table {
-	width: 1000px;
+	width: 100%;
 	text-align: left;
 	border-collapse: collapse;
 	border: 1px solid #444;
 	font-size: 18px;
 }
 th {
-    background-color: #8ABECC;
+    background-color: #cc8a8a;
 }
 th, td {
     border: 1px solid #444444;
     padding: 10px;
 }
 .long {
-	width: 120px;
+	width: 90%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -186,4 +185,24 @@ button {
 	width: 100px;
 	height: 40px;
 	line-height: 40px;
+}
+#chart_wrap{
+	position: relative;
+}
+.chart1{
+	position: relative;
+	width: 90%;
+	margin-bottom: 50px;
+}
+.chart2{
+	position: relative;
+}
+#myChart2{
+	width: 100px;
+}
+.chart2_group{
+	width: 30%;
+	display: flex;
+	text-align: center;
+	margin: 0 auto;
 }
