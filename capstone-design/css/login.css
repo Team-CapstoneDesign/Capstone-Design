@@ -11,6 +11,7 @@
 .loginLogo img{
   margin-top: -50px;
   margin-bottom: 20px;
+  width: 100px;
 }
 .login h2 {
   padding: 0 0 20px 0;
