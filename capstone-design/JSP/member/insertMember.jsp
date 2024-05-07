@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/insertMember.css">
 
-<script language="javascript" src="../dojan_js_package.js">
+<script language="javascript" src="../dozan_js_package.js">
 </script>
 
 </head>

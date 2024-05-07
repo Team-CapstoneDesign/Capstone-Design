@@ -10,7 +10,7 @@
 
 </head>
 
-<script language="javascript" src="../dojan_js_package.js"></script>
+<script language="javascript" src="../dozan_js_package.js"></script>
 
 
 <body onLoad="searchid_focus()">  

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../../css/style.css">
 <link rel="stylesheet" href="../../css/review.css">
 
-<script language="javascript" src="../dojan_js_package.js">
+<script language="javascript" src="../dozan_js_package.js">
 	</script>
 
 </head>
@@ -85,11 +85,11 @@
 				<div class="sub_headerTitle">
 					<ul class="smap">
 						<!-- 미니 네비게이션 -->
-						<li><a href="index.html">home</a></li>
+						<li><a href="../index.jsp">home</a></li>
 						<li>></li>
-						<li class="en"><a href="index.html">커피 이야기</a></li>
+						<li class="en"><a href="./review_list.jsp">커피 이야기</a></li>
 						<li>></li>
-						<li><a href="index.html" class="this">캡슐 조합 리뷰</a></li>
+						<li><a href="./review_list.jsp" class="this">캡슐 조합 리뷰</a></li>
 					</ul>
 				</div>
 			</div>
@@ -100,7 +100,7 @@
 					캡슐 커스텀은 어떠셨나요? 후기를 작성해주세요!
 				</div>			
 				<%
-						String DB_URL = "jdbc:mysql://localhost:3306/dojan";
+						String DB_URL = "jdbc:mysql://localhost:3306/dozan";
 						String DB_ID = "multi";
 						String DB_PASSWORD = "abcd";
 
@@ -244,7 +244,7 @@
 	</div>
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="../../JS/dojan_js_package.js"></script>
+	<script src="../../JS/dozan_js_package.js"></script>
 	<script src="../../JS/navEvent.js"></script>
 	
 </body>

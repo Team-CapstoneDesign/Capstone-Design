@@ -13,7 +13,7 @@
 <body>
  <%
 						
-			String DB_URL="jdbc:mysql://localhost:3306/dojan";  
+			String DB_URL="jdbc:mysql://localhost:3306/dozan";  
 			String DB_ID="multi";  
 		    String DB_PASSWORD="abcd"; 
 						 	 
@@ -42,7 +42,7 @@
 			<h3>府轰 包府 惑技 炼雀</h3>
 			<table>
 				<tr>
-					<th width="20%">累己老</th>
+					<th width="13%">累己老</th>
 					<td><%= Rdate%></td>
 				</tr>
 				<tr>

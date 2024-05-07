@@ -85,11 +85,11 @@
 				<div class="sub_headerTitle">
 					<ul class="smap">
 						<!-- 미니 네비게이션 -->
-						<li><a href="index.html">home</a></li>
+						<li><a href="../index.jsp">home</a></li>
 						<li>></li>
-						<li class="en"><a href="index.html">커피 이야기</a></li>
+						<li class="en"><a href="./coffee_recipe.jsp">커피 이야기</a></li>
 						<li>></li>
-						<li><a href="index.html" class="this">커피 응용 레시피</a></li>
+						<li><a href="./coffee_recipe.jsp" class="this">커피 응용 레시피</a></li>
 					</ul>
 				</div>
 			</div>

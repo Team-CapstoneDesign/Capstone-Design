@@ -19,7 +19,7 @@
 	   String id = (String) session.getAttribute("sid");
 	
 	  
-       String DB_URL="jdbc:mysql://localhost:3306/dojan";  
+       String DB_URL="jdbc:mysql://localhost:3306/dozan";  
        String DB_ID="multi";  
        String DB_PASSWORD="abcd"; 
  	 
@@ -113,11 +113,11 @@
 				<div class="sub_headerTitle">
 					<ul class="smap">
 						<!-- ¹Ì´Ï ³×ºñ°ÔÀÌ¼Ç -->
-						<li><a href="index.html">home</a></li>
+						<li><a href="../index.jsp">home</a></li>
 						<li>></li>
-						<li class="en"><a href="index.html">Ä¿ÇÇ ÀÌ¾ß±â</a></li>
+						<li class="en"><a href="./review_list.jsp">Ä¿ÇÇ ÀÌ¾ß±â</a></li>
 						<li>></li>
-						<li><a href="index.html" class="this">Ä¸½¶ Á¶ÇÕ ¸®ºä</a></li>
+						<li><a href="./review_list.jsp" class="this">Ä¸½¶ Á¶ÇÕ ¸®ºä</a></li>
 					</ul>
 				</div>
 			</div>
@@ -234,7 +234,7 @@
 	</div>
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="../../JS/dojan_js_package.js"></script>
+	<script src="../../JS/dozan_js_package.js"></script>
 	<script src="../../JS/navEvent.js"></script>
 	
 </body>

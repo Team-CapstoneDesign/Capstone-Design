@@ -85,11 +85,11 @@
 				<div class="sub_headerTitle">
 					<ul class="smap">
 						<!-- 미니 네비게이션 -->
-						<li><a href="index.html">home</a></li>
+						<li><a href="../index.jsp">home</a></li>
 						<li>></li>
-						<li class="en"><a href="index.html">장바구니</a></li>
+						<li class="en"><a href="./showcart.jsp">장바구니</a></li>
 						<li>></li>
-						<li><a href="index.html" class="this">주문/결제</a></li>
+						<li><a href="./order2.jsp" class="this">주문/결제</a></li>
 					</ul>
 				</div>
 			</div>
@@ -121,7 +121,7 @@
      <div class="cartItem_content">
       <form name="everyCartInfo" method="post" action="orderOK.jsp">
 					<%
-						String DB_URL = "jdbc:mysql://localhost:3306/dojan";
+						String DB_URL = "jdbc:mysql://localhost:3306/dozan";
 						String DB_ID = "multi";
 						String DB_PASSWORD = "abcd";
 
@@ -181,7 +181,6 @@
 								<th>구매수량<br>
 								<span>(10개 1세트 + 10캡슐)</span></th>
 								<th>합계</th>
-								<th></th>
 							</tr>
 						</table>
 						<%
@@ -217,7 +216,6 @@
 								<th>구매수량<br>
 								<span>(10개 1세트 + 10캡슐)</span></th>
 								<th>합계</th>
-								<th></th>
 							</tr>
 
 							<%
@@ -287,7 +285,6 @@
 								<td><%=capTypeName%></td>
 								<td><input type="hidden" value="<%=ctQty%>"><%=ctQty%>세트</td>
 								<td><%=comNomaltotal%> 원</td>
-								<td></td>
 							</tr>
 
 						
@@ -303,7 +300,6 @@
 								<th>구매수량<br>
 								<span>(10개 1세트 + 10캡슐)</span></th>
 								<th>합계</th>
-								<th></th>
 							</tr>
 
 			<%  
@@ -331,7 +327,6 @@
 								<td><%= cap%></td>
 								<td><input type="hidden" name="qty" value="<%=csQty%>"><%=csQty%>세트</td>
 								<td><%= comCstotal%> 원</td>
-								<td></td>
 							</tr>
  <%  }  // (rs.4) while문의 끝  %>
           </table>
@@ -364,7 +359,7 @@
           <div class="cart_section5">
 				  <table>
 					<tr class="cart_orderInfo">
-					  <th><span>주문자 정보(내 정보 그대로 불러오기. 수정 불가.)</span></th>
+					  <th><span>주문자 정보</span></th>
 					</tr>
 					<tr>
 					  <th>주문자<br><span class="myinfo2"><%=Mname%></span></th>
@@ -372,7 +367,7 @@
 					  <th>이메일<br><span class="myinfo2"><%=Memail%></span></th>
 					</tr>
 					<tr class="cart_addrInfo">
-					  <th><span>배송지 정보(이전 단계 정보 그대로 불러오기. 수정 불가.)</span></th>
+					  <th><span>배송지 정보</span></th>
 					</tr>
 					<tr>
 					  <th>받는 사람<br>
@@ -507,7 +502,7 @@
     </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script language="javascript" src="../dojan_js_package.js"></script>
+    <script language="javascript" src="../dozan_js_package.js"></script>
 	<script src="../../JS/navEvent.js"></script>
 
 </body>

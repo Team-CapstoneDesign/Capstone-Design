@@ -6,7 +6,7 @@
 
 <%
 try {
- 	 String DB_URL="jdbc:mysql://localhost:3306/dojan";    //// 아직 커스텀 미완
+ 	 String DB_URL="jdbc:mysql://localhost:3306/dozan";    //// 아직 커스텀 미완
      String DB_ID="multi"; 
      String DB_PASSWORD="abcd";
  	 

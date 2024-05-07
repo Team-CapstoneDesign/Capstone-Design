@@ -82,9 +82,9 @@
 				<div class="sub_headerTitle">
 					<ul class="smap">
 						<!-- 미니 네비게이션 -->
-						<li><a href="index.html">home</a></li>
+						<li><a href="../index.jsp">home</a></li>
 						<li>></li>
-						<li class="en"><a href="index.html">장바구니</a></li>
+						<li class="en"><a href="./showcart.jsp">장바구니</a></li>
 					</ul>
 				</div>
 			</div>
@@ -116,7 +116,7 @@
 				<form name="cartItem" method="post" action="">
 					<%
 						try {
-						String DB_URL = "jdbc:mysql://localhost:3306/dojan";
+						String DB_URL = "jdbc:mysql://localhost:3306/dozan";
 						String DB_ID = "multi";
 						String DB_PASSWORD = "abcd";
 

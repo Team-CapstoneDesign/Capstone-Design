@@ -9,7 +9,7 @@
 	
 <%
 						
-			String DB_URL="jdbc:mysql://localhost:3306/dojan";  
+			String DB_URL="jdbc:mysql://localhost:3306/dozan";  
 			String DB_ID="multi";  
 		    String DB_PASSWORD="abcd"; 
 						 	 
@@ -76,7 +76,7 @@ if (Ocap != null) {
 			<h3>커스텀 캡슐 주문 내역 상세 조회</h3>
 			<table>
 				<tr>
-					<th width="20%">주문 날짜</th>
+					<th width="13%">주문 날짜</th>
 					<td><%= Odate%></td>
 				</tr>
 				<tr>

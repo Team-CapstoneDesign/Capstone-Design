@@ -9,7 +9,7 @@
 
 <%
 try{
- 	 String DB_URL="jdbc:mysql://localhost:3306/dojan";    
+ 	 String DB_URL="jdbc:mysql://localhost:3306/dozan";    
      String DB_ID="multi"; 
      String DB_PASSWORD="abcd";
  	 
