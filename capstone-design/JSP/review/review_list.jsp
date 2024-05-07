@@ -147,7 +147,7 @@
 				
 				<form name="reveiwList" method="post" action="">
 					
-				<div class="rvBtn"><a href="rwWrite.jsp"><input type="button" class="rvBtn1" value="³» Ä¸½¶ Á¶ÇÕ ¸®ºä ÀÛ¼ºÇÏ±â" ></a></div>
+				<div class="rvBtn"><a href="review_select.jsp"><input type="button" class="rvBtn1" value="³» Ä¸½¶ Á¶ÇÕ ¸®ºä ÀÛ¼ºÇÏ±â" ></a></div>
 					
 				<div class="reviewContents">
 					<!-- ¸®ºä ¹Ú½º ½ÃÀÛ. ÃÖ´ë ³ëÃâ °³¼ö 6°³.-->

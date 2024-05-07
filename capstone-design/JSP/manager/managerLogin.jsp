@@ -10,7 +10,7 @@
 	<script src="../dojan_js_package.js"></script>
 </head>
 <body>
-<form name="login" method="post" action="loginOK.jsp">
+<form name="login" method="post" action="manager_loginOK.jsp">
 	<section class="login">
 			<div class="loginLogo">
 				<img src="../../images/logo.png" alt="">

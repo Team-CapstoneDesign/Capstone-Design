@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<%@ page import="java.sql.*"%>
-<html>
+<%@ page contentType="text/html;charset=euc-kr" %>
+<%@ page import="java.sql.*" %>
 <head>
 <meta charset="EUC-KR">
 <title>리뷰 작성하기</title>
@@ -12,10 +10,11 @@
 	</script>
 
 </head>
+<%
+    String id = (String) session.getAttribute("sid");
+	%>
 <body>	
-	<%
-		String id = (String) session.getAttribute("sid");
-	%> 
+
 	<div class="wrap">
 
 		<div id="header">
@@ -99,8 +98,7 @@
 			<div class="reviewPage">
 				<div class="reviewPage_title">
 					캡슐 커스텀은 어떠셨나요? 후기를 작성해주세요!
-				</div>
-				<!-- jsp 파일로 바꿀때 해당 라인만 추수 삭제
+				</div>			
 				<%
 						String DB_URL = "jdbc:mysql://localhost:3306/dojan";
 						String DB_ID = "multi";
@@ -111,95 +109,63 @@
 
 						request.setCharacterEncoding("euc-kr");
 
-						String jsql = "select * from member where memId = ?";
+						String jsql = "SELECT OC.ordNo, OC.csName, OC.ordQty, OC.ordCap, OC.ordRoast, OC.ordOrigin, OC.ordBlend " +
+                        "FROM orderinfo AS OI " +
+                        "INNER JOIN ordercustom AS OC ON OI.ordNo = OC.ordNo " +
+                        "WHERE OI.memId = ?";
 						PreparedStatement pstmt = con.prepareStatement(jsql);
 						pstmt.setString(1, id);
 						ResultSet rs = pstmt.executeQuery();
-						rs.next();
-	
-						String userName = rs.getString("memName");
 
 						
-						String jsql2 = "SELECT oc.ordRoast, oc.ordOrigin, oc.ordBlend " +
-                                       "FROM ordercustom oc INNER JOIN orderinfo oi ON oc.ordNo = oi.ordNo " +
-                                       "WHERE oi.memId = ?";                                //  memID이용해서 ordercustom에 저장된 베이스, 블렌드 원두, 로스팅단계 가져옴
-						PreparedStatement pstmt2 = con.prepareStatement(jsql2);
-						pstmt2.setString(1, id);
-						ResultSet rs2 = pstmt2.executeQuery();
-
-						rs2.next();
-
-
-						String ordRoast = rs2.getString("ordRoast");
-                        String ordOrigin = rs2.getString("ordOrigin");
-                        String ordBlend = rs2.getString("ordBlend");
-													
-													
-
 				%>
-				jsp 파일로 바꿀때 해당 라인만 추수 삭제 -->
 				<form name="rwSelect" method="post" action="">
 					<div class="selectMyCs">
 						<!-- 상품 선택 시작 -->
+						<%
+		     while(rs.next()){
+			   String RordNo = rs.getString("ordNo");
+			   String Rname = rs.getString("csName");
+			   String Rorigin = rs.getString("ordOrigin");   	
+			   String Rblend = rs.getString("ordBlend");	
+			   String Rroast = rs.getString("ordRoast");	
+%> 	
 							<table>
 								<tr>
 									<th rowspan="3" id="line1">
-										내가 정한 커스텀 캡슐 이름.
+										<%= Rname%>
 									</th>
 									<td id="line2"> <!-- 순서가 이상해 보이지만 이게 맞습니다. -->
 										베이스 원두
-										<span>브라질 산토스</span>
+										<span><%= Rorigin%></span>
 									</td>
 									<td rowspan="3" id="line3">
-										<input type="button" class="selectRVbtn" value="리뷰 작성하기">
+										<a href="rwWrite.jsp?ordNo=<%=RordNo%>">
+										<input type="button" class="selectRVbtn" value="리뷰 작성하기"><a>
+
 									</td>
 								</tr>
 								<tr>
 									<td id="line2">
 										블렌드 원두
-										<span>자메이카 블루마운틴</span>
-										<span>자메이카 블루마운틴</span>
-										<span>자메이카 블루마운틴</span>
+										<%
+                       String[] RRblend = Rblend.split("  ");   
+                       for (int i = 0; i < RRblend.length; i++) {
+                       %>
+										<span><%= RRblend[i] %></span>
+										<%
+                       }
+                      %>
 									</td>
 								</tr>
 								<tr>
 									<td id="line2">
 										로스팅 단계
-										<span>6단계</span>
+										<span><%= Rroast%> 단계</span>
 									</td>
 								</tr>
 							</table>
-						<!-- 상품 선택 끝 -->
-						
-						<!-- 상품 선택 반복 시작 -->
-							<table>
-								<tr>
-									<th rowspan="3" id="line1">
-										내가 정한 커스텀 캡슐 이름.
-									</th>
-									<td id="line2">
-										베이스 원두
-										<span>브라질 산토스</span>
-									</td>
-									<td rowspan="3" id="line3">
-										<input type="button" class="selectRVbtn" value="리뷰 작성하기">
-									</td>
-								</tr>
-								<tr>
-									<td id="line2">
-										블렌드 원두
-										<span>자메이카 블루마운틴</span>
-										<span>자메이카 블루마운틴</span>
-										<span>자메이카 블루마운틴</span>
-									</td>
-								</tr>
-								<tr>
-									<td id="line2">
-										로스팅 단계
-										<span>6단계</span>
-									</td>
-								</tr>
-							</table>
+						<% } %>	
 						<!-- 상품 선택 반복 끝 -->
 					</div>
 				</form>
