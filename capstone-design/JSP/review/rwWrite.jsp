@@ -12,10 +12,21 @@
 	</script>
 
 </head>
+<%
+    String id = (String) session.getAttribute("sid");
+
+    if (id == null){
+%> 
+        <script>
+            alert("로그인이 필요합니다!");
+            location.href="../member/login.jsp";
+        </script>
+<%
+    }
+   else {
+%>
+	
 <body>	
-	<%
-		String id = (String) session.getAttribute("sid");
-	%> 
 	<div class="wrap">
 
 		<div id="header">
@@ -120,12 +131,12 @@
 	
 						String userName = rs.getString("memName");
 
-						
-						String jsql2 = "SELECT oc.ordRoast, oc.ordOrigin, oc.ordBlend " +
-                                       "FROM ordercustom oc INNER JOIN orderinfo oi ON oc.ordNo = oi.ordNo " +
-                                       "WHERE oi.memId = ?";                                //  memID이용해서 ordercustom에 저장된 베이스, 블렌드 원두, 로스팅단계 가져옴
+						String key = request.getParameter("ordNo");
+
+						String jsql2 = "SELECT ordRoast, ordOrigin, ordBlend FROM ordercustom WHERE ordNo = ?";                                
+						//  memID이용해서 ordercustom에 저장된 베이스, 블렌드 원두, 로스팅단계 가져옴
 						PreparedStatement pstmt2 = con.prepareStatement(jsql2);
-						pstmt2.setString(1, id);
+						pstmt2.setString(1, key);
 						ResultSet rs2 = pstmt2.executeQuery();
 
 						rs2.next();
@@ -259,4 +270,5 @@
 	<script src="../../JS/navEvent.js"></script>
 	
 </body>
+	   <% } %>
 </html>

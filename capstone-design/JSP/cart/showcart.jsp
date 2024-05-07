@@ -22,7 +22,7 @@
 					</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
-						<li><a href="../custome.jsp">캡슐 커스텀</a></li>
+						<li><a href="../goods/custome.jsp">캡슐 커스텀</a></li>
 						<li><a>두잔 캡슐</a>
 							<div class="submenu">
 								<ul id="productMenu">
@@ -131,7 +131,14 @@
 
 						ResultSet rs = pstmt.executeQuery();
 
-						if (!rs.next()) // 장바구니 내용없으면 굳이 비었다고 출력하는거보다 그냥 아무것도 없게 보이는것도 괜찮을거같음
+
+						String cscartQuery = "SELECT * FROM cscart WHERE ctNo = ?";
+
+						PreparedStatement cscartStmt = con.prepareStatement(cscartQuery);
+                        cscartStmt.setString(1, ctNo);
+                        ResultSet cscartResult = cscartStmt.executeQuery();
+
+						if (!rs.next()  && !cscartResult.next() ) // 장바구니 내용없으면 굳이 비었다고 출력하는거보다 그냥 아무것도 없게 보이는것도 괜찮을거같음
 						{
 					%>
 					  <table class="cartItem_list">

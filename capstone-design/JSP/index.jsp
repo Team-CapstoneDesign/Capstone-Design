@@ -273,7 +273,7 @@
 							id="tell_number">02-456-789</span><br> <span
 							class="footer_bold">상담시간 </span>10:00 ~ 18:00<br> <span
 							class="footer_bold">문자상담 </span>카카오톡 플러스 친구 등록<br> 반품 안내는 해당
-						상품 페이지를 참고해주세요
+						상품 페이지를 참고해주세요   
 					</p>
 				</div>
 
