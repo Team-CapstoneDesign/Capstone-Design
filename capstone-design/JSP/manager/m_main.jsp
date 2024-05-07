@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*" %>
+<%@ page import="java.util.ArrayList" %>
 <head>
 	<meta charset="euc-kr">
 	<title>관리자 페이지</title>
@@ -243,30 +244,112 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script>
-	let myCt1 = document.getElementById('myChart1');
+<%
+String jsql9 = "SELECT DISTINCT cart.prdNo, goods.prdName, goods.prdType, COALESCE(t.duplicate_count, 0) AS duplicate_count, COALESCE(t.total_quantity, 0) AS total_quantity FROM cart LEFT JOIN goods ON cart.prdNo = goods.prdNo LEFT JOIN (SELECT prdNo, COUNT(*) AS duplicate_count, SUM(ctqty) AS total_quantity FROM cart GROUP BY prdNo) AS t ON cart.prdNo = t.prdNo ORDER BY total_quantity DESC;";
+PreparedStatement pstmt9 = con.prepareStatement(jsql9);
+ResultSet rs9 = pstmt9.executeQuery();
+ArrayList<String> prdNameList = new ArrayList<>();
+ArrayList<Integer> totalQuantityList = new ArrayList<>();
+while (rs9.next()) {
+    String prdName = rs9.getString("prdName");
+    prdNameList.add(prdName);
+    
+    int totalQuantity = rs9.getInt("total_quantity");
+    totalQuantityList.add(totalQuantity);
+}
+%>
 
-	let myChart1 = new Chart(myCt1, {
-		type: 'bar',
-		data: {
-			labels: ['두잔 예가체프 블렌딩', '두잔 예가체프 블렌딩', '두잔 푸른 용 가배', '두잔 모닝 오리진', '두잔 시그니처 오리진'],
-			datasets: [
-				{
-					label: 'Dataset',
-					data: [55, 10, 30, 40, 50],
+let myCt1 = document.getElementById('myChart1');
+let labels = [];
+let datasets = [];
+
+<%
+for (int i = 0; i < 5; i++) {
+    String prdName = prdNameList.get(i);
+%>
+    labels.push('<%= prdName %>');
+    
+<%
+}
+%>
+
+let myChart1 = new Chart(myCt1, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+        		label: '판매량(개)',
+				data: [
+				<%
+				for (int i = 0; i < 5; i++) {
+				    int totalQuantity = totalQuantityList.get(i);
+				%>
+				   	<%=totalQuantity%>,
+				<%
 				}
-			]
-		},
-	});
+				%>
+				], // 각 카테고리에 대한 값
+		
+			}]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: '카테고리별 제품 구매 회수'
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+    },
+});
 
+<%
+String jsql10 = "SELECT goods.ctgType, COALESCE(COUNT(cart.prdNo), 0) AS ctgType_duplicate_count FROM goods LEFT JOIN cart ON goods.prdNo = cart.prdNo GROUP BY goods.ctgType ORDER BY ctgType_duplicate_count DESC;";
+PreparedStatement pstmt10 = con.prepareStatement(jsql10);
+ResultSet rs10 = pstmt10.executeQuery();
 
+ArrayList<String> ctgList = new ArrayList<>();
+ArrayList<Integer> ctgListCtn = new ArrayList<>();
+while (rs10.next()) {
+    String prdTypeList = rs10.getString("ctgType");
+    ctgList.add(prdTypeList);
+    
+    int prdTypeListCnt = rs10.getInt("ctgType_duplicate_count");
+    ctgListCtn.add(prdTypeListCnt);
+}
+%>
+let ctgList = [];
+let ctgListCtn2 = [];
+<%
+for (int i = 0; i < 5; i++) {
+    String ctgTypeList = ctgList.get(i);
+%>
+    ctgList.push('<%= ctgTypeList %>');
+<%
+}
+%>
 	let myCt2 = document.getElementById('myChart2');
 
 	let myChart2 = new Chart(myCt2, {
 		type: 'doughnut',
 		data: {
-			labels: ["시즌제품", "시그니처", "오리지널", "블렌드", "디카페인", "베버리지"],
+			labels: ctgList,
 			datasets: [{
-				data: [500, 200, 100, 80, 60, 150], // 각 카테고리에 대한 값
+				data: [
+				<%
+				for (int i = 0; i < 5; i++) {
+				    int ctgListCtnResult = ctgListCtn.get(i);
+				%>
+				   	<%=ctgListCtnResult%>,
+				<%
+				}
+				%>
+				], // 각 카테고리에 대한 값
 		
 			}]
 		},
@@ -281,7 +364,6 @@
 			},
 		},
 	});
-
 
 </script>
 
