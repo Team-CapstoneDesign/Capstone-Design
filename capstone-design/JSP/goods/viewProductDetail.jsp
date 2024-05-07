@@ -177,7 +177,7 @@ try{
 		
 		<!-- 惑前 惑技 家俺 康开 -->
 		<div class="goods_detail_detail">
-    <img src="../../images/<%=ctgType%>.png">
+    <img src="../../images/productDetail/productDetail_<%=prdNo%>.png">
     <% } %>
   </div>
 	</div>
