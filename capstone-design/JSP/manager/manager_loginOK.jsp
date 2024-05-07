@@ -7,14 +7,14 @@
 
 </head>
 
-<script src="../dojan_js_package.js"></script>
+<script src="../dozan_js_package.js"></script>
 	
 </script>
 
 <body>
 
 	<%
-		String DB_URL = "jdbc:mysql://localhost:3306/dojan";
+		String DB_URL = "jdbc:mysql://localhost:3306/dozan";
 	String DB_ID = "multi";
 	String DB_PASSWORD = "abcd";
 

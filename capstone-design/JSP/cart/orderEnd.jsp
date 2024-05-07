@@ -88,11 +88,11 @@
 				<div class="sub_headerTitle">
 					<ul class="smap">
 						<!-- 미니 네비게이션 -->
-						<li><a href="index.html">home</a></li>
+						<li><a href="../index.jsp">home</a></li>
 						<li>></li>
-						<li class="en"><a href="index.html">장바구니</a></li>
+						<li class="en"><a href="./showcart.jsp">장바구니</a></li>
 						<li>></li>
-						<li><a href="index.html" class="this">주문 완료</a></li>
+						<li><a href="./orderEnd.jsp" class="this">주문 완료</a></li>
 					</ul>
 				</div>
 			</div>
@@ -203,7 +203,7 @@
 		</div>
 
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script src="../../JS/dojan_js_package.js"></script>
+		<script src="../../JS/dozan_js_package.js"></script>
 		<script src="../../JS/navEvent.js"></script>
 		<script
 			src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

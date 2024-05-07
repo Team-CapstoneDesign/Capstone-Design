@@ -11,7 +11,7 @@
 <link rel="stylesheet"
 	href="https://cdn.rawgit.com/InventPartners/Checkbox2Button/32fbe6d/css/checkbox2button.css" />
 
-<script language="javascript" src="../dojan_js_package.js">
+<script language="javascript" src="../dozan_js_package.js">
 </script>
 
 <title>д╦╫╤ д©╫╨ер</title>

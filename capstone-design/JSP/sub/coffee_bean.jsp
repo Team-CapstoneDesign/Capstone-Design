@@ -7,7 +7,6 @@
 <title>원두 소개</title>
 
 <link rel="stylesheet" href="../../css/style.css">
-
 <link rel="stylesheet" href="../../css/sub_beans.css">
 
 </head>
@@ -86,11 +85,11 @@
 				<div class="sub_headerTitle">
 					<ul class="smap">
 						<!-- 미니 네비게이션 -->
-						<li><a href="index.html">home</a></li>
+						<li><a href="../index.jsp">home</a></li>
 						<li>></li>
-						<li class="en"><a href="index.html">커피 이야기</a></li>
+						<li class="en"><a href="./coffee_bean.jsp">커피 이야기</a></li>
 						<li>></li>
-						<li><a href="index.html" class="this">원두 소개</a></li>
+						<li><a href="./coffee_bean.jsp" class="this">원두 소개</a></li>
 					</ul>
 				</div>
 			</div>

@@ -12,12 +12,12 @@
 </script>
 <link rel="stylesheet" href="../../css/manager.css">
 	
-<script language="javascript" src="../dojan_js_package.js"></script>
+<script language="javascript" src="../dozan_js_package.js"></script>
 	
 </head>
          <%
 						
-			String DB_URL="jdbc:mysql://localhost:3306/dojan";  
+			String DB_URL="jdbc:mysql://localhost:3306/dozan";  
 			String DB_ID="multi";  
 		    String DB_PASSWORD="abcd"; 
 						 	 
@@ -55,7 +55,7 @@
 				
 			<table>
 				<tr>
-					<th width="20%">회원명</th>
+					<th width="13%">회원명</th>
 					<td><input type="text" name="name" id="name" value="<%= name%>"></td>
 				</tr>
 				<tr>

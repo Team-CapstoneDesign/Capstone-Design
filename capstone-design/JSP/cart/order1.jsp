@@ -87,11 +87,11 @@
 				<div class="sub_headerTitle">
 					<ul class="smap">
 						<!-- 미니 네비게이션 -->
-						<li><a href="index.html">home</a></li>
+						<li><a href="../index.jsp">home</a></li>
 						<li>></li>
-						<li class="en"><a href="index.html">장바구니</a></li>
+						<li class="en"><a href="./showcart.jsp">장바구니</a></li>
 						<li>></li>
-						<li><a href="index.html" class="this">주문/결제</a></li>
+						<li><a href="./order1.jsp" class="this">주문/결제</a></li>
 					</ul>
 				</div>
 			</div>
@@ -119,7 +119,7 @@
 			</div>
 
 			<%
-			String DB_URL = "jdbc:mysql://localhost:3306/dojan";
+			String DB_URL = "jdbc:mysql://localhost:3306/dozan";
 			String DB_ID = "multi";
 			String DB_PASSWORD = "abcd";
 
@@ -143,7 +143,7 @@
 					</div>
 
 					<div class="cart_section2">
-						<div class="cart_title">주문자 정보(내 정보 그대로 불러오기. 수정 불가.)</div>
+						<div class="cart_title">주문자 정보</div>
 						<%
 							String myid = (String) session.getAttribute("sid");
 
@@ -175,7 +175,7 @@
 					</div>
 
 					<div class="cart_section3">
-						<div class="cart_title">배송지 정보(내 정보를 가져오되 수정 가능하게)</div>
+						<div class="cart_title">배송지 정보</div>
 						<div class="cartWrap">
 							<th>받는 사람<br> <input type="text" name="name" id="name" placeholder="이름을 입력해주세요" value="<%=name%>"><br>
 							</th>
@@ -290,7 +290,7 @@
 		</div>
 
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script language="javascript" src="../dojan_js_package.js"></script>
+		<script language="javascript" src="../dozan_js_package.js"></script>
 		<script src="../../JS/navEvent.js"></script>
 		<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 		<script>

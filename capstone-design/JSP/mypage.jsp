@@ -89,7 +89,7 @@ pageEncoding="EUC-KR"%>
 			<%
 			
 
-		 String DB_URL="jdbc:mysql://localhost:3306/dojan";  
+		 String DB_URL="jdbc:mysql://localhost:3306/dozan";  
  	     String DB_ID="multi";  
   		 String DB_PASSWORD="abcd";
  	 
@@ -231,7 +231,7 @@ pageEncoding="EUC-KR"%>
                                       <div class="WarrantyCard__DateWithWarrantyNumber-mj30e3-4 VDSvq">
 									  <%= ordDate%>
                                         </div>
-                                        <a href="/pledges/6869332">
+                                        <a href="./goods/viewProductDetail.jsp?prdNo=<%=prdNo%>">
 										<span class="WarrantyCard__Title-mj30e3-5 cQXRRi"><%= prdName%></span></a>
                                         <ul class="RewardItems__Items-sc-6cegjp-0 glqfra">
                                             <li><span class="RewardItems__Title-sc-6cegjp-2 gkHbvS"><%= ordQty%> °³</span></li><span

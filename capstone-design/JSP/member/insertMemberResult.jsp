@@ -31,7 +31,7 @@
 
 
 
- 	 String DB_URL="jdbc:mysql://localhost:3306/dojan";  
+ 	 String DB_URL="jdbc:mysql://localhost:3306/dozan";  
      String DB_ID="multi";  
      String DB_PASSWORD="abcd"; 
  	 
@@ -63,7 +63,7 @@
 	<div class="insertMemResult">
 		
 	<div class="insertMemLogo">
-		<img src="../../images/logo_dark.png" alt="">
+		<img src="../../images/logo.png" width="100px" alt="">
 	</div>
 		
     <h2>정상적으로 가입이 완료되었습니다.</h2>

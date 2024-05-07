@@ -16,7 +16,7 @@
 		String id = (String) session.getAttribute("sid");
 
 	try {
-		String DB_URL = "jdbc:mysql://localhost:3306/dojan";
+		String DB_URL = "jdbc:mysql://localhost:3306/dozan";
 		String DB_ID = "multi";
 		String DB_PASSWORD = "abcd";
 
@@ -118,11 +118,11 @@
 				<div class="sub_headerTitle">
 					<ul class="smap">
 						<!-- ¹Ì´Ï ³×ºñ°ÔÀÌ¼Ç -->
-						<li><a href="index.html">home</a></li>
+						<li><a href="../index.jsp">home</a></li>
 						<li>></li>
-						<li class="en"><a href="index.html">µÎÀÜ Ä¸½¶</a></li>
+						<li class="en"><a href="./viewProduct.jsp?ctgType=<%=ctgType%>">µÎÀÜ Ä¸½¶</a></li>
 						<li>></li>
-						<li><a href="index.html" class="this"><%=category_name%></a></li>
+						<li><a href="./viewProduct.jsp?ctgType=<%=ctgType%>" class="this"><%=category_name%></a></li>
 					</ul>
 				</div>
 			</div>
