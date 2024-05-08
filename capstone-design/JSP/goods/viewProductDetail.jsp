@@ -84,7 +84,7 @@ try{
 					%>
 					<span class="quick_menu"><a href="../member/logout.jsp">로그아웃</a></span>
 					<span class="quick_menu"><a href="../mypage.jsp">마이페이지</a></span> <span
-						class="quick_menu"><a href="../cart/showcart.jsp">고객센터</a></span>
+						class="quick_menu"><a href="../cart/showcart.jsp">장바구니</a></span>
 					<%
 						}
 					%>
