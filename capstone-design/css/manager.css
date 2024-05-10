@@ -171,6 +171,15 @@ th, td {
     text-overflow: ellipsis;
 	display: inline-block;
 }
+.goods img {
+	width: 150px;
+	cursor: pointer;
+}
+.goods textarea {
+	width: 500px;
+	height: 200px;
+	font-size: 18px;
+}
 
 /* 뒤로가기, 삭제 버튼 */
 div.btn_back, div.btn_modify, div.btn_delete {
@@ -216,6 +225,8 @@ button {
 	height: 40px;
 	line-height: 40px;
 }
+
+/* 통계 부분. */
 #chart_wrap{
 	position: relative;
 }

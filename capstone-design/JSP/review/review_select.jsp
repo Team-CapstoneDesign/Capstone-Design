@@ -97,7 +97,7 @@
 
 			<div class="reviewPage">
 				<div class="reviewPage_title">
-					캡슐 커스텀은 어떠셨나요? 후기를 작성해주세요!
+					캡슐 커스텀은 어떠셨나요? 리뷰를 작성해주세요!
 				</div>			
 				<%
 						String DB_URL = "jdbc:mysql://localhost:3306/dozan";

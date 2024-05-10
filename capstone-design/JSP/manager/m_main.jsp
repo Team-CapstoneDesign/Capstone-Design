@@ -84,6 +84,37 @@
 		</div>
 	</div>
 
+	<!-- 상품(완제품 캡슐) 관리 영역. -->
+	<section class="goods" id="goods">
+		<h2>상품 관리</h2>
+
+		<h3>완제품 캡슐 상품 내역</h3>
+		<table>
+			<tr>
+			    <th width="12%">상품번호</th>
+				<th width="12%">상품 분류</th>
+				<th width="20%">상품명</th>
+				<th width="13%">로스팅 단계</th>
+				<th width="13%">상품 가격</th>
+				<th width="10%">상세 조회</th>
+				<th width="10%">상품 수정</th>
+				<th width="10%">상품 삭제</th>
+			</tr>
+			<!-- 반복 시작. -->
+			<tr>
+			    <td>DB001</td>
+				<td>블렌딩</td>
+				<td><span class="long">두잔 소프트 블렌딩</span></td>
+				<td>시티-풀시티</td>
+				<td>11,900 원</td>
+				<td><a href="./detailGoods.jsp">상세 조회</a></td>
+				<td><a href="./detailGoods.jsp">수정</a></td>
+				<td><a href="">삭제</a></td>
+			</tr>
+			<!-- 반복 끝. -->
+		</table>
+	</section>
+
 	<!-- 주문 내역 관리 영역. -->
 	<section class="order" id="order">
 		<h2>주문 내역 관리</h2>
@@ -227,7 +258,8 @@
 		</table>
 	</section>
 
-	<section class="review" id="chart_wrap">
+	<!-- 판매 및 매출 통계 영역. -->
+	<section class="graph_n_chart" id="chart_wrap">
 		<h2>판매 통계</h2>
 		<div class="chart1">
 			<h3>매출 순위</h3>
@@ -241,6 +273,7 @@
 			</div>
 		</div>
 	</section>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script>

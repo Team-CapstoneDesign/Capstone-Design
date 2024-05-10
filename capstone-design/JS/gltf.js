@@ -67,7 +67,7 @@ const loadingManager = new THREE.LoadingManager(
 let donut = null;
 const loader = new THREE.GLTFLoader(loadingManager);
 loader.load(
-  '../gltf/model0006.glb',
+  '../gltf/final01.glb',
   (glb) => {
     console.log(glb);
     donut = glb.scene;

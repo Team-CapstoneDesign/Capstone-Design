@@ -21,6 +21,7 @@
 			<img src="../../images/logo.png">
 		</div>
 		<ul>
+			<li><a href="./m_main.jsp#goods" target="display-frame">惑前 包府</a></li>
 			<li><a href="./m_main.jsp#order" target="display-frame">林巩 郴开 包府</a></li>
 			<li><a href="./m_main.jsp#member" target="display-frame">雀盔 沥焊 包府</a></li>
 			<li><a href="./m_main.jsp#review" target="display-frame">府轰 包府</a></li>
