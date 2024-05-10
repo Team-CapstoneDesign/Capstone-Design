@@ -98,6 +98,63 @@
 			</form>
 			
 		</section>
+
+
+		<section class="order" id="order">
+		<h2>상품 주문 내역</h2>
+
+		<!-- 커스텀 캡슐 영역. -->
+		<h3>커스텀 캡슐 주문 내역</h3>
+		<table>
+			<tr>
+			    <th width="7%">주문 번호</th>
+				<th width="20%">주문 날짜</th>
+				<th width="18">커스텀 이름</th>
+				<th width="22%">커스텀 가격</th>
+				<th width="13%">상품 수량</th>
+				<th width="10%">상세 조회</th>
+				<th width="10%">주문 삭제</th>
+			</tr>
+			<!-- 반복 시작. -->
+			<tr>
+			    <td>1</td>
+				<td>2024. 3. 16. 오전 5:54:55</td>
+				<td>coffee</td>
+				<td>11,900원</td>
+				<td>2 개</td>
+				<td><a href="">상세 조회</a></td>
+				<td><a href="">주문 삭제</a></td>
+			</tr>
+			<!-- 반복 끝. -->
+		</table>
+
+		<!-- 완제품 캡슐 영역. -->
+		<h3>완제품 캡슐 주문 내역</h3>
+		<table>
+			<tr>
+			    <th width="7%">주문 번호</th>
+				<th width="20%">주문 날짜</th>
+				<th width="15%">상품명</th>
+				<th width="15%">판매 가격</th>
+				<th width="8%">상품 수량</th>
+				<th width="15%">총 주문 금액</th>
+				<th width="10%">상세 조회</th>
+				<th width="10%">주문 삭제</th>
+			</tr>
+			<!-- 반복 시작. -->
+			<tr>
+			    <td>1</td>
+				<td>2024. 4. 2. 오후 8:51:25</td>
+				<td><span class="long">두잔 예가체프 블렌딩</span></td>
+				<td>10,900 원</td>
+				<td>2 개</td>
+				<td>23,800 원</td>
+				<td><a href="">상세 조회</a></td>
+				<td><a href="">주문 삭제</a></td>
+			</tr>
+			<!-- 반복 끝. -->
+		</table>
+	</section>
 	
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>

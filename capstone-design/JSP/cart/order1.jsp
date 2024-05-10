@@ -180,16 +180,16 @@
 							<th>받는 사람<br> <input type="text" name="name" id="name" placeholder="이름을 입력해주세요" value="<%=name%>"><br>
 							</th>
 							<th>번호<br> 
-								<input type="text" name="tel1" id="tel1" placeholder="휴대폰" maxlength='3'>
-								<input type="text" name="tel2" id="tel2" placeholder="번호를" maxlength='4'>
-								<input type="text" name="tel3" id="tel3" placeholder="입력해주세요" maxlength='4'><br>
+								<input type="text" name="tel1" id="tel1" placeholder="휴대폰" maxlength='3' value="">
+								<input type="text" name="tel2" id="tel2" placeholder="번호를" maxlength='4' value="">
+								<input type="text" name="tel3" id="tel3" placeholder="입력해주세요" maxlength='4' value=""><br>
 							</th>
 							<th>주소<br>
-								<input type="text" name="zipNo" id="zipNo" placeholder="우편번호를 입력해주세요" readonly>
+								<input type="text" name="zipNo" id="zipNo" placeholder="우편번호를 입력해주세요" value="" readonly>
 								<button type="button" class="findZipNo" onclick="DaumPostcode();">우편번호 찾기</button><br>
-								<input type="text" name="address" id="address" placeholder="기본주소를 입력해주세요">
-								<input type="text" name="addrplus" id="addrplus" placeholder="주소 참고항목을 입력해주세요"><br>
-								<input type="text" name="addressdetail" id="addressdetail" placeholder="상세주소를 입력해주세요">
+								<input type="text" name="address" id="address" placeholder="기본주소를 입력해주세요" value="">
+								<input type="text" name="addrplus" id="addrplus" placeholder="주소 참고항목을 입력해주세요" value=""><br>
+								<input type="text" name="addressdetail" id="addressdetail" placeholder="상세주소를 입력해주세요" value="">
 							</th>
 						</div>
 					</div>
