@@ -67,7 +67,7 @@ const loadingManager = new THREE.LoadingManager(
 let donut = null;
 const loader = new THREE.GLTFLoader(loadingManager);
 loader.load(
-  '../gltf/model0006.glb',
+  '../gltf/final01.glb',
   (glb) => {
     console.log(glb);
     donut = glb.scene;
@@ -128,7 +128,7 @@ const tick = () => {
 
   if (!!donut) {
     donut.position.y = Math.sin(elapsedTime * 1.5) * 0.1 - 0.1;
-    donut.rotation.y += deltaTime * 0.3; // yÃà ÁÖÀ§·Î È¸Àü
+    donut.rotation.y += deltaTime * 0.3; // yï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½
   }
 
   renderer.render(scene, camera);
