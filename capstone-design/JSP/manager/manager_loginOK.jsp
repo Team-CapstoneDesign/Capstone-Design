@@ -44,7 +44,7 @@
 	%>
 	<script>
                 alert("관리자 아이디 또는 비밀번호가 일치하지 않습니다.");
-                location.reload(); // 페이지 새로고침
+                window.location.href = "managerLogin.jsp"; // 페이지 새로고침
     </script>
 	<%
 		}
@@ -54,7 +54,7 @@
 	%>
 	<script>
                 alert("관리자 아이디 또는 비밀번호가 일치하지 않습니다.");
-                location.reload(); // 페이지 새로고침
+                window.location.href = "managerLogin.jsp"; // 페이지 새로고침
     </script>
 	<%
 		}
