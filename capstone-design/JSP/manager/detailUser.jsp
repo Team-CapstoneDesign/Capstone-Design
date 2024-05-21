@@ -32,6 +32,7 @@
 			ResultSet rs = pstmt.executeQuery();  	
 			rs.next();
 
+            String date = rs.getString("Date");
 			String name = rs.getString("memName");
 			String birth = rs.getString("memBirth");  
 			String tel =  rs.getString("memTel");	
@@ -54,6 +55,10 @@
 			<form name="modify" method="post" action="updateUserResult.jsp">
 				
 			<table>
+			    <tr>
+					<th width="13%">가입날짜</th>
+					<td><input type="hidden" id="name" value="<%= date%>"><%= date%></td>
+				</tr>
 				<tr>
 					<th width="13%">회원명</th>
 					<td><input type="text" name="name" id="name" value="<%= name%>"></td>

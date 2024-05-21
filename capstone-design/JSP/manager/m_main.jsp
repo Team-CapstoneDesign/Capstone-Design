@@ -63,6 +63,10 @@
      ResultSet rs8 = pstmt8.executeQuery();
 	 rs8.next();
 
+	 String jsql11 = "select * from goods";     // 상품
+	 PreparedStatement pstmt11 = con.prepareStatement(jsql11);
+	 ResultSet rs11 = pstmt11.executeQuery();
+
 	 int totalMember = rs5.getInt("total_member");
 	 int totalReview = rs6.getInt("total_board");
 	 int totalproduct = rs7.getInt("total_product");
@@ -97,20 +101,27 @@
 				<th width="13%">로스팅 단계</th>
 				<th width="13%">상품 가격</th>
 				<th width="10%">상세 조회</th>
-				<th width="10%">상품 수정</th>
 				<th width="10%">상품 삭제</th>
 			</tr>
+		<%
+		while(rs11.next()){
+			String Gprdno = rs11.getString("prdNo");   	
+			String Gtype = rs11.getString("prdType");	
+			String Gname = rs11.getString("prdName");	
+			String Groast = rs11.getString("prdRoasting");
+			String Gprice = rs11.getString("prdPrice");
+%>
 			<!-- 반복 시작. -->
 			<tr>
-			    <td>DB001</td>
-				<td>블렌딩</td>
-				<td><span class="long">두잔 소프트 블렌딩</span></td>
-				<td>시티-풀시티</td>
-				<td>11,900 원</td>
-				<td><a href="./detailGoods.jsp">상세 조회</a></td>
-				<td><a href="./detailGoods.jsp">수정</a></td>
-				<td><a href="">삭제</a></td>
+			    <td><%= Gprdno%></td>
+				<td><%= Gtype%></td>
+				<td><span class="long"><%= Gname%></span></td>
+				<td><%= Groast%></td>
+				<td><%= Gprice%> 원</td>
+				<td><a href="detailGoods.jsp?prdNo=<%=Gprdno%>">상세 조회</a></td>
+				<td><a href="deleteGoods.jsp?prdNo=<%=Gprdno%>">삭제</a></td>
 			</tr>
+			<% } %>
 			<!-- 반복 끝. -->
 		</table>
 	</section>

@@ -38,21 +38,23 @@
 	 Class.forName("org.gjt.mm.mysql.Driver"); 
  	 Connection con = DriverManager.getConnection(DB_URL, DB_ID, DB_PASSWORD);
 
-	 String jsql = "INSERT INTO member (memName, memBirth, memTel, memId, memPwd, memEmail, memZipno, memAddress, memAddrplus) VALUES (?,?,?,?,?,?,?,?,?)";	
+	 String jsql = "INSERT INTO member (Date, memName, memBirth, memTel, memId, memPwd, memEmail, memZipno, memAddress, memAddrplus) VALUES (?,?,?,?,?,?,?,?,?,?)";	
 
-	 
+	 java.util.Date date = new java.util.Date();   
+    String oDate = date.toLocaleString(); 
 
 
 	 PreparedStatement pstmt  = con.prepareStatement(jsql);
-	 pstmt.setString(1,name);
-	 pstmt.setString(2,birth);
-	 pstmt.setString(3,tel);
-	 pstmt.setString(4,id);
-	 pstmt.setString(5,pwd);
-	 pstmt.setString(6,email);
-     pstmt.setString(7,zipno);
-     pstmt.setString(8,addr);
-	 pstmt.setString(9,addrplus);
+	 pstmt.setString(1,oDate);
+	 pstmt.setString(2,name);
+	 pstmt.setString(3,birth);
+	 pstmt.setString(4,tel);
+	 pstmt.setString(5,id);
+	 pstmt.setString(6,pwd);
+	 pstmt.setString(7,email);
+     pstmt.setString(8,zipno);
+     pstmt.setString(9,addr);
+	 pstmt.setString(10,addrplus);
 
 
 
