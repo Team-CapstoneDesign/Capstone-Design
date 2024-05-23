@@ -147,7 +147,7 @@
 						<%
 							String myid = (String) session.getAttribute("sid");
 
-						String jsql = "select memName, memTel, memEmail from member where memId = ?";
+						String jsql = "select * from member where memId = ?";
 						PreparedStatement pstmt = con.prepareStatement(jsql);
 						pstmt.setString(1, myid);
 
@@ -157,6 +157,11 @@
 						String name = rs.getString("memName");
 						String tel = rs.getString("memTel");
 						String email = rs.getString("memEmail");
+						String[ ]  telArr = tel.split("-");
+						String zip =  rs.getString("memZipno");
+						String addr =  rs.getString("memAddress");
+                        String[ ]  addrArr = addr.split("  ");
+	                    String addrPlus =  rs.getString("memAddrplus");
 						%>
 						<div class="cartWrap">
 							<div class="cart_cont">
@@ -180,16 +185,16 @@
 							<th>받는 사람<br> <input type="text" name="name" id="name" placeholder="이름을 입력해주세요" value="<%=name%>"><br>
 							</th>
 							<th>번호<br> 
-								<input type="text" name="tel1" id="tel1" placeholder="휴대폰" maxlength='3' value="">
-								<input type="text" name="tel2" id="tel2" placeholder="번호를" maxlength='4' value="">
-								<input type="text" name="tel3" id="tel3" placeholder="입력해주세요" maxlength='4' value=""><br>
+								<input type="text" name="tel1" id="tel1" placeholder="휴대폰" maxlength='3' value="<%=telArr[0]%>">
+								<input type="text" name="tel2" id="tel2" placeholder="번호를" maxlength='4' value="<%=telArr[1]%>">
+								<input type="text" name="tel3" id="tel3" placeholder="입력해주세요" maxlength='4' value="<%=telArr[2]%>"><br>
 							</th>
 							<th>주소<br>
-								<input type="text" name="zipNo" id="zipNo" placeholder="우편번호를 입력해주세요" value="" readonly>
+								<input type="text" name="zipNo" id="zipNo" placeholder="우편번호를 입력해주세요" value="<%= zip%>" readonly>
 								<button type="button" class="findZipNo" onclick="DaumPostcode();">우편번호 찾기</button><br>
-								<input type="text" name="address" id="address" placeholder="기본주소를 입력해주세요" value="">
-								<input type="text" name="addrplus" id="addrplus" placeholder="주소 참고항목을 입력해주세요" value=""><br>
-								<input type="text" name="addressdetail" id="addressdetail" placeholder="상세주소를 입력해주세요" value="">
+								<input type="text" name="address" id="address" placeholder="기본주소를 입력해주세요" value="<%=addrArr[0]%>">
+								<input type="text" name="addrplus" id="addrplus" placeholder="주소 참고항목을 입력해주세요" value="<%=addrArr[1]%>"><br>
+								<input type="text" name="addressdetail" id="addressdetail" placeholder="상세주소를 입력해주세요" value="<%= addrPlus%>">
 							</th>
 						</div>
 					</div>
