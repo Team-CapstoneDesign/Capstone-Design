@@ -20,6 +20,7 @@
 			String key = request.getParameter("ordNo");
 			
 			String jsql = "SELECT " + 
+			    "orderinfo.memId, " +
                 "orderinfo.ordDate, " + 
 				"orderinfo.ordZipno, " +
 				"orderinfo.ordAddress, " +
@@ -42,6 +43,7 @@
             ResultSet rs = pstmt.executeQuery();	
 			rs.next();
 
+			String Cid = rs.getString("memId");
 			String Cdate = rs.getString("ordDate");
 			String Cname = rs.getString("csName");  
 			String Corigin =  rs.getString("ordOrigin");
@@ -66,6 +68,10 @@
 				<tr>
 					<th width="13%">주문 날짜</th>
 					<td><%= Cdate%></td>
+				</tr>
+				<tr>
+					<th>주문 고객</th>
+					<td><%= Cid%></td>
 				</tr>
 				<tr>
 					<th>커스텀 이름</th>

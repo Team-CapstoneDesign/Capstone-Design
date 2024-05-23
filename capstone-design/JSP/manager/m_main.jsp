@@ -30,14 +30,14 @@
 	 PreparedStatement pstmt2 = con.prepareStatement(jsql2);
 	 ResultSet rs2 = pstmt2.executeQuery();
  
- 	 String jsql3 = "SELECT O.ordNo, O.ordDate, G.prdName, G.prdPrice, G.prdPrice2, P.ordQty " +
+ 	 String jsql3 = "SELECT O.memId, O.ordNo, O.ordDate, G.prdName, G.prdPrice, G.prdPrice2, P.ordQty " +
                "FROM orderinfo AS O " +
                "JOIN orderproduct AS P ON O.ordNo = P.ordNo " +
                "JOIN goods AS G ON P.prdNo = G.prdNo";                      // 완제품 주문
   	 PreparedStatement pstmt3 = con.prepareStatement(jsql3);
 	 ResultSet rs3 = pstmt3.executeQuery();
 
-	String jsql4 = "SELECT oi.ordNo, oi.ordDate, oc.csName, oc.ordQty " +
+	String jsql4 = "SELECT oi. memId, oi.ordNo, oi.ordDate, oc.csName, oc.ordQty " +
                "FROM orderinfo oi " +
                "JOIN ordercustom oc ON oi.ordNo = oc.ordNo";    // 커스텀 주문
 	 PreparedStatement pstmt4 = con.prepareStatement(jsql4);
@@ -134,23 +134,26 @@
 		<h3>커스텀 캡슐 주문 내역</h3>
 		<table>
 			<tr>
+			    <th width="7%">주문 고객</th>
 			    <th width="7%">주문 번호</th>
-				<th width="20%">주문 날짜</th>
-				<th width="18">커스텀 이름</th>
-				<th width="22%">커스텀 가격</th>
-				<th width="13%">상품 수량</th>
-				<th width="10%">상세 조회</th>
-				<th width="10%">주문 삭제</th>
+				<th width="19%">주문 날짜</th>
+				<th width="17">커스텀 이름</th>
+				<th width="19%">커스텀 가격</th>
+				<th width="12%">상품 수량</th>
+				<th width="9%">상세 조회</th>
+				<th width="9%">주문 삭제</th>
 			</tr>
 			<!-- 반복 시작. -->
 			<%
 		while(rs4.next()){
+			String Cid = rs4.getString("memId");
 			String Cnum = rs4.getString("ordNo");   	
 			String Cdate = rs4.getString("ordDate");	
 			String Cname = rs4.getString("csName");	
 			String Cqty = rs4.getString("ordQty");
 %>
-			<tr>
+			<tr> 
+			    <td><%= Cid%></td>
 			    <td><%= Cnum%></td>
 				<td><%= Cdate%></td>
 				<td><%= Cname%></td>
@@ -167,18 +170,20 @@
 		<h3>완제품 캡슐 주문 내역</h3>
 		<table>
 			<tr>
+			    <th width="7%">주문 고객</th>
 			    <th width="7%">주문 번호</th>
-				<th width="20%">주문 날짜</th>
-				<th width="15%">상품명</th>
-				<th width="15%">판매 가격</th>
-				<th width="8%">상품 수량</th>
-				<th width="15%">총 주문 금액</th>
-				<th width="10%">상세 조회</th>
-				<th width="10%">주문 삭제</th>
+				<th width="19%">주문 날짜</th>
+				<th width="14%">상품명</th>
+				<th width="14%">판매 가격</th>
+				<th width="7%">상품 수량</th>
+				<th width="14%">총 주문 금액</th>
+				<th width="9%">상세 조회</th>
+				<th width="9%">주문 삭제</th>
 			</tr>
 			<!-- 반복 시작. -->
 			<%
 		while(rs3.next()){
+			String Oid = rs3.getString("memId");
 			String Onum = rs3.getString("ordNo");   	
 			String Odate = rs3.getString("ordDate");
 			String Pname = rs3.getString("prdName");   	
@@ -190,6 +195,7 @@
 			String comTprice = String.format("%,d", Tprice);
 %>
 			<tr>
+			    <td><%= Oid%></td>
 			    <td><%= Onum%></td>
 				<td><%= Odate%></td>
 				<td><span class="long"><%= Pname%></span></td>

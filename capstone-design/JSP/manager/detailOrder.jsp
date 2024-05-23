@@ -18,7 +18,7 @@
 
 			String key = request.getParameter("ordNo");
 			
-			String jsql = "SELECT OI.ordNo, OI.ordDate, OP.prdNo, OP.ordCap, OP.ordQty, OI.ordZipno, OI.ordAddress, OI.ordAddrplus, OI.ordRec " +
+			String jsql = "SELECT OI.memId, OI.ordNo, OI.ordDate, OP.prdNo, OP.ordCap, OP.ordQty, OI.ordZipno, OI.ordAddress, OI.ordAddrplus, OI.ordRec " +
               "FROM orderinfo AS OI " +
               "INNER JOIN orderproduct AS OP ON OI.ordNo = OP.ordNo " +
               "WHERE OI.ordNo = ?";
@@ -28,6 +28,7 @@
             ResultSet rs = pstmt.executeQuery();	
 			rs.next();
 
+            String Oid = rs.getString("memId");
 			String Odate = rs.getString("ordDate");
 			String Oproduct = rs.getString("prdNo");  
 			String Ocap =  rs.getString("ordCap");
@@ -78,6 +79,10 @@ if (Ocap != null) {
 				<tr>
 					<th width="13%">주문 날짜</th>
 					<td><%= Odate%></td>
+				</tr>
+				<tr>
+					<th>주문 고객</th>
+					<td><%= Oid%></td>
 				</tr>
 				<tr>
 					<th>주문 상품 번호</th>

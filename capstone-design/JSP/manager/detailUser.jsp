@@ -44,7 +44,31 @@
 			String addr =  rs.getString("memAddress");
             String[ ]  addrArr = addr.split("  ");
 			String addrPlus =  rs.getString("memAddrplus");
- 
+
+
+			String jsql2 = "SELECT o.ordNo, o.ordDate, g.prdName, g.prdPrice, g.prdPrice2, p.ordQty, p.prdNo " +
+                        "FROM orderinfo o " +
+                        "JOIN orderproduct p ON o.ordNo = p.ordNo " +
+                        "JOIN goods g ON p.prdNo = g.prdNo " +
+                        "WHERE o.memId = ?";
+    
+   
+            PreparedStatement pstmt2 = con.prepareStatement(jsql2);
+            pstmt2.setString(1, key);
+    
+            ResultSet rs2 = pstmt2.executeQuery();
+
+
+
+			String jsql3 = "SELECT o.ordNo, o.ordDate, c.ordQty, c.csName " +
+                   "FROM orderinfo o " +
+                   "JOIN ordercustom c ON o.ordNo = c.ordNo " +
+                   "WHERE o.memId = ?";
+
+			PreparedStatement pstmt3 = con.prepareStatement(jsql3);
+            pstmt3.setString(1, key);
+    
+            ResultSet rs3 = pstmt3.executeQuery();
 
 			%>
 <body>
@@ -114,50 +138,66 @@
 			<tr>
 			    <th width="7%">주문 번호</th>
 				<th width="20%">주문 날짜</th>
-				<th width="18">커스텀 이름</th>
-				<th width="22%">커스텀 가격</th>
-				<th width="13%">상품 수량</th>
-				<th width="10%">상세 조회</th>
-				<th width="10%">주문 삭제</th>
+				<th width="20%">커스텀 이름</th>
+				<th width="20%">커스텀 가격</th>
+				<th width="20%">상품 수량</th>
 			</tr>
 			<!-- 반복 시작. -->
+			<%  
+					while (rs3.next()) {
+				    String cNum = rs3.getString("ordNo");
+         			String cDate = rs3.getString("ordDate");
+        			String cName = rs3.getString("csName");
+					String cQty = rs3.getString("ordQty");
+
+					%>
 			<tr>
-			    <td>1</td>
-				<td>2024. 3. 16. 오전 5:54:55</td>
-				<td>coffee</td>
+			    <td><%= cNum%></td>
+				<td><%= cDate%></td>
+				<td><%= cName%></td>
 				<td>11,900원</td>
-				<td>2 개</td>
-				<td><a href="">상세 조회</a></td>
-				<td><a href="">주문 삭제</a></td>
+				<td><%= cQty%> 개</td>
 			</tr>
 			<!-- 반복 끝. -->
+			<% } %>
 		</table>
 
 		<!-- 완제품 캡슐 영역. -->
 		<h3>완제품 캡슐 주문 내역</h3>
 		<table>
 			<tr>
-			    <th width="7%">주문 번호</th>
+			    <th width="6%">주문 번호</th>
 				<th width="20%">주문 날짜</th>
 				<th width="15%">상품명</th>
 				<th width="15%">판매 가격</th>
 				<th width="8%">상품 수량</th>
 				<th width="15%">총 주문 금액</th>
-				<th width="10%">상세 조회</th>
-				<th width="10%">주문 삭제</th>
 			</tr>
 			<!-- 반복 시작. -->
+			<%  
+					while (rs2.next()) {
+				    String oNum = rs2.getString("ordNo");
+         			String oDate = rs2.getString("ordDate");
+        			String oName = rs2.getString("prdName");
+					String oPrice = rs2.getString("prdPrice");
+        			int oPrice2 = rs2.getInt("prdPrice2");
+        			int oQty = rs2.getInt("ordQty");
+					
+					int total = oPrice2 * oQty; 
+					 
+					String comtotal = String.format("%,d", total);
+					
+					%>
 			<tr>
-			    <td>1</td>
-				<td>2024. 4. 2. 오후 8:51:25</td>
-				<td><span class="long">두잔 예가체프 블렌딩</span></td>
-				<td>10,900 원</td>
-				<td>2 개</td>
-				<td>23,800 원</td>
-				<td><a href="">상세 조회</a></td>
-				<td><a href="">주문 삭제</a></td>
+			    <td><%= oNum%></td>
+				<td><%= oDate%></td>
+				<td><span class="long"><%= oName%></span></td>
+				<td><%= oPrice%> 원</td>
+				<td><%= oQty%> 개</td>
+				<td><%= comtotal%> 원</td>
 			</tr>
 			<!-- 반복 끝. -->
+			<% }%>
 		</table>
 	</section>
 	
