@@ -324,7 +324,7 @@ const roastingStages = [
   { step: 1, name: 'Raw/Green', description: '처음에 원두가 들어오는 상태로 아직 로스팅되지 않은 상태' },
   { step: 2, name: 'Drying', description: '원두 내부의 물기를 제거하여 로스팅 프로세스를 시작' },
   { step: 3, name: 'First Crack', description: '원두 내부의 수분과 기체가 빠져나가면서 첫번째 크랙이 발생' },
-  { step: 4, name: 'Cinnamon Roast', description: '가볍게 로스팅된 상태로 콘내초보다 조금 더 진한 갈색' },
+  { step: 4, name: 'Cinnamon Roast', description: '가볍게 로스팅된 상태로 조금 더 진한 갈색' },
   { step: 5, name: 'City Roast', description: '로스팅이 진행되면서 단맛이 강조되고 은은한 산미가 나타남' },
   { step: 6, name: 'Full City Roast', description: '더욱 진한 갈색, 오일이 조금 나오기 시작하며 로스팅 특유의 풍미가 강해짐' },
   { step: 7, name: 'Second Crack', description: '두번째 크랙이 발생하며 로스팅이 깊어지고 오일이 더 나오는 단계' },
