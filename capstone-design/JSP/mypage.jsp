@@ -271,7 +271,7 @@ pageEncoding="EUC-KR"%>
                                         class="ScrollableCommonProducts_product_item__4oBG_ ScrollableCommonProducts_skeleton__jysvq">
                                         <div class="link_item">
                                             <div class="ScrollableCommonProducts_thumb__l7PBq">
-											<a href="../goods/viewProductDetail.jsp?prdNo=<%=wishNo%>"><img src="../images/capdesign/<%=wishNo%>.png"></a>
+											<a href="./goods/viewProductDetail.jsp?prdNo=<%= wishNo%>"><img src="../images/capdesign/<%=wishNo%>.png"></a>
 											</div>
                                             <div class="ScrollableCommonProducts_info_area__oZNC0">
                                                 <div class="ScrollableCommonProducts_price__I2bI7"><%= wishName%></div>

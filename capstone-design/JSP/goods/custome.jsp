@@ -502,7 +502,7 @@
       </form>
     </div>
 
-    
+    <!--
 		<footer>
 			<div class="footer1">
 				<ul>
@@ -571,6 +571,8 @@
 				</div>
 			</div>
 		</footer>
+
+		-->
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="../../JS/navEvent.js"></script>

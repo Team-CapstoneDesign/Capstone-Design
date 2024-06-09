@@ -204,12 +204,10 @@
 						<div class="cartWrap">
 							<tr>
 								<th>
-									<label> <input type="radio" name="payment" value="신용카드" id="card"> 신용카드
-									</label> <br> 
+									
 									<label> <input type="radio" name="payment" value="카카오페이" id="kakao"> 카카오페이
 									</label> <br> 
-									<label> <input type="radio" name="payment" value="무통장입금" id="bank"> 무통장입금
-									</label> <br>
+									
 								</th>
 							</tr>
 						</div>

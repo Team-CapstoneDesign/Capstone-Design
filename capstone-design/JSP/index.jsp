@@ -98,9 +98,9 @@
               <h2>두잔 오리진</h2>
             </div>
             <div class="signature_time">
-              <a href=""><div class="time morning" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="800"></div></a>
-              <a href=""><div class="time afternoon" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="2000"></div></a>
-              <a href=""><div class="time evening" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="3000"></div></a>
+              <a href="./goods/viewProductDetail.jsp?prdNo=DS003"><div class="time morning" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="800"></div></a>
+              <a href="./goods/viewProductDetail.jsp?prdNo=DS004"><div class="time afternoon" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="2000"></div></a>
+              <a href="./goods/viewProductDetail.jsp?prdNo=DS005"><div class="time evening" data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-duration="3000"></div></a>
             </div>
             <div class="signature_time_capusle">
               <img class="time_capsule" src="../images/model02_3.png" alt="" data-aos="fade-up">
@@ -124,7 +124,7 @@
           <div class="signature_Origin" data-aos="fade-up">
             <div class="origin_left">
                <img src="../images/capdesign/DS001.png" alt="">
-               <button>자세히 보기</button>
+               <a href="./goods/viewProductDetail.jsp?prdNo=DS001"><button>자세히 보기</button></a>
             </div>
             <div class="origin_right">
               <div class="originTitle">두잔 시그니처 오리진 / 로스팅 하이</div>
@@ -175,10 +175,10 @@
           <div class="signature_Origin" data-aos="fade-up">
             <div class="origin_left">
                <img src="../images/capdesign/DS002.png" alt="">
-               <button>자세히 보기</button>
+               <a href="./goods/viewProductDetail.jsp?prdNo=DS002"><button>자세히 보기</button></a>
             </div>
             <div class="origin_right">
-              <div class="originTitle">두잔 시그니처 블랜드 / 로스팅 시티</div>
+              <div class="originTitle">두잔 시그니처 블렌드 / 로스팅 시티</div>
               <div class="origin_explanation">
                 <p>
                   브라질 산토스+콜롬비아 수프리모+베트남 로부스타를<br> 사용하여
@@ -232,9 +232,9 @@
           </div>
           <div class="bestGoodsList">
 						<div class="listSection1">
-							<a href=""><img class="bestGoods"
+							<a href="./goods/viewProductDetail.jsp?prdNo=DT004"><img class="bestGoods"
 								src="../images/bestgoods1.png" alt="" data-aos="fade-left"
-								data-aos-duration="500"></a> <a href=""><img
+								data-aos-duration="500"></a> <a href="./goods/viewProductDetail.jsp?prdNo=DO005"><img
 								class="bestGoods" src="../images/bestgoods5.png" alt=""
 								data-aos="fade-left" data-aos-duration="600"></a> <img
 								class="bestGoods_capsule1" src="../images/model02_3.png" alt="">
@@ -243,13 +243,17 @@
 						</div>
 						<div class="listSection2">
 							<img class="gabe" src="../images/gabe.png" alt=""> <a
-								href=""><img class="bestGoods"
+								href="./goods/viewProductDetail.jsp?prdNo=DT003">
+							<img class="bestGoods"
 								src="../images/bestgoods2.png" alt="" data-aos="fade-left"
-								data-aos-duration="700"></a> <a href=""><img
+								data-aos-duration="700"></a> <a href="./goods/viewProductDetail.jsp?prdNo=DB007">
+							<img
 								class="bestGoods" src="../images/bestgoods3.png" alt=""
-								data-aos="fade-left" data-aos-duration="800"></a> <a href=""><img
+								data-aos="fade-left" data-aos-duration="800"></a> <a href="./goods/viewProductDetail.jsp?prdNo=DB003">
+							<img
 								class="bestGoods" src="../images/bestgoods6.png" alt=""
-								data-aos="fade-left" data-aos-duration="900"></a> <img
+								data-aos="fade-left" data-aos-duration="900"></a> 
+							<img
 								class="bestGoods_capsule3" src="../images/model04_6.png" alt="">
 						</div>
         </div>
