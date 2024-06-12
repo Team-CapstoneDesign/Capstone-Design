@@ -28,7 +28,7 @@
 				</a>
 				<div class="topmenuWrap">
 					<ul class="topmenu">
-						<li><a href="../custome.jsp">д╦╫╤ д©╫╨ер</a></li>
+						<li><a href="../goods/custome.jsp">д╦╫╤ д©╫╨ер</a></li>
 						<li><a>╣нюэ д╦╫╤</a>
 							<div class="submenu">
 								<ul id="productMenu">

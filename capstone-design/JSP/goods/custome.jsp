@@ -430,7 +430,7 @@
         </div>
 
       </div>
-      <form name="result" action="../cart/csIncart.jsp" class="custome_section" id="select-result"
+      <form name="result" action="../cart/csIncart.jsp" method="post" class="custome_section" id="select-result"
         style="display: none;">
         <div class="result_background3">
           <img id="resultBackground3" src="../../images/result_background3.png" alt="">
@@ -502,7 +502,7 @@
       </form>
     </div>
 
-    <!--
+    
 		<footer>
 			<div class="footer1">
 				<ul>
@@ -571,8 +571,6 @@
 				</div>
 			</div>
 		</footer>
-
-		-->
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="../../JS/navEvent.js"></script>
@@ -580,7 +578,7 @@
 	<script
 		src="https://cdn.rawgit.com/InventPartners/Checkbox2Button/32fbe6d/js/checkbox2button.min.js"></script>
 
-	<script src="../../JS/custome.js"></script>
+	<script src="../../JS/custome.js" charset="EUC-KR"></script>
 	<script>
     AOS.init({
       duration: 1000,
