@@ -24,6 +24,7 @@ else
 {
  try
 	 {
+	 	request.setCharacterEncoding("EUC-KR");
  	    String DB_URL="jdbc:mysql://localhost:3306/dozan";    
         String DB_ID="multi"; 
         String DB_PASSWORD="abcd";
